@@ -1,0 +1,1 @@
+<input type="checkbox" name="is_collections_enabled" id="is_collections_enabled" value="1" <?= checked( 1, get_option('is_collections_enabled'), false )  ?> />

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="33px" height="43px" viewBox="0 0 33 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>result_location</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="result_location" transform="translate(2.000000, 2.000000)" stroke="#FFFFFF" stroke-width="2.05263158">
+            <path d="M14.5,39 C14.5,39 29,21.366743 29,13.7647059 C29,6.16266875 22.5081288,0 14.5,0 C6.49187113,0 0,6.16266875 0,13.7647059 C0,21.366743 14.5,39 14.5,39 Z" id="Oval-3"></path>
+            <ellipse id="Oval-6" cx="14.5" cy="14.3684211" rx="6.21428571" ry="6.15789474"></ellipse>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,618 @@
+Region,Retailer,Store,Range
+Auckland,"Beds R Us","Beds R Us Botany",Chiropractic
+Auckland,"Beds R Us","Beds R Us Botany",Classic
+Auckland,"Beds R Us","Beds R Us Botany",Sanctuary
+Auckland,"Beds R Us","Beds R Us Botany",Swisstek
+Auckland,"Beds R Us","Beds R Us Glen Innes",Chiropractic
+Auckland,"Beds R Us","Beds R Us Glen Innes",Classic
+Auckland,"Beds R Us","Beds R Us Glen Innes",Sanctuary
+Auckland,"Beds R Us","Beds R Us Glen Innes",Swisstek
+Auckland,"Beds R Us","Beds R Us New Lynn",Chiropractic
+Auckland,"Beds R Us","Beds R Us New Lynn",Classic
+Auckland,"Beds R Us","Beds R Us New Lynn",Sanctuary
+Auckland,"Beds R Us","Beds R Us New Lynn",Swisstek
+Auckland,"Beds R Us","Beds R Us Newmarket",Chiropractic
+Auckland,"Beds R Us","Beds R Us Newmarket",Classic
+Auckland,"Beds R Us","Beds R Us Newmarket",Sanctuary
+Auckland,"Beds R Us","Beds R Us Newmarket",Swisstek
+Auckland,"Beds R Us","Beds R Us Pukekohe",Chiropractic
+Auckland,"Beds R Us","Beds R Us Pukekohe",Classic
+Auckland,"Beds R Us","Beds R Us Pukekohe",Sanctuary
+Auckland,"Beds R Us","Beds R Us Pukekohe",Swisstek
+Auckland,"Beds R Us","Beds R Us Silverdale",Chiropractic
+Auckland,"Beds R Us","Beds R Us Silverdale",Classic
+Auckland,"Beds R Us","Beds R Us Silverdale",Sanctuary
+Auckland,"Beds R Us","Beds R Us Silverdale",Swisstek
+Auckland,"Beds R Us","Beds R Us Wairau Park",Chiropractic
+Auckland,"Beds R Us","Beds R Us Wairau Park",Classic
+Auckland,"Beds R Us","Beds R Us Wairau Park",Sanctuary
+Auckland,"Beds R Us","Beds R Us Wairau Park",Swisstek
+Auckland,"Beds R Us","Beds R Us Warkworth",Chiropractic
+Auckland,"Beds R Us","Beds R Us Warkworth",Classic
+Auckland,"Beds R Us","Beds R Us Warkworth",Sanctuary
+Auckland,"Beds R Us","Beds R Us Warkworth",Swisstek
+Auckland,Farmers,"Farmers Albany Westfield",Balance
+Auckland,Farmers,"Farmers Albany Westfield",Chiropractic
+Auckland,Farmers,"Farmers Albany Westfield",Classic
+Auckland,Farmers,"Farmers Albany Westfield",Junior
+Auckland,Farmers,"Farmers Albany Westfield",Sanctuary
+Auckland,Farmers,"Farmers Botany Downs",Balance
+Auckland,Farmers,"Farmers Botany Downs",Chiropractic
+Auckland,Farmers,"Farmers Botany Downs",Classic
+Auckland,Farmers,"Farmers Botany Downs",Junior
+Auckland,Farmers,"Farmers Botany Downs",Sanctuary
+Auckland,Farmers,"Farmers Home Albany",Balance
+Auckland,Farmers,"Farmers Home Albany",Chiropractic
+Auckland,Farmers,"Farmers Home Albany",Classic
+Auckland,Farmers,"Farmers Home Albany",Junior
+Auckland,Farmers,"Farmers Home Albany",Sanctuary
+Auckland,Farmers,"Farmers Lynnmall",Balance
+Auckland,Farmers,"Farmers Lynnmall",Chiropractic
+Auckland,Farmers,"Farmers Lynnmall",Classic
+Auckland,Farmers,"Farmers Lynnmall",Junior
+Auckland,Farmers,"Farmers Lynnmall",Sanctuary
+Auckland,Farmers,"Farmers Manukau",Balance
+Auckland,Farmers,"Farmers Manukau",Chiropractic
+Auckland,Farmers,"Farmers Manukau",Classic
+Auckland,Farmers,"Farmers Manukau",Junior
+Auckland,Farmers,"Farmers Manukau",Sanctuary
+Auckland,Farmers,"Farmers Newmarket",Balance
+Auckland,Farmers,"Farmers Newmarket",Chiropractic
+Auckland,Farmers,"Farmers Newmarket",Classic
+Auckland,Farmers,"Farmers Newmarket",Junior
+Auckland,Farmers,"Farmers Newmarket",Sanctuary
+Auckland,Farmers,"Farmers Pakuranga",Balance
+Auckland,Farmers,"Farmers Pakuranga",Chiropractic
+Auckland,Farmers,"Farmers Pakuranga",Classic
+Auckland,Farmers,"Farmers Pakuranga",Junior
+Auckland,Farmers,"Farmers Pakuranga",Sanctuary
+Auckland,Farmers,"Farmers Papakura",Balance
+Auckland,Farmers,"Farmers Papakura",Chiropractic
+Auckland,Farmers,"Farmers Papakura",Classic
+Auckland,Farmers,"Farmers Papakura",Junior
+Auckland,Farmers,"Farmers Papakura",Sanctuary
+Auckland,Farmers,"Farmers Pukekohe",Balance
+Auckland,Farmers,"Farmers Pukekohe",Chiropractic
+Auckland,Farmers,"Farmers Pukekohe",Classic
+Auckland,Farmers,"Farmers Pukekohe",Junior
+Auckland,Farmers,"Farmers Pukekohe",Sanctuary
+Auckland,Farmers,"Farmers Silverdale",Balance
+Auckland,Farmers,"Farmers Silverdale",Chiropractic
+Auckland,Farmers,"Farmers Silverdale",Classic
+Auckland,Farmers,"Farmers Silverdale",Junior
+Auckland,Farmers,"Farmers Silverdale",Sanctuary
+Auckland,Farmers,"Farmers St Lukes",Balance
+Auckland,Farmers,"Farmers St Lukes",Chiropractic
+Auckland,Farmers,"Farmers St Lukes",Classic
+Auckland,Farmers,"Farmers St Lukes",Junior
+Auckland,Farmers,"Farmers St Lukes",Sanctuary
+Auckland,Farmers,"Farmers Westgate",Balance
+Auckland,Farmers,"Farmers Westgate",Chiropractic
+Auckland,Farmers,"Farmers Westgate",Classic
+Auckland,Farmers,"Farmers Westgate",Junior
+Auckland,Farmers,"Farmers Westgate",Sanctuary
+Auckland,"Smith's City","Smiths City Mount Wellington",Balance
+Auckland,"Smith's City","Smiths City Mount Wellington",Chiropractic
+Auckland,"Smith's City","Smiths City Mount Wellington",Classic
+Auckland,"Smith's City","Smiths City Mount Wellington",Mezzo
+Auckland,"Smith's City","Smiths City Mount Wellington",Sanctuary
+Auckland,"Smith's City","Smiths City Wairau Park",Balance
+Auckland,"Smith's City","Smiths City Wairau Park",Chiropractic
+Auckland,"Smith's City","Smiths City Wairau Park",Classic
+Auckland,"Smith's City","Smiths City Wairau Park",Mezzo
+Auckland,"Smith's City","Smiths City Wairau Park",Sanctuary
+Auckland,"The Bed People","The Bed People Albany",Chiropractic
+Auckland,"The Bed People","The Bed People Albany",Sanctuary
+Auckland,"The Bed People","The Bed People Botany",Chiropractic
+Auckland,"The Bed People","The Bed People Botany",Sanctuary
+Auckland,"The Bed People","The Bed People Manukau",Chiropractic
+Auckland,"The Bed People","The Bed People Manukau",Sanctuary
+Auckland,"The Bed People","The Bed People Mt Wellington",Chiropractic
+Auckland,"The Bed People","The Bed People Mt Wellington",Sanctuary
+Auckland,"The Bed People","The Bed People Newmarket",Chiropractic
+Auckland,"The Bed People","The Bed People Newmarket",Sanctuary
+Auckland,"The Bed People","The Bed People Wairau Park",Chiropractic
+Auckland,"The Bed People","The Bed People Wairau Park",Sanctuary
+Auckland,"The Bed People","The Bed People Westgate",Chiropractic
+Auckland,"The Bed People","The Bed People Westgate",Sanctuary
+"Bay of Plenty","Beds R Us","Beds R Us Mount Maunganui",Chiropractic
+"Bay of Plenty","Beds R Us","Beds R Us Mount Maunganui",Classic
+"Bay of Plenty","Beds R Us","Beds R Us Mount Maunganui",Sanctuary
+"Bay of Plenty","Beds R Us","Beds R Us Mount Maunganui",Swisstek
+"Bay of Plenty","Beds R Us","Beds R Us Tauranga",Chiropractic
+"Bay of Plenty","Beds R Us","Beds R Us Tauranga",Classic
+"Bay of Plenty","Beds R Us","Beds R Us Tauranga",Sanctuary
+"Bay of Plenty","Beds R Us","Beds R Us Tauranga",Swisstek
+"Bay of Plenty","Beds R Us","Van Dyks Beds R Us Rotorua",Chiropractic
+"Bay of Plenty","Beds R Us","Van Dyks Beds R Us Rotorua",Classic
+"Bay of Plenty","Beds R Us","Van Dyks Beds R Us Rotorua",Sanctuary
+"Bay of Plenty","Beds R Us","Van Dyks Beds R Us Rotorua",Swisstek
+"Bay of Plenty",Farmers,"Farmers Bayfair",Balance
+"Bay of Plenty",Farmers,"Farmers Bayfair",Chiropractic
+"Bay of Plenty",Farmers,"Farmers Bayfair",Classic
+"Bay of Plenty",Farmers,"Farmers Bayfair",Junior
+"Bay of Plenty",Farmers,"Farmers Bayfair",Sanctuary
+"Bay of Plenty",Farmers,"Farmers Rotorua",Balance
+"Bay of Plenty",Farmers,"Farmers Rotorua",Chiropractic
+"Bay of Plenty",Farmers,"Farmers Rotorua",Classic
+"Bay of Plenty",Farmers,"Farmers Rotorua",Junior
+"Bay of Plenty",Farmers,"Farmers Rotorua",Sanctuary
+"Bay of Plenty",Farmers,"Farmers Tauranga",Balance
+"Bay of Plenty",Farmers,"Farmers Tauranga",Chiropractic
+"Bay of Plenty",Farmers,"Farmers Tauranga",Classic
+"Bay of Plenty",Farmers,"Farmers Tauranga",Junior
+"Bay of Plenty",Farmers,"Farmers Tauranga",Sanctuary
+"Bay of Plenty",Farmers,"Farmers Whakatane",Balance
+"Bay of Plenty",Farmers,"Farmers Whakatane",Chiropractic
+"Bay of Plenty",Farmers,"Farmers Whakatane",Classic
+"Bay of Plenty",Farmers,"Farmers Whakatane",Junior
+"Bay of Plenty",Farmers,"Farmers Whakatane",Sanctuary
+"Bay of Plenty","Smith's City","Smiths City Kawerau",Balance
+"Bay of Plenty","Smith's City","Smiths City Kawerau",Chiropractic
+"Bay of Plenty","Smith's City","Smiths City Kawerau",Classic
+"Bay of Plenty","Smith's City","Smiths City Kawerau",Mezzo
+"Bay of Plenty","Smith's City","Smiths City Kawerau",Sanctuary
+"Bay of Plenty","Smith's City","Smiths City Opotiki",Balance
+"Bay of Plenty","Smith's City","Smiths City Opotiki",Chiropractic
+"Bay of Plenty","Smith's City","Smiths City Opotiki",Classic
+"Bay of Plenty","Smith's City","Smiths City Opotiki",Mezzo
+"Bay of Plenty","Smith's City","Smiths City Opotiki",Sanctuary
+"Bay of Plenty","Smith's City","Smiths City Rotorua",Balance
+"Bay of Plenty","Smith's City","Smiths City Rotorua",Chiropractic
+"Bay of Plenty","Smith's City","Smiths City Rotorua",Classic
+"Bay of Plenty","Smith's City","Smiths City Rotorua",Mezzo
+"Bay of Plenty","Smith's City","Smiths City Rotorua",Sanctuary
+"Bay of Plenty","Smith's City","Smiths City Tauranga",Balance
+"Bay of Plenty","Smith's City","Smiths City Tauranga",Chiropractic
+"Bay of Plenty","Smith's City","Smiths City Tauranga",Classic
+"Bay of Plenty","Smith's City","Smiths City Tauranga",Mezzo
+"Bay of Plenty","Smith's City","Smiths City Tauranga",Sanctuary
+"Bay of Plenty","Smith's City","Smiths City Whakatane",Balance
+"Bay of Plenty","Smith's City","Smiths City Whakatane",Chiropractic
+"Bay of Plenty","Smith's City","Smiths City Whakatane",Classic
+"Bay of Plenty","Smith's City","Smiths City Whakatane",Mezzo
+"Bay of Plenty","Smith's City","Smiths City Whakatane",Sanctuary
+Canterbury,"Back to Bed","Back To Bed Christchurch",Balance
+Canterbury,"Back to Bed","Back To Bed Christchurch",Chiropractic
+Canterbury,"Back to Bed","Back To Bed Christchurch",Classic
+Canterbury,"Back to Bed","Back To Bed Christchurch",Sanctuary
+Canterbury,"Back to Bed","Back To Bed Christchurch",Swisstek
+Canterbury,"Beds R Us","Beds R Us Christchurch",Chiropractic
+Canterbury,"Beds R Us","Beds R Us Christchurch",Classic
+Canterbury,"Beds R Us","Beds R Us Christchurch",Sanctuary
+Canterbury,"Beds R Us","Beds R Us Christchurch",Swisstek
+Canterbury,"Beds R Us","Beds R Us Hornby",Chiropractic
+Canterbury,"Beds R Us","Beds R Us Hornby",Classic
+Canterbury,"Beds R Us","Beds R Us Hornby",Sanctuary
+Canterbury,"Beds R Us","Beds R Us Hornby",Swisstek
+Canterbury,Farmers,"Farmers Hornby",Balance
+Canterbury,Farmers,"Farmers Hornby",Chiropractic
+Canterbury,Farmers,"Farmers Hornby",Classic
+Canterbury,Farmers,"Farmers Hornby",Junior
+Canterbury,Farmers,"Farmers Hornby",Sanctuary
+Canterbury,Farmers,"Farmers Moorhouse",Balance
+Canterbury,Farmers,"Farmers Moorhouse",Chiropractic
+Canterbury,Farmers,"Farmers Moorhouse",Classic
+Canterbury,Farmers,"Farmers Moorhouse",Junior
+Canterbury,Farmers,"Farmers Moorhouse",Sanctuary
+Canterbury,Farmers,"Farmers Northlands",Balance
+Canterbury,Farmers,"Farmers Northlands",Chiropractic
+Canterbury,Farmers,"Farmers Northlands",Classic
+Canterbury,Farmers,"Farmers Northlands",Junior
+Canterbury,Farmers,"Farmers Northlands",Sanctuary
+Canterbury,Farmers,"Farmers Rangiora",Balance
+Canterbury,Farmers,"Farmers Rangiora",Chiropractic
+Canterbury,Farmers,"Farmers Rangiora",Classic
+Canterbury,Farmers,"Farmers Rangiora",Junior
+Canterbury,Farmers,"Farmers Rangiora",Sanctuary
+Canterbury,Farmers,"Farmers Riccarton",Balance
+Canterbury,Farmers,"Farmers Riccarton",Chiropractic
+Canterbury,Farmers,"Farmers Riccarton",Classic
+Canterbury,Farmers,"Farmers Riccarton",Junior
+Canterbury,Farmers,"Farmers Riccarton",Sanctuary
+Canterbury,Farmers,"Farmers Shirley",Balance
+Canterbury,Farmers,"Farmers Shirley",Chiropractic
+Canterbury,Farmers,"Farmers Shirley",Classic
+Canterbury,Farmers,"Farmers Shirley",Junior
+Canterbury,Farmers,"Farmers Shirley",Sanctuary
+Canterbury,"Smith's City","Smiths City Colombo St Christchurch",Balance
+Canterbury,"Smith's City","Smiths City Colombo St Christchurch",Chiropractic
+Canterbury,"Smith's City","Smiths City Colombo St Christchurch",Classic
+Canterbury,"Smith's City","Smiths City Colombo St Christchurch",Mezzo
+Canterbury,"Smith's City","Smiths City Colombo St Christchurch",Sanctuary
+Canterbury,"Smith's City","Smiths City Kaikoura",Balance
+Canterbury,"Smith's City","Smiths City Kaikoura",Chiropractic
+Canterbury,"Smith's City","Smiths City Kaikoura",Classic
+Canterbury,"Smith's City","Smiths City Kaikoura",Mezzo
+Canterbury,"Smith's City","Smiths City Kaikoura",Sanctuary
+Canterbury,"Smith's City","Smiths City Northwood",Balance
+Canterbury,"Smith's City","Smiths City Northwood",Chiropractic
+Canterbury,"Smith's City","Smiths City Northwood",Classic
+Canterbury,"Smith's City","Smiths City Northwood",Mezzo
+Canterbury,"Smith's City","Smiths City Northwood",Sanctuary
+Coromandel,"Beds R Us","Beds R Us (Baxters Interiors)",Chiropractic
+Coromandel,"Beds R Us","Beds R Us (Baxters Interiors)",Classic
+Coromandel,"Beds R Us","Beds R Us (Baxters Interiors)",Sanctuary
+Coromandel,"Beds R Us","Beds R Us (Baxters Interiors)",Swisstek
+Coromandel,"Beds R Us","Beds R Us-Waihi Furnishers Limited",Chiropractic
+Coromandel,"Beds R Us","Beds R Us-Waihi Furnishers Limited",Classic
+Coromandel,"Beds R Us","Beds R Us-Waihi Furnishers Limited",Sanctuary
+Coromandel,"Beds R Us","Beds R Us-Waihi Furnishers Limited",Swisstek
+"Hawkes Bay","Beds R Us","Beds R Us Hastings",Chiropractic
+"Hawkes Bay","Beds R Us","Beds R Us Hastings",Classic
+"Hawkes Bay","Beds R Us","Beds R Us Hastings",Sanctuary
+"Hawkes Bay","Beds R Us","Beds R Us Hastings",Swisstek
+"Hawkes Bay","Beds R Us","Beds R Us Napier",Chiropractic
+"Hawkes Bay","Beds R Us","Beds R Us Napier",Classic
+"Hawkes Bay","Beds R Us","Beds R Us Napier",Sanctuary
+"Hawkes Bay","Beds R Us","Beds R Us Napier",Swisstek
+"Hawkes Bay","Beds R Us","Taylors Furniture Beds R Us",Chiropractic
+"Hawkes Bay","Beds R Us","Taylors Furniture Beds R Us",Classic
+"Hawkes Bay","Beds R Us","Taylors Furniture Beds R Us",Sanctuary
+"Hawkes Bay","Beds R Us","Taylors Furniture Beds R Us",Swisstek
+"Hawkes Bay",Farmers,"Farmers Hastings",Balance
+"Hawkes Bay",Farmers,"Farmers Hastings",Chiropractic
+"Hawkes Bay",Farmers,"Farmers Hastings",Classic
+"Hawkes Bay",Farmers,"Farmers Hastings",Junior
+"Hawkes Bay",Farmers,"Farmers Hastings",Sanctuary
+"Hawkes Bay",Farmers,"Farmers Napier",Balance
+"Hawkes Bay",Farmers,"Farmers Napier",Chiropractic
+"Hawkes Bay",Farmers,"Farmers Napier",Classic
+"Hawkes Bay",Farmers,"Farmers Napier",Junior
+"Hawkes Bay",Farmers,"Farmers Napier",Sanctuary
+"Hawkes Bay","Smith's City","Smiths City Hastings",Balance
+"Hawkes Bay","Smith's City","Smiths City Hastings",Chiropractic
+"Hawkes Bay","Smith's City","Smiths City Hastings",Classic
+"Hawkes Bay","Smith's City","Smiths City Hastings",Mezzo
+"Hawkes Bay","Smith's City","Smiths City Hastings",Sanctuary
+"King Country","Beds R Us","Beds R Us Taumarunui",Chiropractic
+"King Country","Beds R Us","Beds R Us Taumarunui",Classic
+"King Country","Beds R Us","Beds R Us Taumarunui",Sanctuary
+"King Country","Beds R Us","Beds R Us Taumarunui",Swisstek
+Manawatu,"Beds R Us","Beds R Us Palmerston North",Chiropractic
+Manawatu,"Beds R Us","Beds R Us Palmerston North",Classic
+Manawatu,"Beds R Us","Beds R Us Palmerston North",Sanctuary
+Manawatu,"Beds R Us","Beds R Us Palmerston North",Swisstek
+Manawatu,Farmers,"Farmers Levin",Balance
+Manawatu,Farmers,"Farmers Levin",Chiropractic
+Manawatu,Farmers,"Farmers Levin",Classic
+Manawatu,Farmers,"Farmers Levin",Junior
+Manawatu,Farmers,"Farmers Levin",Sanctuary
+Manawatu,Farmers,"Farmers Palmerston North",Balance
+Manawatu,Farmers,"Farmers Palmerston North",Chiropractic
+Manawatu,Farmers,"Farmers Palmerston North",Classic
+Manawatu,Farmers,"Farmers Palmerston North",Junior
+Manawatu,Farmers,"Farmers Palmerston North",Sanctuary
+Manawatu,Farmers,"Farmers Palmerston North Home Centre",Balance
+Manawatu,Farmers,"Farmers Palmerston North Home Centre",Chiropractic
+Manawatu,Farmers,"Farmers Palmerston North Home Centre",Classic
+Manawatu,Farmers,"Farmers Palmerston North Home Centre",Junior
+Manawatu,Farmers,"Farmers Palmerston North Home Centre",Sanctuary
+Manawatu,"Smith's City","Smiths City Palmerston North",Balance
+Manawatu,"Smith's City","Smiths City Palmerston North",Chiropractic
+Manawatu,"Smith's City","Smiths City Palmerston North",Classic
+Manawatu,"Smith's City","Smiths City Palmerston North",Mezzo
+Manawatu,"Smith's City","Smiths City Palmerston North",Sanctuary
+Marlborough,"Beds R Us","Beds R Us Blenheim",Chiropractic
+Marlborough,"Beds R Us","Beds R Us Blenheim",Classic
+Marlborough,"Beds R Us","Beds R Us Blenheim",Sanctuary
+Marlborough,"Beds R Us","Beds R Us Blenheim",Swisstek
+Marlborough,Farmers,"Farmers Blenheim",Balance
+Marlborough,Farmers,"Farmers Blenheim",Chiropractic
+Marlborough,Farmers,"Farmers Blenheim",Classic
+Marlborough,Farmers,"Farmers Blenheim",Junior
+Marlborough,Farmers,"Farmers Blenheim",Sanctuary
+Marlborough,"Smith's City","Smiths City Blenheim",Balance
+Marlborough,"Smith's City","Smiths City Blenheim",Chiropractic
+Marlborough,"Smith's City","Smiths City Blenheim",Classic
+Marlborough,"Smith's City","Smiths City Blenheim",Mezzo
+Marlborough,"Smith's City","Smiths City Blenheim",Sanctuary
+"Nelson Bays",Farmers,"Farmers Nelson",Balance
+"Nelson Bays",Farmers,"Farmers Nelson",Chiropractic
+"Nelson Bays",Farmers,"Farmers Nelson",Classic
+"Nelson Bays",Farmers,"Farmers Nelson",Junior
+"Nelson Bays",Farmers,"Farmers Nelson",Sanctuary
+"Nelson Bays",Farmers,"Farmers Richmond",Balance
+"Nelson Bays",Farmers,"Farmers Richmond",Chiropractic
+"Nelson Bays",Farmers,"Farmers Richmond",Classic
+"Nelson Bays",Farmers,"Farmers Richmond",Junior
+"Nelson Bays",Farmers,"Farmers Richmond",Sanctuary
+"Nelson Bays","Smith's City","Smiths City Nelson",Balance
+"Nelson Bays","Smith's City","Smiths City Nelson",Chiropractic
+"Nelson Bays","Smith's City","Smiths City Nelson",Classic
+"Nelson Bays","Smith's City","Smiths City Nelson",Mezzo
+"Nelson Bays","Smith's City","Smiths City Nelson",Sanctuary
+"Nelson Bays","Smith's City","Smiths City Richmond",Balance
+"Nelson Bays","Smith's City","Smiths City Richmond",Chiropractic
+"Nelson Bays","Smith's City","Smiths City Richmond",Classic
+"Nelson Bays","Smith's City","Smiths City Richmond",Mezzo
+"Nelson Bays","Smith's City","Smiths City Richmond",Sanctuary
+"North Otago",Farmers,"Farmers Oamaru",Balance
+"North Otago",Farmers,"Farmers Oamaru",Chiropractic
+"North Otago",Farmers,"Farmers Oamaru",Classic
+"North Otago",Farmers,"Farmers Oamaru",Junior
+"North Otago",Farmers,"Farmers Oamaru",Sanctuary
+"North Otago","Smith's City","Smiths City Oamaru",Balance
+"North Otago","Smith's City","Smiths City Oamaru",Chiropractic
+"North Otago","Smith's City","Smiths City Oamaru",Classic
+"North Otago","Smith's City","Smiths City Oamaru",Mezzo
+"North Otago","Smith's City","Smiths City Oamaru",Sanctuary
+Northland,"Beds R Us","Beds R Us Kaitaia",Chiropractic
+Northland,"Beds R Us","Beds R Us Kaitaia",Classic
+Northland,"Beds R Us","Beds R Us Kaitaia",Sanctuary
+Northland,"Beds R Us","Beds R Us Kaitaia",Swisstek
+Northland,"Beds R Us","Beds R Us Kerikeri",Chiropractic
+Northland,"Beds R Us","Beds R Us Kerikeri",Classic
+Northland,"Beds R Us","Beds R Us Kerikeri",Sanctuary
+Northland,"Beds R Us","Beds R Us Kerikeri",Swisstek
+Northland,"Beds R Us","Beds R Us Whangarei",Chiropractic
+Northland,"Beds R Us","Beds R Us Whangarei",Classic
+Northland,"Beds R Us","Beds R Us Whangarei",Sanctuary
+Northland,"Beds R Us","Beds R Us Whangarei",Swisstek
+Northland,Farmers,"Farmers Kaitaia",Balance
+Northland,Farmers,"Farmers Kaitaia",Chiropractic
+Northland,Farmers,"Farmers Kaitaia",Classic
+Northland,Farmers,"Farmers Kaitaia",Junior
+Northland,Farmers,"Farmers Kaitaia",Sanctuary
+Northland,Farmers,"Farmers Whangarei",Balance
+Northland,Farmers,"Farmers Whangarei",Chiropractic
+Northland,Farmers,"Farmers Whangarei",Classic
+Northland,Farmers,"Farmers Whangarei",Junior
+Northland,Farmers,"Farmers Whangarei",Sanctuary
+Northland,"Smith's City","Smiths City Whangarei",Balance
+Northland,"Smith's City","Smiths City Whangarei",Chiropractic
+Northland,"Smith's City","Smiths City Whangarei",Classic
+Northland,"Smith's City","Smiths City Whangarei",Mezzo
+Northland,"Smith's City","Smiths City Whangarei",Sanctuary
+Otago,"Beds R Us","Beds R Us Alexandra",Chiropractic
+Otago,"Beds R Us","Beds R Us Alexandra",Classic
+Otago,"Beds R Us","Beds R Us Alexandra",Sanctuary
+Otago,"Beds R Us","Beds R Us Alexandra",Swisstek
+Otago,"Beds R Us","Beds R Us Dunedin",Chiropractic
+Otago,"Beds R Us","Beds R Us Dunedin",Classic
+Otago,"Beds R Us","Beds R Us Dunedin",Sanctuary
+Otago,"Beds R Us","Beds R Us Dunedin",Swisstek
+Otago,Farmers,"Farmers Dunedin",Balance
+Otago,Farmers,"Farmers Dunedin",Chiropractic
+Otago,Farmers,"Farmers Dunedin",Classic
+Otago,Farmers,"Farmers Dunedin",Junior
+Otago,Farmers,"Farmers Dunedin",Sanctuary
+Otago,"Smith's City","Smiths City Alexandra",Balance
+Otago,"Smith's City","Smiths City Alexandra",Chiropractic
+Otago,"Smith's City","Smiths City Alexandra",Classic
+Otago,"Smith's City","Smiths City Alexandra",Mezzo
+Otago,"Smith's City","Smiths City Alexandra",Sanctuary
+Otago,"Smith's City","Smiths City Andersons Bay",Balance
+Otago,"Smith's City","Smiths City Andersons Bay",Chiropractic
+Otago,"Smith's City","Smiths City Andersons Bay",Classic
+Otago,"Smith's City","Smiths City Andersons Bay",Mezzo
+Otago,"Smith's City","Smiths City Andersons Bay",Sanctuary
+Otago,"Smith's City","Smiths City Queenstown",Balance
+Otago,"Smith's City","Smiths City Queenstown",Chiropractic
+Otago,"Smith's City","Smiths City Queenstown",Classic
+Otago,"Smith's City","Smiths City Queenstown",Mezzo
+Otago,"Smith's City","Smiths City Queenstown",Sanctuary
+Otago,"Smith's City","Smiths City Wanaka",Balance
+Otago,"Smith's City","Smiths City Wanaka",Chiropractic
+Otago,"Smith's City","Smiths City Wanaka",Classic
+Otago,"Smith's City","Smiths City Wanaka",Mezzo
+Otago,"Smith's City","Smiths City Wanaka",Sanctuary
+"Poverty Bay","Beds R Us","Fenns - Beds R Us Gisborne",Chiropractic
+"Poverty Bay","Beds R Us","Fenns - Beds R Us Gisborne",Classic
+"Poverty Bay","Beds R Us","Fenns - Beds R Us Gisborne",Sanctuary
+"Poverty Bay","Beds R Us","Fenns - Beds R Us Gisborne",Swisstek
+"Poverty Bay","Smith's City","Smiths City Gisborne",Balance
+"Poverty Bay","Smith's City","Smiths City Gisborne",Chiropractic
+"Poverty Bay","Smith's City","Smiths City Gisborne",Classic
+"Poverty Bay","Smith's City","Smiths City Gisborne",Mezzo
+"Poverty Bay","Smith's City","Smiths City Gisborne",Sanctuary
+"South Canterbury","Beds R Us","Beds R Us Ashburton",Chiropractic
+"South Canterbury","Beds R Us","Beds R Us Ashburton",Classic
+"South Canterbury","Beds R Us","Beds R Us Ashburton",Sanctuary
+"South Canterbury","Beds R Us","Beds R Us Ashburton",Swisstek
+"South Canterbury","Beds R Us","Beds R Us Timaru",Chiropractic
+"South Canterbury","Beds R Us","Beds R Us Timaru",Classic
+"South Canterbury","Beds R Us","Beds R Us Timaru",Sanctuary
+"South Canterbury","Beds R Us","Beds R Us Timaru",Swisstek
+"South Canterbury",Farmers,"Farmers Ashburton",Balance
+"South Canterbury",Farmers,"Farmers Ashburton",Chiropractic
+"South Canterbury",Farmers,"Farmers Ashburton",Classic
+"South Canterbury",Farmers,"Farmers Ashburton",Junior
+"South Canterbury",Farmers,"Farmers Ashburton",Sanctuary
+"South Canterbury",Farmers,"Farmers Timaru",Balance
+"South Canterbury",Farmers,"Farmers Timaru",Chiropractic
+"South Canterbury",Farmers,"Farmers Timaru",Classic
+"South Canterbury",Farmers,"Farmers Timaru",Junior
+"South Canterbury",Farmers,"Farmers Timaru",Sanctuary
+"South Canterbury","Smith's City","Smiths City Ashburton",Balance
+"South Canterbury","Smith's City","Smiths City Ashburton",Chiropractic
+"South Canterbury","Smith's City","Smiths City Ashburton",Classic
+"South Canterbury","Smith's City","Smiths City Ashburton",Mezzo
+"South Canterbury","Smith's City","Smiths City Ashburton",Sanctuary
+"South Canterbury","Smith's City","Smiths City Timaru",Balance
+"South Canterbury","Smith's City","Smiths City Timaru",Chiropractic
+"South Canterbury","Smith's City","Smiths City Timaru",Classic
+"South Canterbury","Smith's City","Smiths City Timaru",Mezzo
+"South Canterbury","Smith's City","Smiths City Timaru",Sanctuary
+Southland,"Beds R Us","Beds R Us Invercargill",Chiropractic
+Southland,"Beds R Us","Beds R Us Invercargill",Classic
+Southland,"Beds R Us","Beds R Us Invercargill",Sanctuary
+Southland,"Beds R Us","Beds R Us Invercargill",Swisstek
+Southland,Farmers,"Farmers Invercargill",Balance
+Southland,Farmers,"Farmers Invercargill",Chiropractic
+Southland,Farmers,"Farmers Invercargill",Classic
+Southland,Farmers,"Farmers Invercargill",Junior
+Southland,Farmers,"Farmers Invercargill",Sanctuary
+Southland,"Smith's City","Smiths City Gore",Balance
+Southland,"Smith's City","Smiths City Gore",Chiropractic
+Southland,"Smith's City","Smiths City Gore",Classic
+Southland,"Smith's City","Smiths City Gore",Mezzo
+Southland,"Smith's City","Smiths City Gore",Sanctuary
+Southland,"Smith's City","Smiths City Invercargill",Balance
+Southland,"Smith's City","Smiths City Invercargill",Chiropractic
+Southland,"Smith's City","Smiths City Invercargill",Classic
+Southland,"Smith's City","Smiths City Invercargill",Mezzo
+Southland,"Smith's City","Smiths City Invercargill",Sanctuary
+Taranaki,"Beds R Us","Beds R Us Hawera",Chiropractic
+Taranaki,"Beds R Us","Beds R Us Hawera",Classic
+Taranaki,"Beds R Us","Beds R Us Hawera",Sanctuary
+Taranaki,"Beds R Us","Beds R Us Hawera",Swisstek
+Taranaki,"Beds R Us","Beds R Us New Plymouth",Chiropractic
+Taranaki,"Beds R Us","Beds R Us New Plymouth",Classic
+Taranaki,"Beds R Us","Beds R Us New Plymouth",Sanctuary
+Taranaki,"Beds R Us","Beds R Us New Plymouth",Swisstek
+Taranaki,"Beds R Us","Beds R Us Stratford",Chiropractic
+Taranaki,"Beds R Us","Beds R Us Stratford",Classic
+Taranaki,"Beds R Us","Beds R Us Stratford",Sanctuary
+Taranaki,"Beds R Us","Beds R Us Stratford",Swisstek
+Taranaki,Farmers,"Farmers New Plymouth",Balance
+Taranaki,Farmers,"Farmers New Plymouth",Chiropractic
+Taranaki,Farmers,"Farmers New Plymouth",Classic
+Taranaki,Farmers,"Farmers New Plymouth",Junior
+Taranaki,Farmers,"Farmers New Plymouth",Sanctuary
+Waikato,"Beds R Us","Beds R Us Morrinsville",Chiropractic
+Waikato,"Beds R Us","Beds R Us Morrinsville",Classic
+Waikato,"Beds R Us","Beds R Us Morrinsville",Sanctuary
+Waikato,"Beds R Us","Beds R Us Morrinsville",Swisstek
+Waikato,"Beds R Us","Beds R Us Otorohanga",Chiropractic
+Waikato,"Beds R Us","Beds R Us Otorohanga",Classic
+Waikato,"Beds R Us","Beds R Us Otorohanga",Sanctuary
+Waikato,"Beds R Us","Beds R Us Otorohanga",Swisstek
+Waikato,"Beds R Us","Beds R Us Taupo",Chiropractic
+Waikato,"Beds R Us","Beds R Us Taupo",Classic
+Waikato,"Beds R Us","Beds R Us Taupo",Sanctuary
+Waikato,"Beds R Us","Beds R Us Taupo",Swisstek
+Waikato,"Beds R Us","Beds R Us Te Rapa",Chiropractic
+Waikato,"Beds R Us","Beds R Us Te Rapa",Classic
+Waikato,"Beds R Us","Beds R Us Te Rapa",Sanctuary
+Waikato,"Beds R Us","Beds R Us Te Rapa",Swisstek
+Waikato,"Beds R Us","Van Dyks Beds R Us Cambridge",Chiropractic
+Waikato,"Beds R Us","Van Dyks Beds R Us Cambridge",Classic
+Waikato,"Beds R Us","Van Dyks Beds R Us Cambridge",Sanctuary
+Waikato,"Beds R Us","Van Dyks Beds R Us Cambridge",Swisstek
+Waikato,"Beds R Us","Van Dyks Beds R Us Putaruru",Chiropractic
+Waikato,"Beds R Us","Van Dyks Beds R Us Putaruru",Classic
+Waikato,"Beds R Us","Van Dyks Beds R Us Putaruru",Sanctuary
+Waikato,"Beds R Us","Van Dyks Beds R Us Putaruru",Swisstek
+Waikato,Farmers,"Farmers Centre Place Hamilton",Balance
+Waikato,Farmers,"Farmers Centre Place Hamilton",Chiropractic
+Waikato,Farmers,"Farmers Centre Place Hamilton",Classic
+Waikato,Farmers,"Farmers Centre Place Hamilton",Junior
+Waikato,Farmers,"Farmers Centre Place Hamilton",Sanctuary
+Waikato,Farmers,"Farmers Chartwell",Balance
+Waikato,Farmers,"Farmers Chartwell",Chiropractic
+Waikato,Farmers,"Farmers Chartwell",Classic
+Waikato,Farmers,"Farmers Chartwell",Junior
+Waikato,Farmers,"Farmers Chartwell",Sanctuary
+Waikato,Farmers,"Farmers Taupo",Balance
+Waikato,Farmers,"Farmers Taupo",Chiropractic
+Waikato,Farmers,"Farmers Taupo",Classic
+Waikato,Farmers,"Farmers Taupo",Junior
+Waikato,Farmers,"Farmers Taupo",Sanctuary
+Waikato,Farmers,"Farmers Te Awa at The Base Hamilton",Balance
+Waikato,Farmers,"Farmers Te Awa at The Base Hamilton",Chiropractic
+Waikato,Farmers,"Farmers Te Awa at The Base Hamilton",Classic
+Waikato,Farmers,"Farmers Te Awa at The Base Hamilton",Junior
+Waikato,Farmers,"Farmers Te Awa at The Base Hamilton",Sanctuary
+Waikato,"Smith's City","Smiths City Taupo",Balance
+Waikato,"Smith's City","Smiths City Taupo",Chiropractic
+Waikato,"Smith's City","Smiths City Taupo",Classic
+Waikato,"Smith's City","Smiths City Taupo",Mezzo
+Waikato,"Smith's City","Smiths City Taupo",Sanctuary
+Waikato,"The Bed People","The Bed People Te Rapa",Chiropractic
+Waikato,"The Bed People","The Bed People Te Rapa",Sanctuary
+Wairarapa,"Beds R Us","Beds R Us Masterton - Bryans Furniture",Chiropractic
+Wairarapa,"Beds R Us","Beds R Us Masterton - Bryans Furniture",Classic
+Wairarapa,"Beds R Us","Beds R Us Masterton - Bryans Furniture",Sanctuary
+Wairarapa,"Beds R Us","Beds R Us Masterton - Bryans Furniture",Swisstek
+Wairarapa,Farmers,"Farmers Masterton",Balance
+Wairarapa,Farmers,"Farmers Masterton",Chiropractic
+Wairarapa,Farmers,"Farmers Masterton",Classic
+Wairarapa,Farmers,"Farmers Masterton",Junior
+Wairarapa,Farmers,"Farmers Masterton",Sanctuary
+Wanganui,"Beds R Us","Beds R Us Wanganui",Chiropractic
+Wanganui,"Beds R Us","Beds R Us Wanganui",Classic
+Wanganui,"Beds R Us","Beds R Us Wanganui",Sanctuary
+Wanganui,"Beds R Us","Beds R Us Wanganui",Swisstek
+Wanganui,Farmers,"Farmers Wanganui",Balance
+Wanganui,Farmers,"Farmers Wanganui",Chiropractic
+Wanganui,Farmers,"Farmers Wanganui",Classic
+Wanganui,Farmers,"Farmers Wanganui",Junior
+Wanganui,Farmers,"Farmers Wanganui",Sanctuary
+Wanganui,"Independent Store","E C Dallison and Sons Ltd Waverly",Balance
+Wanganui,"Independent Store","E C Dallison and Sons Ltd Waverly",Chiropractic
+Wanganui,"Independent Store","E C Dallison and Sons Ltd Waverly",Classic
+Wellington,"Beds R Us","Beds R Us Kapiti",Chiropractic
+Wellington,"Beds R Us","Beds R Us Kapiti",Classic
+Wellington,"Beds R Us","Beds R Us Kapiti",Sanctuary
+Wellington,"Beds R Us","Beds R Us Kapiti",Swisstek
+Wellington,"Beds R Us","Beds R Us Lower Hutt",Chiropractic
+Wellington,"Beds R Us","Beds R Us Lower Hutt",Classic
+Wellington,"Beds R Us","Beds R Us Lower Hutt",Sanctuary
+Wellington,"Beds R Us","Beds R Us Lower Hutt",Swisstek
+Wellington,"Beds R Us","Beds R Us Thorndon Quay",Chiropractic
+Wellington,"Beds R Us","Beds R Us Thorndon Quay",Classic
+Wellington,"Beds R Us","Beds R Us Thorndon Quay",Sanctuary
+Wellington,"Beds R Us","Beds R Us Thorndon Quay",Swisstek
+Wellington,"Beds R Us","Paula's Furniture & Beds R Us Paraparaumu",Chiropractic
+Wellington,"Beds R Us","Paula's Furniture & Beds R Us Paraparaumu",Classic
+Wellington,"Beds R Us","Paula's Furniture & Beds R Us Paraparaumu",Sanctuary
+Wellington,"Beds R Us","Paula's Furniture & Beds R Us Paraparaumu",Swisstek
+Wellington,Farmers,"Farmers Paraparaumu",Balance
+Wellington,Farmers,"Farmers Paraparaumu",Chiropractic
+Wellington,Farmers,"Farmers Paraparaumu",Classic
+Wellington,Farmers,"Farmers Paraparaumu",Junior
+Wellington,Farmers,"Farmers Paraparaumu",Sanctuary
+Wellington,Farmers,"Farmers Porirua",Balance
+Wellington,Farmers,"Farmers Porirua",Chiropractic
+Wellington,Farmers,"Farmers Porirua",Classic
+Wellington,Farmers,"Farmers Porirua",Junior
+Wellington,Farmers,"Farmers Porirua",Sanctuary
+Wellington,Farmers,"Farmers Queensgate",Balance
+Wellington,Farmers,"Farmers Queensgate",Chiropractic
+Wellington,Farmers,"Farmers Queensgate",Classic
+Wellington,Farmers,"Farmers Queensgate",Junior
+Wellington,Farmers,"Farmers Queensgate",Sanctuary
+Wellington,Farmers,"Farmers Upper Hutt",Balance
+Wellington,Farmers,"Farmers Upper Hutt",Chiropractic
+Wellington,Farmers,"Farmers Upper Hutt",Classic
+Wellington,Farmers,"Farmers Upper Hutt",Junior
+Wellington,Farmers,"Farmers Upper Hutt",Sanctuary
+Wellington,"Smith's City","Smiths City Kapiti",Balance
+Wellington,"Smith's City","Smiths City Kapiti",Chiropractic
+Wellington,"Smith's City","Smiths City Kapiti",Classic
+Wellington,"Smith's City","Smiths City Kapiti",Mezzo
+Wellington,"Smith's City","Smiths City Kapiti",Sanctuary
+Wellington,"Smith's City","Smiths City Lower Hutt",Balance
+Wellington,"Smith's City","Smiths City Lower Hutt",Chiropractic
+Wellington,"Smith's City","Smiths City Lower Hutt",Classic
+Wellington,"Smith's City","Smiths City Lower Hutt",Mezzo
+Wellington,"Smith's City","Smiths City Lower Hutt",Sanctuary
+Wellington,"Smith's City","Smiths City Porirua",Balance
+Wellington,"Smith's City","Smiths City Porirua",Chiropractic
+Wellington,"Smith's City","Smiths City Porirua",Classic
+Wellington,"Smith's City","Smiths City Porirua",Mezzo
+Wellington,"Smith's City","Smiths City Porirua",Sanctuary
+Wellington,"The Bed People","The Bed People Lower Hutt",Chiropractic
+Wellington,"The Bed People","The Bed People Lower Hutt",Sanctuary
+"West Coast","Beds R Us","Beds R Us Greymouth",Chiropractic
+"West Coast","Beds R Us","Beds R Us Greymouth",Classic
+"West Coast","Beds R Us","Beds R Us Greymouth",Sanctuary
+"West Coast","Beds R Us","Beds R Us Greymouth",Swisstek
+"West Coast","Beds R Us","Beds R Us Hokitika",Chiropractic
+"West Coast","Beds R Us","Beds R Us Hokitika",Classic
+"West Coast","Beds R Us","Beds R Us Hokitika",Sanctuary
+"West Coast","Beds R Us","Beds R Us Hokitika",Swisstek
+"West Coast","Beds R Us","Beds R Us Westport",Chiropractic
+"West Coast","Beds R Us","Beds R Us Westport",Classic
+"West Coast","Beds R Us","Beds R Us Westport",Sanctuary
+"West Coast","Beds R Us","Beds R Us Westport",Swisstek
+"West Coast","Beds R Us","Y Furniture & Beds R Us Greymouth",Chiropractic
+"West Coast","Beds R Us","Y Furniture & Beds R Us Greymouth",Classic
+"West Coast","Beds R Us","Y Furniture & Beds R Us Greymouth",Sanctuary
+"West Coast","Beds R Us","Y Furniture & Beds R Us Greymouth",Swisstek
+"West Coast","Smith's City","Smiths City Greymouth",Balance
+"West Coast","Smith's City","Smiths City Greymouth",Chiropractic
+"West Coast","Smith's City","Smiths City Greymouth",Classic
+"West Coast","Smith's City","Smiths City Greymouth",Mezzo
+"West Coast","Smith's City","Smiths City Greymouth",Sanctuary

@@ -1,0 +1,1 @@
+<input type="text" name="gform_retailer_field_id" id="gform_retailer_field_id" value="<?php echo get_option('gform_retailer_field_id'); ?>" />

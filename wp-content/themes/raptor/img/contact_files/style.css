@@ -1,0 +1,67 @@
+/*
+Theme Name: Overdose Raptor Sleep Market
+Author: the Overdose team
+Author URI: http://wordpress.org/
+Description: Overdose team theme special for Sleep Market.
+Version: 1.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: sleep-market
+Text Domain: raptor.overdose.digital
+Upgrade: false
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+a._miracoil-nav-link.active {
+    text-decoration: underline;
+}
+
+a._miracoil-nav-link:hover {
+    text-decoration: underline;
+}
+._rating-group-title {
+    max-width: 70px;
+}
+
+.app-svg img {
+    width: 45px;
+    height: 45px;
+}
+
+.app-main-menu__link-icon .app-svg img {
+    width: 25px;
+    height: 27px;
+}
+
+#app-mobile-menu ul {list-style-type: none;}
+
+._custom-load-more {
+    background-color: #fff !important;
+    color: #4F3C82 !important;
+    border: 1px solid #4F3C82 !important;
+    text-transform: uppercase;
+    font-weight: bold !important;
+}
+
+button.alm-load-more-btn.done{
+   display: none;
+}
+
+._materials-title {
+    text-transform: capitalize;
+}
+
+.hidden {
+    display: none;
+}
+
+.header-desctop-navigation.with-news-article {
+    padding-bottom: 0;
+}
+
+.header-desctop-navigation.with-news-article .article-news-box.article-ps-box,
+.header-desctop-navigation.with-news-article .article-news-box {
+    background: #fff;
+    margin-top: 60px;
+    color: #221048;
+}

@@ -1,0 +1,986 @@
+/*
+TABLE OF CONTENTS
+
+1. General styles
+2. Header
+3. Sections
+ 3a. Section 1
+ 3b. Section 2
+ 3c. Section 3
+ 3d. Section 4
+ 3e. Section 5
+ 3f. Section 6
+ 3g. Section 7
+ 3h. Section 8
+4. CTA boxes
+5.
+6. Responsive layouts
+*/
+
+/* 1. General styles */
+
+@font-face {
+    font-family: 'gothambold';
+    src: url('/custom/SleepMaker/Infographic/css/gotham-bold-webfont.woff2') format('woff2'), url('/custom/SleepMaker/Infographic/css/gotham-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+@font-face {
+    font-family: 'gothambook';
+    src: url('/custom/SleepMaker/Infographic/css/gotham-book-webfont.woff2') format('woff2'), url('/custom/SleepMaker/Infographic/css/gotham-book-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+html {
+    font-size: 16px;
+    font-family: 'gothambook';
+}
+
+.row {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.arrow-row {
+    padding-top: 110px;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.section-1 .arrow-row {
+    padding-top: 120px;
+}
+
+.cta-row + .arrow-row {
+    padding-top: 45px;
+}
+
+.down-arrow {
+    position: absolute;
+    bottom: -40px;
+    z-index: 5;
+    clear: both;
+}
+
+section {
+    padding-top: 100px;
+    position: relative;
+}
+
+.blue {
+    color: #193c6f;
+}
+
+.white {
+    color: #fff;
+}
+
+.teal {
+    color: #b9d6d2;
+}
+
+.text-centre {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+h1, h2 {
+    font-size: 3.125rem;
+    font-family: 'gothambold';
+}
+
+.large-hero-text {
+    font-size: 2rem;
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: 1.125rem;
+    line-height: 1.4;
+}
+
+h4 {
+    font-size: 1.125rem;
+    line-height: 1.4;
+    font-family: 'gothambold';
+}
+
+p {
+    font-size: 1rem;
+}
+
+strong {
+    font-family: 'gothambold';
+}
+
+.mobile-only {
+    display: none;
+    visibility: hidden;
+}
+
+.small-text {
+    font-size: .8rem;
+}
+
+.down-arrow img {
+    width: 70px;
+}
+
+button {
+    font-size: 1.25rem;
+    padding: 1.1rem 1.5rem;
+    border-radius: .5rem;
+    font-family: 'gothambook';
+    box-shadow: 0;
+    border: 0;
+    background-color: #ed4c5c;
+    color: #fff;
+}
+
+    button:hover {
+        background-color: #193c6f;
+    }
+
+.white-button {
+    background-color: #fff;
+    color: #863176;
+}
+
+a.cta-button:hover {
+    background-color: #193c6f;
+}
+
+a.cta-button {
+    text-decoration: none;
+}
+
+.cta-button {
+    margin-left: 1rem;
+    font-size: 1.25rem;
+    padding: 1.1rem 1.5rem;
+    border-radius: .5rem;
+    font-family: 'gothambook';
+    box-shadow: 0;
+    border: 0;
+    background-color: #ed4c5c;
+    color: #fff;
+}
+
+/* 2. Header */
+header {
+    height: 125px;
+}
+
+.logo {
+    height: auto;
+    padding-top: 2rem;
+}
+
+
+/* 3. Sections */
+.section-1, .section-3, .section-4, .section-5, .section-7 {
+    color: #193c6f;
+}
+
+.section-2, .section-6, .section-8 {
+    color: #fff;
+}
+
+.section-1, .section-2 {
+    height: 675px;
+}
+
+.section-3 {
+    height: 940px;
+}
+
+.section-4 {
+    height: 1100px;
+}
+
+.section-5 {
+    height: 830px;
+}
+
+.section-6 {
+    height: 630px;
+}
+
+.section-7 {
+    height: 1040px;
+}
+
+.section-8 {
+    height: 700px;
+}
+
+/* 3a. Section 1 */
+
+.section-1 {
+    background-image: url('/custom/SleepMaker/Infographic/images/hero-bg.jpg');
+    background-size: cover;
+}
+
+.small-border {
+    border-top: 5px solid #193c6f;
+    width: 8%;
+}
+
+.small-border-white {
+    border-top: 5px solid #fff;
+    width: 8%;
+}
+
+.hero-text {
+    font-size: 1.45rem;
+    line-height: 1.2;
+}
+
+.hero-image {
+    max-width: 95%;
+    float: right;
+}
+
+/* 3b. Section 2 */
+
+.section-2 {
+    background-image: url('/custom/SleepMaker/Infographic/images/sleep-quick-facts-bg.jpg');
+    background-size: cover;
+}
+
+
+.small-circle {
+    max-width: 55%;
+    margin: 2rem auto 3rem;
+    display: block;
+}
+
+.med-text {
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+.jump-hover:hover {
+    margin-top: 1.5rem;
+    margin-bottom: 3.5rem;
+}
+
+
+/* 3c. Section 3 */
+
+.section-3 {
+    background-image: url('/custom/SleepMaker/Infographic/images/body-telling-you-bg.jpg');
+    background-size: cover;
+}
+
+.medium-circle {
+    width: 280px;
+    margin: 0 auto;
+    display: block;
+    height: 280px;
+}
+
+    .medium-circle h3 {
+        width: 70%;
+        margin: 0 auto;
+        padding-top: 4rem;
+        font-size: 1.125rem;
+        color: #fff;
+    }
+
+    .medium-circle p {
+        width: 70%;
+        margin: 0 auto;
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+.image-1 {
+    background-image: url('/custom/SleepMaker/Infographic/images/body-telling-you-1.png');
+    background-size: cover;
+}
+
+.image-2 {
+    background-image: url('/custom/SleepMaker/Infographic/images/body-telling-you-2.png');
+    background-size: cover;
+}
+
+.image-3 {
+    background-image: url('/custom/SleepMaker/Infographic/images/body-telling-you-3.png');
+    background-size: cover;
+}
+
+.flip {
+    -webkit-perspective: 800;
+    position: relative;
+    margin: 50px auto;
+    height: 280px;
+    width: 280px;
+}
+
+.coin {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -webkit-transition: -webkit-transform 1s;
+    -moz-transition: -moz-transform 1s;
+    -o-transition: -o-transform 1s;
+    transition: transform 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 50% 50%;
+}
+
+.objectfit .flip .coin.flipped {
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
+
+.objectfit .flip .coin {
+    width: 100%;
+    height: 100%;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: -webkit-transform 1s;
+    -moz-transition: -moz-transform 1s;
+    -o-transition: -o-transform 1s;
+    transition: transform 1s;
+}
+
+.flip .coin .face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: all 1.0s ease-in;
+    z-index: 2;
+}
+
+.flip .coin .front {
+    position: absolute;
+    z-index: 1;
+}
+
+.no-objectfit .coin .back {
+    visibility: hidden;
+    display: none;
+}
+
+.no-objectfit .coin .front {
+    visibility: visible;
+    display: block;
+}
+
+.no-objectfit .coin.flipped .front {
+    visibility: hidden;
+    display: none;
+}
+
+.no-objectfit .coin.flipped .back {
+    visibility: visible;
+    display: block;
+    cursor: pointer;
+    background-color: #193c6f;
+    border-radius: 100%;
+}
+
+.objectfit .flip .coin .back {
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+    cursor: pointer;
+    background-color: #193c6f;
+    border-radius: 100%;
+}
+
+/* 3d. Section 4 */
+
+.section-4 {
+    background-color: #b9d6d2;
+}
+
+.highlight-text {
+    color: #193c6f!important;
+}
+
+.select-layer-button {
+    background-color: #fff;
+    color: #193c6f;
+    margin-bottom: 1rem;
+}
+
+    .select-layer-button:hover {
+        color: #fff;
+    }
+
+.mattress-layer-image {
+    background-image: url("/custom/SleepMaker/Infographic/images/mattress-exploded-bg.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+    .mattress-layer-image img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 70px;
+        margin-bottom: 30px;
+    }
+
+.mattress-layer-buttons {
+    text-align: center;
+}
+
+.mattress-layer-text {
+    color: #fff;
+}
+
+    .mattress-layer-text h4 {
+        margin-top: 2.2rem;
+        margin-bottom: .8rem;
+    }
+
+#mattress-comfort-layer {
+    display: none;
+}
+
+#mattress-support-layer {
+    display: none;
+}
+
+
+/* 3e. Section 5 */
+
+.section-5 {
+    background-image: url('/custom/SleepMaker/Infographic/images/soft-med-firm-bg.jpg');
+    background-size: cover;
+}
+
+    .section-5 .blurb {
+        margin-bottom: 50px;
+    }
+
+.narrow-text {
+    width: 65%;
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+.small-jump-hover:hover {
+    margin-top: 1.5rem;
+    margin-bottom: 3.5rem;
+}
+
+.med-jump-hover:hover {
+    margin-top: .5rem;
+    margin-bottom: 4.5rem;
+}
+
+.large-jump-hover:hover {
+    margin-top: -.5rem;
+    margin-bottom: 5.5rem;
+}
+
+/* 3f. Section 6 */
+
+.section-6 {
+    background-image: url('/custom/SleepMaker/Infographic/images/spring-in-back-bg.jpg');
+    background-size: cover;
+}
+
+
+/* 3g. Section 7 */
+
+.section-7 {
+    background-image: url('/custom/SleepMaker/Infographic/images/sleep-style-bg.jpg');
+    background-size: cover;
+}
+
+    .section-7 .flip {
+        -webkit-perspective: 800px;
+        -moz-perspective: 800px;
+        -o-perspective: 800px;
+        perspective: 800px;
+        position: relative;
+        margin: 50px auto;
+        height: 340px;
+        width: 340px;
+    }
+
+        .section-7 .flip .coin .back {
+            height: 340px;
+            width: 340px;
+            background-color: #fff;
+            border-radius: 100%;
+            border: 1px solid #193c6f;
+        }
+
+            .section-7 .flip .coin .back p {
+                font-size: .93rem;
+                width: 80%;
+                text-align: center;
+                margin: 20px auto 0;
+            }
+
+                .section-7 .flip .coin .back p:first-of-type {
+                    margin: 80px auto 0;
+                }
+
+.large-circle {
+    max-width: 100%;
+    display: block;
+}
+
+/* 3h. Section 8 */
+
+.section-8 {
+    background-color: #b9d6d2;
+}
+
+.mattress-image {
+    max-width: 100%;
+}
+
+.section-8 .cta-row {
+    max-width: 1200px;
+}
+
+    .section-8 .cta-row .cta-horizontal {
+        height: 232px;
+    }
+
+/* 4. CTA boxes */
+
+.cta-row {
+    max-width: 1100px;
+    margin: 3em auto 6em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cta-horizontal {
+    width: 48%;
+    height: 214px;
+    font-size: 1.5rem;
+}
+
+.cta-long {
+    width: 100%;
+    background-color: #b9d6d2;
+    ;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+}
+
+.white-background {
+    background-color: #fff;
+    border-radius: 1rem;
+}
+
+    .white-background p, .cta-long p {
+        color: #193c6f;
+        margin: 0;
+        font-size: 1.3rem;
+    }
+
+.cta-long p {
+    padding: 2.3rem 2rem 2.3rem 2.2rem;
+}
+
+.white-background p, .cta-long p {
+    padding: 1.5rem 2rem 1.7rem 2.2rem;
+}
+
+.miracoil-background {
+    background-image: url('/custom/SleepMaker/Infographic/images/Miracoil-CTA.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+    .miracoil-background p {
+        padding-left: 1rem;
+        max-width: 75%;
+        color: #193c6f;
+    }
+
+.coccoon-background {
+    background-image: url('/custom/SleepMaker/Infographic/images/coccoon-cta.png');
+    background-size: cover;
+    color: #fff;
+    background-repeat: no-repeat;
+}
+
+    .coccoon-background p {
+        padding: 1rem;
+    }
+
+.mattress-cta {
+    background-image: url('/custom/SleepMaker/Infographic/images/mattress-selector-cta.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.mattress-cta-portrait {
+    background-image: url('/custom/SleepMaker/Infographic/images/mattress-selector-portrait-cta.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: #193c6f;
+    max-height: 468px;
+    height: 468px;
+}
+
+    .mattress-cta-portrait p {
+        padding: 11rem 1.5rem 1rem 1rem;
+        font-size: 1.6rem;
+    }
+
+    .mattress-cta-portrait .cta-button {
+        margin: 0 1.5rem 1rem 1rem;
+        padding: 1.1rem 1.5rem;
+        font-size: 1.4rem;
+        text-align: left;
+    }
+
+    .mattress-cta-portrait a.cta-button {
+        display: block;
+    padding-left: 1.5rem;
+    text-align: center;
+    }
+
+.mattress-cta p {
+    padding-left: 1rem;
+    font-size: 1.1rem;
+    max-width: 70%;
+    color: #193c6f;
+}
+
+.cta-horizontal a.cta-button {
+    position: relative;
+    top: 1.5rem;
+}
+
+/* 6. Responsive layouts */
+
+@media screen and (max-width: 1200px) {
+
+    html {
+        width: 100%;
+    }
+
+    .section-1, .section-2, .section-3, .section-4, .section-5, .section-6, .section-7, .section-8 {
+        height: auto;
+    }
+
+    .logo {
+        padding-left: 2rem;
+    }
+
+    .row, .arrow-row {
+        width: 95%;
+    }
+
+    .cta-row {
+        flex-direction: column;
+    }
+
+        .cta-row .cta-horizontal {
+            margin: 0 auto 3rem;
+            width: 460px;
+            height: auto;
+            min-height: 230px;
+            background-size: contain;
+        }
+
+    .mattress-cta-portrait {
+        background-position: center;
+        max-width: 310px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .coin-flip {
+        -webkit-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .cta-horizontal a.cta-button {
+        top: 0;
+    }
+
+    .mattress-cta a.cta-button {
+        font-size: 1.05rem;
+    }
+
+    .mattress-cta-portrait p {
+        font-size: 1.2rem;
+        margin-bottom: 0;
+    }
+
+    .mattress-cta-portrait a.cta-button {
+        font-size: 1.1rem;
+    }
+
+    .section-7 .flip .coin .back p {
+        font-size: .9rem;
+    }
+}
+
+@media screen and (max-width: 60em) {
+
+    .hero-image {
+        display: block;
+        float: none;
+        margin: 0 auto;
+    }
+
+    h3, h4, .medium-circle h3 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1.3rem;
+    }
+
+    .white-background p, .cta-long p {
+        font-size: 1rem;
+    }
+
+    .small-text {
+        font-size: .75rem;
+    }
+
+    .text-right {
+        text-align: center;
+    }
+
+    .row {
+        position: relative;
+        padding-bottom: 60px;
+        margin: 0 auto;
+    }
+
+    .cta-row + .arrow-row {
+        padding-top: 0;
+    }
+
+    .mobile-only {
+        display: block!important;
+        visibility: visible!important;
+    }
+
+    .small-hide {
+        display: none!important;
+        visibility: hidden!important;
+    }
+
+    .mobile-only img {
+        max-width: 50%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .mobile-only p {
+        text-align: center;
+    }
+
+    .mobile-only h3 {
+        margin-bottom: 4.5rem;
+    }
+
+    .mattress-layer-text {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .small-circle {
+        max-width: 35%;
+    }
+
+    .med-text {
+        max-width: 70%;
+        margin: 0 auto 2.5em;
+    }
+
+    .flip {
+        width: 340px;
+        height: 340px;
+    }
+
+    .section-7 .flip, .section-7 .flip .coin .back {
+        width: 340px;
+        height: 340px;
+    }
+
+        .section-7 .flip .coin .back p {
+            font-size: 1.2rem;
+        }
+
+    .cta-row {
+        margin: 3rem auto 0;
+        padding-bottom: 3rem;
+    }
+
+        .cta-row .cta-horizontal, .section-8 .cta-row .cta-horizontal {
+            width: 100%;
+        }
+
+    .section-8 .cta-row .cta-horizontal {
+        width: 100%;
+        height: 150px;
+        min-height: 150px;
+    }
+
+    .cta-horizontal {
+        font-size: 1rem;
+    }
+
+        .cta-horizontal p {
+            padding: 0 1rem;
+            margin-bottom: .4rem;
+            font-size: 1.1rem;
+        }
+
+    .white-background {
+        height: auto;
+    }
+
+        .white-background p {
+            font-size: 1.2rem;
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+            height: auto;
+        }
+
+    .cta-horizontal .small-text {
+        padding: 0 1rem;
+        margin: .2rem;
+    }
+
+    .cta-horizontal a.cta-button {
+        top: 0;
+        font-size: 1rem;
+        padding: .5rem 1rem;
+    }
+
+    .text-right {
+        text-align: center;
+    }
+
+    .mattress-image {
+        max-width: 50%;
+        display: block;
+        float: none;
+        margin: 0 auto 2rem;
+    }
+}
+
+@media screen and (max-width: 40em) {
+
+    .section-1 {
+        padding-top: 20px;
+    }
+
+    h1, h2 {
+        font-size: 2.4rem;
+    }
+
+    h3, h4, .medium-circle h3 {
+        font-size: 1.3rem;
+    }
+
+    .medium-circle h3 {
+        width: 75%;
+        padding-top: 2rem;
+    }
+
+    .logo {
+        margin: 0 auto;
+        padding-left: 0;
+    }
+
+    .section-8 .cta-row .cta-horizontal {
+        width: 100%;
+        height: 150px;
+        min-height: 150px;
+    }
+
+    .cta-horizontal {
+        font-size: 1rem;
+    }
+
+        .cta-horizontal p {
+            padding: 0 1rem;
+            margin-bottom: .4rem;
+            font-size: .9rem;
+        }
+
+        .cta-horizontal .small-text {
+            padding: 0 1rem;
+            margin: .2rem;
+            font-size: .55rem;
+        }
+
+    .miracoil-background p {
+        font-size: .8rem;
+    }
+
+    .white-background p {
+        font-size: 1.2rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        height: auto;
+    }
+
+    .cta-horizontal a.cta-button {
+        top: 0;
+        font-size: 1rem;
+        padding: .5rem 1rem;
+        max-width: 60%;
+    }
+
+    .teal {
+        color: #ed4c5c;
+        font-size: 1.2rem;
+        font-family: 'gothambold';
+    }
+
+    .arrow-row {
+        padding-top: 0;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .flip, .section-7 .flip, .section-7 .flip .coin .back {
+        width: 280px;
+        height: 280px;
+        margin: 0 auto;
+    }
+
+    .coin-flip {
+        width: 280px;
+    }
+}
+

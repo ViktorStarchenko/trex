@@ -1,0 +1,1 @@
+<input type="text" name="share_email_subject" id="share_email_subject" value="<?php echo get_option('share_email_subject'); ?>" />

@@ -1,0 +1,1 @@
+<input type="text" name="retailers_twists_modal_title" id="retailers_twists_modal_title" style="width: 100%;" value="<?php echo get_option('retailers_twists_modal_title'); ?>" />

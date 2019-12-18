@@ -1,0 +1,1 @@
+<textarea rows="6" name="retailers_twists_modal_text" id="retailers_twists_modal_text" style="width: 100%;"><?php echo get_option('retailers_twists_modal_text'); ?></textarea>
