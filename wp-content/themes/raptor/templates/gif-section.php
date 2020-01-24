@@ -7,6 +7,7 @@ $attrs['cta_link_gif'] = isset($attrs['cta_link']) ? $attrs['cta_link'] : '';
 $attrs['url_gif'] = isset($attrs['gif']) ? $attrs['gif'] : '';
 $attrs['url_video'] = isset($attrs['video']) ? $attrs['video'] : '';
 $attrs['container'] = isset($attrs['container']) ? $attrs['container'] : '';
+$attrs['url_mob_img'] = isset($attrs['url_mob_img']) ? $attrs['url_mob_img'] : '';
 
 //$attrs['url_video'] = 'http://trex.staging.overdose.digital/wp-content/uploads/2019/03/cameo-falling.mp4';
 
@@ -20,9 +21,10 @@ $attrs['container'] = isset($attrs['container']) ? $attrs['container'] : '';
     <section class="gif-section <?= $class; ?> ">
         <img src="<?= $attrs['gif'] ?>" alt="<?= $attrs['title_gif']  ?>" class="lazy-load video-image" />
         <?php if($attrs['url_video']) : ?>
-            <video class="lazy-load video-box" src="<?= $attrs['url_video']; ?>" autoplay muted loop>
+            <video class="lazy-load video-box" id="video-banner" src="<?= $attrs['url_video']; ?>" autoplay muted loop>
                 Your browser does not support the video tag.
             </video>
+            <div id="mob-banner-image" style="background: url('<?= $attrs['url_mob_img']  ?>') no-repeat center center;"></div>
         <?php endif; ?>
         <div class="gif-info">
             <?php if( $attrs['title_gif'] ) : ?>

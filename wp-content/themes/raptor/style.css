@@ -367,7 +367,19 @@ a.app-filter-result__detail-special{
     ._header-nav.app-lg-hidden{
         display: none!important;
     }
+
+    #video-banner{
+        display: none;
+    }
 }
+
+#mob-banner-image{
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; height: 610px; width: 100%;
+}
+
 @font-face {
     font-family: 'GothamLight';
     src: url("/wp-content/themes/raptor/fonts/Gotham-Light.otf") format("opentype"),
@@ -557,6 +569,10 @@ body, html{
         background: -moz-linear-gradient(left,transparent 0,rgba(0,0,0,.2) 100%);
         background: -webkit-linear-gradient(left,transparent 0,rgba(0,0,0,.2) 100%);
         background: linear-gradient(to left,transparent 0,rgba(0,0,0,.2) 100%);
+    }
+
+    #mob-banner-image{
+        display: none;
     }
 }
 
