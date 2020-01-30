@@ -958,6 +958,10 @@ function included_post_categories($should_index, WP_Post $post)
             }
         }
     }
+    
+    if ($post->post_type == 'page' && $post->post_status == 'publish' && $post->post_name != 'sitemap') {
+        $should_index = true;
+    }
 
     return $should_index;
 }
