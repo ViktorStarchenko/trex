@@ -252,7 +252,7 @@
         ?>
         <div class="article-news-box">
             <div class="app-container content">
-                <h1 class="page-h1"><?php echo get_field('special_offers_title'); ?></h1>
+                <h1 id="SpecialOffers" class="page-h1"><?php echo get_field('special_offers_title'); ?></h1>
                 <?php $excerpt = get_the_excerpt(); ?>
 
                     <div class="page-subtitle">
