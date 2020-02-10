@@ -24,10 +24,6 @@
 tcg_init_selector('70303aa4960c853fc06555b592f7160d', 1);
 
 </script>
-<<<<<<< HEAD
-=======
-
->>>>>>> 651626ebed09378cd7b9ea50d5c2be3950101732
 <?php if(get_field('sleep_selector_block_form', 5598)) : ?>
 <div class="js-signup-newsletter"></div>
 <?php endif; ?>
