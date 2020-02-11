@@ -12,7 +12,20 @@
         <div class="page-content">
             <h1 class="page-h1"><?=get_the_title();?></h1>
             <div >
-                <?php the_content(); ?>
+                <div class="page-subtitle" style="text-align: center;"><?php the_content(); ?></div>
+
+                <!-- wp:html -->
+                <div class="_bottom-tools" style="text-align:center;margin-bottom:80px;">
+                    <a href="#Promotions" class="app-button-filter _inline ">Promotions</a>
+                    <a href="#SpecialOffers" class="app-button-filter _inline ">Special Offers</a>
+                </div>
+                <!-- /wp:html -->
+
+                <!-- wp:html -->
+                <h1 class="page-h1" style="text-align: center;" id="Promotions">Promotions</h1>
+                <div class="page-subtitle" style="text-align: center;">From time to time we have special promotions on this page. Please check in regularly for exclusive offers, discounts and promotions.</div>
+                <!-- /wp:html -->
+
             </div>
         </div>
     </div>
@@ -258,7 +271,7 @@
                     <div class="page-subtitle">
                         <?php echo get_field('special_offers_text'); ?>
                     </div>
-                
+
                 <?php if ( $filteredBY == 'beds' ) : ?>
                     <div class="_bottom-tools">
                         <a href="<?= get_category_link($specialOffersCategory->cat_ID); ?>" class="app-button-filter _inline <?php echo $catId === null ? 'active' : ''; ?>">All</a>
