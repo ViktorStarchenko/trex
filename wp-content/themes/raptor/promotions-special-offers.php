@@ -22,8 +22,8 @@
                 <!-- /wp:html -->
 
                 <!-- wp:html -->
-                <h1 class="page-h1" style="text-align: center;" id="Promotions">Promotions</h1>
-                <div class="page-subtitle" style="text-align: center;">From time to time we have special promotions on this page. Please check in regularly for exclusive offers, discounts and promotions.</div>
+                <h1 class="page-h1" style="text-align: center;" id="Promotions"><?= get_field('promotions_title')?></h1>
+                <div class="page-subtitle" style="text-align: center;"><?= get_field('promotions_text')?></div>
                 <!-- /wp:html -->
 
             </div>
