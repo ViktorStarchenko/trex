@@ -4079,3 +4079,8 @@ ul._inner-submenu li:first-child::after{
     }
 
 }
+
+.promo-popup-form .gform_heading .gform_title{
+	font-size:35px !important;
+	line-height:35px !important;
+}
