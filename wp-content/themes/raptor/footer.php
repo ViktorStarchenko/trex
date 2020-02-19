@@ -219,6 +219,7 @@ $storesAndPromotionsPages = get_field('stores_and_promotions_pages', $headerNavi
     </div>
 </div>
 
+<a href="javascript:void(0);" class="popup-sleep-selector-trigger">ccc</a>
 
 <div id="newsletter-signup-sleep-selector" class="app-sleep-selector-modal _size-lg" style="display: none;">
     <a href="" class="app-modal-close"></a>
