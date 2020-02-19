@@ -206,6 +206,20 @@ $storesAndPromotionsPages = get_field('stores_and_promotions_pages', $headerNavi
     </div>
 </div>
 
+
+<div id="promotional-popup-sleep-selector" class="popup-sleep-selector app-sleep-selector-modal _size-lg" style="display: none;">
+
+    <a href="" class="app-modal-close"></a>
+    <div class="app-sleep-selector-modal__flex">
+        <div class="_custom-gform-styles">
+        <div class="article-news-box gravity-form _gravity-form-wrapper">
+            <?= get_field('promotional-popup-sleep-selector-block-form', $headerNavigation->ID); ?>
+        </div>
+        </div>
+    </div>
+</div>
+
+
 <div id="newsletter-signup-sleep-selector" class="app-sleep-selector-modal _size-lg" style="display: none;">
     <a href="" class="app-modal-close"></a>
     <?php
