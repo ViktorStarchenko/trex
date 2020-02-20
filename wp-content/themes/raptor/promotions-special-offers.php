@@ -17,7 +17,7 @@
                 <!-- wp:html -->
                 <div class="_bottom-tools" style="text-align:center;margin-bottom:80px;">
                     <a href="#Promotions" class="app-button-filter _inline ">Promotions</a>
-                    <a href="#SpecialOffers" class="app-button-filter _inline ">Special Offers</a>
+                    <a href="#SpecialOffers" class="app-button-filter _inline ">Retailer Specials</a>
                 </div>
                 <!-- /wp:html -->
 
