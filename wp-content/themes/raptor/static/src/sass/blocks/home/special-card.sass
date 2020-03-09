@@ -1,0 +1,55 @@
+.special-card
+    border: 1px solid #d2ced8
+    padding: 16px
+    & + &
+        margin-top: 20px
+    &__head
+        display: flex
+        flex-flow: row nowrap
+        align-items: flex-start
+        &-icon
+            max-width: 25px
+            max-height: 25px
+            flex-shrink: 0
+            margin-right: 7px
+        &-title
+            display: inline-block
+            flex-grow: 1
+            font-size: 22px
+            font-weight: 400
+            letter-spacing: 0.79px
+            text-transform: uppercase
+            font-family: "CalibreWeb-Regular"
+    &__desc
+        padding-left: 7px
+        p
+            color: #777777
+            font-family: "CalibreWeb-Regular"
+            font-size: 18px
+            font-weight: 400
+            line-height: calc(22/18)
+        p + p
+            margin-top: 3px
+    &__footer
+        display: flex
+        flex-flow: row nowrap
+        justify-content: space-between
+        align-items: center
+        padding-left: 7px
+        &-link
+            color: $main
+            font-family: "CalibreWeb-Regular"
+            font-size: 14px
+            font-weight: 400
+            letter-spacing: 1.31px
+            text-decoration: underline
+            text-transform: uppercase
+            &:hover
+                text-decoration: none
+                cursor: pointer
+        &-date
+            color: rgba($main, 0.4)
+            font-family: "CalibreWeb-Regular"
+            font-size: 14px
+            font-weight: 400
+            line-height: calc(22/14)

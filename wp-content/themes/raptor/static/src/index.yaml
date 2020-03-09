@@ -1,0 +1,6 @@
+ProjectTitle: Starting Template
+
+PageList:
+- file: /home/
+  name: home
+  ready: 1

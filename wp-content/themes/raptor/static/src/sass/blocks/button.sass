@@ -1,0 +1,141 @@
+.button
+	$this: &
+
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	position: relative
+	padding: 0.475em 1.25em 0.5em
+	cursor: pointer
+	text-align: center
+	border-radius: 4px
+	font-weight: 500
+	line-height: 1.4em
+	font-size: 13px
+	text-decoration: none
+	white-space: nowrap
+	letter-spacing: -0.01em
+	box-sizing: border-box
+	letter-spacing: -0.01em
+	transition: all .3s
+	pointer-events: auto
+
+	&:hover:active
+		transform: scale(0.98)
+
+	&__icon
+		display: block
+		margin: 0 -10px 0 10px
+		width: 24px
+		height: 24px
+		overflow: hidden
+
+		svg
+			width: 24px
+			height: 24px
+			fill: rgba(black, 0)
+			stroke: currentColor
+
+	&--accent
+		color: white
+		border: 1px solid $accent
+		background-color: lighten($accent, 2%)
+
+		+notouch
+			&:hover
+				color: white
+				background-color: darken($accent, 5%)
+				border: 1px solid darken($accent, 5%)
+	
+	&--border
+		color: $accent
+		background-color: white
+		border: 1px solid $accent
+
+		+notouch
+			&:hover
+				color: white
+				background-color: darken($accent, 5%)
+				border: 1px solid darken($accent, 5%)
+
+	&--border-dark
+		color: white
+		background-color: $text-color
+		border: 1px solid white
+
+		+notouch
+			&:hover
+				color: white
+				background-color: $accent
+				border: 1px solid $accent
+	
+	&--border-light
+		color: $text-color
+		border: 1px solid rgba($text-color, 0.2)
+		background-color: white
+		letter-spacing: -0.02em
+		font-size: 14px
+		
+		+notouch
+			&:hover
+				color: white
+				background-color: $accent
+				border: 1px solid $accent
+				
+	&--rounded-dark
+		border-radius: 1.5em
+		color: white
+		background-color: darken($accent, 5%)
+		border: 1px solid white
+
+		+notouch
+			&:hover
+				color: white
+				background-color: $accent
+				border: 1px solid $accent
+
+	&--rounded-light
+		border-radius: 1.5em
+		color: $text-color
+		border: 1px solid rgba($text-color, 0.2)
+		background-color: white
+
+		+notouch
+			&:hover
+				color: white
+				background-color: $accent
+				border: 1px solid $accent
+
+	&--uppercase
+		text-transform: uppercase
+
+	&--bold
+		font-weight: bold
+
+	&--l
+		padding: 14px 28px
+		font-size: 16px
+		line-height: 1em
+
+	&--xl
+		padding: 14px 57px
+		font-size: 16px
+		line-height: 1em 
+
+	&--full
+		display: block
+		width: 100%
+
+	&--right
+		display: flex
+		margin: 0 0 0 auto
+	
+	&--follow
+		+ #{$this}--follow
+			margin-left: 16px
+
+	&--disable
+		color: $grey-d7
+		border-color: lighten($grey-d7, 5.10)
+		pointer-events: none
+		background: $white

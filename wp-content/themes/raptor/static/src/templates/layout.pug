@@ -1,0 +1,41 @@
+include /data
+include /helpers/mixins
+include /blocks/mixins
+include /meta/mixins
+
+doctype html
+
+html
+	head
+		-
+			const page = {
+				title: 'Title',
+				//- url: String,
+				ogType: 'website',
+				ogImage: '/img/social.jpg',
+				ogImageWidth: 1200,
+				ogImageHeight: 630,
+				//- description: '',
+				//- site_name: '',
+				//- admins: ''
+				themeColor: '#ffffff',
+				class: [],
+				hasVueTemplates: false
+			};
+
+		block head
+
+		+head(page)
+
+	body.body(class= page.class)
+		
+		block header
+			// Header
+			include /blocks/header
+
+		block content
+			// Content
+
+		block footer
+			// Footer
+			include /blocks/footer

@@ -1,0 +1,103 @@
+.tabs
+	position: relative
+	// overflow: hidden
+	// margin-top: 80px
+	// margin-bottom: 80px
+	// +r(768)
+	// 	margin-top: 65px
+	// 	margin-bottom: 65px
+	&--category
+		.tabs__header
+			+r(768)
+				width: 100%
+				margin: 0
+				padding: 20px
+		// .tabs__list
+		// 	+rm(769)
+		// 		justify-content: flex-start
+		.tabs__item
+			padding: 0
+		.tabs__link
+			padding: 5px 3px 15px 3px
+
+.tabs__title
+	margin-bottom: 60px
+	text-align: center
+	
+.tabs__container
+	position: relative
+	width: 100%
+
+.tabs__list
+	width: 100%
+	display: flex
+	flex-flow: row nowrpap
+
+.tabs__item
+	width: 50%
+	flex-shrink: 0
+
+
+.tabs__link
+	display: block
+	position: relative
+	padding: 15px 10px
+	color: $main
+	background: #fff
+	transition: color 0.2s ease-in, background-color 0.2s ease-in
+	text-decoration: none
+	text-align: center
+	font-family: "CalibreWeb-Medium"
+	font-size: 16px
+	font-weight: 500
+	letter-spacing: 1.07px
+	line-height: 1
+	text-transform: uppercase
+	border: 1px solid $main
+	+r(768)
+		font-size: 15px
+		letter-spacing: 1px
+	+r(360)
+		font-size: 14px
+	&.active
+		// color: green
+		// transition: color 0.2s ease-out
+		background: $main
+		color: #fff
+
+.tabs__body
+	// max-width: 980px
+	// margin: 0 auto
+	border: 1px solid rgba($main, 0.36)
+	margin-top: -1px
+	max-height: 415px
+	// overflow: hidden
+	height: 100vh
+	position: relative
+	&::after
+		content: ''
+		display: block
+		width: calc(100% - 8px)
+		height: 80px
+		background-image: linear-gradient(to top, #ffffff 10%, rgba(255, 255, 255, 0) 100%)
+		position: absolute
+		bottom: 0
+		left: 0
+		pointer-events: none
+
+.tabs__content
+	// position: relative
+	transition: transform 0.3s ease, opacity 0.2s ease
+	overflow-y: auto
+	height: 100%
+	&::-webkit-scrollbar
+		width: 8px
+	/* Track */
+	&::-webkit-scrollbar-track
+		background-color: #fff
+	/* Handle */
+	&::-webkit-scrollbar-thumb
+		position: relativ
+		border-radius: 6px
+		background-color: rgba(#d8d8d8, .44)
+		transition: background-color .3s

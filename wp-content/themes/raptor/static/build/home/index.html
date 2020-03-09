@@ -1,0 +1,261 @@
+
+<!-- use with SVGO module--><!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Home</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<meta name="format-detection" content="telephone=no"/>
+		<meta name="description"/>
+		<link rel="stylesheet" media="all" href="/css/app.css"/>
+		<link rel="stylesheet" media="all" href="/css/fonts.css"/>
+		<!-- Main scripts-->
+		<script defer="defer" type="text/javascript" src="/js/app.js"></script>
+	</head>
+	<body class="body">
+		<!-- Header-->
+		<header style="border:1px solid #2E1A47; width:100%; height:50px; padding: 10px; color: #2E1A47; text-align:center;">
+			<h3>header</h3>
+		</header>
+		<div class="find-grid">
+			<!-- SVG Sprite-->
+			<div class="svg-icon" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="close"><path d="M8 6.933L14.36.58a.75.75 0 011.06 1.062L9.054 8l6.366 6.359a.75.75 0 01-1.06 1.061L8 9.066 1.64 15.42a.75.75 0 11-1.06-1.06L6.945 8 .58 1.642A.75.75 0 011.64.579z"/></symbol><symbol id="down_arrow"><path fill="currentColor" d="M11.045.66a.507.507 0 01.704.729L6.346 6.608a.506.506 0 01-.704 0L.244 1.388A.506.506 0 11.948.66l5.046 4.88z"/></symbol></svg></div>
+			<div class="find-grid__result">
+				<div class="find-grid__text">
+					<h1 class="find-grid__text-title">Find a Retailer </h1>
+					<p class="find-grid__text-desc">Enter your address and we’ll find your closest SleepMaker retailer</p>
+				</div>
+				<div class="find-grid__form">
+					<form class="find-form" action="/">
+						<div class="find-form__row">
+							<div class="find-form__item">
+								<div class="find-form__field">
+									<input type="search" name="findSearch" placeholder="Search City, Address, Postcode or Store…">
+									<button class="find-form__submit" type="submit"></button>
+								</div>
+							</div>
+						</div>
+						<div class="find-form__row">
+							<div class="find-form__item">
+								<div class="find-form__field">
+									<div class="find-filter js-drop-filter">
+										<div class="find-filter__select js-drop-filter-trigger" data-select="Search by range">
+											<div class="find-filter__select-title"><span class="js-drop-filter-selected">Search by range</span></div>
+											<div class="find-filter__select-icon"></div>
+										</div>
+										<div class="find-filter__drop">
+											<ul class="filter-drop">
+												<li class="filter-drop__item js-drop-filter-item">
+													<input class="filter-drop__check" id="range-1" type="checkbox" name="retailer" value="">
+													<label class="filter-drop__label" for="range-1">Cocoon</label>
+												</li>
+												<li class="filter-drop__item js-drop-filter-item">
+													<input class="filter-drop__check" id="range-2" type="checkbox" name="retailer" value="">
+													<label class="filter-drop__label" for="range-2">Maison</label>
+												</li>
+												<li class="filter-drop__item js-drop-filter-item">
+													<input class="filter-drop__check" id="range-3" type="checkbox" name="retailer" value="">
+													<label class="filter-drop__label" for="range-3">Luxury</label>
+												</li>
+												<li class="filter-drop__item js-drop-filter-item">
+													<input class="filter-drop__check" id="range-4" type="checkbox" name="retailer" value="">
+													<label class="filter-drop__label" for="range-4">Miracoil</label>
+												</li>
+												<li class="filter-drop__item js-drop-filter-item">
+													<input class="filter-drop__check" id="range-5" type="checkbox" name="retailer" value="">
+													<label class="filter-drop__label" for="range-5">Lifestyle</label>
+												</li>
+												<li class="filter-drop__item js-drop-filter-item">
+													<input class="filter-drop__check" id="range-6" type="checkbox" name="retailer" value="">
+													<label class="filter-drop__label" for="range-6">Singles</label>
+												</li>
+												<li class="filter-drop__item js-drop-filter-item">
+													<input class="filter-drop__check" id="range-7" type="checkbox" name="retailer" value="">
+													<label class="filter-drop__label" for="range-7">Relax</label>
+												</li>
+												<li class="filter-drop__item js-drop-filter-item">
+													<input class="filter-drop__check" id="range-8" type="checkbox" name="retailer" value="">
+													<label class="filter-drop__label" for="range-8">Bed in a Box</label>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="find-form__item">
+								<div class="find-form__field">
+									<div class="find-filter js-drop-filter">
+										<div class="find-filter__select js-drop-filter-trigger" data-select="Search by retailer">
+											<div class="find-filter__select-title"><span class="js-drop-filter-selected">Search by retailer</span></div>
+											<div class="find-filter__select-icon"></div>
+										</div>
+										<div class="find-filter__drop">
+											<ul class="filter-drop">
+												<li class="filter-drop__item js-drop-filter-item">
+													<input class="filter-drop__check" id="retailer-1" type="checkbox" name="range" value="">
+													<label class="filter-drop__label" for="retailer-1">check 1</label>
+												</li>
+												<li class="filter-drop__item js-drop-filter-item">
+													<input class="filter-drop__check" id="retailer-2" type="checkbox" name="range" value="">
+													<label class="filter-drop__label" for="retailer-2">check 2</label>
+												</li>
+												<li class="filter-drop__item js-drop-filter-item">
+													<input class="filter-drop__check" id="retailer-3" type="checkbox" name="range" value="">
+													<label class="filter-drop__label" for="retailer-3">check 3</label>
+												</li>
+												<li class="filter-drop__item js-drop-filter-item">
+													<input class="filter-drop__check" id="retailer-4" type="checkbox" name="range" value="">
+													<label class="filter-drop__label" for="retailer-4">check 4</label>
+												</li>
+												<li class="filter-drop__item js-drop-filter-item">
+													<input class="filter-drop__check" id="retailer-5" type="checkbox" name="range" value="">
+													<label class="filter-drop__label" for="retailer-5">check 5</label>
+												</li>
+												<li class="filter-drop__item js-drop-filter-item">
+													<input class="filter-drop__check" id="retailer-6" type="checkbox" name="range" value="">
+													<label class="filter-drop__label" for="retailer-6">check 6</label>
+												</li>
+												<li class="filter-drop__item js-drop-filter-item">
+													<input class="filter-drop__check" id="retailer-7" type="checkbox" name="range" value="">
+													<label class="filter-drop__label" for="retailer-7">check 7</label>
+												</li>
+												<li class="filter-drop__item js-drop-filter-item">
+													<input class="filter-drop__check" id="retailer-8" type="checkbox" name="range" value="">
+													<label class="filter-drop__label" for="retailer-8">check 8</label>
+												</li>
+												<li class="filter-drop__item js-drop-filter-item">
+													<input class="filter-drop__check" id="retailer-9" type="checkbox" name="range" value="">
+													<label class="filter-drop__label" for="retailer-9">check 9</label>
+												</li>
+												<li class="filter-drop__item js-drop-filter-item">
+													<input class="filter-drop__check" id="retailer-10" type="checkbox" name="range" value="">
+													<label class="filter-drop__label" for="retailer-10">check 10</label>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+					<div class="find-form__result">Showing 25 results</div>
+					<div class="tabs js-tabs-wrapper">
+						<div class="tabs__container">
+							<div class="tabs__list">
+								<div class="tabs__item"><a class="tabs__link js-tab-trigger active" href="#tab-1">RETAIL STORES</a></div>
+								<div class="tabs__item"><a class="tabs__link js-tab-trigger" href="#tab-2">ONLINE STORES</a></div>
+							</div>
+						</div>
+						<div class="tabs__body">
+							<div class="tabs__content js-tab-content" id="tab-1">
+								<div class="shop-card">
+									<div class="shop-card__name">David Jones Market Street </div>
+									<div class="shop-card__address"> 
+										<p>Cnr. Sth Dowling St & Dacey Ave, Moore Park 2021</p>
+										<p>(02) 9662 9888</p>
+									</div>
+									<div class="shop-card__selected">Luxury, Cacoon, Miracoil</div>
+									<div class="shop-card__row">
+										<div class="shop-card__row-item"><a class="shop-card__icon shop-card__site" href="#"><img src="/img/icons/shop-card-site.png" alt="shop-card-site"/>VISIT SITE</a></div>
+										<div class="shop-card__row-item"><a class="shop-card__icon shop-card__offers" href="#"><img src="/img/icons/shop-card-offers.png" alt="shop-card-offers"/>SPECIAL OFFERS</a></div>
+										<div class="shop-card__row-item"><a class="shop-card__icon shop-card__map" href="#"><img src="/img/icons/shop-card-map.png" alt="shop-card-map"/>VIEW ON MAP</a></div>
+									</div>
+									<div class="shop-card__special">
+										<div class="shop-card-wrap">
+											<div class="shop-card-wrap__head">
+												<div class="shop-card-wrap__title">Available deals</div>
+												<div class="shop-card-wrap__close"></div>
+											</div>
+											<div class="shop-card-wrap__body">
+												<div class="special-card">
+													<div class="special-card__head"><img class="special-card__head-icon" src="/img/icons/special-card-dollar.png" alt="dollar"/><span class="special-card__head-title">20% Off Swisstek</span></div>
+													<div class="special-card__desc">
+														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vulputate vel ex id ultricies. Nam gravida risus non erat </p>
+													</div>
+													<div class="special-card__footer"><a class="special-card__footer-link" href="#">SEE THE RANGE</a>
+														<div class="special-card__footer-date">Offer ends 7th January 2021</div>
+													</div>
+												</div>
+												<div class="special-card">
+													<div class="special-card__head"><img class="special-card__head-icon" src="/img/icons/special-card-dollar.png" alt="dollar"/><span class="special-card__head-title">20% Off Swisstek</span></div>
+													<div class="special-card__desc">
+														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vulputate vel ex id ultricies. Nam gravida risus non erat </p>
+													</div>
+													<div class="special-card__footer"><a class="special-card__footer-link" href="#">SEE THE RANGE</a>
+														<div class="special-card__footer-date">Offer ends 7th January 2021</div>
+													</div>
+												</div>
+												<div class="special-card">
+													<div class="special-card__head"><img class="special-card__head-icon" src="/img/icons/special-card-dollar.png" alt="dollar"/><span class="special-card__head-title">20% Off Swisstek</span></div>
+													<div class="special-card__desc">
+														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vulputate vel ex id ultricies. Nam gravida risus non erat </p>
+													</div>
+													<div class="special-card__footer"><a class="special-card__footer-link" href="#">SEE THE RANGE</a>
+														<div class="special-card__footer-date">Offer ends 7th January 2021</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="shop-card">
+									<div class="shop-card__name">David Jones Market Street </div>
+									<div class="shop-card__address"> 
+										<p>Cnr. Sth Dowling St & Dacey Ave, Moore Park 2021</p>
+										<p>(02) 9662 9888</p>
+									</div>
+									<div class="shop-card__selected">Luxury, Cacoon, Miracoil</div>
+									<div class="shop-card__row">
+										<div class="shop-card__row-item"><a class="shop-card__icon shop-card__site" href="#"><img src="/img/icons/shop-card-site.png" alt="shop-card-site"/>VISIT SITE</a></div>
+										<div class="shop-card__row-item"><a class="shop-card__icon shop-card__offers" href="#"><img src="/img/icons/shop-card-offers.png" alt="shop-card-offers"/>SPECIAL OFFERS</a></div>
+										<div class="shop-card__row-item"><a class="shop-card__icon shop-card__map" href="#"><img src="/img/icons/shop-card-map.png" alt="shop-card-map"/>VIEW ON MAP</a></div>
+									</div>
+								</div>
+								<div class="shop-card">
+									<div class="shop-card__name">David Jones Market Street </div>
+									<div class="shop-card__address"> 
+										<p>Cnr. Sth Dowling St & Dacey Ave, Moore Park 2021</p>
+										<p>(02) 9662 9888</p>
+									</div>
+									<div class="shop-card__selected">Luxury, Cacoon, Miracoil</div>
+									<div class="shop-card__row">
+										<div class="shop-card__row-item"><a class="shop-card__icon shop-card__site" href="#"><img src="/img/icons/shop-card-site.png" alt="shop-card-site"/>VISIT SITE</a></div>
+										<div class="shop-card__row-item"><a class="shop-card__icon shop-card__offers" href="#"><img src="/img/icons/shop-card-offers.png" alt="shop-card-offers"/>SPECIAL OFFERS</a></div>
+										<div class="shop-card__row-item"><a class="shop-card__icon shop-card__map" href="#"><img src="/img/icons/shop-card-map.png" alt="shop-card-map"/>VIEW ON MAP</a></div>
+									</div>
+								</div>
+								<div class="shop-card">
+									<div class="shop-card__name">David Jones Market Street </div>
+									<div class="shop-card__address"> 
+										<p>Cnr. Sth Dowling St & Dacey Ave, Moore Park 2021</p>
+										<p>(02) 9662 9888</p>
+									</div>
+									<div class="shop-card__selected">Luxury, Cacoon, Miracoil</div>
+									<div class="shop-card__row">
+										<div class="shop-card__row-item"><a class="shop-card__icon shop-card__site" href="#"><img src="/img/icons/shop-card-site.png" alt="shop-card-site"/>VISIT SITE</a></div>
+										<div class="shop-card__row-item"><a class="shop-card__icon shop-card__offers" href="#"><img src="/img/icons/shop-card-offers.png" alt="shop-card-offers"/>SPECIAL OFFERS</a></div>
+										<div class="shop-card__row-item"><a class="shop-card__icon shop-card__map" href="#"><img src="/img/icons/shop-card-map.png" alt="shop-card-map"/>VIEW ON MAP</a></div>
+									</div>
+								</div>
+							</div>
+							<div class="tabs__content js-tab-content" id="tab-2">
+								<div class="find-form__nothing">
+									<div class="find-form__nothing-title">The selected retailer does not stock this range. </div>
+									<div class="find-form__nothing-text">Please select another retailer.</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="find-grid__map">
+				<div class="map"><img src="/img/map.png" alt="map"></div>
+			</div>
+		</div>
+		<!-- Footer-->
+		<footer style="background:#2E1A47; width:100%; height:50px; padding: 10px; color: #ffffff; text-align:center;">
+			<h3>footer</h3>
+		</footer>
+	</body>
+</html>

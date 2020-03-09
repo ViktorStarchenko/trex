@@ -1,0 +1,253 @@
+.find-grid
+	display: flex
+	justify-content: space-between
+	flex-flow: row wrap
+	width: 100%
+	max-width: 1360px
+	margin: 0 auto
+	padding: 35px 25px 50px 25px
+	+r(768)
+		padding: 25px
+	&__result
+		width: 50%
+		+rm(1025)
+			padding-right: 20px
+			max-width: 610px
+		+r(1024)
+			width: 100%
+			margin-bottom: 30px
+	&__text
+		margin-bottom: 40px
+		&-title
+			font-family: "NewzaldWeb-Medium"
+			font-size: 40px
+			line-height: 1.1
+			color: #2e1b47
+			+r(768)
+				font-size: 30px
+		&-desc
+			font-family: "CalibreWeb-Light"
+			font-size: 18px
+			line-height: calc(22/18)
+			color: #2e1b47
+	&__map
+		width: 50%
+		+r(1024)
+			width: 100%
+		.map
+			width: 100%
+			position: relative
+			&::before
+				content: ''
+				display: block
+				width: 100%
+				padding-bottom: 111%
+			img
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				object-fit: cover
+
+
+//form, dropdown
+.find-form
+	&__row
+		display: flex
+		flex-flow: row wrap
+		margin-left: -10px
+		margin-right: -10px
+		& + &
+			margin-top: 15px
+	&__item
+		padding: 0 10px
+		flex-grow: 1
+		flex-shrink: 0
+		width: 50%
+		+r(768)
+			width: 100%
+			& + &
+				margin-top: 15px
+	&__submit
+		background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIiIGhlaWdodD0iMjIiIHZpZXdCb3g9IjAgMCAyMiAyMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+R3JvdXAgMjwvdGl0bGU+PGcgdHJhbnNmb3JtPSJyb3RhdGUoLTQ1IDguMzQ2IDcuNDk3KSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48Y2lyY2xlIHN0cm9rZT0iIzIyMTA0OCIgY3g9IjcuNSIgY3k9IjcuNSIgcj0iNyIvPjxwYXRoIGZpbGw9IiMyMjEwNDgiIGQ9Ik02LjgxOCAxNWgxLjM2NHYxMC45MDlINi44MTh6Ii8+PC9nPjwvc3ZnPg==)
+	&__field
+		border: 1px solid #d2ced8
+		border-radius: 3px
+		font-size: 18px
+		letter-spacing: 0.64px
+		line-height: calc(35/18)
+		font-family: "CalibreWeb-Light"
+		+r(768)
+			font-size: 15px
+		input:not(.filter-drop__check)
+			display: block
+			width: 100%
+			padding: 8px 10px
+			font-family: "CalibreWeb-Light"
+			font-size: 18px
+			letter-spacing: 0.64px
+			line-height: calc(35/18)
+			+r(768)
+				font-size: 15px
+			&::-webkit-input-placeholder 
+				color: rgba(#2e1b47, 0.53)
+			&::-webkit-input-placeholder
+				color: rgba(#2e1b47, 0.53)
+			&::-moz-placeholder
+				color: rgba(#2e1b47, 0.53)
+			&:-ms-input-placeholder
+				color: rgba(#2e1b47, 0.53)
+			&:-moz-placeholder
+				color: rgba(#2e1b47, 0.53)
+	&__result
+		color: $main
+		font-family: "CalibreWeb-Light"
+		font-size: 14px
+		font-weight: 300
+		line-height: calc(22/14)
+		margin: 10px 0
+	&__nothing
+		display: flex
+		flex-flow: column nowrap
+		align-items: center
+		justify-content: center
+		text-align: center
+		width: 100%
+		height: 100%
+		color: $main
+		padding: 10px
+		position: relative
+		z-index: 1
+		&-title
+			font-size: 34px
+			font-weight: 500
+			line-height: calc(36/34)
+			font-family: "NewzaldWeb-Medium"
+			max-width: 350px
+			margin-bottom: 10px
+		&-text
+			font-family: "CalibreWeb-Light"
+			font-size: 18px
+			font-weight: 300
+			line-height: calc(22/18)
+.find-filter
+	$this: &
+	position: relative
+	&.active
+		#{$this}__drop
+			opacity: 1
+			transform: translateY(0)
+			pointer-events: all
+			visibility: visible
+			transition: visibility 0s 0s, opacity .2s 0s, transform .25s 0s
+		#{$this}__select-icon
+			transform: rotate(-180deg)
+	&.selected
+		#{$this}__select
+			color: $main
+	&__drop
+		position: absolute
+		left: -1px
+		top: 100%
+		z-index: 10
+		width: calc(100% + 2px)
+		background: #fff
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+		border: 1px solid #d2ced8
+		padding-top: 20px
+		padding-bottom: 25px
+		max-height: 300px
+		overflow-y: auto
+		opacity: 0
+		transform: translateY(3px)
+		visibility: hidden
+		pointer-events: none
+		transition: visibility 0s 2s, opacity .15s 0s, transform .15s 0s
+		/* width */
+		&::-webkit-scrollbar
+			width: 8px
+		/* Track */
+		&::-webkit-scrollbar-track
+			background-color: #fff
+		/* Handle */
+		&::-webkit-scrollbar-thumb
+			position: relativ
+			border-radius: 6px
+			background-color: rgba(#d8d8d8, .44)
+			transition: background-color .3s
+	&__select
+		color: rgba(#2e1b47, 0.53)
+		padding: 8px 20px
+		display: flex
+		align-items: center
+		flex-flow: row nowrap
+		justify-content: space-between
+		cursor: pointer
+		&-title
+			overflow: hidden
+			white-space: nowrap
+			padding-right: 20px
+			span
+				overflow: hidden
+				width: 100%
+				text-overflow: ellipsis
+				display: block
+				width: 100%
+		&-icon
+			color: $main
+			transform: rotate(0)
+			transition: transform .2s 0s
+			width: 12px
+			height: 7px
+			background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMyIgaGVpZ2h0PSI3Ij48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik0xMS4wNDUuNjZhLjUwNy41MDcgMCAwIDEgLjcwNC43MjlMNi4zNDYgNi42MDhhLjUwNi41MDYgMCAwIDEtLjcwNCAwTC4yNDQgMS4zODhBLjUwNi41MDYgMCAxIDEgLjk0OC42Nmw1LjA0NiA0Ljg4eiIvPjwvc3ZnPg==")
+			background-repeat: no-repeat
+
+.filter-drop
+	&__item
+		position: relative
+		padding: 0 20px
+		line-height: calc(22/18)
+		cursor: pointer
+		& + &
+			margin-top: 10px
+	&__check
+		position: absolute
+		width: 1px
+		height: 1px
+		visibility: hidden
+		padding: 0
+		&:checked + .filter-drop__label
+			&::after
+				opacity: 1
+				transform: scale(1)
+			
+	&__label
+		color: #221048
+		font-family: "CalibreWeb-Light"
+		font-size: 18px
+		line-height: calc(22/18)
+		position: relative
+		padding-left: 33px
+		display: block
+		&::before
+			content: ''
+			display: block
+			width: 15px
+			height: 15px
+			border: 1px solid #2d1a46
+			position: absolute
+			top: 2px
+			left: 0
+		&::after
+			content: ''
+			display: block
+			width: 15px
+			height: 15px
+			background: #2d1a46
+			position: absolute
+			top: 2px
+			left: 0
+			opacity: 0
+			transform: scale(0.5)
+			transition: opacity .2s, transform .2s
