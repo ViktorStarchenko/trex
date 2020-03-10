@@ -106,16 +106,16 @@ foreach ($metaValues as $key => $meta) {
         var myQuiz = [], question, answer;
          <?php while( have_rows('questions') ): the_row(); ?>
             question = {
-                q: '<?= get_sub_field('title'); ?>',
+                q: "<?= get_sub_field('title'); ?>",
                 options: [],
-                hint_title: '<?= get_sub_field('hint_title'); ?>',
-                hint_text: '<?= get_sub_field('hint_text'); ?>'
+                hint_title: "<?= get_sub_field('hint_title'); ?>",
+                hint_text: "<?= get_sub_field('hint_text'); ?>"
             };
             <?php foreach(get_sub_field('answers') as $answer): ?>
                 answer = {
-                    text: '<?= $answer['answer_title']; ?>',
-                    type: '<?= explode(':', $answer['answer_relation'])[0]; ?>',
-                    image: '<?= !empty($answer['answer_image']) ? $answer['answer_image'] : ''; ?>'
+                    text: "<?= $answer['answer_title']; ?>",
+                    type: "<?= explode(':', $answer['answer_relation'])[0]; ?>",
+                    image: "<?= !empty($answer['answer_image']) ? $answer['answer_image'] : ''; ?>"
                 }
                 question['options'].push(answer);
             <?php endforeach; ?> 
