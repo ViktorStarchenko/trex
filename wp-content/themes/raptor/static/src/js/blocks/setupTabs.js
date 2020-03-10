@@ -1,3 +1,4 @@
+import {hideStart, hideElement, showElement} from './toggleElVisible';
 export default function setupTabs() {
 	if (document.querySelectorAll('.js-tabs-wrapper').length) {
 		// search all tabs wrappers on the page
@@ -18,7 +19,7 @@ export default function setupTabs() {
 					content.style.opacity = '1';
 					content.style.transform = 'none';
 					if (content.id !== currentTriggerHash) {
-						hideElement(content);
+						hideStart(content);
 					}
 				});
 			} else {
@@ -30,7 +31,7 @@ export default function setupTabs() {
 						triggers[0].classList.toggle('active');
 						triggers[0].parentNode.classList.toggle('active');
 					} else {
-						hideElement(content);
+						hideStart(content);
 					}
 				});
 			}
@@ -61,19 +62,3 @@ export default function setupTabs() {
 	}
 }
 
-function hideElement(el) {
-	el.style.opacity = '0';
-	el.style.transform = 'translateY(10px)';
-	setTimeout(() => {
-		el.style.display = 'none';
-	}, 300);
-}
-function showElement(el) {
-	setTimeout(() => {
-		el.style.display = '';
-	}, 300);
-	setTimeout(() => {
-		el.style.opacity = '1';
-		el.style.transform = 'none';
-	}, 320);
-}

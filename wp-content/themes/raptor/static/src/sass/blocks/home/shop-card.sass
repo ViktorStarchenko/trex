@@ -60,28 +60,31 @@
         background: #fff
         border-top: 1px solid rgba(46,26,71,.36)
         padding: 30px 0
+        transition: transform 0.3s ease, opacity 0.2s ease
         +r(1024)
             margin-top: 25px
         +rm(1025)
-            border: 1px solid rgba(46,26,71,.36)
-            padding: 30px 0 30px 20px
-            width: 380px
-            height: 100%
-            margin-left: -1px
-            position: absolute
-            left: 100%
-            top: 0
-            z-index: 2
-            &::after
-                content: ''
-                display: block
-                width: calc(100% - 10px)
-                height: 80px
-                background-image: linear-gradient(to top, #ffffff 20%, rgba(255, 255, 255, 0) 100%)
+            &.special-aboslute
+                border: 1px solid rgba(46,26,71,.36)
+                padding: 30px 0 30px 20px
+                width: 380px
+                height: calc(100% + 2px)
+                // margin-left: -1px
                 position: absolute
-                bottom: 0
-                left: 0
-                pointer-events: none
+                left: 100%
+                top: -1px
+                z-index: 2
+                &::after
+                    content: ''
+                    display: block
+                    width: calc(100% - 10px)
+                    height: 80px
+                    background-image: linear-gradient(to top, #ffffff 20%, rgba(255, 255, 255, 0) 100%)
+                    position: absolute
+                    bottom: 0
+                    left: 0
+                    pointer-events: none
+
 
 .shop-card-wrap
     height: 100%
@@ -108,6 +111,11 @@
         //close
         background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiI+PHBhdGggZD0iTTggNi45MzNMMTQuMzYuNThhLjc1Ljc1IDAgMCAxIDEuMDYgMS4wNjJMOS4wNTQgOGw2LjM2NiA2LjM1OWEuNzUuNzUgMCAwIDEtMS4wNiAxLjA2MUw4IDkuMDY2IDEuNjQgMTUuNDJhLjc1Ljc1IDAgMSAxLTEuMDYtMS4wNkw2Ljk0NSA4IC41OCAxLjY0MkEuNzUuNzUgMCAwIDEgMS42NC41Nzl6Ii8+PC9zdmc+")
         background-repeat: no-repeat
+        cursor: pointer
+        transform: scale(1)
+        transition: transform .2s
+        &:hover
+            transform: scale(1.2)
     &__body
         overflow-y: auto
         height: calc(100% - 50px)

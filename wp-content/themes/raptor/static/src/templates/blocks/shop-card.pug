@@ -1,6 +1,6 @@
 mixin shop-card(props={})
-    .shop-card
-        .shop-card__name David Jones Market Street 
+    .shop-card.js-special-wrap
+        .shop-card__name!= `${'David Jones ' + props.index + ' Market Street'}`
         .shop-card__address 
             p Cnr. Sth Dowling St & Dacey Ave, Moore Park 2021
             p (02) 9662 9888
@@ -11,20 +11,20 @@ mixin shop-card(props={})
                     img(src="/img/icons/shop-card-site.png", alt="shop-card-site")
                     | VISIT SITE
             .shop-card__row-item
-                a(href="#").shop-card__icon.shop-card__offers
+                a(href="#").shop-card__icon.shop-card__offers.js-special-trigger
                     img(src="/img/icons/shop-card-offers.png", alt="shop-card-offers")
                     | SPECIAL OFFERS
             .shop-card__row-item
                 a(href="#").shop-card__icon.shop-card__map
                     img(src="/img/icons/shop-card-map.png", alt="shop-card-map")
                     | VIEW ON MAP
-        if(props.index === 1)
-            .shop-card__special
-                .shop-card-wrap
-                    .shop-card-wrap__head
-                        .shop-card-wrap__title Available deals
-                        .shop-card-wrap__close
-                    .shop-card-wrap__body
+        .shop-card__special.js-special-target
+            .shop-card-wrap
+                .shop-card-wrap__head
+                    .shop-card-wrap__title!= `${'Available deals ' + props.index}`
+                    .shop-card-wrap__close.js-special-target-close
+                .shop-card-wrap__body
+                    - var n = 0
+                    while n < props.index + 2
                         +special-card
-                        +special-card
-                        +special-card
+                        - n++

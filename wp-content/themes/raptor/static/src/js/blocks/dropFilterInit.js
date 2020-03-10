@@ -7,7 +7,7 @@ export default function dropFilterInit() {
 			let openTrigger = item.querySelector('.js-drop-filter-trigger');
 			let selectItem = item.querySelectorAll('.js-drop-filter-item');
 			let selectedArr = [];
-            
+			//open filter
 			openTrigger.addEventListener('click', () => {
 				if(!item.classList.contains('active')) {
 					dropFilters.forEach(removeClass => {
@@ -18,11 +18,11 @@ export default function dropFilterInit() {
 					item.classList.remove('active');
 				}
 			});
-            
+			// selected element -> change text 
 			selectItem.forEach(sItem => {
 				let box = sItem.querySelector('input');
 				let label = sItem.querySelector('label');
-                
+				//select
 				box.addEventListener('click', () => {
 					if(box.checked) {
 						selectedArr.push(label.innerText);
@@ -41,6 +41,15 @@ export default function dropFilterInit() {
 						}
 					}
 				});
+			});
+			//missclick -> close filter
+			document.addEventListener('click', (e) => {
+				if(e.target.closest('.js-drop-filter') === item) {
+					return;
+				} else {
+					item.classList.remove('active');
+					return;
+				}
 			});
 		});
 	}

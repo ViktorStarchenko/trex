@@ -1,29 +1,6 @@
 .tabs
 	position: relative
-	// overflow: hidden
-	// margin-top: 80px
-	// margin-bottom: 80px
-	// +r(768)
-	// 	margin-top: 65px
-	// 	margin-bottom: 65px
-	&--category
-		.tabs__header
-			+r(768)
-				width: 100%
-				margin: 0
-				padding: 20px
-		// .tabs__list
-		// 	+rm(769)
-		// 		justify-content: flex-start
-		.tabs__item
-			padding: 0
-		.tabs__link
-			padding: 5px 3px 15px 3px
 
-.tabs__title
-	margin-bottom: 60px
-	text-align: center
-	
 .tabs__container
 	position: relative
 	width: 100%
@@ -36,7 +13,6 @@
 .tabs__item
 	width: 50%
 	flex-shrink: 0
-
 
 .tabs__link
 	display: block
@@ -74,6 +50,9 @@
 	// overflow: hidden
 	height: 100vh
 	position: relative
+	transition: max-height .2s
+	&.extend
+		max-height: 650px
 	&::after
 		content: ''
 		display: block
