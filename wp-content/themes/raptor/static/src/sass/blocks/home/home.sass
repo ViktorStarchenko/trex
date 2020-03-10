@@ -141,6 +141,7 @@
 			pointer-events: all
 			visibility: visible
 			transition: visibility 0s 0s, opacity .2s 0s, transform .25s 0s
+			z-index: 10
 		#{$this}__select-icon
 			transform: rotate(-180deg)
 	&.selected
@@ -150,7 +151,7 @@
 		position: absolute
 		left: -1px
 		top: 100%
-		z-index: 10
+		z-index: -1
 		width: calc(100% + 2px)
 		background: #fff
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
@@ -161,7 +162,7 @@
 		overflow-y: auto
 		opacity: 0
 		transform: translateY(3px)
-		visibility: hidden
+		// visibility: hidden
 		pointer-events: none
 		transition: visibility 0s 2s, opacity .15s 0s, transform .15s 0s
 		/* width */

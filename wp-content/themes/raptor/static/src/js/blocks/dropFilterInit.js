@@ -7,6 +7,7 @@ export default function dropFilterInit() {
 			let openTrigger = item.querySelector('.js-drop-filter-trigger');
 			let selectItem = item.querySelectorAll('.js-drop-filter-item');
 			let selectedArr = [];
+
 			//open filter
 			openTrigger.addEventListener('click', () => {
 				if(!item.classList.contains('active')) {
@@ -18,23 +19,34 @@ export default function dropFilterInit() {
 					item.classList.remove('active');
 				}
 			});
+
 			// selected element -> change text 
 			selectItem.forEach(sItem => {
 				let box = sItem.querySelector('input');
 				let label = sItem.querySelector('label');
+				
+				if(box.checked) {
+					selectedArr.push(label.innerText);
+					selected.innerText = selectedArr.join(', ');
+
+					if(selectedArr.length) {
+						item.classList.add('selected');
+					}
+				}
+
 				//select
-				box.addEventListener('click', () => {
+				box.addEventListener('change', () => {
 					if(box.checked) {
 						selectedArr.push(label.innerText);
 						selected.innerText = selectedArr.join(', ');
-                        
+
 						if(selectedArr.length) {
 							item.classList.add('selected');
 						}
 					} else {
 						selectedArr.remove(label.innerText);
 						selected.innerText = selectedArr.join(', ');
-                        
+
 						if(!selectedArr.length) {
 							item.classList.remove('selected');
 							selected.innerText = defaultValue;
@@ -42,6 +54,7 @@ export default function dropFilterInit() {
 					}
 				});
 			});
+
 			//missclick -> close filter
 			document.addEventListener('click', (e) => {
 				if(e.target.closest('.js-drop-filter') === item) {
