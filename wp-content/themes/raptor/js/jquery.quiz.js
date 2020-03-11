@@ -160,6 +160,8 @@
             url: wp.ajax.settings.url,
             data: { action: 'add_squiz_scores' , scores: scores }
           }).done(function() { });
+
+          $('#quiz-email').modal('show');
         
         var keysSorted = Object.keys(scores).sort(function(a,b){return scores[b]-scores[a]});
         $('.results-page.' + keysSorted[0]).scrollTop();

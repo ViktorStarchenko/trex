@@ -1,0 +1,220 @@
+.quiz-popup-wrap
+    width: 100%
+    max-width: 1140px
+    position: relative
+    padding-right: 60px
+    +r(1024)
+        padding-right: 0
+    +r(768)
+        max-width: 400px
+.quiz-popup
+    display: flex
+    flex-flow: row wrap
+    background: #fff
+    border-radius: 3px
+    overflow: hidden
+    &__close
+        display: inline-flex
+        justify-content: center
+        align-items: center
+        padding: 14px
+        box-sizing: border-box
+        width: 48px
+        height: 48px
+        border-radius: 50%
+        background: rgba(#231148, 0.56)
+        color: #ffffff
+        position: absolute
+        top: 0
+        right: 0
+        +r(1024)
+            top: 9px
+            right: 9px
+            width: 30px
+            height: 30px
+            padding: 9px
+        svg
+            display: block
+            width: 100%
+            height: 100%
+    &__info
+        width: 57%
+        padding: 45px 50px 65px 40px
+        +r(768)
+            width: 100%
+            padding: 40px 20px 50px 20px
+    &__title
+        color: #2e1a47
+        font-family: "NewzaldWeb-Bold"
+        font-size: 26px
+        line-height: 1.1
+        font-weight: 700
+        margin-bottom: 20px
+    &__content
+        font-size: 18px
+        font-weight: 400
+        letter-spacing: 0.43px
+        line-height: calc(24/18)
+        font-family: "CalibreWeb-Regular"
+        color: #3b3b3b
+        margin-bottom: 30px
+        p + p 
+            margin-top: 5px
+        ul, ol
+            margin: 10px 0
+            li + li
+                margin-top: 5px
+        strong
+            color: #2e1a47
+            font-size: 20px
+            font-weight: 600
+            letter-spacing: 0.47px
+            font-family: "CalibreWeb-Medium"
+    &__subtext 
+        color: #3b3b3b
+        font-family: "CalibreWeb-Light"
+        font-size: 18px
+        font-weight: 300
+        letter-spacing: 0.43px
+        line-height: calc(26/18)
+        
+    &__decor
+        width: 43%
+        +r(768)
+            width: 100%
+        img
+            display: inline-block
+            object-fit: cover
+            width: 100%
+            height: 100%
+
+.quiz-popup-form
+    margin: 20px 0
+    max-width: 440px
+    +r(1024)
+        max-width: 768px
+    +r(650)
+    &__input
+        margin-bottom: 12px
+        & + &
+            margin-top: 20px
+        input
+            color: #2e1a47
+            font-size: 16px
+            font-weight: 100
+            letter-spacing: 0.34px
+            line-height: calc(20/16)
+            display: block
+            width: 100%
+            border-radius: 3px
+            border: 1px solid #2e1a47
+            padding: 14px 20px 16px 20px
+            font-family: "CalibreWeb-Regular"
+            &::-webkit-input-placeholder 
+                font-family: "CalibreWeb-Thin"
+                color: #777777
+            &::-webkit-input-placeholder
+                font-family: "CalibreWeb-Thin"
+                color: #777777
+            &::-moz-placeholder
+                font-family: "CalibreWeb-Thin"
+                color: #777777
+            &:-ms-input-placeholder
+                font-family: "CalibreWeb-Thin"
+                color: #777777
+            &:-moz-placeholder
+                font-family: "CalibreWeb-Thin"
+                color: #777777
+    &__agree
+        margin: 12px 0
+        color: #3b3b3b
+        font-family: "CalibreWeb-Light"
+        font-size: 18px
+        font-weight: 300
+        letter-spacing: 0.43px
+        line-height: calc(26/18)
+        input
+            clip-path: circle(0)
+            opacity: 0
+            display: none
+            &:checked + label
+                &::before
+                    background: #2e1a47
+                &::after
+                    opacity: 1
+                    transition: opacity .2s .1s
+        label
+            display: block
+            padding-left: 40px
+            position: relative
+            &::before
+                content: ''
+                display: block
+                background: #ffffff
+                width: 23px
+                height: 23px
+                border: 1px solid #2e1a47
+                border-radius: 50%
+                position: absolute
+                left: 1px
+                top: 3px
+                transition: background-color .2s
+            &::after
+                content: ''
+                display: block
+                background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMyIgaGVpZ2h0PSIxMCI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTEyLjEzLjE0N2EuNTEyLjUxMiAwIDAgMSAuNzE3LjczTDQuNDYgOS4xMjNhLjUxMi41MTIgMCAwIDEtLjcxOCAwTC4xNTMgNS41OTdhLjUxMi41MTIgMCAwIDEgLjcxNy0uNzNMNC4xIDguMDR6Ii8+PC9zdmc+")
+                background-position: center
+                background-repeat: no-repeat
+                width: 24px
+                height: 24px
+                position: absolute
+                left: 1px
+                top: 3px
+                opacity: 0
+                transition: opacity .2s 0s
+                margin-left: -1px
+
+    &__submit
+        color: #2e1a47
+        font-family: "CalibreWeb-Medium"
+        font-size: 15px
+        font-weight: 500
+        letter-spacing: 1.5px
+        text-transform: uppercase
+        display: inline-block
+        border-radius: 3px
+        border: 1px solid #2e1a47
+        padding: 16px
+        width: 100%
+        max-width: 200px
+        background-color: #fff
+        transition: background-color .2s, color .2s
+        box-sizing: border-box
+        +r(650)
+            max-width: none
+        &:hover
+            background-color: #2e1a47
+            color: #ffffff
+    &__footer
+        margin-top: 30px
+
+
+.link-underline
+    display: inline-block
+    position: relative
+    color: currentColor
+    text-decoration: none
+    &:hover
+        &::after
+            transform: scaleX(0)
+    &::after
+        content: ''
+        display: block
+        width: 98%
+        height: 1px
+        background: currentColor
+        position: absolute
+        left: 1%
+        bottom: -1px
+        transform: scaleX(1)
+        transition: transform .1s

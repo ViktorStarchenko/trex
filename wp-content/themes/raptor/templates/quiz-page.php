@@ -90,6 +90,33 @@ foreach ($metaValues as $key => $meta) {
                         </div>
                         
                 </div>
+                <div class="modal fade" id="quiz-email" tabindex="-1" role="dialog" aria-labelledby="quizModal" style="bottom: initial;">
+                    <div class="modal-dialog quiz-popup-wrap" role="document">
+                        <button class="close quiz-popup__close" type="button" data-dismiss="modal" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill="currentColor" d="M17.991.693a.903.903 0 0 1 1.333 0 1.047 1.047 0 0 1 0 1.418L11.896 10l7.428 7.89a1.047 1.047 0 0 1 0 1.416.903.903 0 0 1-1.333 0l-7.436-7.898a.898.898 0 0 1-1.11 0l-7.436 7.899a.903.903 0 0 1-1.333 0 1.047 1.047 0 0 1 0-1.418L8.104 10 .676 2.11a1.047 1.047 0 0 1 0-1.416.903.903 0 0 1 1.333 0l7.436 7.898a.898.898 0 0 1 1.11 0z"/></svg></button>
+                        <div class="quiz-popup">
+                            <div class="quiz-popup__info">
+                                <div class="quiz-popup__title">Thanks for taking our sleep IQ quiz</div>
+                                <div class="quiz-popup__content">
+                                    <p>You've just learnt more about sleep and here's your chance to be rewarded with an amazing new sheet set. Send us your email address and we'll put you in the draw to <strong>WIN a luxury Tencel Cotton Sheet Set valued at $299</strong>. We have ten sheet sets to give away. Simply enter your address below and submit.</p>
+                                </div>
+                                <form class="quiz-popup-form" action="/">
+                                    <div class="quiz-popup-form__input">
+                                        <input type="email" placeholder="Email address">
+                                    </div>
+                                    <div class="quiz-popup-form__agree">
+                                        <input id="quiz-agree" type="checkbox" name="quiz-agree">
+                                        <label for="quiz-agree">I agree with the <a class="link-underline" href="#">Terms & Conditions</a></label>
+                                    </div>
+                                    <div class="quiz-popup-form__footer">
+                                        <button class="quiz-popup-form__submit" type="submit">Submit</button>
+                                    </div>
+                                </form>
+                                <div class="quiz-popup__subtext">I do not wish to enter the draw. <a class="close link-underline" data-dismiss="modal" aria-label="Close" href="#">View my Sleep IQ results</a></div>
+                            </div>
+                            <div class="quiz-popup__decor"><img src="/img/QUILTS.png" alt="QUILTS"></div>
+                        </div>
+                    </div>
+                </div>
         </div>
     </div>
      <div id="fb-root"></div>
