@@ -3123,6 +3123,7 @@ ul.app-store-list .deal-store-list li{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 15px;
 }
 .gif-info ._title{
     font-size: 60px;
