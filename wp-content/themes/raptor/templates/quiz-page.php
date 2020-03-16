@@ -92,7 +92,6 @@ foreach ($metaValues as $key => $meta) {
                 </div>
                 <?php
                 $quizEmail = get_field('quiz_email');
-                $quizEmail['enable'] = true;
                 ?>
                 <?php if (!empty($quizEmail['enable'])) : ?>
                     <div class="modal fade" id="quiz-email" tabindex="-1" role="dialog" aria-labelledby="quizModal" style="bottom: initial;">
