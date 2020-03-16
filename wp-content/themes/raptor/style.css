@@ -4455,7 +4455,7 @@ ul._inner-submenu li:first-child::after{
     color: #fff;
 }
 
-.quiz-popup .quiz-popup-form .gform_wrapper .gform_confirmation_message{
+.quiz-popup .quiz-popup-form .gform_confirmation_message{
     color: #2e1a47;
     font-family: NewzaldWeb-Bold;
     font-size: 26px;
