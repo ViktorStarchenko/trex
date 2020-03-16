@@ -4351,3 +4351,114 @@ ul._inner-submenu li:first-child::after{
         max-width:none
     }
 }
+
+.quiz-popup .quiz-popup-form .gform_wrapper .ginput_container_email{
+    margin: 0 0 12px 0;
+}
+
+.quiz-popup .quiz-popup-form .gform_wrapper .ginput_container_email input{
+    color: #2e1a47;
+    font-size: 16px !important;
+    font-weight: 100;
+    letter-spacing: .34px;
+    line-height: 1.25;
+    display: block;
+    border-radius: 3px;
+    border: 1px solid #2e1a47;
+    padding: 14px 20px 16px !important;
+    width: 100% !important;
+}
+
+.quiz-popup .quiz-popup-form .gform_wrapper .gfield_error .ginput_container:after{
+    background: none;
+}
+
+.quiz-popup .quiz-popup-form .gform_wrapper .ginput_container_checkbox{
+    margin: 12px 0;
+    color: #3b3b3b;
+    font-family: CalibreWeb-Light;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: .43px;
+    line-height: 1.44444;
+}
+
+.quiz-popup .quiz-popup-form .gform_wrapper .ginput_container_checkbox a{
+    display: inline-block;
+    position: relative;
+    color: currentColor;
+}
+
+.quiz-popup .quiz-popup-form .gform_wrapper .ginput_container_checkbox label:before {
+    content: "";
+    display: block;
+    background: #fff;
+    width: 23px;
+    height: 23px;
+    border: 1px solid #2e1a47;
+    border-radius: 50%;
+    position: absolute;
+    left: 1px;
+    top: 0;
+    transition: background-color .2s;
+}
+
+.quiz-popup .quiz-popup-form .gform_wrapper .ginput_container_checkbox label:after {
+    content: "";
+    display: block;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMyIgaGVpZ2h0PSIxMCI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTEyLjEzLjE0N2EuNTEyLjUxMiAwIDAxLjcxNy43M0w0LjQ2IDkuMTIzYS41MTIuNTEyIDAgMDEtLjcxOCAwTC4xNTMgNS41OTdhLjUxMi41MTIgMCAwMS43MTctLjczTDQuMSA4LjA0eiIvPjwvc3ZnPg==");
+    background-position: 50%;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 1px;
+    top: 0;
+    opacity: 0;
+    transition: opacity .2s 0s;
+    margin-left: -1px;
+    border: none !important;
+    transform: rotate(0) !important;
+}
+
+.quiz-popup .quiz-popup-form .gform_wrapper .ginput_container_checkbox input:checked+label:after {
+    opacity: 1;
+    transition: opacity .2s .1s;
+}
+
+.quiz-popup .quiz-popup-form .gform_wrapper .ginput_container_checkbox input:checked+label:before {
+    background: #2e1a47;
+}
+
+.quiz-popup .quiz-popup-form .gform_wrapper .gform_footer .gform_button.button{
+    color: #2e1a47;
+    font-family: CalibreWeb-Medium;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    display: inline-block;
+    border-radius: 3px;
+    border: 1px solid #2e1a47;
+    padding: 16px;
+    width: 100%;
+    max-width: 200px;
+    background-color: #fff;
+    transition: background-color .2s,color .2s;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.quiz-popup .quiz-popup-form .gform_wrapper .gform_footer .gform_button.button:hover {
+    background-color: #2e1a47;
+    color: #fff;
+}
+
+.quiz-popup .quiz-popup-form .gform_wrapper .gform_confirmation_message{
+    color: #2e1a47;
+    font-family: NewzaldWeb-Bold;
+    font-size: 26px;
+    line-height: 1.1;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
