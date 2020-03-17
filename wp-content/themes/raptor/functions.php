@@ -578,7 +578,14 @@ function custom_listing_template()
         <% } %>
         
         <div class="shop-card__row">
-            <div class="shop-card__row-item"><a class="shop-card__icon shop-card__site" href="#"><img src="'.get_template_directory_uri().'/static/build/img/icons/shop-card-site.png" alt="shop-card-site"/>VISIT SITE</a></div>
+            <% if ( site_url ) {  %>
+            <div class="shop-card__row-item">
+                <a class="shop-card__icon shop-card__site" href="<%= site_url %>" target="_blank">
+                    <img src="'.get_template_directory_uri().'/static/build/img/icons/shop-card-site.png" alt="shop-card-site"/>
+                    VISIT SITE
+                </a>
+            </div>
+            <% } %>
             <% if ( offers && offers[0].hot ) {  %>
             <div class="shop-card__row-item"><a class="shop-card__icon shop-card__offers js-special-trigger" href="#">
                 <img src="'.get_template_directory_uri().'/static/build/img/icons/shop-card-offers.png" alt="shop-card-offers"/>SPECIAL OFFERS</a>
@@ -959,6 +966,15 @@ function custom_store_data_response($stores_meta)
 
         $store_meta['retailer'] = get_field('display_name', $retailer->ID);
         $store_meta['retailer_image'] = get_the_post_thumbnail_url($retailer);
+
+        $store_meta['site_url'] = $store_meta['url'];
+        if (empty($store_meta['site_url'])) {
+            $store_meta['site_url'] = get_field('retailer_url', $retailer->ID);
+        }
+
+        if (empty($store_meta['site_url'])) {
+            $store_meta['site_url'] = get_field('url', $retailer->ID);
+        }
 
         //$retailer_url = get_field('retailer_url', $retailer->ID);
 

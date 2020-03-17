@@ -86,8 +86,19 @@ foreach ($retailerChunks as $k => $retailer) {
     }
 }
 
+$matressesArgs = [
+    'numberposts' => -1,
+    'category' => $matressesCategory->cat_ID
+];
+$args = [];
+$post_in = get_field('ranges_order');
+if (!empty($post_in)) {
+    $matressesArgs['post__in'] = $post_in;
+    $matressesArgs['orderby'] ='post__in';
+}
+
 $matressesCategory = get_category_by_slug('Beds');
-$matresses = get_posts(['numberposts' => -1, 'category' => $matressesCategory->cat_ID]);
+$matresses = get_posts($matressesArgs);
 
 $collectionsCategory = get_category_by_slug('sleep-collections');
 $collections = get_posts(['numberposts' => -1, 'category' => $collectionsCategory->cat_ID]);
@@ -97,6 +108,10 @@ ob_start();
     <style>
         #wpsl-stores {
             display: block !important;
+            height: 100%;
+        }
+        #wpsl-stores ul {
+            height: 100%;
         }
         #wpsl-direction-details {
             display: none !important;
@@ -119,6 +134,7 @@ ob_start();
         }
         #wpsl-stores li.no-results{
             width: 100%;
+            height: 100%;
         }
     </style>
 
@@ -349,10 +365,34 @@ ob_start();
                             */ ?>
                         </div>
                         <div class="tabs__content js-tab-content" id="tab-2">
-                            <div class="find-form__nothing">
-                                <div class="find-form__nothing-title">The selected retailer does not stock this range. </div>
-                                <div class="find-form__nothing-text">Please select another retailer.</div>
-                            </div>
+                            <ul>
+                                <?php $k = 0; ?>
+                                <?php foreach ($retailers as $retailer): ?>
+                                    <?php $url = get_field('url', $retailer->ID); ?>
+                                    <?php if($url) : ?>
+                                        <li class="shop-card ">
+                                            <div class="shop-card__name"><?= get_field('display_name', $retailer->ID) ?></div>
+
+                                            <div class="shop-card__row">
+                                                <div class="shop-card__row-item">
+                                                    <a class="shop-card__icon shop-card__site" href="<?= $url ?>" target="_blank">
+                                                    <img src="<?= get_template_directory_uri() ?>/static/build/img/icons/shop-card-site.png" alt="shop-card-site"/>VISIT SITE
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <?php $k++; ?>
+                                    <?php endif; ?>
+                                <?php endforeach; ?>
+                                <?php if ($k == 0) : ?>
+                                    <li class="no-results">
+                                        <div class="find-form__nothing">
+                                            <div class="find-form__nothing-title">The selected retailer does not stock this range. </div>
+                                            <div class="find-form__nothing-text">Please select another retailer.</div>
+                                        </div>
+                                    </li>
+                                <?php endif; ?>
+                            </ul>
                         </div>
                     </div>
                 </div>
