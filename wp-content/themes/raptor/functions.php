@@ -526,7 +526,7 @@ function custom_listing_template()
 {
 
     global $wpsl, $wpsl_settings;
-
+/*
     $listing_template = '<li data-store-id="<%= id %>" class="app-filter-result__list-item app-filter-result__list-vi"><div class="_divider"></div>' . "\r\n";
     $listing_template .= "\t\t" . '   <div class="article-inline-goods__title"><%= store %></div>' . "\r\n";
     $listing_template .= "\t\t" . '   <div class="article-inline-goods__subtitle"><%= city %> </div>' . "\r\n";
@@ -544,8 +544,108 @@ function custom_listing_template()
     $listing_template .= include 'wpsl-templates/listing-details.php';
     $listing_template .= "\t\t" . '<a class="wpsl-directions" style="display: none;"></a>' . "\r\n";
     $listing_template .= "\t" . '</li>' . "\r\n";
+*/
+    $listing_template = '
+    <% var offersCss = "" %>
+    <% if ( offers && offers[0].hot ) {  %>
+        <% offersCss = "js-special-wrap" %>
+    <% } %>
+    <li data-store-id="<%= id %>" class="shop-card <%= offersCss %>" itemscope itemtype="http://schema.org/LocalBusiness">
+        <div class="shop-card__name"><%= store %></div>
+        <meta itemprop="name" content="<%= store %>">
+        
+        <div class="shop-card__address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+            <p><span itemprop="streetAddress"><%= address %></span>, <span itemprop="addressLocality"><%= city %></span>, <%= country %></p>
+            <% if (phone){ %>
+                <p><a href="tel:<%= phone %>"><span itemprop="telephone"><%= phone %></span></a></p>
+            <% } %>
+        </div>
+        
+        <% if(ranges_show == 1) { %>
+            <% if(ranges.length > 0) { %>
+            <div class="shop-card__selected">
+                <% for(var i in ranges) { %>
+                    <% var separator = "," %>
+                    <% if(ranges.length - 1 == i) { %>
+                        <% separator = "" %>
+                    <% } %>
+                    <% if (ranges[i].title) { %>
+                        <a href="<%= ranges[i].link %>" class="ga-link " title="<%= ranges[i].title %>"><%= ranges[i].title %></a><%= separator %>
+                    <% } %>
+                <% } %>
+            </div>
+            <% } %>
+        <% } %>
+        
+        <div class="shop-card__row">
+            <div class="shop-card__row-item"><a class="shop-card__icon shop-card__site" href="#"><img src="'.get_template_directory_uri().'/static/build/img/icons/shop-card-site.png" alt="shop-card-site"/>VISIT SITE</a></div>
+            <% if ( offers && offers[0].hot ) {  %>
+            <div class="shop-card__row-item"><a class="shop-card__icon shop-card__offers js-special-trigger" href="#">
+                <img src="'.get_template_directory_uri().'/static/build/img/icons/shop-card-offers.png" alt="shop-card-offers"/>SPECIAL OFFERS</a>
+            </div>
+            <% } %>
+            <div class="shop-card__row-item">
+                <a class="shop-card__icon shop-card__map js-show-store-details" href="#">
+                    <img src="'.get_template_directory_uri().'/static/build/img/icons/shop-card-map.png" alt="shop-card-map"/>VIEW ON MAP
+                </a>
+            </div>
+        </div>
+        <% if ( offers && offers[0].hot ) {  %>
+        <div class="shop-card__special js-special-target">
+            <div class="shop-card-wrap">
+                <div class="shop-card-wrap__head">
+                    <div class="shop-card-wrap__title">Available deals</div>
+                    <div class="shop-card-wrap__close js-special-target-close"></div>
+                </div>
+                <div class="shop-card-wrap__body">
+                    <% for(var i in offers) { %>
+                        <% if (offers[i].title) { %>
+                        <div class="special-card">
+                            <div class="special-card__head">
+                                <% if(offers[i].hot) { %>
+                                    <img class="special-card__head-icon" src="'.get_stylesheet_directory_uri().'/static/build/img/icons/special-card-dollar.png">
+                                <% } %>
+                                <span class="special-card__head-title"><%= offers[i].title %></span>
+                            </div>
+                            <% if(offers[i].sub_title){ %>
+                            <div class="deal-content-subtitle">
+                                <%= offers[i].sub_title %>
+                            </div>
+                            <% } %>
+                            <div class="special-card__desc">
+                                <p><%= offers[i].excerpt %></p>
+                            </div>
+                            <div class="special-card__footer">
+                                <% if(retailer_url[offers[i].id]) { %>
+                                    <a href="<%= retailer_url[offers[i].id] %>" class="ga-link" target="_blank" data-name="<%= offers[i].name %>"><%= offers[i].cta_button %></a>
+                                <% } else { %>
+                                    <a href="<%= retailer_url %>" class="ga-link special-card__footer-link" data-name="<%= offers[i].name %>"><%= offers[i].cta_button %></a>
+                                <% } %>
+                                <div class="special-card__footer-date">Offer ends <%= offers[i].ends %></div>
+                            </div>
+                        </div>
+                        <% } %>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+        <% } %>
+    </li>';
 
     return $listing_template;
+}
+
+
+add_filter( 'wpsl_no_results', 'custom_no_results' );
+
+function custom_no_results() {
+
+    $output = '<div class="find-form__nothing">
+        <div class="find-form__nothing-title">The selected retailer does not stock this range. </div>
+        <div class="find-form__nothing-text">Please select another retailer.</div>
+    </div>';
+
+    return $output;
 }
 
 add_filter('wpsl_sql', function ($sql) {
@@ -887,6 +987,11 @@ function custom_store_data_response($stores_meta)
 
         $result[] = $store_meta;
     }
+/*
+    echo "<pre>";
+    print_r($result);
+    echo "</pre>";
+*/
     return $result;
 }
 
