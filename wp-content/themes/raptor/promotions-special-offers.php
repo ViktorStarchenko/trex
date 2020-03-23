@@ -449,15 +449,15 @@
     <?= do_shortcode('[content_block slug=ready-to-buy]'); ?>
 </section>
 <script>
-$(function() {
+JQuery(function() {
 	var catid = 0;
 
 	<?php if($catId) {?>
-	    	catid = $catId;
+	    	catid = <?php echo $catId;?>
 	<?php } ?>
 
 	if(catid){
-    	$(document).scrollTop( $("#container").offset().top );
+		JQuery(document).scrollTop( $("#container").offset().top );
 	}
 });
 </script>
