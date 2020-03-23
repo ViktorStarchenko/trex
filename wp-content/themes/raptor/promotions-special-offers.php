@@ -449,7 +449,7 @@
     <?= do_shortcode('[content_block slug=ready-to-buy]'); ?>
 </section>
 <script>
-jQuery(function() {
+$(function() {
 	var catid = 0;
 
 	<?php if($catId) {?>
@@ -457,7 +457,7 @@ jQuery(function() {
 	<?php } ?>
 
 	if(catid){
-		jQuery(document).scrollTop( $("#container").offset().top );
+		$(document).scrollTop( $("#container").offset().top );
 	}
 });
 </script>
