@@ -448,5 +448,17 @@
 
     <?= do_shortcode('[content_block slug=ready-to-buy]'); ?>
 </section>
+<script>
+$(function() {
+	var catid = 0;
 
+	<?php if($catId) {?>
+	    	catid = $catId;
+	<?php } ?>
+
+	if(catid){
+    	$(document).scrollTop( $("#container").offset().top );
+	}
+});
+</script>
 <?php get_footer(); ?>
