@@ -450,15 +450,19 @@
 </section>
 <script>
 jQuery(function() {
-	var catid = 0;
 
-	<?php if($catId) {?>
-	    	catid = <?php echo $catId;?>
-	<?php } ?>
-
-	if(catid){
-		jQuery(document).scrollTop( $("#container").offset().top );
-	}
+	jQuery( document ).ready(function() {
+    	var catid = 0;
+    
+    	<?php if($catId) {?>
+    	    	catid = <?php echo $catId;?>
+    	<?php } ?>
+    
+    	if(catid){
+    		jQuery(document).scrollTop( jQuery("#container").offset().top );
+    	}
+	});
+	
 });
 </script>
 <?php get_footer(); ?>
