@@ -125,16 +125,12 @@ ob_start();
         .find-grid__map .map{
             height: 100%;
         }
-        .shop-card__selected a:hover{
-            text-decoration: underline !important;
-        }
-        .find-grid__map .map#wpsl-gmap img{
-            top: 50%;
-            left: 50%;
-        }
         #wpsl-stores li.no-results{
             width: 100%;
             height: 100%;
+        }
+        .tabs__container{
+            display: none;
         }
     </style>
 

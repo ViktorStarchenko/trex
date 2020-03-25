@@ -592,7 +592,7 @@ function custom_listing_template()
             </div>
             <% } %>
             <div class="shop-card__row-item">
-                <a class="shop-card__icon shop-card__map " data-class="js-show-store-details" target="_blank" href="https://www.google.com/maps/dir/?api=1&destination=<%= encodeURIComponent(address) %>,<%= encodeURIComponent(city) %>,<%= encodeURIComponent(country) %>" >
+                <a class="shop-card__icon shop-card__map js-show-store-details" href="#wpsl-gmap">
                     <img src="'.get_template_directory_uri().'/static/build/img/icons/shop-card-map.png" alt="shop-card-map"/>VIEW ON MAP
                 </a>
             </div>
