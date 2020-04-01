@@ -86,6 +86,7 @@ foreach ($retailerChunks as $k => $retailer) {
     }
 }
 
+$matressesCategory = get_category_by_slug('beds');
 $matressesArgs = [
     'numberposts' => -1,
     'category' => $matressesCategory->cat_ID
@@ -97,7 +98,6 @@ if (!empty($post_in)) {
     $matressesArgs['orderby'] ='post__in';
 }
 
-$matressesCategory = get_category_by_slug('Beds');
 $matresses = get_posts($matressesArgs);
 
 $collectionsCategory = get_category_by_slug('sleep-collections');
