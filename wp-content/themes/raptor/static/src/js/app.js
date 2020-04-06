@@ -13,7 +13,7 @@ import './helpers/removeArrayItem.js';
 // BEM blocks
 import dropFilterInit from './blocks/dropFilterInit';
 import setupTabs from './blocks/setupTabs';
-import toggleSpecialOffers from './blocks/toggleSpecialOffers';
+import './blocks/toggleSpecialOffers';
 // import MenuMobile from './blocks/menu-mob';
 // import Form from './blocks/form';
 
@@ -26,6 +26,6 @@ import toggleSpecialOffers from './blocks/toggleSpecialOffers';
 window.addEventListener('load', () => {
 	dropFilterInit();
 	setupTabs();
-	toggleSpecialOffers();
+	window.toggleSpecialOffers();
 	// ...
 });
