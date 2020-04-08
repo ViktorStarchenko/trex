@@ -1113,7 +1113,6 @@ body, html{
     width: 100%;
     max-width: 1500px;
     margin: 0 auto;
-    min-height: 380px;
 }
 .promo-list-box .article-luxury-flex{
     margin-bottom: 30px;
@@ -4462,4 +4461,13 @@ ul._inner-submenu li:first-child::after{
     line-height: 1.1;
     font-weight: 700;
     margin-bottom: 20px;
+}
+.article-news-box.no-padding{
+    padding: 0px;
+}
+.app-offers-list.no-padding-top{
+    padding-top: 0px;
+}
+.no-flex{
+    flex: none;
 }
