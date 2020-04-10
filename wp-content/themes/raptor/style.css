@@ -4471,3 +4471,6 @@ ul._inner-submenu li:first-child::after{
 .no-flex{
     flex: none;
 }
+div span.ginput_full .cstm-inpt-plchldr{
+    top: 4px!important;
+}
