@@ -1,0 +1,25 @@
+mixin comparison-card(props={})
+    .comparison-card
+        .comparison-card__img
+            +img('../img/comparison/comparison-card/comparison-card', 'jpg')
+        .comparison-card__head
+            .comparison-card__title!= props.title
+            a.bttn(href="#") Learn more
+        .comparison-card__text We’ve got your back#[sup ®] For consistent even body support throughout the night, the continuous coil design of Chiropractic has no equal.
+        comparison-card
+        .comparison-card__accordion.js-acc.accordeon(data-toggle="comparison")
+            .accordeon__title.js-acc-trig
+                span.accordeon__title-icon
+                    +icon('plus')(width="30" height="30" viewBox="0 0 30 30")
+                | Details
+            .accordeon__body.js-acc-targ
+                .content
+                    dl
+                        dt Luxury
+                        dd The finest fabrics and the latest technology meet to deliver a sleep experience that is unrivalled.
+                    dl
+                        dt Unparalleled Comfort
+                        dd Created to redefine the comfort levels you expect from a mattress.
+                    dl
+                        dt Design
+                        dd Every element has been carefully considered and crafted to ensure you get a mattress that looks as good as it feels.

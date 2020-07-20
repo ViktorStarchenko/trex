@@ -14,35 +14,40 @@
 		<script defer="defer" type="text/javascript" src="/js/app.js"></script>
 	</head>
 	<body class="body">
+		<!-- SVG Sprite-->
+		<div class="svg-icon" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="close"><path d="M8 6.933L14.36.58a.75.75 0 011.06 1.062L9.054 8l6.366 6.359a.75.75 0 01-1.06 1.061L8 9.066 1.64 15.42a.75.75 0 11-1.06-1.06L6.945 8 .58 1.642A.75.75 0 011.64.579z"/></symbol><symbol id="down_arrow"><path fill="currentColor" d="M11.045.66a.507.507 0 01.704.729L6.346 6.608a.506.506 0 01-.704 0L.244 1.388A.506.506 0 11.948.66l5.046 4.88z"/></symbol><symbol id="plus"><path fill="currentColor" fill-rule="evenodd" d="M15 8c.314 0 .568.255.568.568l-.006 5.869 5.87-.005a.568.568 0 01.001 1.136l-5.86.004-.005 5.86a.568.568 0 01-1.136 0l.005-5.87-5.869.006a.568.568 0 01-.001-1.136l5.86-.004.005-5.86c0-.314.255-.568.568-.568z"/></symbol></svg></div>
 		<!-- Header-->
 		<header style="border:1px solid #2E1A47; width:100%; height:50px; padding: 10px; color: #2E1A47; text-align:center;">
 			<h3>header</h3>
 		</header>
-		<div class="div" style="background:#ccc;">
-			<div class="modal fade" id="quiz-email" tabindex="-1" role="dialog" aria-labelledby="quizModal" style="bottom: initial;">
-				<div class="modal-dialog quiz-popup-wrap" role="document">
-					<button class="close quiz-popup__close" type="button" data-dismiss="modal" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill="currentColor" d="M17.991.693a.903.903 0 0 1 1.333 0 1.047 1.047 0 0 1 0 1.418L11.896 10l7.428 7.89a1.047 1.047 0 0 1 0 1.416.903.903 0 0 1-1.333 0l-7.436-7.898a.898.898 0 0 1-1.11 0l-7.436 7.899a.903.903 0 0 1-1.333 0 1.047 1.047 0 0 1 0-1.418L8.104 10 .676 2.11a1.047 1.047 0 0 1 0-1.416.903.903 0 0 1 1.333 0l7.436 7.898a.898.898 0 0 1 1.11 0z"/></svg></button>
-					<div class="quiz-popup">
-						<div class="quiz-popup__info">
-							<div class="quiz-popup__title">Thanks for taking our sleep IQ quiz</div>
-							<div class="quiz-popup__content">
-								<p>You've just learnt more about sleep and here's your chance to be rewarded with an amazing new sheet set. Send us your email address and we'll put you in the draw to <strong>WIN a luxury Tencel Cotton Sheet Set valued at $299</strong>. We have ten sheet sets to give away. Simply enter your address below and submit.</p>
+		<!-- Content-->
+		<div class="main">
+			<div class="div" style="background:#ccc;">
+				<div class="modal fade" id="quiz-email" tabindex="-1" role="dialog" aria-labelledby="quizModal" style="bottom: initial;">
+					<div class="modal-dialog quiz-popup-wrap" role="document">
+						<button class="close quiz-popup__close" type="button" data-dismiss="modal" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill="currentColor" d="M17.991.693a.903.903 0 0 1 1.333 0 1.047 1.047 0 0 1 0 1.418L11.896 10l7.428 7.89a1.047 1.047 0 0 1 0 1.416.903.903 0 0 1-1.333 0l-7.436-7.898a.898.898 0 0 1-1.11 0l-7.436 7.899a.903.903 0 0 1-1.333 0 1.047 1.047 0 0 1 0-1.418L8.104 10 .676 2.11a1.047 1.047 0 0 1 0-1.416.903.903 0 0 1 1.333 0l7.436 7.898a.898.898 0 0 1 1.11 0z"/></svg></button>
+						<div class="quiz-popup">
+							<div class="quiz-popup__info">
+								<div class="quiz-popup__title">Thanks for taking our sleep IQ quiz</div>
+								<div class="quiz-popup__content">
+									<p>You've just learnt more about sleep and here's your chance to be rewarded with an amazing new sheet set. Send us your email address and we'll put you in the draw to <strong>WIN a luxury Tencel Cotton Sheet Set valued at $299</strong>. We have ten sheet sets to give away. Simply enter your address below and submit.</p>
+								</div>
+								<form class="quiz-popup-form" action="/">
+									<div class="quiz-popup-form__input">
+										<input type="email" placeholder="Email address">
+									</div>
+									<div class="quiz-popup-form__agree">
+										<input id="quiz-agree" type="checkbox" name="quiz-agree">
+										<label for="quiz-agree">I agree with the <a class="link-underline" href="#">Terms & Conditions</a></label>
+									</div>
+									<div class="quiz-popup-form__footer">
+										<button class="quiz-popup-form__submit" type="submit">Submit</button>
+									</div>
+								</form>
+								<div class="quiz-popup__subtext">I do not wish to enter the draw. <a class="close link-underline" data-dismiss="modal" aria-label="Close" href="#">View my Sleep IQ results</a></div>
 							</div>
-							<form class="quiz-popup-form" action="/">
-								<div class="quiz-popup-form__input">
-									<input type="email" placeholder="Email address">
-								</div>
-								<div class="quiz-popup-form__agree">
-									<input id="quiz-agree" type="checkbox" name="quiz-agree">
-									<label for="quiz-agree">I agree with the <a class="link-underline" href="#">Terms & Conditions</a></label>
-								</div>
-								<div class="quiz-popup-form__footer">
-									<button class="quiz-popup-form__submit" type="submit">Submit</button>
-								</div>
-							</form>
-							<div class="quiz-popup__subtext">I do not wish to enter the draw. <a class="close link-underline" data-dismiss="modal" aria-label="Close" href="#">View my Sleep IQ results</a></div>
+							<div class="quiz-popup__decor"><img src="/img/QUILTS.png" alt="QUILTS"></div>
 						</div>
-						<div class="quiz-popup__decor"><img src="/img/QUILTS.png" alt="QUILTS"></div>
 					</div>
 				</div>
 			</div>

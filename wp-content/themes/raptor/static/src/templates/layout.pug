@@ -28,13 +28,16 @@ html
 		+head(page)
 
 	body.body(class= page.class)
-		
+		// SVG Sprite
+		+svg-icon()
+
 		block header
 			// Header
 			include /blocks/header
 
-		block content
-			// Content
+		// Content
+		.main
+			block content
 
 		block footer
 			// Footer

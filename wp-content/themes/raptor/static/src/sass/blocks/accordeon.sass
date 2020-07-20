@@ -1,0 +1,47 @@
+.accordeon
+	$this: &
+	display: block
+	text-align: left
+
+.accordeon__title
+	width: 100%
+	display: flex
+	align-items: center
+	// justify-content: space-between
+	cursor: pointer
+	position: relative
+	&.active
+		.accordeon__title-icon
+			transform: rotate(-45deg)
+	&.disable
+		pointer-events: none
+		.accordeon__title-icon
+			display: none
+	&-icon
+		flex-shrink: 0
+		display: inline-flex
+		justify-content: center
+		align-items: center
+		width: 30px
+		height: 30px
+		transition: transform .2s
+		transform: rotate(0)
+		font-size: 0
+		svg
+			width: 100%
+			height: 100%
+	svg:not([id])
+		transition: transform .2s
+		will-change: transfrom
+	&:hover
+		svg:not([id])
+			transform: scale(1.1) skew(0.01deg)
+
+.accordeon__body
+	will-change: height
+	transition: height .3s
+	overflow: hidden
+	&.active
+
+.accordeon-wrap
+	display: block

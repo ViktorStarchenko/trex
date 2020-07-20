@@ -11,15 +11,17 @@ html {
 
 .body {
 	position: relative;
-	display: block;
+	// display: block;
 	height: 100%;
 	line-height: 1.25;
 	font-size: 1em;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: CalibreWeb, Arial, Helvetica, sans-serif;
 	font-weight: 400;
 	color: $text-color;
 	background-color: white;
 
+	display: flex;
+	flex-flow: column nowrap;
 	// &:before {
 	// 	content: '';
 	// 	position: absolute;
@@ -36,4 +38,9 @@ html {
 	&.swiper-lazy-loaded {
 		opacity: 1;
 	}
+}
+
+sup{
+	vertical-align: super;
+    font-size: smaller;
 }

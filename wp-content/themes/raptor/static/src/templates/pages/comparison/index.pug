@@ -1,6 +1,22 @@
 extends /layout
 
 block head
-	- page.title = 'Comparison'
+    - page.title = 'Comparison'
 
 block content
+    .hero-screen
+        picture.hero-screen__pictire
+            source(media="(max-width: 768px)", srcset=`../img/comparison/comparison-mob.jpg 1x, ../img/comparison/comparison-mob@2x.jpg 2x`)
+            +img('../img/comparison/comparison-desc', 'jpg')
+        .hero-screen__title Find your perfect <br/> Sleep Solution
+    .container
+        .comparison-wrap
+                .content-center
+                    h2 Explore our Mattresses
+                    p We've taken more than 100 years of sleep obsession to turn a beautiful dream into reality. Nestle into a mattress with rich, quality fabric that integrates the latest technology designed to give you a superior sleep.
+                .comparison-grid.js-acc-wrap
+                    +comparison-card({title: 'Cocoon'})
+                    +comparison-card({title: 'Luxury'})
+        .swap-card-wrap
+            +swap-card
+            +swap-card
