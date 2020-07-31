@@ -1,0 +1,30 @@
+.footer-basement
+    display: flex
+    justify-content: center
+    &:first-child
+        margin-right: auto
+        +r(1024)
+            margin: 0
+            width: 100%
+    &:last-child
+        margin-left: auto
+        +r(1024)
+            margin: 0
+            width: 100%
+    &__item
+        &:not(:last-child)
+            margin-right: 35px
+            +r(768)
+                margin-right: 20px
+    &__link
+        color: $white
+        text-decoration: none
+        font-family: "CalibreWeb-Light", sans-serif
+        font-size: 14px
+        font-weight: 300
+        font-stretch: normal
+        font-style: normal
+        line-height: 2.5
+        letter-spacing: 0.5px
+        +r(768)
+            font-size: 12px

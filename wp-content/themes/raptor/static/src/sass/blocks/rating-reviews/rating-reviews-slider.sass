@@ -1,0 +1,18 @@
+.rating-reviews-slider
+    width: 100%
+    max-width: 1250px
+    margin: 70px auto 0
+    +r(768)
+        margin-top: 50px
+    .swiper-container
+        overflow: visible
+    .swiper-slide
+        opacity: .6
+        transition: .3s
+        width: 48.8% !important
+        padding: 0 20px
+        +r(768)
+            width: 65% !important
+            padding: 0 10px
+        &.swiper-slide-active
+            opacity: 1

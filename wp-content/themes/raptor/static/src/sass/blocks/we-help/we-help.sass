@@ -1,0 +1,57 @@
+.we-help
+    display: flex
+    flex-flow: row wrap
+    background: $main
+    max-width: 1440px
+    margin: 0 auto
+    margin-bottom: 75px
+    +r(768)
+        margin-bottom: 50px
+    &__menu
+        width: 50%
+        padding-left: 94px
+        padding-right: 30px
+        padding-top: 165px
+        padding-bottom: 170px
+        +r(1200)
+            padding-left: 54px
+            padding-right: 30px
+            padding-top: 100px
+            padding-bottom: 110px
+        +r(768)
+            width: 100%
+            padding-left: 20px
+            padding-right: 20px
+            padding-top: 50px
+            padding-bottom: 60px
+    &__nav
+        +rm(769)
+            max-width: 490px
+    &__title
+        margin-bottom: 38px
+        font-size: 40px
+        color: $white
+        font-family: $f-2
+        +r(768)
+            margin-bottom: 40px
+            font-size: 30px
+    &__img
+        width: 50%
+        border-left: 1px solid $text
+        position: relative
+        line-height: 0
+        +r(768)
+            width: 100%
+            border: 0
+            &:before
+                content: ''
+                display: block
+                width: 100%
+                padding-bottom: 88%
+        img
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            object-fit: cover

@@ -15,6 +15,8 @@ import dropFilterInit from './blocks/dropFilterInit';
 import setupTabs from './blocks/setupTabs';
 import './blocks/toggleSpecialOffers';
 import setupAccordeon from './blocks/initAccordeon';
+import inirSliders from './blocks/inirSliders';
+import topPromoInit from './blocks/topPromoInit';
 // import MenuMobile from './blocks/menu-mob';
 // import Form from './blocks/form';
 
@@ -30,4 +32,6 @@ window.addEventListener('load', () => {
 	window.toggleSpecialOffers();
 	// ...
 	setupAccordeon();
+	inirSliders();
+	topPromoInit();
 });

@@ -1,0 +1,44 @@
+.we-help-nav
+    &:hover
+        .we-help-nav__item
+            opacity: .5
+            &:hover
+                opacity: 1
+    &__item
+        & + &
+            margin-top: 30px
+    &__link
+        color: $white
+        text-decoration: none
+        &:hover
+            opacity: .2
+    &__name
+        display: block
+        display: flex
+        align-items: center
+        font-family: "CalibreWeb-Regular"
+        font-size: 26px
+        letter-spacing: 0.35px
+        margin-bottom: 4px
+        +r(768)
+            font-size: 20px
+            margin-bottom: 14px
+            justify-content: space-between
+    &__icon
+        margin-left: 15px
+        flex-shrink: 0
+        display: flex
+        width: 24px
+        height: 24px
+        justify-content: center
+        align-items: center
+        border-radius: 50%
+        border: 1px solid $white
+    &__text
+        display: block
+        font-family: "CalibreWeb-Regular"
+        font-size: 18px
+        line-height: calc( 22 / 18 )
+        letter-spacing: 0px
+        +r(768)
+            font-size: 15px

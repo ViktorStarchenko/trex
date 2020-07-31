@@ -4,3 +4,78 @@ block head
 	- page.title = 'Home'
 
 block content
+	.we-help
+		.we-help__menu
+			.we-help__title How can we help you?
+			.we-help__nav
+				ul.we-help-nav
+					li.we-help-nav__item
+						a(href="#").we-help-nav__link
+							span.we-help-nav__name Explore our Mattresses
+								span.we-help-nav__icon
+									+icon('arrow-right')(width="24" height="24" viewBox="0 0 24 24")
+							span.we-help-nav__text Find your new bed from our ranges that cover everyone from the little ones in your home through all stages of life.
+					li.we-help-nav__item
+						a(href="#").we-help-nav__link
+							span.we-help-nav__name Sleep Selector
+								span.we-help-nav__icon
+									+icon('arrow-right')(width="24" height="24" viewBox="0 0 24 24")
+							span.we-help-nav__text Unsure which mattress you need? Complete our short Sleep Selector quiz and we’ll match you to the perfect bed to suit your needs and your budget.
+					li.we-help-nav__item
+						a(href="#").we-help-nav__link
+							span.we-help-nav__name Find a Retailer
+								span.we-help-nav__icon
+									+icon('arrow-right')(width="24" height="24" viewBox="0 0 24 24")
+							span.we-help-nav__text FInd your nearest store to try out SleepMaker in-store and get their expert advice.
+		.we-help__img
+			picture
+				source(media="(max-width: 768px)", srcset="../img/we-help/we-help-mob.png 1x, ../img/we-help/we-help-mob@2x.png 2x")
+				+img('../img/we-help/we-help-desc', 'png')
+	.feature-wrap
+		// a(href="#").feature-card
+		// or
+		// div.feature-card
+		+feature-card({img:'feature-card-2', title:'QUALITY', text:'SleepMaker mattresses are only made with the highest quality materials, ensuring total comfort and support.'})
+		+feature-card({img:'feature-card-1', title:'AUSTRALIAN MADE', text:'SleepMaker maintains local manufacturing capabilities and is committed to on-shore manufacturing.'})
+		+feature-card({img:'feature-card-3', title:'INNOVATION', text:'SleepMaker combine leading edge innovation, world-class operating processes of the highest quality products.'})
+	.complete-decor
+		.complete-decor__bg
+			picture
+				source(media="(max-width: 650px)", srcset="../img/complete-decor/complete-decor-mob.png 1x, ../img/complete-decor/complete-decor-mob@2x.png 2x")
+				+img('../img/complete-decor/complete-decor-desc', 'png')
+		.content-center
+			h6 BETTER
+			h2 At SleepMaker we make better sleep.
+			p.
+				To make better sleep we make our own foam. And we make our own springs.
+				Because the only way to make sure of better. Is to make it better ourselves.
+				SleepMaker. Makers of the ultimate sleep.
+			a.bttn.bttn--bg(href="#") Learn More
+	.promo-decor
+		.promo-decor__bg
+			picture
+				source(media="(max-width: 650px)", srcset="../img/promo/promo-block-mob.png 1x, ../img/promo/promo-block-mob@2x.png 2x")
+				+img('../img/promo/promo-block-desc', 'png')
+		.content.big-text
+			h6 PROMOTION BLOCK
+			h2 Additional promotional block
+			p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vulputate vel ex id ultricies. Nam gravida risus non erat feugiat dapibus. Nunc rhoncus ut enim sit amet temxpus. In lobortis justo tempus consequat mollis. Praesent rhoncus dapibus sagittis.
+			a.bttn.bttn--bg(href="#") Learn More
+	.bg-decor
+		.content-center.big-text
+			h2 Too hot or too cold in bed?
+			p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vulputate vel ex id ultricies. Nam gravida risus non erat feugiat dapibus.Nunc rhoncus ut enim sit amet tempus. n lobortis justo tempus consequat mollis. Praesent rhoncus dapibus sagittis.
+			a.bttn.bttn--reverse(href="#") Learn More
+
+	.rating-reviews
+		.content-center
+			h3 See why people love Miracoil...
+		+rating-reviews-slider
+
+	.complete-card-outer
+		.content-center
+			h3  Complete your Sleep Experience
+		.complete-card-wrap
+			+complete-card({title: 'Mattresses', img: 'complete-card-1'})
+			+complete-card({title: 'Bedding & Accessories', img: 'complete-card-2'})
+			+complete-card({title: 'Sleep Guide', img: 'complete-card-3'})

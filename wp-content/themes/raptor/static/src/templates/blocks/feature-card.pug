@@ -1,0 +1,6 @@
+mixin feature-card(props={})
+    .feature-card
+        .feature-card__icon
+            +img(`../img/feature-card/${props.img}`, 'png')
+        .feature-card__title!= props.title
+        .feature-card__text!= props.text

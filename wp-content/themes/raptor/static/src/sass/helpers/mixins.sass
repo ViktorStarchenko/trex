@@ -147,11 +147,13 @@ $em: 1em/16;
 		src: local($name), url($path + '.woff2') format('woff2'), url($path + '.woff') format('woff'), url($path + '.ttf') format('ttf'), url($path + '.eot') format('eot')
 
 =placeholder
-	&::placeholder
+	&::-webkit-input-placeholder
 		@content
-		
 	&::-ms-input-placeholder
 		@content
+	&::placeholder
+		@content
+
 
 =text-overflow
 	overflow: hidden

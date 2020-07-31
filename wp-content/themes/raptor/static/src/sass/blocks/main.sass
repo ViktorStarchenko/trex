@@ -5,6 +5,11 @@
 	margin: 0
 	position: relative
 
+img,
+svg
+	display: inline-block
+	max-width: 100%
+
 .container
 	width: 100%
 	max-width: 1340px
@@ -18,8 +23,18 @@
 
 .content,
 .content-center
+	&.big-text
+		p
+			font-size: 20px
+			line-height: 1.5
+			+r(768)
+				font-size: 16px
 	h2
 		margin-bottom: 20px
+	h4
+		margin-bottom: 20px
+	h6
+		margin-bottom: 15px
 	dl + dl
 		margin-top: 25px
 	dl
@@ -46,11 +61,41 @@
 			margin-top: 10px
 			+r(768)
 				font-size: 14px
+	p
+		font-size: 18px
+		+r(768)
+			font-size: 16px
+	.bttn
+		margin-top: 55px
+		+r(768)
+			margin-top: 30px
 
-h1, h2, h3, h4, h5, h6
-	font-family: $f-2
+h1, h2, h3, h4, h5
+	font-family: "NewzaldWeb-Book", serif
 
 h2
+	font-size: 40px
+	+r(768)
+		font-size: 30px
+h3
+	font-size: 30px
+	+r(768)
+		font-size: 24px
+h4
 	font-size: 26px
 	+r(768)
 		font-size: 21px
+h5
+	font-size: 22px
+	+r(768)
+		font-size: 20px
+
+h6
+	font-family: "CalibreWeb-Medium", sans-serif
+	font-size: 16px
+	font-weight: 500
+	font-stretch: normal
+	font-style: normal
+	line-height: normal
+	letter-spacing: 1.5px
+	text-transform: uppercase

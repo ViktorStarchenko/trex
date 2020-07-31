@@ -1,0 +1,61 @@
+.top-banner
+    display: block
+    padding: 0 60px
+    background: $main
+    color: $white
+    will-change: height
+    transition: height .3s
+    overflow: hidden
+    &__inner
+        padding: 20px 0
+        width: 100%
+        max-width: 1370px
+        margin: 0 auto
+        position: relative
+        text-align: center
+    &__content
+        max-width: 600px
+        margin: 0 auto
+    &__title
+        font-family: $f-2
+        font-size: 40px
+        font-weight: normal
+        font-stretch: normal
+        font-style: normal
+        line-height: normal
+        letter-spacing: normal
+        color: $white
+        +r(768)
+            font-size: 30px
+    &__text
+        font-family: $f-1
+        font-size: 18px
+        font-weight: normal
+        font-stretch: normal
+        font-style: normal
+        line-height: 1.22
+        letter-spacing: normal
+        color: $white
+        +r(768)
+            font-size: 15px
+    &__button
+        +rm(1201)
+            position: absolute
+            top: 50%
+            right: 0
+            transform: translateY(-50%)
+            width: 215px
+        +r(1200)
+            margin: 15px auto 0
+            width: 195px
+    &__close
+        position: absolute
+        top: 0
+        left: 100%
+        margin-left: 15px
+        line-height: 0
+        &-icon
+            transform: rotate(45deg)
+            display: block
+            width: 30px
+            height: 30px

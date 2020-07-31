@@ -1,0 +1,33 @@
+.promo-decor
+    width: 100%
+    max-width: 1440px
+    margin: 0 auto
+    padding: 113px 20px
+    background-color: #ccc
+    color: $main
+    position: relative
+    z-index: 1
+    +r(650)
+        padding: 265px 20px 50px 20px
+    &__bg
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: -1
+        img
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            object-fit: cover
+            object-position: right top
+    .content
+        max-width: 615px
+        margin-left: 70px
+        +r(768)
+            margin-left: 0
+    .bttn
+        min-width: 220px

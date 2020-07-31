@@ -1,0 +1,18 @@
+//- +social-list({pinterest:true,facebook:true,instagram:true})
+mixin social-list(props={})
+    ul.social-list
+        if props.facebook
+            li.social-list__item
+                a.social-list__link(href="#" aria-label="facebook")
+                    span.social-list__icon
+                        +icon('facebook')(width="30" height="30" viewBox="0 0 30 30")
+        if props.instagram
+            li.social-list__item
+                a.social-list__link(href="#" aria-label="instagram")
+                    span.social-list__icon
+                        +icon('instagram')(width="30" height="30" viewBox="0 0 30 30")
+        if props.youtube
+            li.social-list__item
+                a.social-list__link(href="#" aria-label="youtube")
+                    span.social-list__icon
+                        +icon('youtube')(width="38" height="38" viewBox="0 0 38 38")

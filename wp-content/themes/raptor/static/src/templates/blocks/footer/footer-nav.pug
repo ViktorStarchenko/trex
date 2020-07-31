@@ -1,0 +1,41 @@
+-
+    var footerNav = [
+        {
+            title: 'Mattresses',
+            list: ['Cocoon', 'Miracoil', 'Relax', 'Lifestyle', 'Singles', 'Just Sleep']
+        },
+        {
+            title: 'Bedding',
+            list: ['Pillows ','Quilts','Protectors']
+        },
+        {
+            title: 'Stores & Promotions',
+            list: ['Shopping Guide', 'Promotions', 'Reviews', 'Find a Store']
+        },
+        {
+            title: 'Sleep Guide',
+            list: ['Back Care','Children & Sleep','Buying a Bed','Health & beauty','Sleep Tips ','Sleepmaker Technology ']
+        },
+        {
+            title: 'Help & Support',
+            list: ['Contact Us' , 'Problem with a Product ', 'Product Registration', 'Sleep Academy']
+        }
+    ]
+mixin footer-nav(props={})
+    .footer-nav.js-acc.accordeon(data-toggle="footer" data-queries="1024")
+        .footer-nav__title.accordeon__title.js-acc-trig!= props.title
+            span.accordeon__title-icon
+                +icon('arrow-right')(width="24" height="24" viewBox="0 0 24 24")
+        .footer-nav__menu.accordeon__body.js-acc-targ
+            ul.footer-nav__list
+                each link in props.list
+                    li.footer-nav__list-item
+                        a.footer-nav__list-link(href="#")!= link
+
+each nav in footerNav
+    +footer-nav(nav)
+
+.footer-nav.footer-nav--social
+    .footer-nav__title Follow us
+    .footer-social
+        +social-list({facebook:true,instagram:true,youtube:true})
