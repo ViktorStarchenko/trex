@@ -1,0 +1,58 @@
+.advance-brands
+    width: 100%
+    margin-top: 80px
+    padding: 0 20px
+    +r(1024)
+        margin-top: 50px
+    &__header
+        margin-bottom: 19.5%
+        +r(1024)
+            margin-bottom: 15%
+    &__content
+        transition: transform 0.3s ease, opacity 0.2s ease
+        text-align: center
+    &__list
+        display: flex
+        &-item
+            width: 25%
+            padding: 10px
+        &-link
+            display: block
+            width: 100%
+            opacity: 0.5
+            font-family: $f-1
+            font-size: 20px
+            font-weight: normal
+            font-stretch: normal
+            font-style: normal
+            line-height: normal
+            letter-spacing: 0.71px
+            color: $white
+            text-align: center
+            text-decoration: none
+            padding-bottom: 10px
+            border-bottom: 1px solid rgba($white, .5)
+            transition: color .2s, border-color .2s
+            +r(1024)
+                font-size: 16px
+            &.active
+                opacity: 1
+                border-bottom: 1px solid $white
+
+.advance-brands-caption
+    opacity: 0.5
+    font-family: $f-1
+    font-size: 12px
+    font-weight: normal
+    font-stretch: normal
+    font-style: normal
+    line-height: 1.67
+    letter-spacing: normal
+    text-align: center
+    color: $white
+    width: 100%
+    max-width: 400px
+    margin: 0 auto
+    margin-top: 80px
+    +r(1024)
+        display: none

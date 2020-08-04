@@ -1,7 +1,12 @@
 mixin complete-card(props={title: 'title'})
-    .complete-card
+    .complete-card&attributes(attributes)
         .complete-card__img
             +img(`../img/complete-card/${props.img}`, 'png')
         .complete-card__title!= props.title
+            if props.subtitle
+                span.complete-card__subtitle!= props.subtitle
         p.complete-card__text Lorem ipsum dolor sit amet, tellus id, vestibulum habitasse iaculis, dolor nunc, lacinia maecen.
-        a.bttn(href="#") Shop now
+        if props.bttn
+            a.bttn(href="#")!= props.bttn
+        if props.link
+            a.link-underline(href="#")!= props.link

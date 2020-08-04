@@ -1,0 +1,33 @@
+.product-specs
+    display: flex
+    flex-flow: row wrap
+    width: 100%
+    max-width: 1290px
+    margin: 0 auto
+    padding: 65px 20px 80px
+    +r(1024)
+        padding: 50px 20px
+    &__title
+        width: 100%
+        padding-left: 25px
+        +r(1024)
+            padding-left: 0
+    &__sidebar
+        width: 31.5%
+        margin-top: 70px
+        padding-left: 25px
+        +r(1024)
+            width: 100%
+            margin-top: 50px
+            padding-left: 0
+            order: 1
+    &__main
+        width: 68.5%
+        margin-top: -35px
+        +r(1024)
+            width: 100%
+            margin-top: 35px
+            order: 0
+
+.product-specs-wrap
+    background-color: rgba(#eaeaea, .3)

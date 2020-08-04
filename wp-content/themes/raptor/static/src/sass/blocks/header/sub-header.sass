@@ -1,0 +1,61 @@
+.sub-header
+    padding: 10px 20px 14px
+    border-bottom: solid 1px #e6e6e6
+    background: $white
+    position: absolute
+    top: 100%
+    left: 0
+    width: 100%
+    overflow: hidden
+    +r(1024)
+        display: none
+    &__logo
+        width: 25%
+        max-width: 330px
+        padding-right: 20px
+        +r(1200)
+            width: 240px
+    &__nav
+        width: 75%
+        +r(1200)
+            flex-grow: 1
+
+.sub-header-logo
+    font-family: $f-1
+    font-size: 20px
+    font-weight: normal
+    font-stretch: normal
+    font-style: normal
+    line-height: normal
+    letter-spacing: normal
+    color: $main
+
+
+.sub-header-inner
+    display: flex
+    align-items: center
+    width: 100%
+    max-width: 1370px
+    margin: 0 auto
+
+.sub-header-nav
+    display: inline-flex
+    max-width: 660px
+    width: 100%
+    +r(1024)
+        display: none
+    &__item
+        &:not(:last-child)
+            margin-right: 7%
+    &__link
+        font-family: $f-1
+        font-size: 18px
+        font-weight: normal
+        font-stretch: normal
+        font-style: normal
+        line-height: normal
+        letter-spacing: normal
+        color: $text
+        text-decoration: none
+        &.active
+            color: $main

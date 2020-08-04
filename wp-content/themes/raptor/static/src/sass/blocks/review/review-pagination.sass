@@ -1,0 +1,39 @@
+.review-pagination
+    display: flex
+    &__item
+        margin-left: -1px
+        border: solid 1px #dddddd
+        transition: border-color .2s
+        position: relative
+        &--prev,
+        &--next,
+            background: $main
+            border-color: $main
+        &.active
+            border-color: $main
+            z-index: 1
+    &__link
+        font-size: 18px
+        font-family: "CalibreWeb-Semibold", sans-serif
+        font-weight: 600
+        font-stretch: normal
+        font-style: normal
+        line-height: 0.78
+        letter-spacing: 1.13px
+        text-align: center
+        color: $main
+        height: 44px
+        min-width: 44px
+        display: flex
+        justify-content: center
+        align-items: center
+        text-decoration: none
+        &--prev,
+        &--next,
+            color: $white
+        &--prev
+            svg
+                transform: scaleX(-1)
+        svg
+            width: 80%
+            height: 80%

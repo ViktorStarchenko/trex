@@ -17,6 +17,8 @@ import './blocks/toggleSpecialOffers';
 import setupAccordeon from './blocks/initAccordeon';
 import inirSliders from './blocks/inirSliders';
 import topPromoInit from './blocks/topPromoInit';
+import textCollapseInit from './blocks/textCollapse';
+import scrollTo from './blocks/scrollTo';
 // import MenuMobile from './blocks/menu-mob';
 // import Form from './blocks/form';
 
@@ -34,4 +36,15 @@ window.addEventListener('load', () => {
 	setupAccordeon();
 	inirSliders();
 	topPromoInit();
+	textCollapseInit();
+	scrollTo();
+
+	//current function
+	var height_top = jQuery('header').offset().top;
+	jQuery(window).scroll(function() {
+		var sticky = jQuery('header'),
+			scroll = jQuery(window).scrollTop();
+		if (scroll > height_top) sticky.addClass('header-fixed');
+		else sticky.removeClass('header-fixed');
+	});
 });

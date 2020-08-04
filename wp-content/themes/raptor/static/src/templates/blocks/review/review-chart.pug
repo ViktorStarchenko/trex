@@ -1,0 +1,5 @@
+mixin review-chart(props={})
+    .review-chart
+        .review-chart__progress
+            .review-chart__progress-inner(style=`transform:translateX(calc(-100% + ${props.val}%))`)
+        .review-chart__value!= props.val+'%'

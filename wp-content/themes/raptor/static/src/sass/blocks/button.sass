@@ -51,6 +51,7 @@
 		&:hover
 			background: $main
 			color: $white
+			border-color: $main
 	&--bg
 		color: $white
 		background: $main
@@ -71,3 +72,65 @@
 		border-color: $text
 		pointer-events: none
 		background: $text
+
+.bttn-row
+	display: flex
+	flex-flow: row wrap
+	justify-content: center
+	.bttn
+		margin: 5px 15px
+		min-width: 220px
+		+r(768)
+			margin: 10px
+		+r(600)
+			width: 100%
+
+
+.swiper-nav
+	position: absolute
+	width: 100%
+	left: 0
+	bottom: 50%
+	transform: translateY(50%)
+	z-index: 1
+	display: flex
+	justify-content: space-between
+	pointer-events: none
+	padding: 0 20px
+	+r(650)
+		padding: 0 10px
+
+.swiper-button-prev,
+.swiper-button-next
+	width: 53px
+	height: 53px
+	background: $main
+	border-radius: 50%
+	cursor: pointer
+	transition: opacity .3s
+	position: static
+	margin: 0
+	pointer-events: all
+	font-size: 0
+	color: $white
+	display: flex
+	+r(768)
+		width: 37px
+		height: 37px
+	&.swiper-button-disabled
+		opacity: 0
+.swiper-button-next
+	.swiper-button-icon
+		margin-left: 8%
+.swiper-button-prev
+	.swiper-button-icon
+		transform: scaleX(-1)
+		margin-right: 8%
+.swiper-button-icon
+	width: 90%
+	height: 90%
+	margin: auto
+	font-size: 0
+	svg
+		width: 100%
+		height: 100%

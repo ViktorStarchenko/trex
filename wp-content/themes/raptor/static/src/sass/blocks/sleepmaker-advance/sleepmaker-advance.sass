@@ -1,0 +1,39 @@
+.sleepmaker-advance
+    width: 100%
+    max-width: 1240px
+    margin: 75px auto
+    display: flex
+    flex-flow: row wrap
+    +r(1024)
+        margin: 50px auto
+    &__info
+        width: 40%
+        max-width: 430px
+        padding-right: 30px
+        +r(1024)
+            width: 100%
+            max-width: none
+            padding: 0
+            order: 1
+            margin-top: 40px
+            padding: 0 20px
+    &__brands
+        width: 60%
+        max-width: 720px
+        margin-left: auto
+        +r(1024)
+            width: 100%
+            max-width: none
+            order: 0
+
+.sleepmaker-advance-show-mob
+    width: 100%
+    display: none
+    +r(1024)
+        display: block
+
+.sleepmaker-advance-show-desc
+    display: block
+    width: 100%
+    +r(1024)
+        display: none

@@ -2,5 +2,249 @@ extends /layout
 
 block head
 	- page.title = 'Product'
+	- page.class = ['product-template']
 
 block content
+	.product-hero
+		.product-hero__bg
+			picture
+				source(media="(max-width: 768px)", srcset="../img/product-hero/home-product-mob.png 1x, ../img/product-hero/home-product-mob@2x.png 2x")
+				+img('../img/product-hero/home-product', 'png')
+		.product-hero__head
+			.product-hero__brand
+				img(src="../img/product-hero/sleepmaker.svg", alt="")
+			.product-hero__logo
+				+img('../img/product-hero/product-logo', 'png')
+		.content
+			h6 BACK CARE PERFORMANCE
+			h2 Miracoil is the choice of Australian <br> Chiropractics & Physiotherapists .
+			p Designed for those with back issues, heavier weights, or those engaged in sports and other strenuous activities.
+		a.product-hero-btn(href="#")
+			span.product-hero-btn__icon
+				span.product-hero-btn__icon-inn
+			| Watch video
+	#product-overview
+		.feature-wrap
+			// a(href="#").feature-card
+			// or
+			// div.feature-card
+			+feature-card({img:'feature-card-1', text:'Designed and built for Australians, by Australians for lasting quality.'})
+			+feature-card({img:'feature-card-4', text:'Endorsed for excellence in support when you sleep.'})
+			+feature-card({img:'feature-card-5', text:'Technology to keep your mattress fresh, hygenic, odour free.'})
+			+feature-card({img:'feature-card-6', text:'120+ <br> 5 Star Reviews'})
+	#product-features
+		.shift-card-wrap
+			+shift-card({title:'Say goodnight to aches and pains.', text:'Backs. A bad back from a bad bed. Means bad news for you.And good news for your chiropractor.<br>Happily we make orthopaedically engineered beds. To both support your back and protect it too. MiraCoil Advance. High gauge, 5 Zone continuous coil support system. Pressure relieving comfort from head to toe and where you need it most.', img:'product-swap-1'})
+			+shift-card({title:'Our most durable design.', text:'Roll together doesn’t happen with our mattresses. We make every part of them to make sure it doesn’t. Premium comfort layers.Pocket spring technology.Memory foam.', img:'product-swap-2'})
+			+shift-card({title:'Stay cool.', text:'How do you make sleep better when it’s baking hot?You find the one thing that makes hot go away. Introducing KulKote.A wickable, moisture free temperature control fabric that lowers your body temperature by 4 degrees. The perfect conditions for sleep.And made exclusively for SleepMaker.<br>KulKote for SleepMaker. Makers of the ultimate sleep.', img:'product-swap-3'})
+	#product-technology
+		.bg-block
+			.sleepmaker-advance
+				.sleepmaker-advance__info.js-text-collapse-wrap
+					+advance-card({title:'Reduces back stress', icon:'reduces',})
+					+advance-card({title:'Support That Lasts', icon:'support',})
+					+advance-card({title:'Maximum Durability', icon:'durability',})
+					+advance-card({title:'Zoned Comfort', icon:'comfort',})
+				.sleepmaker-advance__brands
+					.content-center
+						h6 SLEEPMAKER
+						h2 Miracoil Advance
+					.advance-brands.js-tabs-wrapper
+						.advance-brands__header
+							ul.advance-brands__list
+								li.advance-brands__list-item
+									a.advance-brands__list-link.js-tab-trigger(href="#advance-tab-1") Sub brand #1
+								li.advance-brands__list-item
+									a.advance-brands__list-link.js-tab-trigger(href="#advance-tab-2") Sub brand #2
+								li.advance-brands__list-item
+									a.advance-brands__list-link.js-tab-trigger(href="#advance-tab-3") Sub brand #3
+								li.advance-brands__list-item
+									a.advance-brands__list-link.js-tab-trigger(href="#advance-tab-4") Sub brand #4
+						.advance-brands__body
+							.advance-brands__content.js-tab-content#advance-tab-1
+								+img('../img/advance/advance-brands', 'png')
+							.advance-brands__content.js-tab-content#advance-tab-2
+								+img('../img/advance/advance-brands', 'png')
+							.advance-brands__content.js-tab-content#advance-tab-3
+								+img('../img/advance/advance-brands', 'png')
+							.advance-brands__content.js-tab-content#advance-tab-4
+								+img('../img/advance/advance-brands', 'png')
+					.advance-brands-caption Models and structural components in the SleepMaker Miracoil Range vary and provide a selection of comfort choices. Models may vary between retailers
+			.container
+				.content-center
+					h2 Where to buy
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vulputate vel ex id ultricies. Nam gravida risus non erat feugiat dapibus
+					.bttn-row
+						a.bttn.bttn--border(href="#") FIND A STORE
+						a.bttn.bttn--border(href="#") VIEW SPECIAL OFFERS
+			.availabe-here
+				.container
+					.content-center
+						h6 AVAILABE HERE:
+					.availabe-here-row
+						.availabe-here__item
+							+img('../img/availabe/availabe-1', 'png')
+						.availabe-here__item
+							+img('../img/availabe/availabe-2', 'png')
+						.availabe-here__item
+							+img('../img/availabe/availabe-3', 'png')
+						.availabe-here__item
+							+img('../img/availabe/availabe-1', 'png')
+						.availabe-here__item
+							+img('../img/availabe/availabe-2', 'png')
+						.availabe-here__item
+							+img('../img/availabe/availabe-3', 'png')
+						.availabe-here__item
+							+img('../img/availabe/availabe-1', 'png')
+						.availabe-here__item
+							+img('../img/availabe/availabe-2', 'png')
+	#product-reviews
+		.review
+			.review__head
+				.review-stars
+					h3.review-stars__title See why people love Miracoil...
+					.review-stars-rating
+						.review-stars-rating__value
+							.review-quantity 4.8
+							img(src="../img/review-stars.svg", alt="review stars")
+						.review-stars-rating__total Bases on 2000 reviews
+				.review-chart-wrap
+					+review-chart({val:90})
+					+review-chart({val:4})
+					+review-chart({val:5})
+					+review-chart({val:1})
+					+review-chart({val:0})
+				.review-write
+					a.bttn(href="#") WRITE A REVIEW
+			.review__body
+				.review-tabs.js-tabs-wrapper
+					.review-tabs__head
+						ul.review-tabs__list
+							li.review-tabs__list-item
+								a.review-tabs__list-link.js-tab-trigger(href="#review-tab-1") Reviews
+							li.review-tabs__list-item
+								a.review-tabs__list-link.js-tab-trigger(href="#review-tab-2") Questions
+					.review-tabs__body
+						.review-tabs__content.js-tab-content#review-tab-1
+							+review-card
+							+review-card
+						.review-tabs__content.js-tab-content#review-tab-2
+							h1 questions
+			.review__footer
+				ul.review-pagination
+					li.review-pagination__item.review-pagination__item--prev
+						a.review-pagination__link.review-pagination__link--prev(href="#")
+							+icon('arrow-right')(width="24" height="24" viewBox="0 0 24 24")
+					li.review-pagination__item.active
+						a.review-pagination__link.active(href="#") 1
+					li.review-pagination__item
+						a.review-pagination__link(href="#") 2
+					li.review-pagination__item
+						a.review-pagination__link(href="#") 3
+					li.review-pagination__item.review-pagination__item--next
+						a.review-pagination__link.review-pagination__link--next(href="#")
+							+icon('arrow-right')(width="24" height="24" viewBox="0 0 24 24")
+	#product-specifications
+		.product-specs-wrap
+			.product-specs
+				h3.product-specs__title Product specs
+				.product-specs__sidebar
+					.product-specs-contact
+						.product-specs-contact__title Need Assistance
+						ul.product-specs-contact__list
+							li.product-specs-contact__list-item
+								a.product-specs-contact__list-link(href="#")
+									span.product-specs-contact__list-icon
+										+icon('message')(width="30" height="30" viewBox="0 0 30 30")
+									| Talk to us on Live Chat
+							li.product-specs-contact__list-item
+								a.product-specs-contact__list-link(href="#")
+									span.product-specs-contact__list-icon
+										+icon('envelope')(width="30" height="30" viewBox="0 0 30 30")
+									| support@sleepmaker.com.au
+				.product-specs__main
+					.js-acc-wrap
+						.product-specs-acc.js-acc.accordeon(data-toggle="specs")
+							.accordeon__title.js-acc-trig
+								img.accordeon__title-img(src="../img/specs/dimension.svg", alt="dimension")
+								span.accordeon__title-text Measurements & Dimension
+								span.accordeon__title-icon
+									+icon('plus')(width="30" height="30" viewBox="0 0 30 30")
+							.accordeon__body.js-acc-targ
+								.product-specs-acc__inner
+									+img('../img/specs/specs-scheme', 'png')
+						.product-specs-acc.js-acc.accordeon(data-toggle="specs")
+							.accordeon__title.js-acc-trig
+								img.accordeon__title-img(src="../img/specs/warranty.svg", alt="warranty")
+								span.accordeon__title-text Materials & Warranty
+								span.accordeon__title-icon
+									+icon('plus')(width="30" height="30" viewBox="0 0 30 30")
+							.accordeon__body.js-acc-targ
+								.product-specs-acc__inner
+									.content
+										h4 Materials & Warranty
+										p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum architecto mollitia quis asperiores tenetur assumenda nihil, praesentium cum soluta, fugiat ab ea totam repellendus voluptate debitis deserunt quae iusto corporis?
+										h6 Materials
+										p Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+										h6 Warranty
+										p Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+						.product-specs-acc.js-acc.accordeon(data-toggle="specs")
+							.accordeon__title.js-acc-trig
+								img.accordeon__title-img(src="../img/specs/qa.svg", alt="qa")
+								span.accordeon__title-text Frequently asked Questions
+								span.accordeon__title-icon
+									+icon('plus')(width="30" height="30" viewBox="0 0 30 30")
+							.accordeon__body.js-acc-targ
+								.product-specs-acc__inner
+									h2 Hello, World!
+	.promo-decor.promo-decor--equal
+		.promo-decor__bg
+			picture
+				source(media="(max-width: 650px)", srcset="../img/promo/promo-block-mob-product.png 1x, ../img/promo/promo-block-mob-product@2x.png 2x")
+				+img('../img/promo/promo-block-desc-product', 'png')
+		.content-center.has-white-color
+			h6 BACK CARE PERFORMANCE
+			h2 Say goodnight to back pain and bad sleep
+			.bttn-row
+				a.bttn.bttn--reverse(href="#") Learn More
+				a.bttn.bttn--reverse(href="#") Learn More
+	#product-factory
+		.bg-block
+			.space-wrap
+				.container
+					.content-center
+						h2 Sleep Lab
+				.full-page-slider
+					.swiper-container.js-full-page-slider
+						.swiper-wrapper
+							.swiper-slide
+								+img('../img/full-page-slider/full-page-slider', 'png')
+							.swiper-slide
+								+img('../img/full-page-slider/full-page-slider', 'png')
+							.swiper-slide
+								+img('../img/full-page-slider/full-page-slider', 'png')
+						.swiper-nav
+							.swiper-button-prev.js-full-page-slider-prev
+								.swiper-button-icon
+									+icon('arrow-right')(width="24" height="24" viewBox="0 0 24 24")
+							.swiper-button-next.js-full-page-slider-next
+								.swiper-button-icon
+									+icon('arrow-right')(width="24" height="24" viewBox="0 0 24 24")
+				.container
+					.content-center
+						h2 Make better springs. <br> Make better sleep. Make better relationships.
+						p Sometimes in a relationship you both need your space. Especially when you’re sleeping. Roll together doesn’t happen with our Pocket Spring technology. We make it ourselves to work better for you. Both of you.
+	.complete-card-outer
+		.content-center
+			h3  Related Articles
+		.complete-card-wrap
+			+complete-card({title: 'Tips to relieve back pain', subtitle:'5 Min Read', img: 'complete-card-1', link:'Read More'})
+			+complete-card({title: 'Yoga for Sleep', subtitle:'7 Min Read', img: 'complete-card-2', link:'Read More'})
+			+complete-card({title: 'How to WOF your bed', subtitle:'3 Min Read', img: 'complete-card-3', link:'Read More'})
+	hr.page-devider
+	.complete-card-outer
+		.content-center
+			h3  Complete your Sleep Experience
+		.complete-card-wrap
+			+complete-card({title: 'Luxury Range', subtitle:'2 Options Available', img: 'complete-card-4', bttn:'Learn More'})(class="complete-card--w50")
+			+complete-card({title: 'Essentials Range', subtitle:'2 Options Available', img: 'complete-card-5', bttn:'Learn More'})(class="complete-card--w50")

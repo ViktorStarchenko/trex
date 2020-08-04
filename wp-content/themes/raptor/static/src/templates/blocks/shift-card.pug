@@ -1,0 +1,8 @@
+mixin shift-card(props={})
+    .shift-card
+        .shift-card__img
+            +img(`../img/swap-card/${props.img}`, 'png')
+        .shift-card__content
+            .shift-card__content-inner
+                h5.shift-card__title!= props.title
+                p.shift-card__text!= props.text

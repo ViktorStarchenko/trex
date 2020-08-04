@@ -1,0 +1,55 @@
+.advance-card
+    border-radius: 4px
+    background: $main
+    padding: 20px
+    transition: background-color .2s
+    & + &
+        margin-top: 40px
+    &.active
+        background: $white
+        .advance-card__title,
+        .advance-card__icon,
+        .advance-card__text,
+        .advance-card__button
+            color: $main
+    &__header
+        display: flex
+        margin-bottom: 5px
+    &__title
+        font-family: $f-1
+        font-size: 20px
+        font-weight: normal
+        font-stretch: normal
+        font-style: normal
+        line-height: normal
+        letter-spacing: 0.71px
+        color: rgba($white, .8)
+        transition: color .2s
+    &__icon
+        color: rgba($white, .8)
+        margin-right: 10px
+        transition: color .2s
+    &__text
+        font-family: $f-1
+        font-size: 16px
+        font-weight: normal
+        font-stretch: normal
+        font-style: normal
+        line-height: 1.25
+        letter-spacing: normal
+        color: rgba($white, .5)
+        overflow: hidden
+        p
+            transition: height .25s ease
+    &__button
+        font-family: $f-1
+        font-size: 16px
+        font-weight: normal
+        font-stretch: normal
+        font-style: normal
+        line-height: 1.25
+        letter-spacing: normal
+        color: rgba($white, .5)
+        text-decoration: underline
+        margin-top: 15px
+        transition: color .2s

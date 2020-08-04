@@ -2,10 +2,14 @@
     margin-bottom: 50px
     width: 100%
     max-width: 405px
+    &--w50
+        max-width: 605px
     +rm(769)
         width: calc( 33.33% - 2 * 8px)
         margin-left: 8px
         margin-right: 8px
+        &--w50
+            width: calc( 50% - 2 * 8px)
     &__img
         line-height: 0
         margin-bottom: 23px
@@ -19,6 +23,21 @@
         letter-spacing: 0.79px
         color: $main
         margin-bottom: 20px
+        +r(768)
+            font-size: 20px
+    &__subtitle
+        font-family: $f-1
+        font-size: 15px
+        font-weight: normal
+        font-stretch: normal
+        font-style: normal
+        line-height: normal
+        letter-spacing: 0.54px
+        color: $text
+        display: block
+        margin-top: 5px
+        +r(768)
+            font-size: 13px
     &__text
         color: $text
         margin-bottom: 30px

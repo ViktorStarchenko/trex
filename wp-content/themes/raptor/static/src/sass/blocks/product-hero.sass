@@ -1,0 +1,89 @@
+.product-hero
+    width: 100%
+    max-width: 1440px
+    margin: 0 auto
+    position: relative
+    z-index: 1
+    padding: 75px 100px
+    color: $main
+    +rm(1025)
+        height: 100vh
+        max-height: 780px
+        min-height: 500px
+    +r(1024)
+        padding: 50px 20px
+        padding-bottom: 150px
+    &__bg
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: -1
+        img
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            object-fit: cover
+            object-position: bottom right
+    &__head
+        margin-bottom: 55px
+        +r(768)
+            margin-bottom: 35px
+    .content
+        margin-bottom: 60px
+        max-width: 666px
+        p
+            font-size: 24px
+            line-height: 1.25
+            +r(768)
+                font-size: 20px
+
+.product-hero-btn
+    display: inline-flex
+    align-items: center
+    font-family: $f-1
+    font-size: 20px
+    font-weight: normal
+    font-stretch: normal
+    font-style: normal
+    line-height: normal
+    letter-spacing: 2.25px
+    color: $main
+    text-decoration: none
+    text-transform: uppercase
+    &__icon
+        display: inline-flex
+        justify-content: center
+        align-items: center
+        width: 38px
+        height: 38px
+        border: 1px solid $main
+        border-radius: 50%
+        margin-right: 15px
+        &-inn
+            margin-left: 4px
+            width: 12px
+            height: 12px
+            // background: $main
+            border-left: 2px solid $main
+            position: relative
+            &::before,
+            &::after
+                content: ''
+                display: block
+                position: absolute
+                width: 100%
+                height: 2px
+                background: $main
+                transform-origin: left
+            &::before
+                top: 0
+                left: 0
+                transform: rotate(30deg)
+            &::after
+                bottom: 0
+                left: 0
+                transform: rotate(-30deg)

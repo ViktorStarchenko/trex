@@ -1,0 +1,29 @@
+.availabe-here
+    width: 100%
+    max-width: 1250px
+    margin: 0 auto
+    border-top: 1px solid rgba($white, 0.2)
+    margin-top: 60px
+    padding-top: 60px
+    &__item
+        margin-bottom: 40px
+        text-align: center
+        +rm(1025)
+            &:not(:last-child)
+                margin-right: 35px
+        +r(1024)
+            padding: 0 10px
+            width: 25%
+        +r(600)
+            width: 50%
+
+.availabe-here-row
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-top: 50px
+    margin-bottom: 40px
+    +r(1024)
+        flex-flow: row wrap
+        margin-top: 40px
+        margin-bottom: 10px

@@ -1,0 +1,25 @@
+.full-page-slider
+    width: 100%
+    // max-width: 1440px
+    margin: 55px auto
+    overflow: hidden
+    +r(768)
+        margin-top: 50px
+        .swiper-button-prev,
+        .swiper-button-next
+            background: $white
+            color: $main
+    .swiper-container
+        overflow: visible
+        width: 100%
+        max-width: 1440px
+        margin: 0 auto
+    .swiper-slide
+        width: 50% !important
+        padding: 0 25px
+        text-align: center
+        +r(768)
+            width: 65% !important
+            padding: 0 8px
+        +r(450)
+            width: 73% !important

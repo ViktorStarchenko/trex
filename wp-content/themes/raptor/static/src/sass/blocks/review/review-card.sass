@@ -1,0 +1,147 @@
+.review-card
+    padding-top: 35px
+    padding-bottom: 12px
+    border-bottom: 1px solid rgba($main, .2)
+    +r(650)
+        padding-top: 25px
+        padding-bottom: 10px
+    &__head
+        display: flex
+    &__initials
+        display: flex
+        justify-content: center
+        align-items: center
+        background: $main
+        border-radius: 25px
+        height: 47px
+        min-width: 47px
+        font-family: "CalibreWeb-Medium", sans-serif
+        font-size: 20px
+        font-weight: 500
+        font-stretch: normal
+        font-style: normal
+        line-height: 0.95
+        letter-spacing: 0.63px
+        text-align: center
+        color: $white
+        margin-right: 23px
+        padding: 5px
+        margin-top: 5px
+        +r(650)
+            font-size: 18px
+            height: 37px
+            min-width: 37px
+            margin-right: 14px
+            margin-top: 0
+    &__info
+        margin-right: 20px
+    &__name
+        font-family: $f-1
+        font-size: 20px
+        font-weight: normal
+        font-stretch: normal
+        font-style: normal
+        line-height: normal
+        letter-spacing: 0.27px
+        color: $main
+        margin-bottom: 2px
+        +r(650)
+            font-size: 16px
+    &__local
+        font-family: $f-1
+        font-size: 20px
+        font-weight: normal
+        font-stretch: normal
+        font-style: normal
+        line-height: normal
+        letter-spacing: 0.27px
+        color: $black
+        +r(650)
+            font-size: 16px
+    &__date
+        font-family: $f-1
+        font-size: 16px
+        font-weight: normal
+        font-stretch: normal
+        font-style: normal
+        line-height: 1.25
+        letter-spacing: 0.29px
+        color: $black
+        margin-left: auto
+        margin-right: 7px
+        margin-top: 7px
+        +r(650)
+            font-size: 14px
+            margin-right: 0
+            margin-top: 0
+    &__body
+        padding-left: 70px
+        margin-top: -4px
+        +r(650)
+            padding-left: 0
+            margin-top: 13px
+    &__rating
+        margin-bottom: 10px
+        +r(650)
+            margin-bottom: 5px
+    &__title
+        font-family: $f-1
+        font-size: 20px
+        font-weight: normal
+        font-stretch: normal
+        font-style: normal
+        line-height: normal
+        letter-spacing: 0.27px
+        color: $main
+        margin-bottom: 8px
+        +r(650)
+            font-size: 16px
+    &__text
+        font-family: $f-1
+        color: $text
+        font-size: 18px
+        font-weight: normal
+        font-stretch: normal
+        font-style: normal
+        line-height: 1.22
+        letter-spacing: normal
+        +r(650)
+            font-size: 15px
+        p + p
+            margin-top: 5px
+    &__footer
+        display: flex
+        margin-top: 27px
+        +r(650)
+            margin-top: 20px
+    &__vote
+        margin-left: auto
+        display: flex
+        align-items: center
+        font-weight: normal
+        font-stretch: normal
+        font-style: normal
+        line-height: 1.29
+        letter-spacing: 0.25px
+        color: $main
+        &-title
+            margin-right: 5px
+            font-size: 14px
+            +r(650)
+                font-size: 12px
+        &-value
+            margin-left: 1px
+        &-icon
+            font-size: 0
+        &-like,
+        &-dislike
+            font-size: 14px
+            text-decoration: none
+            color: $main
+            margin: 0 3px
+            padding: 3px
+            display: flex
+            align-items: center
+        &-dislike
+            .review-card__vote-icon
+                transform: scaleY(-1)

@@ -1,0 +1,33 @@
+.product-specs-acc
+    border-top: 1px solid rgba($main, .22)
+    &:last-child
+        border-bottom: 1px solid rgba($main, .22)
+    .accordeon__title
+        padding: 20px 0
+        font-family: $f-1
+        font-size: 22px
+        font-weight: normal
+        font-stretch: normal
+        font-style: normal
+        line-height: normal
+        letter-spacing: 1.1px
+        color: $main
+        +r(768)
+            font-size: 20px
+            letter-spacing: 0.71px
+        +r(400)
+            font-size: 18px
+        &.active
+            .accordeon__title-icon
+                transform: rotate(-45deg)
+        &-img
+            margin-right: 13px
+            flex-shrink: 0
+        &-text
+            padding-right: 10px
+            display: inline-block
+        &-icon
+            margin-left: auto
+    .accordeon__body
+    &__inner
+        padding: 20px 0 40px
