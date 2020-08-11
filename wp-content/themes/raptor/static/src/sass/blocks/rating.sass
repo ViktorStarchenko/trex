@@ -1,0 +1,27 @@
+.rating
+    $rating: &
+    display: inline-flex
+    &__item
+        color: #b2b2b2
+        font-size: 0
+        margin-left: -3px
+    &--one
+        #{$rating}__item
+            &:nth-child(1)
+                color: $main
+    &--two
+        #{$rating}__item
+            &:nth-child(-n+2)
+                color: $main
+    &--three
+        #{$rating}__item
+            &:nth-child(-n+3)
+                color: $main
+    &--four
+        #{$rating}__item
+            &:nth-child(-n+4)
+                color: $main
+    &--five
+        #{$rating}__item
+            &:nth-child(-n+5)
+                color: $main

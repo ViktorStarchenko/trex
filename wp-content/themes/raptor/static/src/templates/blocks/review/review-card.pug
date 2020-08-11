@@ -1,4 +1,4 @@
-mixin review-card
+mixin review-card(props={})
     .review-card
         .review-card__head
             .review-card__initials AB
@@ -8,7 +8,8 @@ mixin review-card
             time.review-card__date 12/12/2012
         .review-card__body
             .review-card__rating
-                img(src="../img/rating-stars.svg", alt="review stars")
+                //- img(src="../img/rating-stars.svg", alt="review stars")
+                +rating(class=`rating--${props.star}`)
             .review-card__title Love this product
             .review-card__text
                 p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vulputate vel ex id ultricies. Nam gravida risus non erat feugiat dapibus. Nunc rhoncus ut enim sit amet temxpus. In lobortis justo tempus consequat mollis. Praesent rhoncus dapibus sagittis. Vestibulum sed fermentum nisl, at venenatis lacus. Vivamus quis leo at nisl commodo gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vulputate vel ex id ultricies. Nam gravida risus non erat feugiat dapibus.

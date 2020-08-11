@@ -3,11 +3,11 @@ mixin rating-reviews-slider
         .swiper-container.js-rating-reviews-slider
             .swiper-wrapper
                 .swiper-slide
-                    +rating-reviews-card
+                    +rating-reviews-card({star:'five'})
                 .swiper-slide
-                    +rating-reviews-card
+                    +rating-reviews-card({star:'two'})
                 .swiper-slide
-                    +rating-reviews-card
+                    +rating-reviews-card({star:'four'})
             .swiper-nav
                 .swiper-button-prev.js-rating-reviews-slider-prev
                     .swiper-button-icon
