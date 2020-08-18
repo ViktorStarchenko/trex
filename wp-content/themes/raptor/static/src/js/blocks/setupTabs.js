@@ -45,8 +45,11 @@ export default function setupTabs() {
 						current.parentElement.classList.remove('active');
 						trigger.classList.add('active');
 						trigger.parentElement.classList.add('active');
+
+						let triggerHash = trigger.hash ? trigger.hash : trigger.dataset.hash;
+
 						tabContents.forEach((content) => {
-							if (content.id !== trigger.hash.slice(1)) {
+							if (content.id !== triggerHash.slice(1)) {
 								hideElement(content);
 								content.classList.remove('active');
 							} else {
