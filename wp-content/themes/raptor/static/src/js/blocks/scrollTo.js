@@ -31,7 +31,7 @@ export default function scrollTo() {
 					setTimeout(function() {
 						let offs = offset(target);
 						window.scroll({
-							top: offs - (window.matchMedia('(max-width: 768px)').matches ? '60' : '90'),
+							top: offs - (window.matchMedia('(max-width: 768px)').matches ? '75' : '145'),
 							behavior: 'smooth'
 						});
 					}, 150);

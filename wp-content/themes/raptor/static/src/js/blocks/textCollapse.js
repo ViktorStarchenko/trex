@@ -43,7 +43,9 @@ export default function textCollapseInit() {
 							item.classList.remove('active');
 						} else {
 							let curretnActive = [...textCollapseItem].find(element => element.classList.contains('active'));
+							let delay = 0;
 							if(curretnActive) {
+								delay = 300;
 								let curretnActiveText = curretnActive.querySelector('.js-text-collapse');
 								let currentVisibleText = [...curretnActiveText.querySelectorAll('p')];
 
@@ -53,11 +55,13 @@ export default function textCollapseInit() {
 								curretnActive.querySelector('.advance-card__button').innerText = bttnText;
 								curretnActive.classList.remove('active');
 							}
-							for(let i = collapseVisible ; i < CollapseText.length; i++) {
-								CollapseText[i].style.height = CollapseText[i].dataset.height + 'px';
-							}
-							buttonCollapseToggle.innerText = bttnTextSwitch;
-							item.classList.add('active');
+							setTimeout(() => {
+								for(let i = collapseVisible ; i < CollapseText.length; i++) {
+									CollapseText[i].style.height = CollapseText[i].dataset.height + 'px';
+								}
+								buttonCollapseToggle.innerText = bttnTextSwitch;
+								item.classList.add('active');
+							}, delay);
 						}
 					});
 
