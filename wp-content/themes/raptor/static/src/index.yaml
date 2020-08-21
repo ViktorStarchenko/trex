@@ -3,16 +3,19 @@ ProjectTitle: Starting Template
 PageList:
 - file: /home/
   name: home
-  ready: 10
+  ready: 100
 - file: /product/
   name: product
-  ready: 10
+  ready: 100
 - file: /comparison/
   name: comparison
-  ready: 10
+  ready: 100
 - file: /find-a-retailer/
   name: find-a-retailer
   ready: 100
+- file: /select-promo/
+  name: select-promo
+  ready: 10
 - file: /modal/
   name: modal
   ready: 1

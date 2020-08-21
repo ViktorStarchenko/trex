@@ -4,6 +4,10 @@
     max-width: 405px
     &--w50
         max-width: 605px
+        .complete-card__img
+            margin-bottom: 30px
+            +r(768)
+                margin-bottom: 15px
     +rm(769)
         width: calc( 33.33% - 2 * 8px)
         margin-left: 8px
@@ -12,7 +16,7 @@
             width: calc( 50% - 2 * 8px)
     &__img
         line-height: 0
-        margin-bottom: 23px
+        margin-bottom: 15px
     &__title
         font-family: $f-1
         font-size: 22px
@@ -22,7 +26,7 @@
         line-height: normal
         letter-spacing: 0.79px
         color: $main
-        margin-bottom: 20px
+        margin-bottom: 15px
         +r(768)
             font-size: 20px
     &__subtitle
@@ -40,6 +44,11 @@
             font-size: 13px
     &__text
         color: $text
+        font-size: 18px
+        line-height: 1.22
         margin-bottom: 30px
+        letter-spacing: 0.2px
+        +r(768)
+            font-size: 15px
     .bttn
         min-width: 212px

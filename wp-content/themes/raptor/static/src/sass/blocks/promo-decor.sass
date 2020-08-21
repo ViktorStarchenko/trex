@@ -1,12 +1,13 @@
 .promo-decor
     width: 100%
-    max-width: 1440px
     margin: 0 auto
     padding: 113px 20px
     background-color: #ccc
     color: $main
     position: relative
     z-index: 1
+    &:not(.promo-decor--full)
+        max-width: 1440px
     +r(650)
         padding: 265px 20px 50px 20px
         &--equal
