@@ -2,9 +2,18 @@ extends /layout
 
 block head
     - page.title = 'Select Promo'
-    - page.class = ['select-promo']
+    - page.class = ['promo']
 
 block content
     .select-promo
         .select-promo__text
+            .select-promo__content
+                .select-promo__brand Sleep Selector
+                h1.select-promo__title Find your perfect <br> Sleep Solution & you’re into win $1000*
+                .content-center.small-text
+                    p Getting a good sleep is hard enough without having to worry about what you’re sleeping on. Because we make our mattresses here in Australia, you can trust SleepMaker. From the springs to the foam, we make it all. And because every SleepMaker mattress is made right here in Australia, each SleepMaker mattress supports thousands of manufacturing, retail and other jobs all over the country. So every time someone buys a SleepMaker, you’re keeping real Aussies working.
+                    a.bttn.bttn--reverse(href="#") COMPLETE NOW
+            .select-promo__link
+                a(href="#") *Terms & Conditions apply
         .select-promo__img
+            +img('../img/select-promo/select-promo', 'jpg')

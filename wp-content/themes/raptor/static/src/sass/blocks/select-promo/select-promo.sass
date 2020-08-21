@@ -1,3 +1,84 @@
 .select-promo
     background: $main
-    min-height: 90vh
+    display: flex
+    flex-flow: row wrap
+    background: $main
+    color: $white
+    +rm(769)
+        min-height: calc(90vh - 100px)
+    &__text
+        width: 50%
+        display: flex
+        flex-flow: column nowrap
+        padding: 30px 20px
+        text-align: center
+        +r(768)
+            width: 100%
+            padding: 40px 20px 35px
+    &__content
+        margin: auto
+        max-width: 550px
+    &__img
+        width: 50%
+        position: relative
+        line-height: 0
+        +r(768)
+            width: 100%
+            &:before
+                content: ''
+                display: block
+                width: 100%
+                padding-bottom: 95%
+        img
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            object-fit: cover
+    &__title
+        max-width: 440px
+        text-align: center
+        margin: 0 auto 15px auto
+        line-height: 0.95
+        +r(768)
+            line-height: 1.03
+    &__brand
+        font-family: $f-2
+        font-size: 20px
+        font-weight: 500
+        line-height: 1
+        letter-spacing: -0.16px
+        color: $white
+        position: relative
+        padding-bottom: 15px
+        margin-bottom: 30px
+        +r(768)
+            margin-bottom: 20px
+        &::after
+            content: ''
+            display: block
+            width: 58px
+            height: 3px
+            background: $white
+            position: absolute
+            bottom: 0
+            left: 50%
+            transform: translateX(-50%)
+    &__link
+        font-family: $f-1
+        font-size: 12px
+        font-weight: normal
+        line-height: 2.5
+        letter-spacing: normal
+        text-align: center
+        margin-top: 20px
+        a
+            color: $white
+            &:hover
+                text-decoration: none
+    .content,
+    .content-center
+        color: $white
+    .bttn
+        min-width: 218px
