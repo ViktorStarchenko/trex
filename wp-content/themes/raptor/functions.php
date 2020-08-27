@@ -295,10 +295,11 @@ add_action("admin_init", function () {
 
 
 if (!is_admin()) {
-
+	wp_enqueue_script('custom-scripts', get_template_directory_uri() . '/static/build/js/app.js', ['jquery'], false, true);
     wp_enqueue_script( 'browser', get_template_directory_uri() . '/js/browser.js', ['jquery'], false, true);
 
     wp_enqueue_script( 'slider', get_template_directory_uri() . '/js/resources/carousel/bootstrap.min.js', ['jquery'], false, true);
+    wp_enqueue_script( 'custom', get_template_directory_uri() . '/js/resources/custom.js', ['jquery'], false, true);
     wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/js/fancybox/jquery.fancybox.min.js', ['jquery'], false, true);
 
     wp_enqueue_script( 'owl', get_template_directory_uri() . '/js/owl.carousel.min.js', ['jquery'], false, true);
@@ -351,7 +352,7 @@ function miracoil_swiper()
 //add reviews js 
 function add_reviews_js()
 {
-    echo '<script type="text/javascript"> (function e(){var e=document.createElement("script");e.type="text/javascript",e.async=!0, e.src="//staticw2.yotpo.com/kd4QkQ6ZPxST0y3teVs5gmCirnpWU664opajrvTS/widget.js";var t=document.getElementsByTagName("script")[0]; t.parentNode.insertBefore(e,t)})(); </script>';
+	echo '<script type="text/javascript"> (function e(){var e=document.createElement("script");e.type="text/javascript",e.async=!0, e.src="//staticw2.yotpo.com/nTvdl5HFT1TU7SIJWaQU9c4b0n2gzJx11sDi0L8B/widget.js";var t=document.getElementsByTagName("script")[0]; t.parentNode.insertBefore(e,t)})(); </script>';
 }
 
 function add_cocoon_js()
@@ -380,6 +381,7 @@ if (!is_admin()) {
         wp_enqueue_style('app-owl-carousel', get_stylesheet_directory_uri() . '/js/owl.carousel.min.css');
         wp_enqueue_style('app-owl', get_stylesheet_directory_uri() . '/js/owl.theme.default.min.css');
         wp_enqueue_style('app-styling', get_stylesheet_directory_uri() . '/css/styles.min.css');
+		wp_enqueue_style('redesign', get_stylesheet_directory_uri() . '/static/build/css/app.css');
         if ( class_exists( 'GFCommon' ) ) {
             wp_enqueue_style('custom-styling', get_stylesheet_directory_uri() . '/css/custom.min.css', ['gforms_formsmain_css']);
         } else {
@@ -547,7 +549,7 @@ function custom_listing_template()
 */
     $listing_template = '
     <% var offersCss = "" %>
-    <% if ( offers && offers[0].hot ) {  %>
+        <% if ( offers && offers[0].hot ) {  %>
         <% offersCss = "js-special-wrap" %>
     <% } %>
     <li data-store-id="<%= id %>" class="shop-card <%= offersCss %>" itemscope itemtype="http://schema.org/LocalBusiness">
@@ -1770,9 +1772,9 @@ function generate_csv($fileName){
     fputcsv($fp, $columnNames);
      
     //Then, loop through the rows and write them to the CSV file.
-    foreach ($rows as $row) {
-        fputcsv($fp, $row);
-    }
+    /*foreach ($rows as $row) {
+        //fputcsv($fp, $row);
+    }*/
      
     //Close the file pointer.
     fclose($fp);
