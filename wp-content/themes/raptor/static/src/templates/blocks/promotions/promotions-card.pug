@@ -1,0 +1,12 @@
+mixin promotions-card(props={})
+    .promotions-card
+        .promotions-card__img
+            +img('../img/promotions/promotions-card', 'png')
+        .promotions-card__logo
+            img(src=`../img/promotions/${props.logo}.svg`, alt="brand logo")
+        .promotions-card__price Miracoil Mattress $799
+        .promotions-card__text 
+            p Lorem ipsum dolor sit amet, tellus id, vestibulum habitasse iaculis, dolor nunc, lacinia maecenas vulputate.
+        .promotions-card__footer
+            a.bttn(href="#") FIND OUT MORE
+            .promotions-card__caption Offer ends 7th January 2020

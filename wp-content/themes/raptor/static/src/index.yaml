@@ -15,7 +15,10 @@ PageList:
   ready: 100
 - file: /select-promo/
   name: select-promo
-  ready: 10
+  ready: 100
+- file: /promotions/
+  name: promotions
+  ready: 100
 - file: /modal/
   name: modal
   ready: 1
