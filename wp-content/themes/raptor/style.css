@@ -4471,3 +4471,6 @@ ul._inner-submenu li:first-child::after{
 .no-flex{
     flex: none;
 }
+.select-promo .select-promo__title {
+    font-size: 2em;
+}
