@@ -206,7 +206,7 @@ $footer_block = get_field('footer_block');
         <div class="content-center has-white-color">
             <h6><?= $footer_block['subtitle']?></h6>
             <h2><?= $footer_block['title']?></h2>
-            <div class="bttn-row"><a class="bttn bttn--reverse" href="<?= $footer_block['cta']['title']?>"><?= $footer_block['cta']['title']?></a></div>
+            <div class="bttn-row"><a class="bttn bttn--reverse" href="<?= $footer_block['cta']['link']?>"><?= $footer_block['cta']['title']?></a></div>
         </div>
     </div>
 </div>
