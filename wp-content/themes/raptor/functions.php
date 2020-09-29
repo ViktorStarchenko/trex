@@ -297,7 +297,7 @@ add_action("admin_init", function () {
 if (!is_admin()) {
 	wp_enqueue_script('custom-scripts', get_template_directory_uri() . '/static/build/js/app.js', ['jquery'], false, true);
     wp_enqueue_script( 'browser', get_template_directory_uri() . '/js/browser.js', ['jquery'], false, true);
-
+    wp_enqueue_script( 'promo', get_template_directory_uri() . '/js/new-promo.js', ['jquery'], false, true);
     wp_enqueue_script( 'slider', get_template_directory_uri() . '/js/resources/carousel/bootstrap.min.js', ['jquery'], false, true);
     wp_enqueue_script( 'custom', get_template_directory_uri() . '/js/resources/custom.js', ['jquery'], false, true);
     wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/js/fancybox/jquery.fancybox.min.js', ['jquery'], false, true);
@@ -3156,6 +3156,249 @@ function remove_wpseo(){
             }
         }
     }
+}
+
+add_action( 'wp_ajax_filter_promo', 'filter_promo' );
+add_action( 'wp_ajax_nopriv_filter_promo', 'filter_promo' );
+
+function filter_promo() {
+    $matIds = $_POST['matId'] ?? null;
+
+    $metaQuery = [
+        [
+            'key'     => 'enabled',
+            'value'   => true,
+            'compare' => '=',
+        ],
+    ];
+
+    $tz = get_option('timezone_string');
+    $timestamp = time();
+    $dt = new DateTime("now", new DateTimeZone($tz));
+    $dt->setTimestamp($timestamp);
+    $date =  $dt->format('Y-m-d');
+
+    $baseQuery = [
+        'relation' => 'AND',
+        [
+            'key'     => 'start_date',
+            'value'   => $date,
+            'compare' => '<=',
+            'type'    => 'DATE',
+        ],
+        [
+            'key'     => 'end_date',
+            'value'   => $date,
+            'compare' => '>=',
+            'type'    => 'DATE',
+        ],
+    ];
+
+    $metaQuery[] = $baseQuery;
+
+
+    $paged = $_POST['paged'];
+
+
+    if (!empty($matIds)){
+        $matArr = [
+            'relation' => 'OR',
+        ];
+        foreach ($matIds as $id) {
+            $matArr[] = [
+                'key'       => 'range',
+                'value'     => $id,
+                'compare'   => 'LIKE',
+            ];
+        }
+
+        $metaQuery[] = $matArr;
+    }
+
+    $promo_query = new WP_Query(array(
+        'category_name' => 'special-offers',
+        'meta_query' => $metaQuery,
+        'posts_per_page' => 8,
+        'paged' => $paged,
+        'post_status' => 'publish',
+    ));
+
+    $total_pages = $promo_query->max_num_pages;
+
+    ob_start();
+    ?>
+
+    <div class="promotions-tile-wrap">
+        <div class="promotions-tile">
+            <?php while($promo_query->have_posts()) : $promo_query->the_post();
+                $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID()), 'large' );
+                $date = new DateTime(get_field('end_date', get_the_ID()));
+                ?>
+                <div class="promotions-card">
+                    <div class="promotions-card__img"><img src="<?= $image[0] ?? '' ?>" srcset="<?= $image[0] ?? '' ?> 2x"/>
+                    </div>
+                    <div class="promotions-card__price"><?= get_the_title(get_the_ID());?></div>
+                    <div class="promotions-card__text">
+                        <p><?= the_excerpt(); ?></p>
+                    </div>
+                    <div class="promotions-card__footer"><a class="bttn" href="#">FIND OUT MORE</a>
+                        <div class="promotions-card__caption">Offer ends <?php echo $date->format('d F Y'); ?></div>
+                    </div>
+                </div>
+            <?php endwhile;
+            wp_reset_postdata();?>
+        </div>
+    </div>
+    <div class="promotions-footer">
+
+        <?php
+        echo paginate_links([
+            'base' => '%_%',
+            'format' => '?pages=%#%',
+            'current' => max(1, $paged),
+            'total' => $total_pages,
+            'type' => 'list',
+            'prev_text' => '<div class="pagination__link pagination__link--prev pagination__item--prev">
+                                    <svg class="icon arrow-right" width="24" height="24" viewBox="0 0 24 24">
+                                        <use xlink:href="#arrow-right"></use>
+                                    </svg></div>',
+            'next_text' => '<div class="pagination__link pagination__link--next pagination__item--prev">
+                                    <svg class="icon arrow-right" width="24" height="24" viewBox="0 0 24 24">
+                                        <use xlink:href="#arrow-right"></use>
+                                    </svg></div>'
+        ]);
+        ?>
+
+    </div>
+
+
+    <?php $content = ob_get_clean();
+
+    echo $content;
+    die();
+
+}
+
+add_action( 'wp_ajax_filter_promo_ret', 'filter_promo_ret' );
+add_action( 'wp_ajax_nopriv_filter_promo_ret', 'filter_promo_ret' );
+
+function filter_promo_ret() {
+    $retIds = $_POST['retId'] ?? null;
+
+
+    $metaQuery = [
+        [
+            'key'     => 'enabled',
+            'value'   => true,
+            'compare' => '=',
+        ],
+    ];
+
+    $tz = get_option('timezone_string');
+    $timestamp = time();
+    $dt = new DateTime("now", new DateTimeZone($tz));
+    $dt->setTimestamp($timestamp);
+    $date =  $dt->format('Y-m-d');
+
+    $baseQuery = [
+        'relation' => 'AND',
+        [
+            'key'     => 'start_date',
+            'value'   => $date,
+            'compare' => '<=',
+            'type'    => 'DATE',
+        ],
+        [
+            'key'     => 'end_date',
+            'value'   => $date,
+            'compare' => '>=',
+            'type'    => 'DATE',
+        ],
+    ];
+
+    $metaQuery[] = $baseQuery;
+
+
+    $paged = $_POST['paged'];
+
+    if (!empty($retIds)){
+        $retArr = [
+            'relation' => 'OR',
+        ];
+        foreach ($retIds as $id) {
+            $retArr[] = [
+                'key'       => 'retailer_groups',
+                'value'     => $id,
+                'compare'   => 'LIKE',
+            ];
+        }
+
+        $metaQuery[] = $retArr;
+    }
+
+    $promo_query = new WP_Query(array(
+        'category_name' => 'special-offers',
+        'meta_query' => $metaQuery,
+        'posts_per_page' => 8,
+        'paged' => $paged,
+        'post_status' => 'publish',
+    ));
+    $total_pages = $promo_query->max_num_pages;
+
+
+
+    ob_start();
+    ?>
+
+    <div class="promotions-tile-wrap">
+        <div class="promotions-tile">
+            <?php while($promo_query->have_posts()) : $promo_query->the_post();
+                $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID()), 'large' );
+                $date = new DateTime(get_field('end_date', get_the_ID()));
+                ?>
+                <div class="promotions-card">
+                    <div class="promotions-card__img"><img src="<?= $image[0] ?? '' ?>" srcset="<?= $image[0] ?? '' ?> 2x"/>
+                    </div>
+                    <div class="promotions-card__price"><?= get_the_title(get_the_ID());?></div>
+                    <div class="promotions-card__text">
+                        <p><?= the_excerpt(); ?></p>
+                    </div>
+                    <div class="promotions-card__footer"><a class="bttn" href="#">FIND OUT MORE</a>
+                        <div class="promotions-card__caption">Offer ends <?php echo $date->format('d F Y'); ?></div>
+                    </div>
+                </div>
+            <?php endwhile;
+            wp_reset_postdata();?>
+        </div>
+    </div>
+    <div class="promotions-footer">
+
+        <?php
+        echo paginate_links([
+            'base' => '%_%',
+            'format' => '?pages=%#%',
+            'current' => max(1, $paged),
+            'total' => $total_pages,
+            'type' => 'list',
+            'prev_text' => '<div class="pagination__link pagination__link--prev pagination__item--prev">
+                                    <svg class="icon arrow-right" width="24" height="24" viewBox="0 0 24 24">
+                                        <use xlink:href="#arrow-right"></use>
+                                    </svg></div>',
+            'next_text' => '<div class="pagination__link pagination__link--next pagination__item--prev">
+                                    <svg class="icon arrow-right" width="24" height="24" viewBox="0 0 24 24">
+                                        <use xlink:href="#arrow-right"></use>
+                                    </svg></div>'
+        ]);
+        ?>
+
+    </div>
+
+
+    <?php $content = ob_get_clean();
+
+    echo $content;
+    die();
+
 }
 
 // QUIZ BLOCK
