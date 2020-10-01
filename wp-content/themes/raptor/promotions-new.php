@@ -116,6 +116,17 @@ $footer_block = get_field('footer_block');
                                 <div class="find-filter__drop">
                                     <ul class="filter-drop">
                                         <?php foreach ($matresses as $key => $matresse):
+                                            $hasOffers = get_posts([
+                                                'category_name' => 'special-offers',
+                                                'meta_query' => array_merge($baseQuery, [[
+                                                    'key'     => 'range', // name of custom field
+                                                    'value'   => '' . $matresse->ID  . '', // matches exaclty "123", not just 123. This prevents a match for "1234"
+                                                    'compare' => 'LIKE',
+                                                ]]),
+                                            ]);
+                                            if (empty($hasOffers)) {
+                                                continue;
+                                            }
                                             ?>
                                             <li class="filter-drop__item js-drop-filter-item ">
                                                 <input class="filter-drop__check" id="range-<?= $key ?>" type="checkbox" name="range" value="<?= $matresse->ID ?>" >
@@ -138,6 +149,17 @@ $footer_block = get_field('footer_block');
                                 <div class="find-filter__drop">
                                     <ul class="filter-drop">
                                         <?php foreach ($retailers as $key => $retailer):
+                                            $hasOffers = get_posts([
+                                                'category_name' => 'special-offers',
+                                                'meta_query' => array_merge($baseQuery, [[
+                                                    'key'     => 'retailer_groups', // name of custom field
+                                                    'value'   => '' . $retailer->ID  . '', // matches exaclty "123", not just 123. This prevents a match for "1234"
+                                                    'compare' => 'LIKE',
+                                                ]]),
+                                            ]);
+                                            if (empty($hasOffers)) {
+                                                continue;
+                                            }
                                             ?>
                                             <li class="filter-drop__item js-drop-filter-item  ">
                                                 <input class="filter-drop__check" id="retailer-<?= $key ?>" type="checkbox" name="retailer" value="<?= $retailer->ID ?>" data-name="<?= $retailer->post_name ?>" >
