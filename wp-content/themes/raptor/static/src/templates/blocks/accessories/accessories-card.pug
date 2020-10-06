@@ -1,0 +1,38 @@
+mixin accessories-card(props={})
+    .accessories-card
+        .accessories-card__img
+            +img('../img/accessories/accessories-card', 'png')
+        .accessories-card__title Plush Latex Pillow
+        .accessories-card__text 
+            p A pillow made of sustainable Talalay latex sourced from rubber trees. It is incredibly soft, durable and the natural latex provides superior anti-microbial features. Best for tummy and back sleepers.
+        .accessories-card__footer
+            a.under-link.js-modal-open(href="#" data-modal-id="modal-html" data-modal-html=`#accessories-${props.number}`) SEE MORE
+        div.get-content(id=`accessories-${props.number}`, style="display:none; visibility: hidden;")
+            .modal-content
+                .modal-info
+                    .modal-info__text
+                        .modal-info__title Plush Latex Pillow
+                        .content
+                            p A pillow made of sustainable Talalay latex sourced from rubber trees. It is incredibly soft, durable and the natural latex provides superior anti-microbial features. Best for tummy and back sleepers.
+                            h6 PRODUCT FEATURES:
+                            ul
+                                li Great for allery suffers because of the hypoallergenic properties of latex
+                                li Size 68X40cm
+                                li Hand washable
+                                li Low to medium profile
+                                li Japara cotton cover with a zip
+                                li Great for allery suffers because of the hypoallergenic properties of latex
+                                li Size 68X40cm
+                                li Hand washable
+                                li Low to medium profile
+                                li Japara cotton cover with a zip
+
+                    .modal-info__img
+                        .modal-info-img
+                            if i % 2
+                                +img(`/img/stuff/bedding-modal-2`, 'png', props.img)
+                            else
+                                +img(`/img/stuff/bedding-modal`, 'png', props.img)
+                .modal-footer
+                    a.bttn.bttn--bg(href="#") Find your perfect sleep solution
+                    a.bttn(href="#") FIND A STORE

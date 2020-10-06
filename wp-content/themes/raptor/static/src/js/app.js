@@ -21,10 +21,11 @@ import textCollapseInit from './blocks/textCollapse';
 import scrollTo from './blocks/scrollTo';
 // import MenuMobile from './blocks/menu-mob';
 // import Form from './blocks/form';
+import Modal from './blocks/modal';
 
 // Init
 // AppRoot.init();
-// Modal.init();
+Modal.init();
 // MenuMobile.init();
 // Form.init();
 
@@ -44,7 +45,12 @@ window.addEventListener('load', () => {
 	jQuery(window).scroll(function() {
 		var sticky = jQuery('header'),
 			scroll = jQuery(window).scrollTop();
-		if (scroll > height_top) sticky.addClass('header-fixed');
-		else sticky.removeClass('header-fixed');
+		if (scroll > height_top) {
+			sticky.addClass('header-fixed');
+		} else {
+			if(!jQuery('body').hasClass('modal-opened')) {
+				sticky.removeClass('header-fixed');
+			}
+		}
 	});
 });

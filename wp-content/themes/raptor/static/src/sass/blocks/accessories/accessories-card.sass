@@ -1,0 +1,38 @@
+.accessories-card
+    background: rgba(#eaeaea, .28)
+    padding: 35px 15px 50px 15px
+    display: flex
+    flex-flow: column nowrap
+    align-items: center
+    text-align: center
+    margin: 15px 16px
+    width: calc( 25% - 32px )
+    +r(1024)
+        width: calc( 33.33% - 32px )
+    +r(768)
+        width: calc( 50% - 32px )
+    +r(550)
+        width: calc( 100% - 32px )
+    &__img
+        margin-bottom: 40px
+    &__title
+        font-family: $f-1
+        font-size: 26px
+        font-weight: normal
+        line-height: normal
+        letter-spacing: 0.35px
+        color: $main
+        margin-bottom: 10px
+    &__text
+        font-family: $f-1
+        font-size: 18px
+        font-weight: normal
+        line-height: 1.22
+        letter-spacing: normal
+        color: $text
+        margin-bottom: 25px
+        p + p
+            margin-top: 5px
+    &__footer
+        margin-top: auto
+        text-align: center

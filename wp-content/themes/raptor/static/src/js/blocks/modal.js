@@ -91,7 +91,7 @@ const _set = {
  * @param {Element} elem 
  */
 function scrollBodyToTop(elem) {
-	const modaBodyElem = elem.querySelector('.modal__body');
+	const modaBodyElem = elem.querySelector('.modals__body');
 	if (modaBodyElem.scrollTop === 0) return;
 	modaBodyElem.scrollTop = 0;
 }
@@ -100,7 +100,7 @@ function scrollBodyToTop(elem) {
  * Добавление классов при скроле тела модального окна
  */
 function modalBodyScroll() {
-	const modaBodyElemAll = document.querySelectorAll('.modal__body');
+	const modaBodyElemAll = document.querySelectorAll('.modals__body');
 	if (!modaBodyElemAll[0]) return;
 
 	function addClass(element) {
@@ -134,7 +134,20 @@ function setRightMargin() {
 	let marginWidth = _get.isOpen ? getScrollWidth() + 'px' : '';
 	_get.containerElem.style.right = marginWidth;
 }
+/**
+ * Передача в модальное окно HTML со страницы
+ */
+function setHtml(currentModalElem, prop = {}) {
+	if(!prop.modalHtml) return;
 
+	const htmlContainer = currentModalElem.querySelector('.js-modal-set-html');
+	if(htmlContainer) {
+		htmlContainer.innerHTML = '';
+
+		let htmlContent = document.querySelector(prop.modalHtml).innerHTML;
+		htmlContainer.innerHTML = htmlContent;
+	}
+}
 /**
  * Передача данных в текущее модальное окно.
  * Данные в виде строки помещаются вмето @{modalData}@
@@ -226,7 +239,8 @@ function open(props = {}) {
 				}
 			}
 
-			dataTransfer(currentModalElem, props);
+			// dataTransfer(currentModalElem, props);
+			setHtml(currentModalElem, props);
 			hideScroll(true);
 			setRightMargin();
 
@@ -288,6 +302,9 @@ function close() {
 				body.classList.remove('modal-opened');
 				scrollBodyToTop(currentModalElem);
 				currentModalElem.querySelectorAll('form').forEach(formEl => { formEl.reset(); });
+
+				let modalSetHtmlContainer = currentModalElem.querySelector('.js-modal-set-html');
+				if(modalSetHtmlContainer) modalSetHtmlContainer.innerHTML = '';
 
 				BindEvent.dispatch('modal', {
 					currentModalElem,

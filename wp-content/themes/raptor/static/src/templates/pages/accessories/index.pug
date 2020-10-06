@@ -1,0 +1,101 @@
+extends /layout
+
+block head
+    - page.title = 'Accessories'
+    - page.class = ['accessories']
+
+block content
+    .text-hero
+        .container
+            .content-center
+                h1 The Creature Comforts
+                p We've created a range of bedding and comfort accessories to give your guests the extra touch to make their stay special.
+    .container
+        .promotions-filter
+            .promotions-filter__title filter by:
+            form.find-form(action="/")
+                .find-form__row
+                    .find-form__item
+                        .find-form__field
+                            .find-filter.js-drop-filter
+                                .find-filter__select.js-drop-filter-trigger(data-select="Filter by range")
+                                    .find-filter__select-title
+                                        span.js-drop-filter-selected Filter by range
+                                    .find-filter__select-icon
+                                .find-filter__drop
+                                    ul.filter-drop
+                                        li.filter-drop__item.js-drop-filter-item
+                                            input.filter-drop__check#range-1(type="checkbox", name="retailer", value="")
+                                            label.filter-drop__label(for="range-1") range #1
+                                        li.filter-drop__item.js-drop-filter-item
+                                            input.filter-drop__check#range-2(type="checkbox", name="retailer", value="")
+                                            label.filter-drop__label(for="range-2") range #2
+                                        li.filter-drop__item.js-drop-filter-item
+                                            input.filter-drop__check#range-3(type="checkbox", name="retailer", value="")
+                                            label.filter-drop__label(for="range-3") range #3
+                                        li.filter-drop__item.js-drop-filter-item
+                                            input.filter-drop__check#range-4(type="checkbox", name="retailer", value="")
+                                            label.filter-drop__label(for="range-4") range #4
+                                        li.filter-drop__item.js-drop-filter-item
+                                            input.filter-drop__check#range-5(type="checkbox", name="retailer", value="")
+                                            label.filter-drop__label(for="range-5") range #5
+
+                    .find-form__item
+                        .find-form__field
+                            .find-filter.js-drop-filter
+                                .find-filter__select.js-drop-filter-trigger(data-select="Filter by retailer")
+                                    .find-filter__select-title
+                                        span.js-drop-filter-selected Filter by retailer
+                                    .find-filter__select-icon
+                                .find-filter__drop
+                                    ul.filter-drop
+                                        li.filter-drop__item.js-drop-filter-item
+                                            input.filter-drop__check#retailer-1(type="checkbox", name="range", value="")
+                                            label.filter-drop__label(for="retailer-1") retailer #1
+                                        li.filter-drop__item.js-drop-filter-item
+                                            input.filter-drop__check#retailer-2(type="checkbox", name="range", value="")
+                                            label.filter-drop__label(for="retailer-2") retailer #2
+                                        li.filter-drop__item.js-drop-filter-item
+                                            input.filter-drop__check#retailer-3(type="checkbox", name="range", value="")
+                                            label.filter-drop__label(for="retailer-3") retailer #3
+                                        li.filter-drop__item.js-drop-filter-item
+                                            input.filter-drop__check#retailer-4(type="checkbox", name="range", value="")
+                                            label.filter-drop__label(for="retailer-4") retailer #4
+                                        li.filter-drop__item.js-drop-filter-item
+                                            input.filter-drop__check#retailer-5(type="checkbox", name="range", value="")
+                                            label.filter-drop__label(for="retailer-5") retailer #5
+        .promotions-tile-wrap
+            .promotions-tile
+                - n = 0
+                while n < 12
+                    - n++
+                    +accessories-card({number: n})
+
+        .promotions-footer
+            ul.pagination
+                li.pagination__item.pagination__item--prev
+                    a.pagination__link.pagination__link--prev(href="#")
+                        +icon('arrow-right')(width="24" height="24" viewBox="0 0 24 24")
+                li.pagination__item.active
+                    a.pagination__link.active(href="#") 1
+                li.pagination__item
+                    a.pagination__link(href="#") 2
+                li.pagination__item
+                    a.pagination__link(href="#") 3
+                li.pagination__item.pagination__item--next
+                    a.pagination__link.pagination__link--next(href="#")
+                        +icon('arrow-right')(width="24" height="24" viewBox="0 0 24 24")
+    .promo-decor.promo-decor--equal.promo-decor--full
+        .promo-decor__bg
+            picture
+                source(media="(max-width: 650px)", srcset="../img/promo/promo-block-mob-product.png 1x, ../img/promo/promo-block-mob-product@2x.png 2x")
+                +img('../img/promo/promo-block-desc-product', 'png')
+        .content-center.has-white-color
+            h6 BACK CARE PERFORMANCE
+            h2 Say goodnight to back pain and bad sleep
+            .bttn-row
+                a.bttn.bttn--reverse(href="#") Where to buy
+
+block modal
+    // Modals
+    +modal-container()

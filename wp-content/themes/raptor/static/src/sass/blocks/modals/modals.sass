@@ -1,0 +1,162 @@
+.modals
+	position: relative
+	left: -0.125em
+	display: inline-block
+	width: 93%
+	max-width: 800px
+	margin: 3rem 2rem
+	vertical-align: middle
+	text-align: left
+	cursor: default
+	background: #FFFFFF
+	box-sizing: border-box
+	white-space: normal
+	+r(768)
+		width: 95%
+		margin: 3rem 2%
+
+	&:not(.is-visible)
+		opacity: 0
+		transform: scale(0.9)
+		transition: transform 0.3s, opacity 0.3s
+
+	&.is-visible
+		opacity: 1
+		transition: transform 0.3s 0.2s, opacity 0.3s 0.2s
+
+	&:not(.is-hidden)
+		visibility: visible
+		overflow-y: visible
+
+	&.is-hidden
+		position: absolute
+		top: 0
+		left: 0
+		height: 0
+		visibility: hidden
+
+.modal-close-btn
+	position: absolute
+	top: 20px
+	right: 20px
+	font-size: 25px
+	line-height: 1
+	width: 30px
+	height: 30px
+	color: $main
+	transition: transform 0.15s ease-in-out
+	transform: rotate(90deg)
+	font-family: auto
+	+notouch
+		&:hover
+			transform: rotate(0)
+
+	+r(768)
+		top: 10px
+		right: 10px
+
+
+
+.modal-content
+	padding: 50px 60px 55px 60px
+	+r(1024)
+		padding: 40px 40px 50px 40px
+	+r(768)
+		padding: 40px 20px 40px 20px
+	&__title
+		font-size: 30px
+		margin-bottom: 40px
+		color: $main
+		font-weight: 500
+		font-family: $f-2
+		letter-spacing: 2px
+		line-height: 1.1
+		text-transform: uppercase
+		+r(768)
+			margin-bottom: 25px
+	.content
+		*
+			color: $text
+			font-size: 18px
+			line-height: 1.22
+		h1, h2, h3, h4, h5, h6
+			color: $main
+		h3
+			margin-top: 29px
+		ul:not([class]),
+		ol:not([class]),
+			margin-top: 10px
+			margin-bottom: 10px
+		& > *:first-child
+			margin-top: 0
+		& > *:last-child
+			margin-bottom: 0
+
+
+.modal-info
+	display: flex
+	flex-flow: row wrap
+	&__title
+		font-family: "NewzaldWeb-Book", serif
+		font-size: 40px
+		letter-spacing: normal
+		margin-bottom: 10px
+		+r(768)
+			font-size: 30px
+	&__text
+		width: 57%
+		padding-right: 20px
+		+r(768)
+			width: 100%
+			order: 1
+	&__img
+		width: 43%
+		+r(768)
+			width: 100%
+			order: 0
+			margin-bottom: 30px
+
+.modal-info-img
+	width: 100%
+	max-width: 520px
+	position: relative
+	font-size: 0
+	+rm(769)
+		margin-top: 10px
+	+r(768)
+		max-width: 450px
+		margin: 0 auto
+	&::before
+		content: ''
+		display: block
+		width: 100%
+		padding-bottom: 81.75%
+	img
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		max-width: 100%
+		max-height: 100%
+		object-fit: cover
+
+.modal-footer
+	display: flex
+	max-width: 700px
+	flex-flow: row wrap
+	align-items: center
+	margin: 35px -5px 0
+	.bttn
+		flex-grow: 1
+		width: 40%
+		margin: 5px
+		line-height: 0.81
+		letter-spacing: 1.07px
+		padding-top: 19px
+		padding-bottom: 19px
+		+r(650)
+			width: 100%
+		+r(350)
+			line-height: 1.2
+			white-space: normal
+			word-break: break-word

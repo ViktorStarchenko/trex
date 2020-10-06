@@ -19,6 +19,9 @@ PageList:
 - file: /promotions/
   name: promotions
   ready: 100
+- file: /accessories/
+  name: accessories
+  ready: 100
 - file: /modal/
   name: modal
   ready: 1

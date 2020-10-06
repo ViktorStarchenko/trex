@@ -37,6 +37,7 @@ export default function hideScroll(isHide) {
 		}
 	
 		if (_state.count === 1 && isHide) {
+			console.log(body.style.cssText);
 			_state.scrollTop = window.pageYOffset;
 			body.style.cssText = `
 			position: fixed;
