@@ -4474,3 +4474,6 @@ ul._inner-submenu li:first-child::after{
 div span.ginput_full .cstm-inpt-plchldr{
     top: 4px!important;
 }
+.select-promo .select-promo__title {
+    font-size: 2em;
+}
