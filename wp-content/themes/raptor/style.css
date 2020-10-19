@@ -4474,3 +4474,44 @@ ul._inner-submenu li:first-child::after{
 .select-promo .select-promo__title {
     font-size: 2em;
 }
+ul.page-numbers li {
+    margin-left: -1px;
+    border: 1px solid #ddd;
+    transition: border-color .2s;
+    position: relative;
+}
+ul.page-numbers li .page-numbers {
+    font-size: 18px;
+    font-family: CalibreWeb-Semibold,sans-serif;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: .78;
+    letter-spacing: 1.13px;
+    text-align: center;
+    color: #2e1a47;
+    height: 44px;
+    min-width: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.promotions-footer ul.page-numbers {
+    display: flex;
+    margin-left: auto;
+}
+ul.page-numbers li span.page-numbers.current {
+    border-color: #2e1a47;
+    z-index: 1;
+}
+.promotions-footer ul.page-numbers li span.page-numbers.current {
+    color: #404041;
+    border: 1px solid #2e1a47;
+}
+ul.page-numbers li a.page-numbers.next {
+    color: #fff;
+}
+ul.page-numbers li a.page-numbers.prev {
+    color: #fff;
+}
