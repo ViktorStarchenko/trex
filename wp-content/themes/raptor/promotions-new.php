@@ -188,7 +188,7 @@ $footer_block = get_field('footer_block');
                             <div class="promotions-card__text">
                                 <p><?= the_excerpt(); ?></p>
                             </div>
-                            <div class="promotions-card__footer"><a class="bttn" href="#">FIND OUT MORE</a>
+                            <div class="promotions-card__footer"><a class="bttn" href="<?= get_field('promo_url', get_the_ID())?>">FIND OUT MORE</a>
                                 <div class="promotions-card__caption">Offer ends <?php echo $date->format('d F Y'); ?></div>
                             </div>
                         </div>
@@ -228,7 +228,7 @@ $footer_block = get_field('footer_block');
         <div class="content-center has-white-color">
             <h6><?= $footer_block['subtitle']?></h6>
             <h2><?= $footer_block['title']?></h2>
-            <div class="bttn-row"><a class="bttn bttn--reverse" href="<?= $footer_block['cta']['title']?>"><?= $footer_block['cta']['title']?></a></div>
+            <div class="bttn-row"><a class="bttn bttn--reverse" href="<?= $footer_block['cta']['url']?>"><?= $footer_block['cta']['title']?></a></div>
         </div>
     </div>
 </div>
