@@ -1,9 +1,23 @@
-mixin swap-card
-    .swap-card
-        .swap-card__content.swap-card__content--center
-            .swap-card__content-inner
-                h5.swap-card__title Find your mattress
-                p.swap-card__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vulputate vel ex id ultricies. Nam gravida risus non erat feugiat dapibus.Nunc rhoncus ut enim sit amet tempus. n lobortis justo tempus consequat mollis. Praesent rhoncus dapibus sagittis.
-                a.bttn.bttn--reverse(href="#") Take the quiz
-        .swap-card__img
-            +img('../img/swap-card/swap-card', 'png')
+mixin swap-card(props={})
+    if !props.modClass
+        .swap-card
+            .swap-card__content.swap-card__content--center
+                .swap-card__content-inner
+                    h5.swap-card__title Find your mattress
+                    p.swap-card__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vulputate vel ex id ultricies. Nam gravida risus non erat feugiat dapibus.Nunc rhoncus ut enim sit amet tempus. n lobortis justo tempus consequat mollis. Praesent rhoncus dapibus sagittis.
+                    a.bttn.bttn--reverse(href="#") Take the quiz
+            .swap-card__img
+                +img('../img/swap-card/swap-card', 'png')
+    else
+        .swap-card(class=props.modClass)
+            .swap-card__content.swap-card__content--center
+                .swap-card__content-inner
+                    .swap-card__subhead
+                        span Prize Giveaway
+                    h5.swap-card__title Find your mattress
+                    p.swap-card__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vulputate vel ex id ultricies. Nam gravida risus non erat feugiat dapibus.Nunc rhoncus ut enim sit amet tempus. n lobortis justo tempus consequat mollis. Praesent rhoncus dapibus sagittis.
+                    a.bttn.bttn--border(href="#") Take the quiz
+            .swap-card__img
+                picture
+                    source(media="(max-width: 1024px)", srcset="../img/swap-card/0411-3.png")
+                    img(src=`../img/swap-card/${props.img}`, alt="")
