@@ -93,12 +93,35 @@ $footer_block = get_field('footer_block');
         </div>
     </div>
     <div class="container">
-        <div class="bg-decor bg-decor--narrow">
-            <div class="content-center big-text">
-                <h2><?=$below_hero['title']?></h2>
-                <p><?=$below_hero['text']?></p><a class="bttn bttn--border" href="<?=$below_hero['cta']['url']?>"><?=$below_hero['cta']['title']?></a>
-            </div>
-        </div>
+        <?php if (!empty($below_hero)) : ?>
+            <?php foreach ($below_hero as $block):?>
+                <?php if ($block['type'] === 'simple'):?>
+                    <div class="bg-decor bg-decor--narrow">
+                        <div class="content-center big-text">
+                            <h2><?=$block['title']?></h2>
+                            <p><?=$block['text']?></p><a class="bttn bttn--border" href="<?=$block['cta']['url']?>"><?=$block['cta']['title']?></a>
+                        </div>
+                    </div>
+                <?php else :?>
+                    <div class="swap-card-wrap">
+                        <div class="swap-card swap-card--extend -<?=$block['image_position']?>">
+                            <div class="swap-card__content swap-card__content--center">
+                                <div class="swap-card__content-inner">
+                                    <div class="swap-card__subhead"><span><?=$block['subtitle']?></span></div>
+                                    <h5 class="swap-card__title"><?=$block['title']?></h5>
+                                    <p class="swap-card__text"><?=$block['text']?></p><a class="bttn bttn--border" href="<?=$block['cta']['url']?>"><?=$block['cta']['title']?></a>
+                                </div>
+                            </div>
+                            <div class="swap-card__img">
+                                <picture>
+                                    <source media="(max-width: 1024px)" srcset="<?=$block['image_mob']['url']?>"/><img src="<?=$block['image']['url']?>" alt=""/>
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                <?php endif;?>
+            <?php endforeach;?>
+        <?php endif;?>
     </div>
     <div class="container">
 
