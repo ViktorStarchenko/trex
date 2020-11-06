@@ -3237,7 +3237,7 @@ function filter_promo() {
                 <div class="promotions-card">
                     <div class="promotions-card__img"><img src="<?= $image[0] ?? '' ?>" srcset="<?= $image[0] ?? '' ?> 2x"/>
                     </div>
-                    <div class="promotions-card__price"><?= get_the_title(get_the_ID());?></div>
+                    <div class="promotions-card__price"><?= get_field('promotion_display_name', get_the_ID()); ?></div>
                     <div class="promotions-card__text">
                         <p><?= the_excerpt(); ?></p>
                     </div>
@@ -3359,7 +3359,7 @@ function filter_promo_ret() {
                 <div class="promotions-card">
                     <div class="promotions-card__img"><img src="<?= $image[0] ?? '' ?>" srcset="<?= $image[0] ?? '' ?> 2x"/>
                     </div>
-                    <div class="promotions-card__price"><?= get_the_title(get_the_ID());?></div>
+                    <div class="promotions-card__price"><?= get_field('promotion_display_name', get_the_ID()); ?></div>
                     <div class="promotions-card__text">
                         <p><?= the_excerpt(); ?></p>
                     </div>

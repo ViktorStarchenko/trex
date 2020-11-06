@@ -79,6 +79,7 @@ $total_pages = $promo_query->max_num_pages;
 ?>
 <?php
 $hero = get_field('hero');
+$promotions = get_field('promotions_list');
 $below_hero = get_field('below_hero');
 $footer_block = get_field('footer_block');
 ?>
@@ -93,28 +94,38 @@ $footer_block = get_field('footer_block');
         </div>
     </div>
     <div class="container">
-        <?php if (!empty($below_hero)) : ?>
-            <?php foreach ($below_hero as $block):?>
-                <?php if ($block['type'] === 'simple'):?>
+        <?php if (!empty($promotions)) : ?>
+            <?php foreach ($promotions as $block):?>
+            <?php
+                $type = get_field('type', $block->ID);
+                $sub_title = get_field('sub_title_promotions', $block->ID);
+                $title = get_field('title_header_promotions', $block->ID);
+                $text_header_promotions = get_field('text_header_promotions', $block->ID);
+                $img = get_field('image_header_promotions', $block->ID);
+                $image_position = get_field('image_position', $block->ID);
+                $img_mobile = get_field('image_mobile_header_promotions', $block->ID);
+                $img_medium = get_field('image_header_medium_promotions', $block->ID);
+                ?>
+                <?php if ($type === 'simple'):?>
                     <div class="bg-decor bg-decor--narrow">
                         <div class="content-center big-text">
-                            <h2><?=$block['title']?></h2>
-                            <p><?=$block['text']?></p><a class="bttn bttn--border" href="<?=$block['cta']['url']?>"><?=$block['cta']['title']?></a>
+                            <h2><?=$title?></h2>
+                            <p><?=$text_header_promotions?></p><a class="bttn bttn--border" href="<?=get_permalink($block->ID);?>">LEARN MORE</a>
                         </div>
                     </div>
                 <?php else :?>
                     <div class="swap-card-wrap">
-                        <div class="swap-card swap-card--extend -<?=$block['image_position']?>">
+                        <div class="swap-card swap-card--extend -<?= $image_position ?>">
                             <div class="swap-card__content swap-card__content--center">
                                 <div class="swap-card__content-inner">
-                                    <div class="swap-card__subhead"><span><?=$block['subtitle']?></span></div>
-                                    <h5 class="swap-card__title"><?=$block['title']?></h5>
-                                    <p class="swap-card__text"><?=$block['text']?></p><a class="bttn bttn--border" href="<?=$block['cta']['url']?>"><?=$block['cta']['title']?></a>
+                                    <div class="swap-card__subhead"><span><?=$sub_title?></span></div>
+                                    <h5 class="swap-card__title"><?=$title?></h5>
+                                    <p class="swap-card__text"><?=$text_header_promotions?></p><a class="bttn bttn--border" href="<?=get_permalink($block->ID);?>">LEARN MORE</a>
                                 </div>
                             </div>
                             <div class="swap-card__img">
                                 <picture>
-                                    <source media="(max-width: 1024px)" srcset="<?=$block['image_mob']['url']?>"/><img src="<?=$block['image']['url']?>" alt=""/>
+                                    <source media="(max-width: 1024px)" srcset="<?=$img_mobile['url']?>"/><img src="<?=$img['url']?>" alt=""/>
                                 </picture>
                             </div>
                         </div>
@@ -207,7 +218,7 @@ $footer_block = get_field('footer_block');
                         <div class="promotions-card">
                             <div class="promotions-card__img"><img src="<?= $image[0] ?? '' ?>" srcset="<?= $image[0] ?? '' ?> 2x"/>
                             </div>
-                            <div class="promotions-card__price"><?= get_the_title(get_the_ID()); ?></div>
+                            <div class="promotions-card__price"><?= get_field('promotion_display_name', get_the_ID()); ?></div>
                             <div class="promotions-card__text">
                                 <p><?= the_excerpt(); ?></p>
                             </div>
