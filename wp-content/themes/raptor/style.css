@@ -4794,3 +4794,11 @@ ul._inner-submenu li:first-child::after{
 .page-template-reviews-page .yotpo.yotpo-main-widget .yotpo-bottomline.yotpo-bottomline-3-boxes .yotpo-bottomline-box-2 .yotpo-star-distribution .yotpo-star-distribution-content .yotpo-distibutions-stars .review-stars,.page-template-reviews-page .yotpo .yotpo-modal-dialog .yotpo-bottomline.yotpo-bottomline-3-boxes .yotpo-bottomline-box-2 .yotpo-star-distribution .yotpo-star-distribution-content .yotpo-distibutions-stars .review-stars {
     display: inline;
 }
+.promotions-card__img {
+    margin-bottom: 30px;
+    height: 100%;
+    max-height: 170px;
+}
+.promotions-card__img img {
+    max-height: 100%;
+}
