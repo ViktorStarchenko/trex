@@ -169,7 +169,13 @@
     <div class="sub-header-inner">
         <div class="sub-header__logo">
             <div class="sub-header-logo"><img src="<?= $submenu_logo['url'] ?? ''?>" alt="miracoil"></div>
-            <div class="sub-header-title">For Back Care</div>
+            <?php $obj = get_queried_object();
+                  $subtext = 'For Back Care';
+                 if (!empty(get_field('header_text', $obj->ID))) {
+                     $subtext = get_field('header_text', $obj->ID);
+                 }
+            ?>
+            <div class="sub-header-title"><?= $subtext; ?></div>
         </div>
         <div class="sub-header__nav">
             <ul class="sub-header-nav">
