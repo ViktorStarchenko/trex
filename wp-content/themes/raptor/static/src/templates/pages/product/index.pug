@@ -5,7 +5,7 @@ block head
 	- page.class = ['product-template']
 
 block content
-	.product-hero
+	.product-hero#product-overview
 		.product-hero__bg
 			picture
 				source(media="(max-width: 768px)", srcset="../img/product-hero/home-product-mob.png 1x, ../img/product-hero/home-product-mob@2x.png 2x")
@@ -23,15 +23,14 @@ block content
 			span.product-hero-btn__icon
 				span.product-hero-btn__icon-inn
 			| Watch video
-	#product-overview
-		.feature-wrap
-			// a(href="#").feature-card
-			// or
-			// div.feature-card
-			+feature-card({img:'feature-card-1', text:'Designed and built for Australians, by Australians for lasting quality.'})
-			+feature-card({img:'feature-card-4', text:'Endorsed for excellence in support when you sleep.'})
-			+feature-card({img:'feature-card-5', text:'Technology to keep your mattress fresh, hygenic, odour free.'})
-			+feature-card({img:'feature-card-6', text:'120+ <br> 5 Star Reviews'})
+	.feature-wrap
+		// a(href="#").feature-card
+		// or
+		// div.feature-card
+		+feature-card({img:'feature-card-1', text:'Designed and built for Australians, by Australians for lasting quality.'})
+		+feature-card({img:'feature-card-4', text:'Endorsed for excellence in support when you sleep.'})
+		+feature-card({img:'feature-card-5', text:'Technology to keep your mattress fresh, hygenic, odour free.'})
+		+feature-card({img:'feature-card-6', text:'120+ <br> 5 Star Reviews'})
 	#product-features
 		.shift-card-wrap
 			+shift-card({title:'Say goodnight to aches and pains.', text:'Backs. A bad back from a bad bed. Means bad news for you.And good news for your chiropractor.<br><br>Happily we make orthopaedically engineered beds. To both support your back and protect it too. MiraCoil Advance. High gauge, 5 Zone continuous coil support system. Pressure relieving comfort from head to toe and where you need it most.', img:'product-swap-1'})
