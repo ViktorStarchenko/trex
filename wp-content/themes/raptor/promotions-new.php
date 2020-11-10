@@ -94,6 +94,37 @@ $footer_block = get_field('footer_block');
         </div>
     </div>
     <div class="container">
+        <?php if (!empty($below_hero)) : ?>
+            <?php foreach ($below_hero as $item):?>
+                <?php if ($item['enable']):?>
+                    <?php if ($item['type'] === 'simple'):?>
+                        <div class="bg-decor bg-decor--narrow">
+                            <div class="content-center big-text">
+                                <h2><?=$item['title']?></h2>
+                                <p><?=$item['text']?></p><a class="bttn bttn--border" href="<?= $item['cta']['url'] ?>"><?= $item['cta']['title']?></a>
+                            </div>
+                        </div>
+                    <?php else :?>
+                        <div class="swap-card-wrap">
+                            <div class="swap-card swap-card--extend -<?= $item['image_position'] ?>">
+                                <div class="swap-card__content swap-card__content--center">
+                                    <div class="swap-card__content-inner">
+                                        <div class="swap-card__subhead"><span><?=$item['subtitle']?></span></div>
+                                        <h5 class="swap-card__title"><?=$item['title']?></h5>
+                                        <p class="swap-card__text"><?=$item['text']?></p><a class="bttn bttn--border" href="<?=$item['cta']['url']?>"><?=$item['cta']['title']?></a>
+                                    </div>
+                                </div>
+                                <div class="swap-card__img">
+                                    <picture>
+                                        <source media="(max-width: 1024px)" srcset="<?=$item['image_mob']['url']?>"/><img src="<?=$item['image']['url']?>" alt=""/>
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endif;?>
+                <?php endif;?>
+            <?php endforeach;?>
+        <?php endif;?>
         <?php if (!empty($promotions)) : ?>
             <?php foreach ($promotions as $block):?>
             <?php
