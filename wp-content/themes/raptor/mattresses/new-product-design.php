@@ -8,7 +8,7 @@ $cards = get_field('product_cards');
 $technology = get_field('technology');
 ?>
 	<div class="main">
-		<div class="product-hero">
+		<div class="product-hero" id="product-overview">
 			<div class="product-hero__bg">
 				<picture>
 					<source media="(max-width: 768px)" srcset="<?= $hero['img_mob']['url'] ?? ''?> 1x, <?= $hero['img_mob_2x']['url'] ?? ''?> 2x"><img src="<?= $hero['img']['url'] ?? ''?>" srcset="<?= $hero['img_2x']['url'] ?? ''?> 2x"/>
@@ -25,19 +25,17 @@ $technology = get_field('technology');
 				<p><?= $hero['text'] ?? ''?></p>
 			</div><a class="product-hero-btn" href="<?= $hero['cta']['url'] ?? ''?>"><span class="product-hero-btn__icon"><span class="product-hero-btn__icon-inn"></span></span><?= $hero['cta']['title'] ?? ''?></a>
 		</div>
-		<div id="product-overview">
-			<div class="feature-wrap">
-				<?php if(!empty($features)) :?>
-					<?php foreach ($features as $feature) :?>
-						<div class="feature-card">
-							<div class="feature-card__icon"><img src="<?= $feature['img']['url'] ?? ''?>" srcset="<?= $feature['img_2x']['url'] ?? ''?> 2x"/>
-							</div>
-							<div class="feature-card__text"><?= $feature['text'] ?? ''?></div>
-						</div>
-					<?php endforeach;?>
-				<?php endif; ?>
-			</div>
-		</div>
+        <div class="feature-wrap">
+            <?php if(!empty($features)) :?>
+                <?php foreach ($features as $feature) :?>
+                    <div class="feature-card">
+                        <div class="feature-card__icon"><img src="<?= $feature['img']['url'] ?? ''?>" srcset="<?= $feature['img_2x']['url'] ?? ''?> 2x"/>
+                        </div>
+                        <div class="feature-card__text"><?= $feature['text'] ?? ''?></div>
+                    </div>
+                <?php endforeach;?>
+            <?php endif; ?>
+        </div>
 		<div id="product-features">
 			<div class="shift-card-wrap">
 				<?php if(!empty($cards)) :?>
