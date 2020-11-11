@@ -17,7 +17,7 @@ export default function scrollTo() {
 				} catch (error) {}
 
 				e.preventDefault();
-				let targetel = item.getAttribute('href');
+				let targetel = item.getAttribute('href') || item.dataset.href;
 				let target = document.querySelector(targetel);
 				let timeDelay = 0;
 
