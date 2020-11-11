@@ -177,7 +177,7 @@
             <ul class="sub-header-nav">
 				<?php if (!empty($navigation["submenu_items"])) : ?>
 					<?php foreach ($navigation["submenu_items"] as $item) : ?>
-                        <li class="sub-header-nav__item"><a class="sub-header-nav__link js-scroll-to" href="<?= $item['link']['url'] ?? ''?>"><?= $item['link']['title'] ?? ''?></a></li>
+                        <li class="sub-header-nav__item"><a class="sub-header-nav__link" href="<?= $item['link']['url'] ?? ''?>"><?= $item['link']['title'] ?? ''?></a></li>
 					<?php endforeach; ?>
 				<?php endif; ?>
             </ul>
