@@ -156,7 +156,7 @@ $footer_block = get_field('footer_block');
                             </div>
                             <div class="swap-card__img">
                                 <picture>
-                                    <source media="(max-width: 1024px)" srcset="<?=$img_mobile['url']?>"/><img src="<?=$img['url']?>" alt=""/>
+                                    <source media="(max-width: 1024px)" srcset="<?=$img_mobile['url']?>"/><img src="<?=$img_medium['url']?>" alt=""/>
                                 </picture>
                             </div>
                         </div>
