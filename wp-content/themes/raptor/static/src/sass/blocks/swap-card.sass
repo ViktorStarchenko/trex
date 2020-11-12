@@ -10,6 +10,8 @@
     &:not(#{$this}--extend)
         &:nth-child(even)
             flex-direction: row-reverse
+        #{$this}__title
+            font-family: $f-2
     &#{$this}--extend
         max-width: 1250px
         margin-left: auto
@@ -68,6 +70,18 @@
                 width: 100%
                 padding-top: 150px
                 padding-bottom: 150px
+        #{$this}__title
+            +r(768)
+                font-size: 30px
+                margin-bottom: 20px
+        #{$this}__text
+            font-size: 20px
+            line-height: 1.5
+            +r(768)
+                font-size: 16px
+        .bttn
+            +r(768)
+                margin-top: 30px
     &__content
         width: 50%
         padding: 50px
@@ -104,7 +118,6 @@
             &::after
                 left: 100%
     &__title
-        font-family: $f-2
         font-size: 40px
         margin-bottom: 20px
         +r(768)
