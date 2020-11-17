@@ -109,7 +109,6 @@ $footer_block = get_field('footer_block');
                             <div class="swap-card swap-card--extend -<?= $item['image_position'] ?>">
                                 <div class="swap-card__content swap-card__content--center">
                                     <div class="swap-card__content-inner">
-                                        <div class="swap-card__subhead"><span><?=$item['subtitle']?></span></div>
                                         <h5 class="swap-card__title"><?=$item['title']?></h5>
                                         <p class="swap-card__text"><?=$item['text']?></p><a class="bttn bttn--border" href="<?=$item['cta']['url']?>"><?=$item['cta']['title']?></a>
                                     </div>
@@ -149,7 +148,6 @@ $footer_block = get_field('footer_block');
                         <div class="swap-card swap-card--extend -<?= $image_position ?>">
                             <div class="swap-card__content swap-card__content--center">
                                 <div class="swap-card__content-inner">
-                                    <div class="swap-card__subhead"><span><?=$sub_title?></span></div>
                                     <h5 class="swap-card__title"><?=$title?></h5>
                                     <p class="swap-card__text"><?=$text_header_promotions?></p><a class="bttn bttn--border" href="<?=get_permalink($block->ID);?>">LEARN MORE</a>
                                 </div>
