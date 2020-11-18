@@ -51,6 +51,7 @@ const _get = {
 				_set.containerElem = elem;
 				return _state.containerElem;
 			} else {
+				return false;
 				console.error(`Modal: can't find element by selector ${_state.containerSelector}`);
 			}
 		}
@@ -235,6 +236,7 @@ function open(props = {}) {
 				if (ajaxElem) {
 					ajaxElem.innerHTML = result.data;
 				} else {
+					return false;
 					throw new Error(`Modal: can\'t find elem by selector "${ajaxSelector}"`);
 				}
 			}

@@ -121,6 +121,12 @@ svg
 	*:last-child
 		margin-bottom: 0
 
+	.bttn-row
+		.bttn
+			margin: 5px 15px
+			+r(768)
+				margin: 10px
+
 h1, h2, h3, h4, h5
 	font-family: "NewzaldWeb-Book", serif
 
@@ -170,19 +176,3 @@ h6
 	border: 0
 	padding: 0
 	margin: 0
-
-
-#product-technology
-	.content-center
-		max-width: 618px
-		+r(450)
-			max-width: 296px
-
-#product-factory
-	.content-center
-		p
-			line-height: 1.67
-
-// old content styles fix
-.page-id-750 .page-content *
-	all: revert

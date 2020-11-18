@@ -3,40 +3,53 @@
 // @import block
 // @import content/all
 @import modals/all
-
-@import main
-
-// Custom
-@import button
-@import home/all
-@import tabs
 @import modal/all
-
-@import hero-screen
-@import comparison/all
-@import accordeon
-@import swap-card
-@import shift-card
-@import we-help/all
-@import feature/all
-@import complete-decor
-@import bg-decor
-@import promo-decor
-@import social-list
-@import rating-reviews/all
-@import complete-card/all
 @import footer/all
-@import top-banner
 @import header/all
-@import product-hero
-@import sleepmaker-advance/all
-@import review/all
-@import product-specs/all
-@import full-page-slider
-// @import form/all
-// @import menu-mob/all
-// @import ui/all
-@import rating
-@import select-promo/all
-@import promotions/all
-@import accessories/all
+@import top-banner
+@import button
+@import social-list
+
+.main
+
+    @import main
+
+    // Custom
+    @import home/all
+    @import tabs
+    @import hero-screen
+    @import comparison/all
+    @import accordeon
+    @import swap-card
+    @import shift-card
+    @import we-help/all
+    @import feature/all
+    @import complete-decor
+    @import bg-decor
+    @import promo-decor
+    @import rating-reviews/all
+    @import complete-card/all
+    @import product-hero
+    @import sleepmaker-advance/all
+    @import review/all
+    @import product-specs/all
+    @import full-page-slider
+    @import rating
+    @import select-promo/all
+    @import promotions/all
+    @import accessories/all
+
+#product-technology
+    .content-center
+        max-width: 618px
+        +r(450)
+            max-width: 296px
+
+#product-factory
+    .content-center
+        p
+            line-height: 1.67
+
+// old content styles fix
+.page-id-750 .page-content *
+    all: revert
