@@ -51,8 +51,8 @@
 		flex-flow: row wrap
 		margin-left: -10px
 		margin-right: -10px
-		& + &
-			margin-top: 15px
+	.find-form__row + .find-form__row
+		margin-top: 15px
 	&__item
 		padding: 0 10px
 		flex-grow: 1
@@ -60,7 +60,7 @@
 		width: 50%
 		+r(768)
 			width: 100%
-			& + &
+			.find-form__item + .find-form__item
 				margin-top: 15px
 	&__submit
 		background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIiIGhlaWdodD0iMjIiIHZpZXdCb3g9IjAgMCAyMiAyMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+R3JvdXAgMjwvdGl0bGU+PGcgdHJhbnNmb3JtPSJyb3RhdGUoLTQ1IDguMzQ2IDcuNDk3KSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48Y2lyY2xlIHN0cm9rZT0iIzIyMTA0OCIgY3g9IjcuNSIgY3k9IjcuNSIgcj0iNyIvPjxwYXRoIGZpbGw9IiMyMjEwNDgiIGQ9Ik02LjgxOCAxNWgxLjM2NHYxMC45MDlINi44MTh6Ii8+PC9nPjwvc3ZnPg==)
@@ -132,7 +132,7 @@
 			font-weight: 300
 			line-height: calc(22/18)
 .find-filter
-	$this: &
+	$this: '.find-filter'
 	position: relative
 	&.active
 		#{$this}__drop
@@ -211,8 +211,6 @@
 		padding: 0 20px
 		line-height: calc(22/18)
 		cursor: pointer
-		& + &
-			margin-top: 10px
 	&__check
 		position: absolute
 		width: 1px
@@ -223,7 +221,6 @@
 			&::after
 				opacity: 1
 				transform: scale(1)
-			
 	&__label
 		color: #221048
 		font-family: "CalibreWeb-Light"
@@ -253,3 +250,6 @@
 			opacity: 0
 			transform: scale(0.5)
 			transition: opacity .2s, transform .2s
+
+.filter-drop__item + .filter-drop__item
+	margin-top: 10px

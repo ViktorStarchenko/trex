@@ -3,8 +3,6 @@
     flex-flow: row wrap
     background: $white
     color: $white
-    & + &
-        margin-top: 60px
     &:nth-child(even)
         flex-direction: row-reverse
         .shift-card__content
@@ -69,6 +67,9 @@
         +r(768)
             margin-top: 20px
             min-width: 180px
+
+.shift-card + .shift-card
+    margin-top: 60px
 
 .shift-card-wrap
     width: 100%

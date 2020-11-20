@@ -1,12 +1,12 @@
+.swap-card + .swap-card
+    margin-top: 40px
 .swap-card
-    $this: &
+    $this: '.swap-card'
     display: flex
     flex-flow: row wrap
     background: $main
     color: $white
     position: relative
-    & + &
-        margin-top: 40px
     &:not(#{$this}--extend)
         &:nth-child(even)
             flex-direction: row-reverse

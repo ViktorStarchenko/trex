@@ -6,8 +6,6 @@
                 opacity: 1
     &__item
         transition: .3s
-        & + &
-            margin-top: 30px
     &__link
         color: $white
         text-decoration: none
@@ -44,3 +42,6 @@
         opacity: 0.75
         +r(768)
             font-size: 15px
+
+.we-help-nav__item + .we-help-nav__item
+    margin-top: 30px
