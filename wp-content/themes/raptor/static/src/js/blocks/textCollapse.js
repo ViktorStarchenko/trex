@@ -15,6 +15,19 @@ export default function textCollapseInit() {
 				}
 				let CollapseText = [...item.querySelectorAll('p')];
 
+				let svgObject = item.querySelector('object');
+				let svgIcon = false;
+				let svgIconElems = [];
+				if(svgObject) {
+					let svgObjectDoc = svgObject.contentDocument;
+					svgIcon = svgObjectDoc.querySelector('svg');
+					svgIconElems = [...svgIcon.querySelectorAll('*')];
+					svgIcon.setAttribute('fill', '#ffffff');
+					svgIconElems.forEach(el => {
+						el.setAttribute('fill', '#ffffff');
+					});
+				}
+
 				if(CollapseText.length > 1 && CollapseText.length > collapseVisible) {
 					for(let i = collapseVisible ; i < CollapseText.length; i++) {
 						CollapseText[i].dataset.height = CollapseText[i].scrollHeight;
@@ -41,6 +54,12 @@ export default function textCollapseInit() {
 							}
 							buttonCollapseToggle.innerText = bttnText;
 							item.classList.remove('active');
+							if(svgIcon) {
+								svgIcon.setAttribute('fill', '#ffffff'); //svg
+								svgIconElems.forEach(el => {
+									el.setAttribute('fill', '#ffffff');
+								});
+							}
 						} else {
 							let curretnActive = [...textCollapseItem].find(element => element.classList.contains('active'));
 							let delay = 0;
@@ -54,6 +73,12 @@ export default function textCollapseInit() {
 								}
 								curretnActive.querySelector('.advance-card__button').innerText = bttnText;
 								curretnActive.classList.remove('active');
+								if(svgIcon) {
+									svgIcon.setAttribute('fill', '#ffffff'); //svg
+									svgIconElems.forEach(el => {
+										el.setAttribute('fill', '#ffffff');
+									});
+								}
 							}
 							setTimeout(() => {
 								for(let i = collapseVisible ; i < CollapseText.length; i++) {
@@ -61,12 +86,18 @@ export default function textCollapseInit() {
 								}
 								buttonCollapseToggle.innerText = bttnTextSwitch;
 								item.classList.add('active');
+								if(svgIcon) {
+									svgIcon.setAttribute('fill', '#2e1a47'); //svg
+									svgIconElems.forEach(el => {
+										el.setAttribute('fill', '#2e1a47');
+									});
+								}
 							}, delay);
 						}
 					});
 
 				} else {
-					// console.log('dd');
+					return false;
 				}
 			});
 		});

@@ -10,6 +10,11 @@
         .advance-card__text,
         .advance-card__button
             color: $main
+        .advance-card__img
+            &.default
+                opacity: 0
+            &.active
+                opacity: 1
     &__header
         display: flex
         margin-bottom: 5px
@@ -27,6 +32,18 @@
         color: rgba($white, .8)
         margin-right: 10px
         transition: color .2s
+        font-size: 0
+        position: relative
+    &__img
+        transition: opacity .2s
+        &.default
+            position: relative
+            opacity: 1
+        &.active
+            position: absolute
+            left: 0
+            top: 0
+            opacity: 0
     &__text
         font-family: $f-1
         font-size: 16px
