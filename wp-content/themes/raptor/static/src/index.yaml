@@ -25,3 +25,6 @@ PageList:
 - file: /modal/
   name: modal
   ready: 1
+- file: /test-form/
+  name: test-form
+  ready: 1
