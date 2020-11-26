@@ -22,6 +22,7 @@ import scrollTo from './blocks/scrollTo';
 // import MenuMobile from './blocks/menu-mob';
 // import Form from './blocks/form';
 import Modal from './blocks/modal';
+import textLimit from './blocks/textLimit';
 
 // Init
 // AppRoot.init();
@@ -39,6 +40,7 @@ window.addEventListener('load', () => {
 	topPromoInit();
 	textCollapseInit();
 	scrollTo();
+	textLimit();
 
 	//current function
 	var height_top = jQuery('header').offset().top;
