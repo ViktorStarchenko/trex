@@ -32,7 +32,6 @@ Modal.init();
 
 window.addEventListener('load', () => {
 	dropFilterInit();
-	setupTabs();
 	window.toggleSpecialOffers();
 	// ...
 	setupAccordeon();
@@ -41,6 +40,9 @@ window.addEventListener('load', () => {
 	textCollapseInit();
 	scrollTo();
 	textLimit();
+	setTimeout(() => {
+		setupTabs();
+	}, 50);
 
 	//current function
 	var height_top = jQuery('header').offset().top;

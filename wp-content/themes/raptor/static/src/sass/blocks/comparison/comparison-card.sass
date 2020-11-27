@@ -1,6 +1,9 @@
 .comparison-card
     width: calc(49% - 40px)
     margin: 0 20px 45px 20px
+    display: flex
+    flex-flow: column nowrap
+    align-items: flex-start
     +r(768)
         width: calc(100% - 40px)
     &__img
@@ -40,6 +43,7 @@
         +r(768)
             font-size: 24px
     &__text
+        margin-top: auto
         font-family: $f-1
         font-size: 18px
         font-weight: normal

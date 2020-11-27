@@ -38,17 +38,37 @@ block content
 			+shift-card({title:'Stay cool.', text:'How do you make sleep better when it’s baking hot?You find the one thing that makes hot go away. Introducing KulKote.A wickable, moisture free temperature control fabric that lowers your body temperature by 4 degrees. The perfect conditions for sleep.And made exclusively for SleepMaker.<br><br>KulKote for SleepMaker. Makers of the ultimate sleep.', img:'product-swap-3'})
 	#product-technology
 		.bg-block
-			.sleepmaker-advance
-				.sleepmaker-advance__info.js-text-collapse-wrap
-					+advance-card({title:'Reduces back stress', icon:'reduces',})
-					+advance-card({title:'Support That Lasts', icon:'support',})
-					+advance-card({title:'Maximum Durability', icon:'durability',})
-					+advance-card({title:'Zoned Comfort', icon:'comfort',})
+			.sleepmaker-advance.js-tabs-wrapper
+				.sleepmaker-advance__info
+					.advance-card-wrap.js-tab-content(data-id="advance-tab-1")
+						.js-text-collapse-wrap
+							+advance-card({title:'Reduces back stress', icon:'reduces',})
+							+advance-card({title:'Support That Lasts', icon:'support',})
+							+advance-card({title:'Maximum Durability', icon:'durability',})
+							+advance-card({title:'Zoned Comfort', icon:'comfort',})
+					.advance-card-wrap.js-tab-content(data-id="advance-tab-2")
+						.js-text-collapse-wrap
+							+advance-card({title:'Reduces back stress', icon:'reduces',})
+							+advance-card({title:'Support That Lasts', icon:'support',})
+							+advance-card({title:'Maximum Durability', icon:'durability',})
+							+advance-card({title:'Zoned Comfort', icon:'comfort',})
+					.advance-card-wrap.js-tab-content(data-id="advance-tab-3")
+						.js-text-collapse-wrap
+							+advance-card({title:'Reduces back stress', icon:'reduces',})
+							+advance-card({title:'Support That Lasts', icon:'support',})
+							+advance-card({title:'Maximum Durability', icon:'durability',})
+							+advance-card({title:'Zoned Comfort', icon:'comfort',})
+					.advance-card-wrap.js-tab-content(data-id="advance-tab-4")
+						.js-text-collapse-wrap
+							+advance-card({title:'Reduces back stress', icon:'reduces',})
+							+advance-card({title:'Support That Lasts', icon:'support',})
+							+advance-card({title:'Maximum Durability', icon:'durability',})
+							+advance-card({title:'Zoned Comfort', icon:'comfort',})
 				.sleepmaker-advance__brands
 					.content-center
 						h6 SLEEPMAKER
 						h2 Miracoil Advance
-					.advance-brands.js-tabs-wrapper
+					.advance-brands
 						.advance-brands__header
 							ul.advance-brands__list
 								li.advance-brands__list-item
@@ -60,13 +80,13 @@ block content
 								li.advance-brands__list-item
 									span.advance-brands__list-link.js-tab-trigger(data-hash="#advance-tab-4") Sub brand #4
 						.advance-brands__body
-							.advance-brands__content.js-tab-content#advance-tab-1
+							.advance-brands__content.js-tab-content#advance-tab-1(data-id="advance-tab-1")
 								+img('../img/advance/advance-brands', 'png')
-							.advance-brands__content.js-tab-content#advance-tab-2
+							.advance-brands__content.js-tab-content#advance-tab-2(data-id="advance-tab-2")
 								+img('../img/advance/advance-brands', 'png')
-							.advance-brands__content.js-tab-content#advance-tab-3
+							.advance-brands__content.js-tab-content#advance-tab-3(data-id="advance-tab-3")
 								+img('../img/advance/advance-brands', 'png')
-							.advance-brands__content.js-tab-content#advance-tab-4
+							.advance-brands__content.js-tab-content#advance-tab-4(data-id="advance-tab-4")
 								+img('../img/advance/advance-brands', 'png')
 					.advance-brands-caption Models and structural components in the SleepMaker Miracoil Range vary and provide a selection of comfort choices. Models may vary between retailers
 			.container

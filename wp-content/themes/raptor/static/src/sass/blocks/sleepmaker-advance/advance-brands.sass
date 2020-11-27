@@ -13,9 +13,14 @@
         text-align: center
     &__list
         display: flex
+        justify-content: center
+        +r(1024)
+            flex-wrap: wrap
         &-item
             width: 25%
             padding: 10px
+            +r(1024)
+                width: auto
         &-link
             display: block
             width: 100%
@@ -30,9 +35,12 @@
             color: $white
             text-align: center
             text-decoration: none
+            padding-left: 5px
+            padding-right: 5px
             padding-bottom: 10px
             border-bottom: 1px solid rgba($white, .5)
             transition: color .2s, border-color .2s, opacity .2s
+            cursor: pointer
             +r(1024)
                 font-size: 16px
             &.active

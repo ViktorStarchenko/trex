@@ -50,10 +50,15 @@ export default function textCollapseInit() {
 						e.preventDefault();
 						if(item.classList.contains('active')) {
 							for(let i = collapseVisible ; i < CollapseText.length; i++) {
-								CollapseText[i].style.height = 0 + 'px';
+								CollapseText[i].style.height = CollapseText[i].dataset.height + 'px';
+								setTimeout(() => {
+									CollapseText[i].style.height = 0 + 'px';
+								}, 50);
 							}
 							buttonCollapseToggle.innerText = bttnText;
-							item.classList.remove('active');
+							setTimeout(() => {
+								item.classList.remove('active');
+							}, 100);
 							if(svgIcon) {
 								svgIcon.setAttribute('fill', '#ffffff'); //svg
 								svgIconElems.forEach(el => {
@@ -69,10 +74,15 @@ export default function textCollapseInit() {
 								let currentVisibleText = [...curretnActiveText.querySelectorAll('p')];
 
 								for(let i = curretnActiveText.dataset.visible ; i < currentVisibleText.length; i++) {
-									currentVisibleText[i].style.height = 0 + 'px';
+									currentVisibleText[i].style.height = currentVisibleText[i].dataset.height + 'px';
+									setTimeout(() => {
+										currentVisibleText[i].style.height = 0 + 'px';
+									}, 100);
 								}
 								curretnActive.querySelector('.advance-card__button').innerText = bttnText;
-								curretnActive.classList.remove('active');
+								setTimeout(() => {
+									curretnActive.classList.remove('active');
+								}, 100);
 								if(svgIcon) {
 									svgIcon.setAttribute('fill', '#ffffff'); //svg
 									svgIconElems.forEach(el => {
@@ -83,6 +93,9 @@ export default function textCollapseInit() {
 							setTimeout(() => {
 								for(let i = collapseVisible ; i < CollapseText.length; i++) {
 									CollapseText[i].style.height = CollapseText[i].dataset.height + 'px';
+									setTimeout(() => {
+										CollapseText[i].style.height = 'auto';
+									}, 100);
 								}
 								buttonCollapseToggle.innerText = bttnTextSwitch;
 								item.classList.add('active');
