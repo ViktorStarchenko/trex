@@ -79,6 +79,7 @@ $total_pages = $promo_query->max_num_pages;
 ?>
 <?php
 $hero = get_field('hero');
+$promotions = get_field('promotions_list');
 $below_hero = get_field('below_hero');
 $footer_block = get_field('footer_block');
 ?>
@@ -93,12 +94,74 @@ $footer_block = get_field('footer_block');
         </div>
     </div>
     <div class="container">
-        <div class="bg-decor bg-decor--narrow">
-            <div class="content-center big-text">
-                <h2><?=$below_hero['title']?></h2>
-                <p><?=$below_hero['text']?></p><a class="bttn bttn--border" href="<?=$below_hero['cta']['url']?>"><?=$below_hero['cta']['title']?></a>
-            </div>
-        </div>
+        <?php if (!empty($below_hero)) : ?>
+            <?php foreach ($below_hero as $item):?>
+                <?php if ($item['enable']):?>
+                    <?php if ($item['type'] === 'simple'):?>
+                        <div class="bg-decor bg-decor--narrow">
+                            <div class="content-center big-text">
+                                <h2><?=$item['title']?></h2>
+                                <p><?=$item['text']?></p><a class="bttn bttn--border" href="<?= $item['cta']['url'] ?>"><?= $item['cta']['title']?></a>
+                            </div>
+                        </div>
+                    <?php else :?>
+                        <div class="swap-card-wrap">
+                            <div class="swap-card swap-card--extend -<?= $item['image_position'] ?>">
+                                <div class="swap-card__content swap-card__content--center">
+                                    <div class="swap-card__content-inner">
+                                        <h5 class="swap-card__title"><?=$item['title']?></h5>
+                                        <p class="swap-card__text"><?=$item['text']?></p><a class="bttn bttn--border" href="<?=$item['cta']['url']?>"><?=$item['cta']['title']?></a>
+                                    </div>
+                                </div>
+                                <div class="swap-card__img">
+                                    <picture>
+                                        <source media="(max-width: 1024px)" srcset="<?=$item['image_mob']['url']?>"/><img src="<?=$item['image']['url']?>" alt=""/>
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endif;?>
+                <?php endif;?>
+            <?php endforeach;?>
+        <?php endif;?>
+        <?php if (!empty($promotions)) : ?>
+            <?php foreach ($promotions as $block):?>
+                <?php
+                $type = get_field('type', $block->ID);
+                $sub_title = get_field('sub_title_promotions', $block->ID);
+                $title = get_field('title_header_promotions', $block->ID);
+                $text_header_promotions = get_field('text_header_promotions', $block->ID);
+                $img = get_field('image_header_promotions', $block->ID);
+                $image_position = get_field('image_position', $block->ID);
+                $img_mobile = get_field('image_mobile_header_promotions', $block->ID);
+                $img_medium = get_field('image_header_medium_promotions', $block->ID);
+                ?>
+                <?php if ($type === 'simple'):?>
+                    <div class="bg-decor bg-decor--narrow">
+                        <div class="content-center big-text">
+                            <h2><?=$title?></h2>
+                            <p><?=$text_header_promotions?></p><a class="bttn bttn--border" href="<?=get_permalink($block->ID);?>">LEARN MORE</a>
+                        </div>
+                    </div>
+                <?php else :?>
+                    <div class="swap-card-wrap">
+                        <div class="swap-card swap-card--extend -<?= $image_position ?>">
+                            <div class="swap-card__content swap-card__content--center">
+                                <div class="swap-card__content-inner">
+                                    <h5 class="swap-card__title"><?=$title?></h5>
+                                    <p class="swap-card__text"><?=$text_header_promotions?></p><a class="bttn bttn--border" href="<?=get_permalink($block->ID);?>">LEARN MORE</a>
+                                </div>
+                            </div>
+                            <div class="swap-card__img">
+                                <picture>
+                                    <source media="(max-width: 1024px)" srcset="<?=$img_mobile['url']?>"/><img src="<?=$img_medium['url']?>" alt=""/>
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                <?php endif;?>
+            <?php endforeach;?>
+        <?php endif;?>
     </div>
     <div class="container">
 
@@ -184,14 +247,11 @@ $footer_block = get_field('footer_block');
                         <div class="promotions-card">
                             <div class="promotions-card__img"><img src="<?= $image[0] ?? '' ?>" srcset="<?= $image[0] ?? '' ?> 2x"/>
                             </div>
-                            <div class="promotions-card__price"><?= get_the_title(get_the_ID()); ?></div>
+                            <div class="promotions-card__price"><?= get_field('promotion_display_name', get_the_ID()); ?></div>
                             <div class="promotions-card__text">
                                 <p><?= the_excerpt(); ?></p>
                             </div>
-                            <?php
-                            $promolinks = get_field("promotion_link", get_the_ID());
-                            ?>
-                            <div class="promotions-card__footer"><a class="bttn" href="<?= $promolinks[0]['promotion_link_url']?>">FIND OUT MORE</a>
+                            <div class="promotions-card__footer"><a class="bttn" href="#">FIND OUT MORE</a>
                                 <div class="promotions-card__caption">Offer ends <?php echo $date->format('d F Y'); ?></div>
                             </div>
                         </div>
@@ -231,7 +291,7 @@ $footer_block = get_field('footer_block');
         <div class="content-center has-white-color">
             <h6><?= $footer_block['subtitle']?></h6>
             <h2><?= $footer_block['title']?></h2>
-            <div class="bttn-row"><a class="bttn bttn--reverse" href="<?= $footer_block['cta']['url']?>"><?= $footer_block['cta']['title']?></a></div>
+            <div class="bttn-row"><a class="bttn bttn--reverse" href="<?= $footer_block['cta']['link']?>"><?= $footer_block['cta']['title']?></a></div>
         </div>
     </div>
 </div>
