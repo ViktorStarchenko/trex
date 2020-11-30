@@ -6,6 +6,8 @@ $top_hero = get_field('top_hero');
 $features = get_field('features');
 $promo_block = get_field('promo_block');
 $catalog_cards = get_field('catalog_cards');
+$yotpo = get_field('yotpo');
+$reviews_title = $yotpo['reviews_title'];
 ?>
 	<div class="main">
 		<div class="we-help">
@@ -31,15 +33,17 @@ $catalog_cards = get_field('catalog_cards');
 			</div>
 		</div>
 		<div class="feature-wrap">
-			<?php if(!empty($features)) :?>
-				<?php foreach ($features as $feature) :?>
-					<div class="feature-card">
-						<div class="feature-card__icon"><img src="<?= $feature['icon']['url'] ?? ''?>" srcset="<?= $feature['icon_2x']['url'] ?? ''?> 2x"/>
-						</div>
-						<div class="feature-card__title"><?= $feature['title'] ?? ''?></div>
-						<div class="feature-card__text"><?= $feature['text'] ?? ''?></div>
-					</div>
-				<?php endforeach;?>
+            <?php if ($features['enable']) : ?>
+                <?php if(!empty($features['items'])) :?>
+                    <?php foreach ($features['items'] as $feature) :?>
+                        <div class="feature-card">
+                            <div class="feature-card__icon"><img src="<?= $feature['icon']['url'] ?? ''?>" srcset="<?= $feature['icon_2x']['url'] ?? ''?> 2x"/>
+                            </div>
+                            <div class="feature-card__title"><?= $feature['title'] ?? ''?></div>
+                            <div class="feature-card__text"><?= $feature['text'] ?? ''?></div>
+                        </div>
+                    <?php endforeach;?>
+                <?php endif; ?>
 			<?php endif; ?>
 		</div>
 		<div class="complete-decor">
@@ -78,7 +82,7 @@ $catalog_cards = get_field('catalog_cards');
 		</div>
 		<div class="rating-reviews">
 			<div class="content-center">
-				<h3>See why people love Miracoil...</h3>
+				<h3><?= $reviews_title?></h3>
 			</div>
 			<div class="rating-reviews-slider">
 				<div class="swiper-container js-rating-reviews-slider">
@@ -122,8 +126,6 @@ $catalog_cards = get_field('catalog_cards');
 			</div>
 		</div>
 	</div>
-<?php $yotpo = get_field('yotpo'); ?>
-<?php $yotpo_product_id = $yotpo['yotpo_product_id'] ?>
 	<script>
         var data = null;
         var xhr = new XMLHttpRequest();
