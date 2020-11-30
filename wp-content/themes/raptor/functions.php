@@ -3201,6 +3201,7 @@ function filter_promo() {
 
     $paged = $_POST['paged'];
 
+
     if (!empty($matIds)){
         $matArr = [
             'relation' => 'OR',
@@ -3215,7 +3216,6 @@ function filter_promo() {
 
         $metaQuery[] = $matArr;
     }
-
 
     $promo_query = new WP_Query(array(
         'category_name' => 'special-offers',
@@ -3239,14 +3239,11 @@ function filter_promo() {
                 <div class="promotions-card">
                     <div class="promotions-card__img"><img src="<?= $image[0] ?? '' ?>" srcset="<?= $image[0] ?? '' ?> 2x"/>
                     </div>
-                    <div class="promotions-card__price"><?= get_the_title(get_the_ID());?></div>
+                    <div class="promotions-card__price"><?= get_field('promotion_display_name', get_the_ID()); ?></div>
                     <div class="promotions-card__text">
                         <p><?= the_excerpt(); ?></p>
                     </div>
-                    <?php
-                            $promolinks = get_field("promotion_link", get_the_ID());
-                            ?>
-                    <div class="promotions-card__footer"><a class="bttn" href="<?= $promolinks[0]['promotion_link_url']?>">FIND OUT MORE</a>
+                    <div class="promotions-card__footer"><a class="bttn" href="#">FIND OUT MORE</a>
                         <div class="promotions-card__caption">Offer ends <?php echo $date->format('d F Y'); ?></div>
                     </div>
                 </div>
@@ -3364,14 +3361,11 @@ function filter_promo_ret() {
                 <div class="promotions-card">
                     <div class="promotions-card__img"><img src="<?= $image[0] ?? '' ?>" srcset="<?= $image[0] ?? '' ?> 2x"/>
                     </div>
-                    <div class="promotions-card__price"><?= get_the_title(get_the_ID());?></div>
+                    <div class="promotions-card__price"><?= get_field('promotion_display_name', get_the_ID()); ?></div>
                     <div class="promotions-card__text">
                         <p><?= the_excerpt(); ?></p>
                     </div>
-                    <?php
-                    $promolinks = get_field("promotion_link", get_the_ID());
-                    ?>
-                    <div class="promotions-card__footer"><a class="bttn" href="<?= $promolinks[0]['promotion_link_url']?>">FIND OUT MORE</a>
+                    <div class="promotions-card__footer"><a class="bttn" href="#">FIND OUT MORE</a>
                         <div class="promotions-card__caption">Offer ends <?php echo $date->format('d F Y'); ?></div>
                     </div>
                 </div>
