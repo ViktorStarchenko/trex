@@ -3243,7 +3243,10 @@ function filter_promo() {
                     <div class="promotions-card__text">
                         <p><?= the_excerpt(); ?></p>
                     </div>
-                    <div class="promotions-card__footer"><a class="bttn" href="#">FIND OUT MORE</a>
+                    <?php
+                            $promolinks = get_field("promotion_link", get_the_ID());
+                            ?>
+                    <div class="promotions-card__footer"><a class="bttn" href="<?= $promolinks[0]['promotion_link_url']?>">FIND OUT MORE</a>
                         <div class="promotions-card__caption">Offer ends <?php echo $date->format('d F Y'); ?></div>
                     </div>
                 </div>
@@ -3365,7 +3368,10 @@ function filter_promo_ret() {
                     <div class="promotions-card__text">
                         <p><?= the_excerpt(); ?></p>
                     </div>
-                    <div class="promotions-card__footer"><a class="bttn" href="#">FIND OUT MORE</a>
+                    <?php
+                    $promolinks = get_field("promotion_link", get_the_ID());
+                    ?>
+                    <div class="promotions-card__footer"><a class="bttn" href="<?= $promolinks[0]['promotion_link_url']?>">FIND OUT MORE</a>
                         <div class="promotions-card__caption">Offer ends <?php echo $date->format('d F Y'); ?></div>
                     </div>
                 </div>
