@@ -13,12 +13,12 @@ export default function setupTabs() {
 
 			if(currentTrigger) {
 				// hide all contents besides active
-				currentTriggerHash = currentTrigger.hash.slice(1);
+				currentTriggerHash = currentTrigger.hash ? currentTrigger.hash.slice(1) : currentTrigger.dataset.hash.slice(1);
 				tabContents.forEach((content) => {
 					currentTrigger.parentNode.classList.toggle('active');
 					content.style.opacity = '1';
 					content.style.transform = 'none';
-					if (content.id !== currentTriggerHash || content.dataset.id !== currentTriggerHash) {
+					if (content.id ? content.id !== currentTriggerHash : content.dataset.id !== currentTriggerHash) {
 						hideStart(content);
 					}
 				});
