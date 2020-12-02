@@ -295,7 +295,10 @@ add_action("admin_init", function () {
 
 
 if (!is_admin()) {
-	wp_enqueue_script('custom-scripts', get_template_directory_uri() . '/static/build/js/app.js', ['jquery'], false, true);
+
+    wp_enqueue_script('custom-scripts', get_template_directory_uri() . '/static/build/js/app.js', ['jquery'], false, true);
+    wp_enqueue_script( 'promo', get_template_directory_uri() . '/js/new-promo.js', ['jquery'], false, true);
+
     wp_enqueue_script( 'browser', get_template_directory_uri() . '/js/browser.js', ['jquery'], false, true);
     wp_enqueue_script( 'promo', get_template_directory_uri() . '/js/new-promo.js', ['jquery'], false, true);
     wp_enqueue_script( 'slider', get_template_directory_uri() . '/js/resources/carousel/bootstrap.min.js', ['jquery'], false, true);
@@ -388,6 +391,7 @@ if (!is_admin()) {
             wp_enqueue_style('custom-styling', get_stylesheet_directory_uri() . '/css/custom.min.css');
         }
         wp_enqueue_style('app-quiz', get_stylesheet_directory_uri() . '/css/app.min.css');
+        wp_enqueue_style('redesign', get_stylesheet_directory_uri() . '/static/build/css/app.css');
     }
 
     add_action('wp_enqueue_scripts', 'app_style_sheet');
@@ -3158,6 +3162,10 @@ function remove_wpseo(){
     }
 }
 
+
+// QUIZ BLOCK
+
+
 add_action( 'wp_ajax_filter_promo', 'filter_promo' );
 add_action( 'wp_ajax_nopriv_filter_promo', 'filter_promo' );
 
@@ -3241,7 +3249,10 @@ function filter_promo() {
                     <div class="promotions-card__text">
                         <p><?= the_excerpt(); ?></p>
                     </div>
-                    <div class="promotions-card__footer"><a class="bttn" href="#">FIND OUT MORE</a>
+                    <?php
+                            $promolinks = get_field("promotion_link", get_the_ID());
+                            ?>
+                    <div class="promotions-card__footer"><a class="bttn" href="<?= $promolinks[0]['promotion_link_url']?>">FIND OUT MORE</a>
                         <div class="promotions-card__caption">Offer ends <?php echo $date->format('d F Y'); ?></div>
                     </div>
                 </div>
@@ -3363,7 +3374,10 @@ function filter_promo_ret() {
                     <div class="promotions-card__text">
                         <p><?= the_excerpt(); ?></p>
                     </div>
-                    <div class="promotions-card__footer"><a class="bttn" href="#">FIND OUT MORE</a>
+                    <?php
+                    $promolinks = get_field("promotion_link", get_the_ID());
+                    ?>
+                    <div class="promotions-card__footer"><a class="bttn" href="<?= $promolinks[0]['promotion_link_url']?>">FIND OUT MORE</a>
                         <div class="promotions-card__caption">Offer ends <?php echo $date->format('d F Y'); ?></div>
                     </div>
                 </div>
@@ -3401,4 +3415,18 @@ function filter_promo_ret() {
 
 }
 
-// QUIZ BLOCK
+add_filter('auth_cookie_expiration', 'admin_expiration_filter', 99, 3);
+function admin_expiration_filter($seconds, $user_id, $remember){
+
+    if ( $remember ) {
+        $expiration = 14*24*60*60;
+    } else {
+        $expiration = 60*60;
+    }
+
+    if ( PHP_INT_MAX - time() < $expiration ) {
+        $expiration =  PHP_INT_MAX - time() - 5;
+    }
+
+    return $expiration;
+}
