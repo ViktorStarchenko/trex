@@ -3421,7 +3421,7 @@ function admin_expiration_filter($seconds, $user_id, $remember){
     if ( $remember ) {
         $expiration = 14*24*60*60;
     } else {
-        $expiration = 5*60;
+        $expiration = 60*60;
     }
 
     if ( PHP_INT_MAX - time() < $expiration ) {
