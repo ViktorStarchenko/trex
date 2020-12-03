@@ -4515,11 +4515,3 @@ ul.page-numbers li a.page-numbers.next {
 ul.page-numbers li a.page-numbers.prev {
     color: #fff;
 }
-.promotions-card__img {
-    margin-bottom: 30px;
-    height: 100%;
-    max-height: 170px;
-}
-.promotions-card__img img {
-    max-height: 100%;
-}
