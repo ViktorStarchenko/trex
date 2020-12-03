@@ -126,7 +126,7 @@ $footer_block = get_field('footer_block');
         <?php endif;?>
         <?php if (!empty($promotions)) : ?>
             <?php foreach ($promotions as $block):?>
-            <?php
+                <?php
                 $type = get_field('type', $block->ID);
                 $sub_title = get_field('sub_title_promotions', $block->ID);
                 $title = get_field('title_header_promotions', $block->ID);
@@ -251,7 +251,10 @@ $footer_block = get_field('footer_block');
                             <div class="promotions-card__text">
                                 <p><?= the_excerpt(); ?></p>
                             </div>
-                            <div class="promotions-card__footer"><a class="bttn" href="#">FIND OUT MORE</a>
+                            <?php
+                            $promolinks = get_field("promotion_link", get_the_ID());
+                            ?>
+                            <div class="promotions-card__footer"><a class="bttn" href="<?= $promolinks[0]['promotion_link_url']?>">FIND OUT MORE</a>
                                 <div class="promotions-card__caption">Offer ends <?php echo $date->format('d F Y'); ?></div>
                             </div>
                         </div>

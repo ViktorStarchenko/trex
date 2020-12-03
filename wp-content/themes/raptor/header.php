@@ -28,6 +28,7 @@
     </style>
     <![endif]-->
 </head>
+
 <?php
 $body_class = '';
 if (is_page_template('mattresses/new-product-design.php')) {
