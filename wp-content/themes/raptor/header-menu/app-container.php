@@ -34,7 +34,7 @@
 							}
 							?>
 							<?php if (!$mainItem["help_container"]) : ?>
-                                <li class="header-menu__item"><a class="header-menu__link header-nav <?= $dropDown ?>" data-class="<?= $dataClass ?>" href="<?= $url ?>"><?= $mainItem["title"]; ?></a></li>
+                                <li class="header-menu__item"><a class="header-menu__link <?= $dropDown ?>" data-class="<?= $dataClass ?>" href="<?= $url ?>"><?= $mainItem["title"]; ?></a></li>
 							<?php endif; ?>
 						<?php endforeach; ?>
 					<?php endif; ?>
