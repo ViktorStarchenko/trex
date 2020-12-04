@@ -248,7 +248,9 @@ $footer_block = get_field('footer_block');
                         <div class="promotions-card">
                             <div class="promotions-card__img"><img src="<?= $image[0] ?? '' ?>" srcset="<?= $image[0] ?? '' ?> 2x"/>
                             </div>
+                            <?php if (!empty($logo)) : ?>
                             <div class="promotions-card__logo"><img src="<?= $logo['url']?>" alt="brand logo"/></div>
+                            <?php endif; ?>
                             <div class="promotions-card__price"><?= get_field('promotion_display_name', get_the_ID()); ?></div>
                             <div class="promotions-card__text">
                                 <p><?= the_excerpt(); ?></p>
