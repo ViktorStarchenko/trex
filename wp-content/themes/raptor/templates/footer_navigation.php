@@ -139,11 +139,6 @@ $footerImg = get_field('footer_image', $postPage->ID);
             <div class="footer-nav__title"><?= $socialTitle ?? '' ?></div>
             <div class="footer-social">
                 <ul class="social-list">
-                    <li class="social-list__item"><a class="social-list__link" href="#" aria-label="facebook"><span class="social-list__icon"><img src="../img/icons/social-icon/facebook.png" alt=""/></span></a></li>
-                    <li class="social-list__item"><a class="social-list__link" href="#" aria-label="instagram"><span class="social-list__icon"><img src="../img/icons/social-icon/instagram.png" alt=""/></span></a></li>
-                    <li class="social-list__item"><a class="social-list__link" href="#" aria-label="youtube"><span class="social-list__icon"><img src="../img/icons/social-icon/youtube.png" alt=""/></span></a></li>
-                </ul>
-                <ul class="social-list">
 					<?php if(!empty($socialLink)) : ?>
 						<?php foreach ($socialLink as $link) : ?>
                             <li class="social-list__item"><a class="social-list__link" href="<?= $link['link']['url']?>" aria-label="<?= $link['link']['title']?>"><span class="social-list__icon">
