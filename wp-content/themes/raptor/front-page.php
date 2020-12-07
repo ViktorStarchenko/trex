@@ -30,7 +30,7 @@ $reviews_title = $yotpo['items']['reviews_title'];
                 </div>
                 <div class="we-help__img">
                     <picture>
-                        <source media="(max-width: 768px)" srcset="<?= $top_hero['img_mob']['url'] ?? ''?> 1x, <?= $top_hero['img_mob_2x']['url'] ?? ''?> 2x"><img src="<?= $top_hero['img']['url'] ?? ''?>" srcset="<?= $top_hero['img_2x']['url'] ?? ''?> 2x"/>
+                        <source media="(max-width: 768px)" srcset="<?= $top_hero['items']['img_mob']['url'] ?? ''?> 1x, <?= $top_hero['items']['img_mob_2x']['url'] ?? ''?> 2x"><img src="<?= $top_hero['items']['img']['url'] ?? ''?>" srcset="<?= $top_hero['items']['img_2x']['url'] ?? ''?> 2x"/>
                     </picture>
                 </div>
             <?php endif; ?>
