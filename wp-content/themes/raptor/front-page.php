@@ -7,32 +7,35 @@ $features = get_field('features');
 $promo_block = get_field('promo_block');
 $catalog_cards = get_field('catalog_cards');
 $yotpo = get_field('yotpo');
-$reviews_title = $yotpo['reviews_title'];
+$yotpo_id = $yotpo['items']['yotpo_product_id'];
+$reviews_title = $yotpo['items']['reviews_title'];
 ?>
 	<div class="main">
-		<div class="we-help">
-			<div class="we-help__menu">
-				<div class="we-help__title"><?= $top_hero['title'] ?? ''?></div>
-				<div class="we-help__nav">
-					<ul class="we-help-nav">
-						<?php if(!empty($top_hero['help_nav'])) :?>
-							<?php foreach ($top_hero['help_nav'] as $item) :?>
-								<li class="we-help-nav__item"><a class="we-help-nav__link" href="<?= $item['link']['url'] ?? ''?>"><span class="we-help-nav__name"><?= $item['link']['title'] ?? ''?><span class="we-help-nav__icon">
-                                                <svg class="icon arrow-right" width="24" height="24" viewBox="0 0 24 24">
-                                                    <use xlink:href="#arrow-right"></use>
-                                                </svg></span></span><span class="we-help-nav__text"><?= $item['text'] ?? ''?></span></a></li>
-							<?php endforeach;?>
-						<?php endif; ?>
-					</ul>
-				</div>
-			</div>
-			<div class="we-help__img">
-				<picture>
-					<source media="(max-width: 768px)" srcset="<?= $top_hero['img_mob']['url'] ?? ''?> 1x, <?= $top_hero['img_mob_2x']['url'] ?? ''?> 2x"><img src="<?= $top_hero['img']['url'] ?? ''?>" srcset="<?= $top_hero['img_2x']['url'] ?? ''?> 2x"/>
-				</picture>
-			</div>
-		</div>
-		<div class="feature-wrap">
+        <div class="we-help">
+            <?php if ($top_hero['enable']) : ?>
+                <div class="we-help__menu">
+                    <div class="we-help__title"><?= $top_hero['items']['title'] ?? ''?></div>
+                    <div class="we-help__nav">
+                        <ul class="we-help-nav">
+                            <?php if(!empty($top_hero['items']['help_nav'])) :?>
+                                <?php foreach ($top_hero['items']['help_nav'] as $item) :?>
+                                    <li class="we-help-nav__item"><a class="we-help-nav__link" href="<?= $item['link']['url'] ?? ''?>"><span class="we-help-nav__name"><?= $item['link']['title'] ?? ''?><span class="we-help-nav__icon">
+                                                    <svg class="icon arrow-right" width="24" height="24" viewBox="0 0 24 24">
+                                                        <use xlink:href="#arrow-right"></use>
+                                                    </svg></span></span><span class="we-help-nav__text"><?= $item['text'] ?? ''?></span></a></li>
+                                <?php endforeach;?>
+                            <?php endif; ?>
+                        </ul>
+                    </div>
+                </div>
+                <div class="we-help__img">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="<?= $top_hero['img_mob']['url'] ?? ''?> 1x, <?= $top_hero['img_mob_2x']['url'] ?? ''?> 2x"><img src="<?= $top_hero['img']['url'] ?? ''?>" srcset="<?= $top_hero['img_2x']['url'] ?? ''?> 2x"/>
+                    </picture>
+                </div>
+            <?php endif; ?>
+        </div>
+        <div class="feature-wrap">
             <?php if ($features['enable']) : ?>
                 <?php if(!empty($features['items'])) :?>
                     <?php foreach ($features['items'] as $feature) :?>
@@ -44,87 +47,93 @@ $reviews_title = $yotpo['reviews_title'];
                         </div>
                     <?php endforeach;?>
                 <?php endif; ?>
-			<?php endif; ?>
-		</div>
-		<div class="complete-decor">
-			<div class="complete-decor__bg">
-				<picture>
-					<source media="(max-width: 650px)" srcset="<?= $promo_block['top']['img_mob']['url'] ?? ''?> 1x, <?= $promo_block['top']['img_mob_2x']['url'] ?? ''?> 2x"><img src="<?= $promo_block['top']['img']['url'] ?? ''?>" srcset="<?= $promo_block['top']['img_2x']['url'] ?? ''?> 2x"/>
-				</picture>
-			</div>
-			<div class="content-center">
-				<h6><?= $promo_block['top']['subtitle'] ?? ''?></h6>
-				<h2><?= $promo_block['top']['title'] ?? ''?></h2>
-				<p>
-					<?= $promo_block['top']['text'] ?? ''?>
-				</p><a class="bttn bttn--bg" href="<?= $promo_block['top']['cta']['url'] ?? ''?>"><?= $promo_block['top']['cta']['title'] ?? ''?></a>
-			</div>
-		</div>
-		<div class="promo-decor">
-			<div class="promo-decor__bg">
-				<picture>
-					<source media="(max-width: 650px)" srcset="<?= $promo_block['bottom']['img_mob']['url'] ?? ''?> 1x, <?= $promo_block['bottom']['img_mob_2x']['url'] ?? ''?> 2x"><img src="<?= $promo_block['bottom']['img']['url'] ?? ''?>" srcset="<?= $promo_block['bottom']['img_2x']['url'] ?? ''?> 2x"/>
-				</picture>
-			</div>
-			<div class="content big-text">
-				<h6><?= $promo_block['bottom']['subtitle'] ?? ''?></h6>
-				<h2><?= $promo_block['bottom']['title'] ?? ''?></h2>
-				<p><?= $promo_block['bottom']['text'] ?? ''?></p>
-				<a class="bttn bttn--bg" href="<?= $promo_block['bottom']['cta']['url'] ?? ''?>"><?= $promo_block['bottom']['cta']['title'] ?? ''?></a>
-			</div>
-		</div>
-		<div class="bg-decor">
-			<div class="content-center big-text">
-				<h2><?= $promo_block['decor']['title'] ?? ''?></h2>
-				<p><?= $promo_block['decor']['text'] ?? ''?></p>
-				<a class="bttn bttn--reverse" href="<?= $promo_block['decor']['cta']['url'] ?? ''?>"><?= $promo_block['decor']['cta']['title'] ?? ''?></a>
-			</div>
-		</div>
-		<div class="rating-reviews">
-			<div class="content-center">
-				<h3><?= $reviews_title?></h3>
-			</div>
-			<div class="rating-reviews-slider">
-				<div class="swiper-container js-rating-reviews-slider">
-					<div id="home-reviews" class="swiper-wrapper">
-					</div>
-					<div class="swiper-nav">
-						<div class="swiper-button-prev js-rating-reviews-slider-prev">
-							<div class="swiper-button-icon">
-								<svg class="icon arrow-right" width="24" height="24" viewBox="0 0 24 24">
-									<use xlink:href="#arrow-right"></use>
-								</svg>
-							</div>
-						</div>
-						<span class="swiper-button-next js-rating-reviews-slider-next yotpo-page-element yotpo-icon yotpo-icon-right-arrow-thin yotpo_next">
-                            <div class="swiper-button-icon">
-                                <svg class="icon arrow-right" width="24" height="24" viewBox="0 0 24 24">
-                                    <use xlink:href="#arrow-right"></use>
-                                </svg>
+            <?php endif; ?>
+        </div>
+        <div class="complete-decor">
+            <?php if ($promo_block['enable']) : ?>
+            <div class="complete-decor__bg">
+                <picture>
+                    <source media="(max-width: 650px)" srcset="<?= $promo_block['items']['top']['img_mob']['url'] ?? ''?> 1x, <?= $promo_block['items']['top']['img_mob_2x']['url'] ?? ''?> 2x"><img src="<?= $promo_block['items']['top']['img']['url'] ?? ''?>" srcset="<?= $promo_block['items']['top']['img_2x']['url'] ?? ''?> 2x"/>
+                </picture>
+            </div>
+            <div class="content-center">
+                <h6><?= $promo_block['items']['top']['subtitle'] ?? ''?></h6>
+                <h2><?= $promo_block['items']['top']['title'] ?? ''?></h2>
+                <p>
+                    <?= $promo_block['items']['items']['top']['text'] ?? ''?>
+                </p><a class="bttn bttn--bg" href="<?= $promo_block['items']['top']['cta']['url'] ?? ''?>"><?= $promo_block['items']['top']['cta']['title'] ?? ''?></a>
+            </div>
+        </div>
+        <div class="promo-decor">
+            <div class="promo-decor__bg">
+                <picture>
+                    <source media="(max-width: 650px)" srcset="<?= $promo_block['items']['bottom']['img_mob']['url'] ?? ''?> 1x, <?= $promo_block['items']['bottom']['img_mob_2x']['url'] ?? ''?> 2x"><img src="<?= $promo_block['items']['bottom']['img']['url'] ?? ''?>" srcset="<?= $promo_block['items']['bottom']['img_2x']['url'] ?? ''?> 2x"/>
+                </picture>
+            </div>
+            <div class="content big-text">
+                <h6><?= $promo_block['items']['bottom']['subtitle'] ?? ''?></h6>
+                <h2><?= $promo_block['items']['bottom']['title'] ?? ''?></h2>
+                <p><?= $promo_block['items']['bottom']['text'] ?? ''?></p>
+                <a class="bttn bttn--bg" href="<?= $promo_block['items']['bottom']['cta']['url'] ?? ''?>"><?= $promo_block['items']['bottom']['cta']['title'] ?? ''?></a>
+            </div>
+        </div>
+        <div class="bg-decor">
+            <div class="content-center big-text">
+                <h2><?= $promo_block['items']['decor']['title'] ?? ''?></h2>
+                <p><?= $promo_block['items']['decor']['text'] ?? ''?></p>
+                <a class="bttn bttn--reverse" href="<?= $promo_block['items']['decor']['cta']['url'] ?? ''?>"><?= $promo_block['items']['decor']['cta']['title'] ?? ''?></a>
+            </div>
+            <?php endif; ?>
+        </div>
+        <div class="rating-reviews">
+            <?php if ($yotpo['enable']) : ?>
+                <div class="content-center">
+                    <h3><?= $reviews_title?></h3>
+                </div>
+                <div class="rating-reviews-slider">
+                    <div class="swiper-container js-rating-reviews-slider">
+                        <div id="home-reviews" class="swiper-wrapper">
+                        </div>
+                        <div class="swiper-nav">
+                            <div class="swiper-button-prev js-rating-reviews-slider-prev">
+                                <div class="swiper-button-icon">
+                                    <svg class="icon arrow-right" width="24" height="24" viewBox="0 0 24 24">
+                                        <use xlink:href="#arrow-right"></use>
+                                    </svg>
+                                </div>
                             </div>
-                        </span>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="complete-card-outer">
-			<div class="content-center">
-				<h3><?= $catalog_cards['title'] ?? '' ?></h3>
-			</div>
-			<div class="complete-card-wrap">
-				<?php if(!empty($catalog_cards['cards'])) :?>
-					<?php foreach ($catalog_cards['cards'] as $card) :?>
-						<div class="complete-card">
-							<div class="complete-card__img"><img src="<?= $card['img']['url'] ?? ''?>" srcset="<?= $card['img_2x']['url'] ?? ''?> 2x"/>
-							</div>
-							<div class="complete-card__title"><?= $card['title'] ?? ''?>
-							</div>
-							<p class="complete-card__text"><?= $card['text'] ?? ''?></p><a class="bttn" href="<?= $card['cta']['url'] ?? ''?>"><?= $card['cta']['title'] ?? ''?></a>
-						</div>
-					<?php endforeach;?>
-				<?php endif; ?>
-			</div>
-		</div>
+                            <span class="swiper-button-next js-rating-reviews-slider-next yotpo-page-element yotpo-icon yotpo-icon-right-arrow-thin yotpo_next">
+                                <div class="swiper-button-icon">
+                                    <svg class="icon arrow-right" width="24" height="24" viewBox="0 0 24 24">
+                                        <use xlink:href="#arrow-right"></use>
+                                    </svg>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            <?php endif; ?>
+        </div>
+        <div class="complete-card-outer">
+            <?php if ($catalog_cards['enable']) : ?>
+                <div class="content-center">
+                    <h3><?= $catalog_cards['items']['title'] ?? '' ?></h3>
+                </div>
+                <div class="complete-card-wrap">
+                    <?php if(!empty($catalog_cards['items']['cards'])) :?>
+                        <?php foreach ($catalog_cards['items']['cards'] as $card) :?>
+                            <div class="complete-card">
+                                <div class="complete-card__img"><img src="<?= $card['img']['url'] ?? ''?>" srcset="<?= $card['img_2x']['url'] ?? ''?> 2x"/>
+                                </div>
+                                <div class="complete-card__title"><?= $card['title'] ?? ''?>
+                                </div>
+                                <p class="complete-card__text"><?= $card['text'] ?? ''?></p><a class="bttn" href="<?= $card['cta']['url'] ?? ''?>"><?= $card['cta']['title'] ?? ''?></a>
+                            </div>
+                        <?php endforeach;?>
+                    <?php endif; ?>
+                </div>
+            <?php endif; ?>
+        </div>
 	</div>
 	<script>
         var data = null;
@@ -201,7 +210,7 @@ $reviews_title = $yotpo['reviews_title'];
             }
         });
 
-        xhr.open("GET", "https://api.yotpo.com/v1/widget/nTvdl5HFT1TU7SIJWaQU9c4b0n2gzJx11sDi0L8B/reviews.json");
+        xhr.open("GET", "https://api.yotpo.com/v1/widget/nTvdl5HFT1TU7SIJWaQU9c4b0n2gzJx11sDi0L8B/products/"+ <?= $yotpo_id; ?> + "/reviews.json");
         xhr.setRequestHeader("content-type", "application/json");
 
         xhr.send(data);
