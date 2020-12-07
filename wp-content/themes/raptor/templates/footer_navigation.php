@@ -139,19 +139,15 @@ $footerImg = get_field('footer_image', $postPage->ID);
             <div class="footer-nav__title"><?= $socialTitle ?? '' ?></div>
             <div class="footer-social">
                 <ul class="social-list">
+                    <li class="social-list__item"><a class="social-list__link" href="#" aria-label="facebook"><span class="social-list__icon"><img src="../img/icons/social-icon/facebook.png" alt=""/></span></a></li>
+                    <li class="social-list__item"><a class="social-list__link" href="#" aria-label="instagram"><span class="social-list__icon"><img src="../img/icons/social-icon/instagram.png" alt=""/></span></a></li>
+                    <li class="social-list__item"><a class="social-list__link" href="#" aria-label="youtube"><span class="social-list__icon"><img src="../img/icons/social-icon/youtube.png" alt=""/></span></a></li>
+                </ul>
+                <ul class="social-list">
 					<?php if(!empty($socialLink)) : ?>
 						<?php foreach ($socialLink as $link) : ?>
-                            <?php if ($link['link']['title'] == 'youtube'): ?>
                             <li class="social-list__item"><a class="social-list__link" href="<?= $link['link']['url']?>" aria-label="<?= $link['link']['title']?>"><span class="social-list__icon">
-                                                    <svg class="icon <?= $link['link']['title']?>" width="38" height="38" viewBox="0 0 38 38">
-                                                        <use xlink:href="#<?= $link['link']['title']?>"></use>
-                                                    </svg></span></a></li>
-                            <?php else: ?>
-                            <li class="social-list__item"><a class="social-list__link" href="<?= $link['link']['url']?>" aria-label="<?= $link['link']['title']?>"><span class="social-list__icon">
-                                                    <svg class="icon <?= $link['link']['title']?>" width="30" height="30" viewBox="0 0 30 30">
-                                                        <use xlink:href="#<?= $link['link']['title']?>"></use>
-                                                    </svg></span></a></li>
-                            <?php endif;?>
+                                                    </span><img src="<?= $link['img']['url']?>" alt=""/></a></li>
 						<?php endforeach; ?>
 					<?php endif; ?>
                 </ul>
