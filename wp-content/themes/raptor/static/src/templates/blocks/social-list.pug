@@ -16,3 +16,16 @@ mixin social-list(props={})
                 a.social-list__link(href="#" aria-label="youtube")
                     span.social-list__icon
                         +icon('youtube')(width="38" height="38" viewBox="0 0 38 38")
+        if props.png
+            li.social-list__item
+                a.social-list__link(href="#" aria-label="facebook")
+                    span.social-list__icon
+                        img(src="../img/icons/social-icon/facebook.png", alt="")
+            li.social-list__item
+                a.social-list__link(href="#" aria-label="instagram")
+                    span.social-list__icon
+                        img(src="../img/icons/social-icon/instagram.png", alt="")
+            li.social-list__item
+                a.social-list__link(href="#" aria-label="youtube")
+                    span.social-list__icon
+                        img(src="../img/icons/social-icon/youtube.png", alt="")
