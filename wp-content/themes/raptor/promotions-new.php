@@ -243,7 +243,8 @@ $footer_block = get_field('footer_block');
                     <?php while($promo_query->have_posts()) : $promo_query->the_post();
                         $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID()), 'large' );
                         $date = new DateTime(get_field('end_date', get_the_ID()));
-                        $logo = get_field('logo', get_the_ID());
+                        $retailer = get_field('retailer_groups', get_the_ID());
+                        $logo = get_field('logo', $retailer->ID);
                         ?>
                         <div class="promotions-card">
                             <div class="promotions-card__img"><img src="<?= $image[0] ?? '' ?>" srcset="<?= $image[0] ?? '' ?> 2x"/>
