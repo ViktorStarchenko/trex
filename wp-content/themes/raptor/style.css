@@ -4515,3 +4515,7 @@ ul.page-numbers li a.page-numbers.next {
 ul.page-numbers li a.page-numbers.prev {
     color: #fff;
 }
+.yotpo-bottomline-box-2 .yotpo-star-distribution .yotpo-distibutions-stars .review-stars{
+    display: flex;
+    width: auto;
+}
