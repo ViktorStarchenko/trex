@@ -388,7 +388,6 @@ if (!is_admin()) {
         }
         wp_enqueue_style('app-quiz', get_stylesheet_directory_uri() . '/css/app.min.css');
         wp_enqueue_style('redesign', get_stylesheet_directory_uri() . '/static/build/css/app.css');
-        wp_enqueue_style('reviews', get_stylesheet_directory_uri() . '/static/build/css/review-widget.css');
     }
 
     add_action('wp_enqueue_scripts', 'app_style_sheet');
