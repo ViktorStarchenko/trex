@@ -161,7 +161,7 @@
         </nav>
     </div>
 </div>
-<div class="sub-header" style="display:none;">
+<div class="sub-header">
     <div class="sub-header-inner">
         <div class="sub-header__logo">
             <div class="sub-header-logo"><img src="<?= $submenu_logo['url'] ?? ''?>" alt="miracoil"></div>
