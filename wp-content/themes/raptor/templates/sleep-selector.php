@@ -10,9 +10,9 @@
 
  <!-- These files always load from our main server-->
 
-    <script src="http://selector.m1-staging.overdose.digital/pub/media/js/sleepmaker.js"></script>
-    <script src="http://selector.m1-staging.overdose.digital/pub/media/js/sleepsaas.js"></script>
-    <script src="http://selector.m1-staging.overdose.digital/pub/media/js/main.js"></script>
+    <script src="https://selector.m1-staging.overdose.digital/pub/media/js/sleepmaker.js"></script>
+    <script src="https://selector.m1-staging.overdose.digital/pub/media/js/sleepsaas.js"></script>
+    <script src="https://selector.m1-staging.overdose.digital/pub/media/js/main.js"></script>
 
 	<!-- These files always load from the local web site-->
 	<link rel="stylesheet" href="/assets/css/vendor.css">
