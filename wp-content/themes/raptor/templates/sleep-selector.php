@@ -10,7 +10,7 @@
 
  <!-- These files always load from our main server-->
 
-    <script src="http://selector.m1-staging.overdose.digital/pub/media/js/sleepmaker-v2.js"></script>
+    <script src="http://selector.m1-staging.overdose.digital/pub/media/js/sleepmaker.js"></script>
     <script src="http://selector.m1-staging.overdose.digital/pub/media/js/sleepsaas.js"></script>
     <script src="http://selector.m1-staging.overdose.digital/pub/media/js/main.js"></script>
 
