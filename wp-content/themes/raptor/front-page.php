@@ -49,42 +49,48 @@ $reviews_title = $yotpo['items']['reviews_title'];
                 <?php endif; ?>
             <?php endif; ?>
         </div>
-        <div class="complete-decor">
-            <?php if ($promo_block['enable']) : ?>
-            <div class="complete-decor__bg">
-                <picture>
-                    <source media="(max-width: 650px)" srcset="<?= $promo_block['items']['top']['img_mob']['url'] ?? ''?> 1x, <?= $promo_block['items']['top']['img_mob_2x']['url'] ?? ''?> 2x"><img src="<?= $promo_block['items']['top']['img']['url'] ?? ''?>" srcset="<?= $promo_block['items']['top']['img_2x']['url'] ?? ''?> 2x"/>
-                </picture>
-            </div>
-            <div class="content-center">
-                <h6><?= $promo_block['items']['top']['subtitle'] ?? ''?></h6>
-                <h2><?= $promo_block['items']['top']['title'] ?? ''?></h2>
-                <p>
-                    <?= $promo_block['items']['items']['top']['text'] ?? ''?>
-                </p><a class="bttn bttn--bg" href="<?= $promo_block['items']['top']['cta']['url'] ?? ''?>"><?= $promo_block['items']['top']['cta']['title'] ?? ''?></a>
-            </div>
-        </div>
-        <div class="promo-decor">
-            <div class="promo-decor__bg">
-                <picture>
-                    <source media="(max-width: 650px)" srcset="<?= $promo_block['items']['bottom']['img_mob']['url'] ?? ''?> 1x, <?= $promo_block['items']['bottom']['img_mob_2x']['url'] ?? ''?> 2x"><img src="<?= $promo_block['items']['bottom']['img']['url'] ?? ''?>" srcset="<?= $promo_block['items']['bottom']['img_2x']['url'] ?? ''?> 2x"/>
-                </picture>
-            </div>
-            <div class="content big-text">
-                <h6><?= $promo_block['items']['bottom']['subtitle'] ?? ''?></h6>
-                <h2><?= $promo_block['items']['bottom']['title'] ?? ''?></h2>
-                <p><?= $promo_block['items']['bottom']['text'] ?? ''?></p>
-                <a class="bttn bttn--bg" href="<?= $promo_block['items']['bottom']['cta']['url'] ?? ''?>"><?= $promo_block['items']['bottom']['cta']['title'] ?? ''?></a>
-            </div>
-        </div>
-        <div class="bg-decor">
-            <div class="content-center big-text">
-                <h2><?= $promo_block['items']['decor']['title'] ?? ''?></h2>
-                <p><?= $promo_block['items']['decor']['text'] ?? ''?></p>
-                <a class="bttn bttn--reverse" href="<?= $promo_block['items']['decor']['cta']['url'] ?? ''?>"><?= $promo_block['items']['decor']['cta']['title'] ?? ''?></a>
-            </div>
+        <?php if ($promo_block['enable']) : ?>
+            <?php if ($promo_block['items']['top']['enable']) : ?>
+                <div class="complete-decor">
+                    <div class="complete-decor__bg">
+                        <picture>
+                            <source media="(max-width: 650px)" srcset="<?= $promo_block['items']['top']['img_mob']['url'] ?? ''?> 1x, <?= $promo_block['items']['top']['img_mob_2x']['url'] ?? ''?> 2x"><img src="<?= $promo_block['items']['top']['img']['url'] ?? ''?>" srcset="<?= $promo_block['items']['top']['img_2x']['url'] ?? ''?> 2x"/>
+                        </picture>
+                    </div>
+                    <div class="content-center">
+                        <h6><?= $promo_block['items']['top']['subtitle'] ?? ''?></h6>
+                        <h2><?= $promo_block['items']['top']['title'] ?? ''?></h2>
+                        <p>
+                            <?= $promo_block['items']['items']['top']['text'] ?? ''?>
+                        </p><a class="bttn bttn--bg" href="<?= $promo_block['items']['top']['cta']['url'] ?? ''?>"><?= $promo_block['items']['top']['cta']['title'] ?? ''?></a>
+                    </div>
+                </div>
             <?php endif; ?>
-        </div>
+        <?php if ($promo_block['items']['bottom']['enable']) : ?>
+            <div class="promo-decor">
+                    <div class="promo-decor__bg">
+                        <picture>
+                            <source media="(max-width: 650px)" srcset="<?= $promo_block['items']['bottom']['img_mob']['url'] ?? ''?> 1x, <?= $promo_block['items']['bottom']['img_mob_2x']['url'] ?? ''?> 2x"><img src="<?= $promo_block['items']['bottom']['img']['url'] ?? ''?>" srcset="<?= $promo_block['items']['bottom']['img_2x']['url'] ?? ''?> 2x"/>
+                        </picture>
+                    </div>
+                    <div class="content big-text">
+                        <h6><?= $promo_block['items']['bottom']['subtitle'] ?? ''?></h6>
+                        <h2><?= $promo_block['items']['bottom']['title'] ?? ''?></h2>
+                        <p><?= $promo_block['items']['bottom']['text'] ?? ''?></p>
+                        <a class="bttn bttn--bg" href="<?= $promo_block['items']['bottom']['cta']['url'] ?? ''?>"><?= $promo_block['items']['bottom']['cta']['title'] ?? ''?></a>
+                    </div>
+            </div>
+        <?php endif; ?>
+        <?php if ($promo_block['items']['decor']['enable']) : ?>
+            <div class="bg-decor">
+                <div class="content-center big-text">
+                    <h2><?= $promo_block['items']['decor']['title'] ?? ''?></h2>
+                    <p><?= $promo_block['items']['decor']['text'] ?? ''?></p>
+                    <a class="bttn bttn--reverse" href="<?= $promo_block['items']['decor']['cta']['url'] ?? ''?>"><?= $promo_block['items']['decor']['cta']['title'] ?? ''?></a>
+                </div>
+            </div>
+        <?php endif; ?>
+        <?php endif; ?>
         <div class="rating-reviews">
             <?php if ($yotpo['enable']) : ?>
                 <div class="content-center">
