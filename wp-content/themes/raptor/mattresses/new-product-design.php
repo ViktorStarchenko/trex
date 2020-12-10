@@ -54,31 +54,41 @@ $technology = get_field('technology');
 				<?php endif; ?>
 			</div>
 		</div>
+        <?php $brands = $technology['brands']; ?>
 		<div id="product-technology">
 			<div class="bg-block">
-				<div class="sleepmaker-advance">
-					<div class="sleepmaker-advance__info js-text-collapse-wrap">
-						<?php if(!empty($technology['specs'])) :?>
-							<?php foreach ($technology['specs'] as $spec) :?>
-								<div class="advance-card js-text-collapse-item">
-									<div class="advance-card__header">
-                                        <div class="advance-card__icon">
-										<?php if(!empty($spec['icon']) && $spec['icon'] != null) :?>
-                                            <object data="<?= $spec['icon']['url'] ?>"  type="image/svg+xml" ></object>
-										<?php endif; ?>
-                                        </div>
-										<div class="advance-card__title"><?= $spec['title'] ?? ''?></div>
-									</div>
-									<div class="advance-card__text js-text-collapse" data-visible="1" data-bttn="Learn More" data-switch="Show Less">
-										<?= $spec['text'] ?? ''?>
-									</div>
+				<div class="sleepmaker-advance js-tabs-wrapper">
+					<div class="sleepmaker-advance__info">
+						<?php if(!empty($brands['list'])) :
+                            $i = 1;
+						?>
+						    <?php foreach ($brands['list'] as $item) :?>
+								<div class="advance-card-wrap js-tab-content" data-id="advance-tab-<?= $i; ?>">
+                                    <div class="js-text-collapse-wrap">
+                                        <?php if(!empty($item['specs'])) : ?>
+                                            <?php foreach ($item['specs'] as $spec) :?>
+                                                <div class="advance-card js-text-collapse-item">
+                                                    <div class="advance-card__header">
+                                                        <div class="advance-card__icon">
+                                                        <?php if(!empty($spec['icon']) && $spec['icon'] != null) :?>
+                                                            <object data="<?= $spec['icon']['url'] ?>"  type="image/svg+xml" ></object>
+                                                        <?php endif; ?>
+                                                        </div>
+                                                        <div class="advance-card__title"><?= $spec['title'] ?? ''?></div>
+                                                    </div>
+                                                    <div class="advance-card__text js-text-collapse" data-visible="1" data-bttn="Learn More" data-switch="Show Less">
+                                                        <?= $spec['text'] ?? ''?>
+                                                    </div>
+                                                </div>
+                                                <?php endforeach;?>
+                                        <?php endif; ?>
+                                    </div>
 								</div>
-							<?php endforeach;?>
+							<?php $i++; endforeach;?>
 						<?php endif; ?>
 					</div>
 					<div class="sleepmaker-advance__brands">
 						<div class="content-center">
-							<?php $brands = $technology['brands']; ?>
 							<h6><?= $brands['subtitle']?></h6>
 							<h2><?= $brands['title']?></h2>
 						</div>
