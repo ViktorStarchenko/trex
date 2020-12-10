@@ -5,9 +5,8 @@
  */
 
 ?>
-
 <?php get_header(); ?>
-
+<?php $headerNavigation = get_page_by_path('header-menu-navigation'); ?>
  <!-- These files always load from our main server-->
 
     <script src="http://selector.m1-staging.overdose.digital/pub/media/js/sleepmaker-v2.js"></script>
@@ -24,7 +23,16 @@
 tcg_init_selector('70303aa4960c853fc06555b592f7160d', 2);
 
 </script>
-<?php if(get_field('sleep_selector_block_form', 5598)) : ?>
-<div class="js-signup-newsletter"></div>
-<?php endif; ?>
+
+    <div id="iamthform" class="app-sleep-selector-modal _size-lg" style="display: none;">
+        <a href="" class="app-modal-close"></a>
+        <div class="app-sleep-selector-modal__flex">
+            <div class="_custom-gform-styles">
+                <div class="article-news-box gravity-form _gravity-form-wrapper">
+                    <?= get_field('sleep_selector_block_form', $headerNavigation->ID); ?>
+                </div>
+            </div>
+        </div>
+    </div>
+
 <?php get_footer();
