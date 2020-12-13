@@ -25,7 +25,6 @@ tcg_init_selector('70303aa4960c853fc06555b592f7160d', 2);
 </script>
 
     <div id="iamthform" class="_size-lg" style="display: none;">
-        <a href="" class="app-modal-close"></a>
         <div class="app-sleep-selector-modal__flex">
             <div class="_custom-gform-styles">
                 <div class="article-news-box gravity-form _gravity-form-wrapper">
