@@ -42,6 +42,6 @@ if (is_page_template('mattresses/new-product-design.php')) {
 <?php if( $short_code = get_field('hello_bar_mattresses', get_the_ID()) ) : ?>
     <?= do_shortcode($short_code); ?>
 <?php endif; ?>
-<div class="app-wrapper <?php echo get_page_template_slug() === 'promotions-new.php' || get_page_template_slug() === 'find-a-store-page.php' ? 'main' : '';?>">
+<div class="app-wrapper <?php echo get_page_template_slug() === 'promotions-new.php' || get_page_template_slug() === 'templates/find-a-store-page.php' ? 'main' : '';?>">
 
 <?php get_template_part( 'header-menu'); ?>
