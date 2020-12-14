@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: Sleep Selector Page V1
+ * Template Name: Sleep Selector GF before result
  * Template Post Type: page
  */
 
@@ -25,7 +25,17 @@ tcg_init_selector('70303aa4960c853fc06555b592f7160d', 1);
 
 </script>
 
-<?php if(get_field('sleep_selector_block_form', 5598)) : ?>
-    <div class="js-signup-newsletter"></div>
-<?php endif; ?>
+    <div id="iamthform" class="_size-lg" style="display: none;">
+        <div class="app-sleep-selector-modal__flex">
+            <div class="_custom-gform-styles">
+                <div class="article-news-box gravity-form _gravity-form-wrapper">
+                    <?= get_field('sleep_selector_block_form', $headerNavigation->ID); ?>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
 <?php get_footer();
