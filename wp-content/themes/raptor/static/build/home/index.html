@@ -57,15 +57,15 @@
 		</header>
 		<!-- Content-->
 		<div class="main">
-			<div class="we-help">
+			<div class="we-help js-tabs-wrapper">
 				<div class="we-help__menu">
 					<div class="we-help__title">How can we help you?</div>
 					<div class="we-help__nav">
 						<ul class="we-help-nav">
-							<li class="we-help-nav__item"><a class="we-help-nav__link" href="#"><span class="we-help-nav__name">Explore our Mattresses<span class="we-help-nav__icon">
+							<li class="we-help-nav__item"><span class="we-help-nav__link js-menu-lvl-trig" data-trig-lvl="lvl-item-explore"><span class="we-help-nav__name">Explore our Mattresses<span class="we-help-nav__icon">
 											<svg class="icon arrow-right" width="24" height="24" viewBox="0 0 24 24">
 												<use xlink:href="#arrow-right"></use>
-											</svg></span></span><span class="we-help-nav__text">Find your new bed from our ranges that cover everyone from the little ones in your home through all stages of life.</span></a></li>
+											</svg></span></span><span class="we-help-nav__text">Find your new bed from our ranges that cover everyone from the little ones in your home through all stages of life.</span></span></li>
 							<li class="we-help-nav__item"><a class="we-help-nav__link" href="#"><span class="we-help-nav__name">Sleep Selector<span class="we-help-nav__icon">
 											<svg class="icon arrow-right" width="24" height="24" viewBox="0 0 24 24">
 												<use xlink:href="#arrow-right"></use>
@@ -75,12 +75,244 @@
 												<use xlink:href="#arrow-right"></use>
 											</svg></span></span><span class="we-help-nav__text">FInd your nearest store to try out SleepMaker in-store and get their expert advice.</span></a></li>
 						</ul>
+						<div class="menu-explore-lvl js-menu-lvl-targ" data-targ-lvl="lvl-item-explore">
+							<div class="menu-explore-lvl__head">
+								<div class="menu-explore-lvl__back">
+									<button class="js-menu-lvl-close lvl-begin menu-explore-bttn">BACK<span class="menu-explore-bttn__icon">
+											<svg class="icon arrow-right" width="24" height="24" viewBox="0 0 24 24">
+												<use xlink:href="#arrow-right"></use>
+											</svg></span></button>
+								</div>
+								<div class="menu-explore-lvl__title we-help__title">What Mattress range suits you...</div>
+							</div>
+							<div class="menu-explore-lvl__body">
+								<ul class="we-help-nav">
+									<li class="we-help-nav__item"><a class="we-help-nav__link js-tab-trigger not-initial" href="#tab-aside-1"><span class="we-help-nav__name">Luxury<span class="we-help-nav__icon">
+													<svg class="icon arrow-right" width="24" height="24" viewBox="0 0 24 24">
+														<use xlink:href="#arrow-right"></use>
+													</svg></span></span><span class="we-help-nav__text">Our most Luxury range Lorem ipsum dolor sit amet, conubia nam pellentesque laoreet id.</span></a></li>
+									<li class="we-help-nav__item"><a class="we-help-nav__link js-tab-trigger not-initial" href="#tab-aside-2"><span class="we-help-nav__name">Therapeutic Needs<span class="we-help-nav__icon">
+													<svg class="icon arrow-right" width="24" height="24" viewBox="0 0 24 24">
+														<use xlink:href="#arrow-right"></use>
+													</svg></span></span><span class="we-help-nav__text">Suffer from back pain? our miracoilr range. Lorem ipsum dolor sit amet, conubia nam pellentesque laoreet id.</span></a></li>
+									<li class="we-help-nav__item"><a class="we-help-nav__link js-tab-trigger not-initial" href="#tab-aside-3"><span class="we-help-nav__name">Your Essentials<span class="we-help-nav__icon">
+													<svg class="icon arrow-right" width="24" height="24" viewBox="0 0 24 24">
+														<use xlink:href="#arrow-right"></use>
+													</svg></span></span><span class="we-help-nav__text">A mattress for any need. Spare bedrooms, kids rooms, range Lorem ipsum dolor sit amet, conubia nam pellentesque laoreet id.</span></a></li>
+									<li class="we-help-nav__item"><a class="we-help-nav__link js-tab-trigger not-initial" href="#tab-aside-1"><span class="we-help-nav__name">Luxury<span class="we-help-nav__icon">
+													<svg class="icon arrow-right" width="24" height="24" viewBox="0 0 24 24">
+														<use xlink:href="#arrow-right"></use>
+													</svg></span></span><span class="we-help-nav__text">Our most Luxury range Lorem ipsum dolor sit amet, conubia nam pellentesque laoreet id.</span></a></li>
+									<li class="we-help-nav__item"><a class="we-help-nav__link js-tab-trigger not-initial" href="#tab-aside-2"><span class="we-help-nav__name">Therapeutic Needs<span class="we-help-nav__icon">
+													<svg class="icon arrow-right" width="24" height="24" viewBox="0 0 24 24">
+														<use xlink:href="#arrow-right"></use>
+													</svg></span></span><span class="we-help-nav__text">Suffer from back pain? our miracoilr range. Lorem ipsum dolor sit amet, conubia nam pellentesque laoreet id.</span></a></li>
+									<li class="we-help-nav__item"><a class="we-help-nav__link js-tab-trigger not-initial" href="#tab-aside-3"><span class="we-help-nav__name">Your Essentials<span class="we-help-nav__icon">
+													<svg class="icon arrow-right" width="24" height="24" viewBox="0 0 24 24">
+														<use xlink:href="#arrow-right"></use>
+													</svg></span></span><span class="we-help-nav__text">A mattress for any need. Spare bedrooms, kids rooms, range Lorem ipsum dolor sit amet, conubia nam pellentesque laoreet id.</span></a></li>
+								</ul>
+							</div>
+						</div>
 					</div>
 				</div>
-				<div class="we-help__img">
-					<picture>
-						<source media="(max-width: 768px)" srcset="../img/we-help/we-help-mob.png 1x, ../img/we-help/we-help-mob@2x.png 2x"><img src="../img/we-help/we-help-desc.png" srcset="../img/we-help/we-help-desc@2x.png 2x"/>
-					</picture>
+				<div class="we-help__content">
+					<div class="we-help-aside">
+						<div class="we-help-aside__tab js-tab-content" id="tab-aside-1">
+							<div class="we-help-aside__title">
+								<h2>Luxury</h2><span>4 OPTIONS AVAILABLE</span>
+							</div>
+							<div class="we-help-aside__content">
+								<div class="explore-card">
+									<div class="explore-card__img">
+										<picture>
+											<source media="(max-width: 768px)" srcset="../img/explore-card/explore-card-1-mob.jpg 1x, ../img/explore-card/explore-card-1-mob@2x.jpg 2x"/><img src="../img/explore-card/explore-card-1-desk.jpg" srcset="../img/explore-card/explore-card-1-desk@2x.jpg 2x"/>
+										</picture>
+									</div>
+									<div class="explore-card__row">
+										<div class="explore-card__info">
+											<div class="explore-card__title">Cocoon</div>
+											<div class="explore-card__caption">The most beautiful sleep you’ve ever had.</div>
+										</div>
+										<div class="explore-card__bttns"><a class="bttn explore-card__link" href="#">Explore Mattress</a></div>
+									</div>
+								</div>
+								<div class="explore-card">
+									<div class="explore-card__img">
+										<picture>
+											<source media="(max-width: 768px)" srcset="../img/explore-card/explore-card-2-mob.jpg 1x, ../img/explore-card/explore-card-2-mob@2x.jpg 2x"/><img src="../img/explore-card/explore-card-2-desk.jpg" srcset="../img/explore-card/explore-card-2-desk@2x.jpg 2x"/>
+										</picture>
+									</div>
+									<div class="explore-card__row">
+										<div class="explore-card__info">
+											<div class="explore-card__title">Luxury</div>
+											<div class="explore-card__caption">The most beautiful sleep you’ve ever had.</div>
+										</div>
+										<div class="explore-card__bttns"><a class="bttn explore-card__link" href="#">Explore Mattress</a></div>
+									</div>
+								</div>
+								<div class="explore-card">
+									<div class="explore-card__img">
+										<picture>
+											<source media="(max-width: 768px)" srcset="../img/explore-card/explore-card-1-mob.jpg 1x, ../img/explore-card/explore-card-1-mob@2x.jpg 2x"/><img src="../img/explore-card/explore-card-1-desk.jpg" srcset="../img/explore-card/explore-card-1-desk@2x.jpg 2x"/>
+										</picture>
+									</div>
+									<div class="explore-card__row">
+										<div class="explore-card__info">
+											<div class="explore-card__title">Luxury</div>
+											<div class="explore-card__caption">The most beautiful sleep you’ve ever had.</div>
+										</div>
+										<div class="explore-card__bttns"><a class="bttn explore-card__link" href="#">Explore Mattress</a></div>
+									</div>
+								</div>
+								<div class="explore-card">
+									<div class="explore-card__img">
+										<picture>
+											<source media="(max-width: 768px)" srcset="../img/explore-card/explore-card-2-mob.jpg 1x, ../img/explore-card/explore-card-2-mob@2x.jpg 2x"/><img src="../img/explore-card/explore-card-2-desk.jpg" srcset="../img/explore-card/explore-card-2-desk@2x.jpg 2x"/>
+										</picture>
+									</div>
+									<div class="explore-card__row">
+										<div class="explore-card__info">
+											<div class="explore-card__title">Luxury</div>
+											<div class="explore-card__caption">The most beautiful sleep you’ve ever had.</div>
+										</div>
+										<div class="explore-card__bttns"><a class="bttn explore-card__link" href="#">Explore Mattress</a></div>
+									</div>
+								</div>
+								<div class="explore-card">
+									<div class="explore-card__img">
+										<picture>
+											<source media="(max-width: 768px)" srcset="../img/explore-card/explore-card-1-mob.jpg 1x, ../img/explore-card/explore-card-1-mob@2x.jpg 2x"/><img src="../img/explore-card/explore-card-1-desk.jpg" srcset="../img/explore-card/explore-card-1-desk@2x.jpg 2x"/>
+										</picture>
+									</div>
+									<div class="explore-card__row">
+										<div class="explore-card__info">
+											<div class="explore-card__title">Luxury</div>
+											<div class="explore-card__caption">The most beautiful sleep you’ve ever had.</div>
+										</div>
+										<div class="explore-card__bttns"><a class="bttn explore-card__link" href="#">Explore Mattress</a></div>
+									</div>
+								</div>
+								<div class="explore-card">
+									<div class="explore-card__img">
+										<picture>
+											<source media="(max-width: 768px)" srcset="../img/explore-card/explore-card-2-mob.jpg 1x, ../img/explore-card/explore-card-2-mob@2x.jpg 2x"/><img src="../img/explore-card/explore-card-2-desk.jpg" srcset="../img/explore-card/explore-card-2-desk@2x.jpg 2x"/>
+										</picture>
+									</div>
+									<div class="explore-card__row">
+										<div class="explore-card__info">
+											<div class="explore-card__title">Luxury</div>
+											<div class="explore-card__caption">The most beautiful sleep you’ve ever had.</div>
+										</div>
+										<div class="explore-card__bttns"><a class="bttn explore-card__link" href="#">Explore Mattress</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="we-help-aside__tab js-tab-content" id="tab-aside-2">
+							<div class="we-help-aside__title">
+								<h2>Therapeutic Needs</h2><span>4 OPTIONS AVAILABLE</span>
+							</div>
+							<div class="we-help-aside__content">
+								<div class="explore-card">
+									<div class="explore-card__img">
+										<picture>
+											<source media="(max-width: 768px)" srcset="../img/explore-card/explore-card-1-mob.jpg 1x, ../img/explore-card/explore-card-1-mob@2x.jpg 2x"/><img src="../img/explore-card/explore-card-1-desk.jpg" srcset="../img/explore-card/explore-card-1-desk@2x.jpg 2x"/>
+										</picture>
+									</div>
+									<div class="explore-card__row">
+										<div class="explore-card__info">
+											<div class="explore-card__title">Cocoon</div>
+											<div class="explore-card__caption">The most beautiful sleep you’ve ever had.</div>
+										</div>
+										<div class="explore-card__bttns"><a class="bttn explore-card__link" href="#">Explore Mattress</a></div>
+									</div>
+								</div>
+								<div class="explore-card">
+									<div class="explore-card__img">
+										<picture>
+											<source media="(max-width: 768px)" srcset="../img/explore-card/explore-card-2-mob.jpg 1x, ../img/explore-card/explore-card-2-mob@2x.jpg 2x"/><img src="../img/explore-card/explore-card-2-desk.jpg" srcset="../img/explore-card/explore-card-2-desk@2x.jpg 2x"/>
+										</picture>
+									</div>
+									<div class="explore-card__row">
+										<div class="explore-card__info">
+											<div class="explore-card__title">Luxury</div>
+											<div class="explore-card__caption">The most beautiful sleep you’ve ever had.</div>
+										</div>
+										<div class="explore-card__bttns"><a class="bttn explore-card__link" href="#">Explore Mattress</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="we-help-aside__tab js-tab-content" id="tab-aside-3">
+							<div class="we-help-aside__title">
+								<h2>Your Essentials</h2><span>4 OPTIONS AVAILABLE</span>
+							</div>
+							<div class="we-help-aside__content">
+								<div class="explore-card">
+									<div class="explore-card__img">
+										<picture>
+											<source media="(max-width: 768px)" srcset="../img/explore-card/explore-card-1-mob.jpg 1x, ../img/explore-card/explore-card-1-mob@2x.jpg 2x"/><img src="../img/explore-card/explore-card-1-desk.jpg" srcset="../img/explore-card/explore-card-1-desk@2x.jpg 2x"/>
+										</picture>
+									</div>
+									<div class="explore-card__row">
+										<div class="explore-card__info">
+											<div class="explore-card__title">Cocoon</div>
+											<div class="explore-card__caption">The most beautiful sleep you’ve ever had.</div>
+										</div>
+										<div class="explore-card__bttns"><a class="bttn explore-card__link" href="#">Explore Mattress</a></div>
+									</div>
+								</div>
+								<div class="explore-card">
+									<div class="explore-card__img">
+										<picture>
+											<source media="(max-width: 768px)" srcset="../img/explore-card/explore-card-2-mob.jpg 1x, ../img/explore-card/explore-card-2-mob@2x.jpg 2x"/><img src="../img/explore-card/explore-card-2-desk.jpg" srcset="../img/explore-card/explore-card-2-desk@2x.jpg 2x"/>
+										</picture>
+									</div>
+									<div class="explore-card__row">
+										<div class="explore-card__info">
+											<div class="explore-card__title">Luxury</div>
+											<div class="explore-card__caption">The most beautiful sleep you’ve ever had.</div>
+										</div>
+										<div class="explore-card__bttns"><a class="bttn explore-card__link" href="#">Explore Mattress</a></div>
+									</div>
+								</div>
+								<div class="explore-card">
+									<div class="explore-card__img">
+										<picture>
+											<source media="(max-width: 768px)" srcset="../img/explore-card/explore-card-1-mob.jpg 1x, ../img/explore-card/explore-card-1-mob@2x.jpg 2x"/><img src="../img/explore-card/explore-card-1-desk.jpg" srcset="../img/explore-card/explore-card-1-desk@2x.jpg 2x"/>
+										</picture>
+									</div>
+									<div class="explore-card__row">
+										<div class="explore-card__info">
+											<div class="explore-card__title">Luxury</div>
+											<div class="explore-card__caption">The most beautiful sleep you’ve ever had.</div>
+										</div>
+										<div class="explore-card__bttns"><a class="bttn explore-card__link" href="#">Explore Mattress</a></div>
+									</div>
+								</div>
+								<div class="explore-card">
+									<div class="explore-card__img">
+										<picture>
+											<source media="(max-width: 768px)" srcset="../img/explore-card/explore-card-2-mob.jpg 1x, ../img/explore-card/explore-card-2-mob@2x.jpg 2x"/><img src="../img/explore-card/explore-card-2-desk.jpg" srcset="../img/explore-card/explore-card-2-desk@2x.jpg 2x"/>
+										</picture>
+									</div>
+									<div class="explore-card__row">
+										<div class="explore-card__info">
+											<div class="explore-card__title">Luxury</div>
+											<div class="explore-card__caption">The most beautiful sleep you’ve ever had.</div>
+										</div>
+										<div class="explore-card__bttns"><a class="bttn explore-card__link" href="#">Explore Mattress</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="we-help__img">
+						<picture>
+							<source media="(max-width: 768px)" srcset="../img/we-help/we-help-mob.png 1x, ../img/we-help/we-help-mob@2x.png 2x"><img src="../img/we-help/we-help-desc.png" srcset="../img/we-help/we-help-desc@2x.png 2x"/>
+						</picture>
+					</div>
 				</div>
 			</div>
 			<div class="feature-wrap">

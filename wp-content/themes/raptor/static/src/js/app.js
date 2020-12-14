@@ -23,6 +23,7 @@ import scrollTo from './blocks/scrollTo';
 // import Form from './blocks/form';
 import Modal from './blocks/modal';
 import textLimit from './blocks/textLimit';
+import menuExploreLvl from './blocks/menuExploreLvl';
 
 // Init
 // AppRoot.init();
@@ -41,6 +42,7 @@ window.addEventListener('load', () => {
 	scrollTo();
 	textLimit();
 	setTimeout(() => {
+		menuExploreLvl();
 		setupTabs();
 	}, 50);
 

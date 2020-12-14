@@ -1,16 +1,24 @@
 .we-help-nav
+    &.active,
     &:hover
+        .we-help-nav__item
+            opacity: .5
+            &:hover,
+            &.active
+                opacity: 1
+    &.active:hover
         .we-help-nav__item
             opacity: .5
             &:hover
                 opacity: 1
+
     &__item
         transition: .3s
     &__link
+        display: block
         color: $white
         text-decoration: none
-        &:hover
-            opacity: .2
+        cursor: pointer
     &__name
         display: block
         display: flex

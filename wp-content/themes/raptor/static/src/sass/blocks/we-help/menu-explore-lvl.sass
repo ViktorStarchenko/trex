@@ -1,0 +1,72 @@
+.menu-explore-lvl
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    // padding-top: 20px
+    // display: none
+    background: $main
+    opacity: 0
+    transform: translate3d(-10px, 0, 0)
+    transition: transform 0.2s ease-out, opacity 0.2s
+    height: 100%
+    pointer-events: none
+    padding: 30px 30px 20px 94px
+    display: flex
+    flex-flow: column nowrap
+    justify-content: center
+    +r(1200)
+        padding-left: 54px
+        padding-right: 30px
+    +r(768)
+        width: 100%
+        padding-left: 20px
+        padding-right: 20px
+        padding-top: 20px
+        padding-bottom: 20px
+    &.is-visible
+        opacity: 1
+        transform: translate3d(0, 0, 0)
+        transition: transform 0.2s ease-out, opacity 0.2s
+        pointer-events: all
+    &.is-z
+        z-index: 1
+    &.next-visible
+        opacity: 0
+        transition: opacity 0.2s
+    &__head
+        display: block
+        // padding: 16px 20px
+        margin-bottom: 30px
+        position: relative
+    &__title
+        margin-bottom: 0
+        +r(768)
+            margin-bottom: 0
+    &__back
+        color: $main
+        // text-transform: uppercase
+        line-height: calc(30/19)
+        font-size: 19px
+        font-weight: 400
+        letter-spacing: 1.19px
+        margin-bottom: 30px
+        button
+            color: $white
+    &__body
+        padding-top: 5px
+        padding-bottom: 30px
+        padding-right: 20px
+        overflow-y: auto
+        +rm(769)
+            max-width: 490px
+
+
+.menu-explore-bttn
+    display: inline-flex
+    flex-flow: row-reverse nowrap
+    align-items: center
+    &__icon
+        display: block
+        font-size: 0
+        transform: scaleX(-1)
