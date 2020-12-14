@@ -34,6 +34,6 @@
 <?php if( $short_code = get_field('hello_bar_mattresses', get_the_ID()) ) : ?>
     <?= do_shortcode($short_code); ?>
 <?php endif; ?>
-<div class="app-wrapper main">
+<div class="app-wrapper <?php echo get_page_template_slug() === 'promotions-new.php' ? 'main' : '';?> ">
 
 <?php get_template_part( 'header-menu'); ?>
