@@ -170,27 +170,27 @@ $technology = get_field('technology');
 		<div id="product-specifications">
 			<div class="product-specs-wrap">
 				<div class="product-specs">
-					<?php $specs = get_field('product_specs'); ?>
-					<h3 class="product-specs__title"><?= $specs['title'] ?? ''?></h3>
+					<?php $product_specs = get_field('product_specs'); ?>
+					<h3 class="product-specs__title"><?= $product_specs['title'] ?? ''?></h3>
 					<div class="product-specs__sidebar">
 						<div class="product-specs-contact">
-							<div class="product-specs-contact__title"><?= $specs['subtitle'] ?? ''?></div>
+							<div class="product-specs-contact__title"><?= $product_specs['subtitle'] ?? ''?></div>
 							<ul class="product-specs-contact__list">
-								<li class="product-specs-contact__list-item"><a class="product-specs-contact__list-link" href="<?= $specs['chat']['url'] ?? ''?>"><span class="product-specs-contact__list-icon">
+								<li class="product-specs-contact__list-item"><a class="product-specs-contact__list-link" href="<?= $product_specs['chat']['url'] ?? ''?>"><span class="product-specs-contact__list-icon">
 												<svg class="icon message" width="30" height="30" viewBox="0 0 30 30">
 													<use xlink:href="#message"></use>
-												</svg></span><?= $specs['chat']['title'] ?? ''?></a></li>
-								<li class="product-specs-contact__list-item"><a class="product-specs-contact__list-link" href="<?= $specs['mail']['url'] ?? ''?>"><span class="product-specs-contact__list-icon">
+												</svg></span><?= $product_specs['chat']['title'] ?? ''?></a></li>
+								<li class="product-specs-contact__list-item"><a class="product-specs-contact__list-link" href="<?= $product_specs['mail']['url'] ?? ''?>"><span class="product-specs-contact__list-icon">
 												<svg class="icon envelope" width="30" height="30" viewBox="0 0 30 30">
 													<use xlink:href="#envelope"></use>
-												</svg></span><?= $specs['mail']['title'] ?? ''?></a></li>
+												</svg></span><?= $product_specs['mail']['title'] ?? ''?></a></li>
 							</ul>
 						</div>
 					</div>
 					<div class="product-specs__main">
 						<div class="js-acc-wrap">
-							<?php if(!empty($specs['list'])) :?>
-								<?php foreach ($specs['list'] as $item) :?>
+							<?php if(!empty($product_specs['list'])) :?>
+								<?php foreach ($product_specs['list'] as $item) :?>
 									<div class="product-specs-acc js-acc accordeon" data-toggle="specs">
 										<div class="accordeon__title js-acc-trig">
 											<img class="accordeon__title-img" src="<?= $item['icon']['url'] ?? ''?>" alt="dimension">
