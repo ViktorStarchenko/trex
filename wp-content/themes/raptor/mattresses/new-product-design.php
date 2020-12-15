@@ -6,6 +6,11 @@ $hero = get_field('hero');
 $features = get_field('features');
 $cards = get_field('product_cards');
 $technology = get_field('technology');
+$product_specs = get_field('product_specs');
+$promo = get_field('promo');
+$factory = get_field('factory');
+$related_articles = get_field('related_articles');
+$complete_cards = get_field('complete_card');
 ?>
 	<div class="main">
 		<div class="product-hero" id="product-overview">
@@ -170,7 +175,6 @@ $technology = get_field('technology');
 		<div id="product-specifications">
 			<div class="product-specs-wrap">
 				<div class="product-specs">
-					<?php $product_specs = get_field('product_specs'); ?>
 					<h3 class="product-specs__title"><?= $product_specs['title'] ?? ''?></h3>
 					<div class="product-specs__sidebar">
 						<div class="product-specs-contact">
@@ -220,7 +224,6 @@ $technology = get_field('technology');
 				</div>
 			</div>
 		</div>
-		<?php $promo = get_field('promo'); ?>
 		<div class="promo-decor promo-decor--equal promo-decor--full">
 			<div class="promo-decor__bg">
 				<picture>
@@ -239,7 +242,6 @@ $technology = get_field('technology');
 				</div>
 			</div>
 		</div>
-		<?php $factory = get_field('factory'); ?>
 		<div id="product-factory">
 			<div class="bg-block">
 				<div class="space-wrap">
@@ -285,7 +287,6 @@ $technology = get_field('technology');
 				</div>
 			</div>
 		</div>
-		<?php $related_articles = get_field('related_articles'); ?>
 		<div class="complete-card-outer">
 			<div class="content-center">
 				<h3><?= $related_articles['title'] ?? '' ?></h3>
@@ -304,7 +305,6 @@ $technology = get_field('technology');
 				<?php endif; ?>
 			</div>
 		</div>
-		<?php $complete_cards = get_field('complete_card'); ?>
 		<hr class="page-devider">
 		<div class="complete-card-outer">
 			<div class="content-center">
