@@ -1,0 +1,12 @@
+mixin explore-card(props={})
+    .explore-card
+        .explore-card__img
+            picture
+                source(media="(max-width: 768px)", srcset=`../img/explore-card/${props.img}-mob.jpg 1x, ../img/explore-card/${props.img}-mob@2x.jpg 2x`)
+                +img(`../img/explore-card/${props.img}-desk`, 'jpg')
+        .explore-card__row
+            .explore-card__info
+                .explore-card__title!= props.title
+                .explore-card__caption The most beautiful sleep you’ve ever had.
+            .explore-card__bttns
+                a.bttn.explore-card__link(href="#") Explore Mattress

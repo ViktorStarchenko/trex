@@ -4,13 +4,13 @@ block head
 	- page.title = 'Home'
 
 block content
-	.we-help
+	.we-help.js-tabs-wrapper
 		.we-help__menu
 			.we-help__title How can we help you?
 			.we-help__nav
 				ul.we-help-nav
 					li.we-help-nav__item
-						a(href="#").we-help-nav__link
+						span.we-help-nav__link.js-menu-lvl-trig(data-trig-lvl=`lvl-item-explore`)
 							span.we-help-nav__name Explore our Mattresses
 								span.we-help-nav__icon
 									+icon('arrow-right')(width="24" height="24" viewBox="0 0 24 24")
@@ -27,10 +27,87 @@ block content
 								span.we-help-nav__icon
 									+icon('arrow-right')(width="24" height="24" viewBox="0 0 24 24")
 							span.we-help-nav__text FInd your nearest store to try out SleepMaker in-store and get their expert advice.
-		.we-help__img
-			picture
-				source(media="(max-width: 768px)", srcset="../img/we-help/we-help-mob.png 1x, ../img/we-help/we-help-mob@2x.png 2x")
-				+img('../img/we-help/we-help-desc', 'png')
+				.menu-explore-lvl.js-menu-lvl-targ(data-targ-lvl=`lvl-item-explore`)
+					.menu-explore-lvl__head
+						//- button.menu-explore-lvl__back.js-menu-lvl-close.vl-begin BACK
+						.menu-explore-lvl__back
+							button.js-menu-lvl-close.lvl-begin.menu-explore-bttn BACK
+								span.menu-explore-bttn__icon
+									+icon('arrow-right')(width="24" height="24" viewBox="0 0 24 24")
+						.menu-explore-lvl__title.we-help__title What Mattress range suits you...
+					.menu-explore-lvl__body
+						ul.we-help-nav
+							li.we-help-nav__item
+								a.we-help-nav__link.js-tab-trigger.not-initial(href="#tab-aside-1")
+									span.we-help-nav__name Luxury
+										span.we-help-nav__icon
+											+icon('arrow-right')(width="24" height="24" viewBox="0 0 24 24")
+									span.we-help-nav__text Our most Luxury range Lorem ipsum dolor sit amet, conubia nam pellentesque laoreet id.
+							li.we-help-nav__item
+								a.we-help-nav__link.js-tab-trigger.not-initial(href="#tab-aside-2")
+									span.we-help-nav__name Therapeutic Needs
+										span.we-help-nav__icon
+											+icon('arrow-right')(width="24" height="24" viewBox="0 0 24 24")
+									span.we-help-nav__text Suffer from back pain? our miracoilr range. Lorem ipsum dolor sit amet, conubia nam pellentesque laoreet id.
+							li.we-help-nav__item
+								a.we-help-nav__link.js-tab-trigger.not-initial(href="#tab-aside-3")
+									span.we-help-nav__name Your Essentials
+										span.we-help-nav__icon
+											+icon('arrow-right')(width="24" height="24" viewBox="0 0 24 24")
+									span.we-help-nav__text A mattress for any need. Spare bedrooms, kids rooms, range Lorem ipsum dolor sit amet, conubia nam pellentesque laoreet id.
+							li.we-help-nav__item
+								a.we-help-nav__link.js-tab-trigger.not-initial(href="#tab-aside-1")
+									span.we-help-nav__name Luxury
+										span.we-help-nav__icon
+											+icon('arrow-right')(width="24" height="24" viewBox="0 0 24 24")
+									span.we-help-nav__text Our most Luxury range Lorem ipsum dolor sit amet, conubia nam pellentesque laoreet id.
+							li.we-help-nav__item
+								a.we-help-nav__link.js-tab-trigger.not-initial(href="#tab-aside-2")
+									span.we-help-nav__name Therapeutic Needs
+										span.we-help-nav__icon
+											+icon('arrow-right')(width="24" height="24" viewBox="0 0 24 24")
+									span.we-help-nav__text Suffer from back pain? our miracoilr range. Lorem ipsum dolor sit amet, conubia nam pellentesque laoreet id.
+							li.we-help-nav__item
+								a.we-help-nav__link.js-tab-trigger.not-initial(href="#tab-aside-3")
+									span.we-help-nav__name Your Essentials
+										span.we-help-nav__icon
+											+icon('arrow-right')(width="24" height="24" viewBox="0 0 24 24")
+									span.we-help-nav__text A mattress for any need. Spare bedrooms, kids rooms, range Lorem ipsum dolor sit amet, conubia nam pellentesque laoreet id.
+
+		.we-help__content
+			.we-help-aside
+				.we-help-aside__tab.js-tab-content(id="tab-aside-1")
+					.we-help-aside__title
+						h2 Luxury
+						span 4 OPTIONS AVAILABLE
+					.we-help-aside__content
+						+explore-card({title: 'Cocoon', img: 'explore-card-1'})
+						+explore-card({title: 'Luxury', img: 'explore-card-2'})
+						+explore-card({title: 'Luxury', img: 'explore-card-1'})
+						+explore-card({title: 'Luxury', img: 'explore-card-2'})
+						+explore-card({title: 'Luxury', img: 'explore-card-1'})
+						+explore-card({title: 'Luxury', img: 'explore-card-2'})
+				.we-help-aside__tab.js-tab-content(id="tab-aside-2")
+					.we-help-aside__title
+						h2 Therapeutic Needs
+						span 4 OPTIONS AVAILABLE
+					.we-help-aside__content
+						+explore-card({title: 'Cocoon', img: 'explore-card-1'})
+						+explore-card({title: 'Luxury', img: 'explore-card-2'})
+				.we-help-aside__tab.js-tab-content(id="tab-aside-3")
+					.we-help-aside__title
+						h2 Your Essentials
+						span 4 OPTIONS AVAILABLE
+					.we-help-aside__content
+						+explore-card({title: 'Cocoon', img: 'explore-card-1'})
+						+explore-card({title: 'Luxury', img: 'explore-card-2'})
+						+explore-card({title: 'Luxury', img: 'explore-card-1'})
+						+explore-card({title: 'Luxury', img: 'explore-card-2'})
+			.we-help__img
+				picture
+					source(media="(max-width: 768px)", srcset="../img/we-help/we-help-mob.png 1x, ../img/we-help/we-help-mob@2x.png 2x")
+					+img('../img/we-help/we-help-desc', 'png')
+
 	.feature-wrap
 		// a(href="#").feature-card
 		// or

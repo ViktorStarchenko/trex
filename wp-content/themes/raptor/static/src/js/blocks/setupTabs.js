@@ -27,25 +27,35 @@ export default function setupTabs() {
 				// hide all contents besides the first one
 
 				console.log(currentTrigger);
-				currentTrigger.classList.toggle('active');
-				currentTrigger.parentNode.classList.toggle('active');
-
-				tabContents.forEach((content, index) => {
+				if(!currentTrigger.classList.contains('not-initial')) {
+					currentTrigger.classList.toggle('active');
+					currentTrigger.parentNode.classList.toggle('active');
 					currentTriggerHash = currentTrigger.hash ? currentTrigger.hash.slice(1) : currentTrigger.dataset.hash.slice(1);
-
-					if (content.id ? content.id !== currentTriggerHash : content.dataset.id !== currentTriggerHash) {
+					tabContents.forEach((content, index) => {
+						if (content.id ? content.id !== currentTriggerHash : content.dataset.id !== currentTriggerHash) {
+							hideStart(content);
+						} else {
+							content.classList.toggle('active');
+						}
+					});
+				} else {
+					tabContents.forEach((content, index) => {
 						hideStart(content);
-					} else {
-						content.classList.toggle('active');
-					}
-
-				});
+					});
+				}
 			}
 
 			let current = currentTrigger;
 			triggers.forEach((trigger) => {
 				trigger.addEventListener('click', (e) => {
 					e.preventDefault();
+					wrapper.classList.add('tab-wrapper-active');
+
+					let parentList = trigger.closest('ul');
+					if(parentList) {
+						parentList.classList.add('active');
+					}
+					console.log(parentList);
 					if(!trigger.classList.contains('active')) {
 						current.classList.remove('active');
 						current.parentElement.classList.remove('active');
