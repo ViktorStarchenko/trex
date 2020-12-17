@@ -25,8 +25,6 @@ export default function setupTabs() {
 			} else {
 				currentTrigger = triggers[0];
 				// hide all contents besides the first one
-
-				console.log(currentTrigger);
 				if(!currentTrigger.classList.contains('not-initial')) {
 					currentTrigger.classList.toggle('active');
 					currentTrigger.parentNode.classList.toggle('active');
@@ -55,7 +53,6 @@ export default function setupTabs() {
 					if(parentList) {
 						parentList.classList.add('active');
 					}
-					console.log(parentList);
 					if(!trigger.classList.contains('active')) {
 						current.classList.remove('active');
 						current.parentElement.classList.remove('active');
