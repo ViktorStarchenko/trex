@@ -28,7 +28,10 @@ $complete_cards = get_field('complete_card');
 				<h6><?= $hero['subtitle'] ?? ''?></h6>
 				<h2><?= $hero['title'] ?? ''?></h2>
 				<p><?= $hero['text'] ?? ''?></p>
-			</div><a class="product-hero-btn" href="<?= $hero['cta']['url'] ?? ''?>"><span class="product-hero-btn__icon"><span class="product-hero-btn__icon-inn"></span></span><?= $hero['cta']['title'] ?? ''?></a>
+			</div>
+            <?php if(!empty($hero['cta'])) : ?>
+                <a class="product-hero-btn" href="<?= $hero['cta']['url'] ?? ''?>"><span class="product-hero-btn__icon"><span class="product-hero-btn__icon-inn"></span></span><?= $hero['cta']['title'] ?? ''?></a>
+            <?php endif; ?>
 		</div>
         <div class="feature-wrap">
             <?php if(!empty($features)) :?>
@@ -143,7 +146,8 @@ $complete_cards = get_field('complete_card');
 						<div class="availabe-here-row">
 							<?php if(!empty($where_to_buy['stores'])) :?>
 								<?php foreach ($where_to_buy['stores'] as $store) :?>
-									<div class="availabe-here__item"><img src="<?= $store['img']['url'] ?? ''?>" srcset="<?= $store['img_2x']['url'] ?? ''?> 2x"/>
+									<div class="availabe-here__item">
+                                        <a href="<?= $store['link']['url'] ?? ''?>"><img src="<?= $store['img']['url'] ?? ''?>" srcset="<?= $store['img_2x']['url'] ?? ''?> 2x"/></a>
 									</div>
 								<?php endforeach;?>
 							<?php endif; ?>
@@ -242,6 +246,7 @@ $complete_cards = get_field('complete_card');
 				</div>
 			</div>
 		</div>
+        <?php if ($factory['enable']) : ?>
 		<div id="product-factory">
 			<div class="bg-block">
 				<div class="space-wrap">
@@ -287,6 +292,7 @@ $complete_cards = get_field('complete_card');
 				</div>
 			</div>
 		</div>
+        <?php endif; ?>
 		<div class="complete-card-outer">
 			<div class="content-center">
 				<h3><?= $related_articles['title'] ?? '' ?></h3>

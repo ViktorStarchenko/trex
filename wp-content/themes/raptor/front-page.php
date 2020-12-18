@@ -28,11 +28,13 @@ $reviews_title = $yotpo['items']['reviews_title'];
                         </ul>
                     </div>
                 </div>
+            <div class="we-help__content">
                 <div class="we-help__img">
                     <picture>
                         <source media="(max-width: 768px)" srcset="<?= $top_hero['items']['img_mob']['url'] ?? ''?> 1x, <?= $top_hero['items']['img_mob_2x']['url'] ?? ''?> 2x"><img src="<?= $top_hero['items']['img']['url'] ?? ''?>" srcset="<?= $top_hero['items']['img_2x']['url'] ?? ''?> 2x"/>
                     </picture>
                 </div>
+            </div>
             <?php endif; ?>
         </div>
         <div class="feature-wrap">
