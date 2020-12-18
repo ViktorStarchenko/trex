@@ -303,7 +303,7 @@ $complete_cards = get_field('complete_card');
 						<div class="complete-card">
 							<div class="complete-card__img"><img src="<?= $article['img']['url'] ?? ''?>" srcset="<?= $article['img_2x']['url'] ?? ''?> 2x"/>
 							</div>
-							<div class="complete-card__title"><?= $article['title'] ?? ''?><span class="complete-card__subtitle"><?= $article['title'] ?? ''?></span>
+							<div class="complete-card__title"><?= $article['title'] ?? ''?><span class="complete-card__subtitle"><?= $article['subtitle'] ?? ''?></span>
 							</div>
 							<p class="complete-card__text"><?= $article['text'] ?? ''?></p><a class="link-underline" href="<?= $article['cta']['url'] ?? ''?>"><?= $article['cta']['title'] ?? ''?></a>
 						</div>
