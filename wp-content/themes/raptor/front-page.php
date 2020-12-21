@@ -11,30 +11,90 @@ $yotpo_id = $yotpo['items']['yotpo_product_id'];
 $reviews_title = $yotpo['items']['reviews_title'];
 ?>
 	<div class="main">
-        <div class="we-help">
+        <div class="we-help js-tabs-wrapper">
             <?php if ($top_hero['enable']) : ?>
                 <div class="we-help__menu">
                     <div class="we-help__title"><?= $top_hero['items']['title'] ?? ''?></div>
                     <div class="we-help__nav">
                         <ul class="we-help-nav">
-                            <?php if(!empty($top_hero['items']['help_nav'])) :?>
-                                <?php foreach ($top_hero['items']['help_nav'] as $item) :?>
-                                    <li class="we-help-nav__item"><a class="we-help-nav__link" href="<?= $item['link']['url'] ?? ''?>"><span class="we-help-nav__name"><?= $item['link']['title'] ?? ''?><span class="we-help-nav__icon">
+                            <?php if(!empty($top_hero['items']['help_nav'])) : $i = 0; ?>
+                                <?php foreach ($top_hero['items']['help_nav'] as $item) :
+                                    if ($i == 0) : ?>
+                                    <li class="we-help-nav__item"><span class="we-help-nav__link js-menu-lvl-trig" data-trig-lvl="lvl-item-explore" ><span class="we-help-nav__name"><?= $item['link']['title'] ?? ''?><span class="we-help-nav__icon">
+                                                    <svg class="icon arrow-right" width="24" height="24" viewBox="0 0 24 24">
+                                                        <use xlink:href="#arrow-right"></use>
+                                                    </svg></span></span><span class="we-help-nav__text"><?= $item['text'] ?? ''?></span></span></li>
+                                    <?php else: ?>
+                                        <li class="we-help-nav__item"><a class="we-help-nav__link" href="<?= $item['link']['url'] ?? ''?>"><span class="we-help-nav__name"><?= $item['link']['title'] ?? ''?><span class="we-help-nav__icon">
                                                     <svg class="icon arrow-right" width="24" height="24" viewBox="0 0 24 24">
                                                         <use xlink:href="#arrow-right"></use>
                                                     </svg></span></span><span class="we-help-nav__text"><?= $item['text'] ?? ''?></span></a></li>
-                                <?php endforeach;?>
+                                    <?php endif; ?>
+                                <?php $i++; endforeach;?>
                             <?php endif; ?>
                         </ul>
+                        <?php
+                            $explore = $top_hero['items']['explore'];
+                        ?>
+                        <div class="menu-explore-lvl js-menu-lvl-targ" data-targ-lvl="lvl-item-explore">
+                            <div class="menu-explore-lvl__head">
+                                <div class="menu-explore-lvl__back">
+                                    <button class="js-menu-lvl-close lvl-begin menu-explore-bttn">BACK<span class="menu-explore-bttn__icon">
+											<svg class="icon arrow-right" width="24" height="24" viewBox="0 0 24 24">
+												<use xlink:href="#arrow-right"></use>
+											</svg></span></button>
+                                </div>
+                                <div class="menu-explore-lvl__title we-help__title"><?= $explore['title']?></div>
+                            </div>
+                            <div class="menu-explore-lvl__body">
+                                <ul class="we-help-nav">
+                                    <?php
+                                    $i = 1;
+                                    foreach ( $explore['items'] as  $item) : ?>
+                                        <li class="we-help-nav__item"><a class="we-help-nav__link js-tab-trigger not-initial" href="#tab-aside-<?= $i ?>"><span class="we-help-nav__name"><?= $item['title'] ?><span class="we-help-nav__icon">
+                                                        <svg class="icon arrow-right" width="24" height="24" viewBox="0 0 24 24">
+                                                            <use xlink:href="#arrow-right"></use>
+                                                        </svg></span></span><span class="we-help-nav__text"><?= $item['text'] ?></span></a>
+                                        </li>
+                                    <?php $i++; endforeach; ?>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            <div class="we-help__content">
-                <div class="we-help__img">
-                    <picture>
-                        <source media="(max-width: 768px)" srcset="<?= $top_hero['items']['img_mob']['url'] ?? ''?> 1x, <?= $top_hero['items']['img_mob_2x']['url'] ?? ''?> 2x"><img src="<?= $top_hero['items']['img']['url'] ?? ''?>" srcset="<?= $top_hero['items']['img_2x']['url'] ?? ''?> 2x"/>
-                    </picture>
+                <div class="we-help__content">
+                    <div class="we-help-aside">
+                        <?php
+                        $i = 1;
+                        foreach ( $explore['items'] as  $item) : ?>
+                            <div class="we-help-aside__tab js-tab-content" id="tab-aside-<?= $i ?>">
+                                <div class="we-help-aside__title">
+                                    <h2><?= $item['aside']['title']?></h2><span><?= $item['aside']['subtitle']?></span>
+                                </div>
+                                <div class="we-help-aside__content">
+                                    <?php if (!empty($item['aside']['subitems'])) : ?>
+                                        <?php foreach ( $item['aside']['subitems'] as  $subitem) :?>
+                                            <div class="explore-card">
+                                                <div class="explore-card__img">
+                                                    <picture>
+                                                        <source media="(max-width: 768px)" srcset="<?= $subitem['img_mob']['url'] ?> 1x"/><img src="<?= $subitem['img']['url']?>" ?> 2x"/>
+                                                    </picture>
+                                                </div>
+                                                <div class="explore-card__row">
+                                                    <div class="explore-card__info">
+                                                        <div class="explore-card__title"><?= $subitem['title']?></div>
+                                                        <div class="explore-card__caption"><?= $subitem['text']?></div>
+                                                    </div>
+                                                    <div class="explore-card__bttns"><a class="bttn explore-card__link" href="<?= $subitem['cta']['url']?>"><?= $subitem['cta']['title']?></a></div>
+                                                </div>
+                                            </div>
+                                        <?php endforeach;?>
+                                    <?php endif;?>
+                                </div>
+                            </div>
+                        <?php $i++; endforeach; ?>
+                    </div>
                 </div>
-            </div>
             <?php endif; ?>
         </div>
         <div class="feature-wrap">
@@ -96,7 +156,7 @@ $reviews_title = $yotpo['items']['reviews_title'];
         <div class="rating-reviews">
             <?php if ($yotpo['enable']) : ?>
                 <div class="content-center">
-                    <h3><?= $reviews_title?></h3>
+                    <h3><?= $reviews_title ?></h3>
                 </div>
                 <div class="rating-reviews-slider">
                     <div class="swiper-container js-rating-reviews-slider">
