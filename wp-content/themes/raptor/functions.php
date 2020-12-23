@@ -3451,7 +3451,7 @@ function paginate_bedding() {
                 $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID()), 'large' );
                 ?>
                 <div class="accessories-card">
-                    <div class="accessories-card__img"><img src="<?= $image[0] ?? '' ?>" srcset="<?= $image[0] ?? '' ?> 2x"/>
+                    <div class="accessories-card__img"><img src="<?= $image[0] ?? '' ?>" />
                     </div>
                     <div class="accessories-card__title"><?= get_the_title(get_the_ID()); ?></div>
                     <div class="accessories-card__text">
@@ -3564,7 +3564,8 @@ function filter_bedding() {
 
 
     $total_pages = $promo_query->max_num_pages;
-
+    $bedding_page = get_page_by_path( 'bedding' );
+    $popup_cta = get_field('popup_cta', $bedding_page->ID);
     ob_start();
     ?>
 
@@ -3574,7 +3575,7 @@ function filter_bedding() {
                 $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID()), 'large' );
                 ?>
                 <div class="accessories-card">
-                    <div class="accessories-card__img"><img src="<?= $image[0] ?? '' ?>" srcset="<?= $image[0] ?? '' ?> 2x"/>
+                    <div class="accessories-card__img"><img src="<?= $image[0] ?? '' ?>" />
                     </div>
                     <div class="accessories-card__title"><?= get_the_title(get_the_ID()); ?></div>
                     <div class="accessories-card__text">
@@ -3588,28 +3589,27 @@ function filter_bedding() {
                                 <div class="modal-info__text">
                                     <div class="modal-info__title"><?= get_the_title(get_the_ID());  ?></div>
                                     <div class="content">
-                                        <p>A pillow made of sustainable Talalay latex sourced from rubber trees. It is incredibly soft, durable and the natural latex provides superior anti-microbial features. Best for tummy and back sleepers.</p>
+                                        <p><?= the_excerpt(); ?></p>
                                         <h6>PRODUCT FEATURES:</h6>
+                                        <?php $details = get_field('accessories_details', get_the_ID());?>
                                         <ul>
-                                            <li>Great for allery suffers because of the hypoallergenic properties of latex</li>
-                                            <li>Size 68X40cm</li>
-                                            <li>Hand washable</li>
-                                            <li>Low to medium profile</li>
-                                            <li>Japara cotton cover with a zip</li>
-                                            <li>Great for allery suffers because of the hypoallergenic properties of latex</li>
-                                            <li>Size 68X40cm</li>
-                                            <li>Hand washable</li>
-                                            <li>Low to medium profile</li>
-                                            <li>Japara cotton cover with a zip</li>
+                                            <?php if (!empty($details)): ?>
+                                                <?php foreach ($details as $detail):?>
+                                                    <li>
+                                                        <?= $detail['detail_title'];?><br>
+                                                        <?= $detail['detail_content'];?>
+                                                    </li>
+                                                <?php endforeach; ?>
+                                            <?php endif; ?>
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="modal-info__img">
-                                    <div class="modal-info-img"><img src="<?= $image[0] ?? '' ?>" srcset="<?= $image[0] ?? '' ?> 2x"/>
+                                    <div class="modal-info-img"><img src="<?= $image[0] ?? '' ?>" />
                                     </div>
                                 </div>
                             </div>
-                            <div class="modal-footer"><a class="bttn bttn--bg" href="#">Find your perfect sleep solution</a><a class="bttn" href="#">FIND A STORE</a></div>
+                            <div class="modal-footer"><a class="bttn bttn--bg" href="<?= $popup_cta['sleep_selector']['url']?>"><?= $popup_cta['sleep_selector']['title']?></a><a class="bttn" href="<?= $popup_cta['find_a_store']['url']?>"><?= $popup_cta['find_a_store']['title']?></a></div>
                         </div>
                     </div>
                 </div>
