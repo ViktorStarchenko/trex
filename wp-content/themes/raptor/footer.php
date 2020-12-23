@@ -206,6 +206,14 @@ $storesAndPromotionsPages = get_field('stores_and_promotions_pages', $headerNavi
         </div>
     </div>
 </div>
+<div class="modal-container is-hidden js-modal-container">
+    <div class="modals is-hidden" id="modal-html" style="max-width:1300px">
+        <div class="modals__header">
+            <button class="modal-close-btn js-modal-close js-menu-mob-close">✕</button>
+        </div>
+        <div class="modals__body js-modal-set-html"></div>
+    </div>
+</div>
 <?php if (get_field('is_floating_footer_enabled')) : ?>
 	<?php
 	$url = get_field('floating_footer_url') ? : '/stockists';

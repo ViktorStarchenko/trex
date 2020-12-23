@@ -3425,6 +3425,228 @@ function filter_promo_ret() {
 
 }
 
+add_action( 'wp_ajax_paginate_bedding', 'paginate_bedding' );
+add_action( 'wp_ajax_nopriv_paginate_bedding', 'paginate_bedding' );
+
+function paginate_bedding() {
+    $catId = $_POST['catId'] ?? null;
+    $paged = $_POST['paged'];
+
+    $promo_query = new WP_Query(array(
+        'cat' => $catId,
+        'paged' => $paged,
+        'post_status' => 'publish',
+        'posts_per_page' => 12,
+    ));
+
+    $total_pages = $promo_query->max_num_pages;
+
+    ob_start();
+    ?>
+
+    <div class="promotions-tile-wrap">
+        <div class="promotions-tile">
+            <?php while($promo_query->have_posts()) : $promo_query->the_post();
+                $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID()), 'large' );
+                ?>
+                <div class="accessories-card">
+                    <div class="accessories-card__img"><img src="<?= $image[0] ?? '' ?>" srcset="<?= $image[0] ?? '' ?> 2x"/>
+                    </div>
+                    <div class="accessories-card__title"><?= get_the_title(get_the_ID()); ?></div>
+                    <div class="accessories-card__text">
+                        <p><?= the_excerpt(); ?></p>
+                    </div>
+                    <div class="accessories-card__footer"><a class="under-link js-modal-open" href="#" data-modal-id="modal-html" data-modal-html="#accessories-<?= get_the_ID() ?>">SEE MORE</a>
+                    </div>
+                    <div class="get-content" id="accessories-<?= get_the_ID() ?>" style="display:none; visibility: hidden;">
+                        <div class="modal-content">
+                            <div class="modal-info">
+                                <div class="modal-info__text">
+                                    <div class="modal-info__title"><?= get_the_title(get_the_ID());  ?></div>
+                                    <div class="content">
+                                        <p>A pillow made of sustainable Talalay latex sourced from rubber trees. It is incredibly soft, durable and the natural latex provides superior anti-microbial features. Best for tummy and back sleepers.</p>
+                                        <h6>PRODUCT FEATURES:</h6>
+                                        <ul>
+                                            <li>Great for allery suffers because of the hypoallergenic properties of latex</li>
+                                            <li>Size 68X40cm</li>
+                                            <li>Hand washable</li>
+                                            <li>Low to medium profile</li>
+                                            <li>Japara cotton cover with a zip</li>
+                                            <li>Great for allery suffers because of the hypoallergenic properties of latex</li>
+                                            <li>Size 68X40cm</li>
+                                            <li>Hand washable</li>
+                                            <li>Low to medium profile</li>
+                                            <li>Japara cotton cover with a zip</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="modal-info__img">
+                                    <div class="modal-info-img"><img src="<?= $image[0] ?? '' ?>" srcset="<?= $image[0] ?? '' ?> 2x"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer"><a class="bttn bttn--bg" href="#">Find your perfect sleep solution</a><a class="bttn" href="#">FIND A STORE</a></div>
+                        </div>
+                    </div>
+                </div>
+            <?php endwhile;
+            wp_reset_postdata();?>
+        </div>
+    </div>
+    <div class="accessories-footer">
+
+        <?php
+        echo paginate_links([
+            'base' => '%_%',
+            'format' => '?pages=%#%',
+            'current' => max(1, $paged),
+            'total' => $total_pages,
+            'type' => 'list',
+            'prev_text' => '<div class="pagination__link pagination__link--prev pagination__item--prev">
+                                    <svg class="icon arrow-right" width="24" height="24" viewBox="0 0 24 24">
+                                        <use xlink:href="#arrow-right"></use>
+                                    </svg></div>',
+            'next_text' => '<div class="pagination__link pagination__link--next pagination__item--prev">
+                                    <svg class="icon arrow-right" width="24" height="24" viewBox="0 0 24 24">
+                                        <use xlink:href="#arrow-right"></use>
+                                    </svg></div>'
+        ]);
+        ?>
+
+    </div>
+
+
+    <?php $content = ob_get_clean();
+
+    echo $content;
+    die();
+
+}
+
+add_action( 'wp_ajax_filter_bedding', 'filter_bedding' );
+add_action( 'wp_ajax_nopriv_filter_bedding', 'filter_bedding' );
+
+function filter_bedding() {
+    $retIds = $_POST['retId'] ?? null;
+    $beddingCategory = get_category_by_slug('bedding');
+
+    $paged = $_POST['paged'];
+
+    $metaQuery = [];
+
+    if (!empty($retIds)){
+        $retArr = [
+            'relation' => 'OR',
+        ];
+        foreach ($retIds as $id) {
+            $retArr[] = [
+                'key'       => 'retailer_groups',
+                'value'     => '' . $id . '',
+                'compare'   => 'LIKE',
+            ];
+        }
+        $metaQuery[] = $retArr;
+        $promo_query = new WP_Query(array(
+            'category_name' => 'bedding',
+            'meta_query' => $retArr,
+            'posts_per_page' => 12,
+            'paged' => $paged,
+            'post_status' => 'publish',
+        ));
+    } else {
+        $promo_query = new WP_Query(array(
+            'category_name' => 'bedding',
+            'posts_per_page' => 12,
+            'paged' => $paged,
+            'post_status' => 'publish',
+        ));
+    }
+
+
+    $total_pages = $promo_query->max_num_pages;
+
+    ob_start();
+    ?>
+
+    <div class="promotions-tile-wrap">
+        <div class="promotions-tile">
+            <?php while($promo_query->have_posts()) : $promo_query->the_post();
+                $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID()), 'large' );
+                ?>
+                <div class="accessories-card">
+                    <div class="accessories-card__img"><img src="<?= $image[0] ?? '' ?>" srcset="<?= $image[0] ?? '' ?> 2x"/>
+                    </div>
+                    <div class="accessories-card__title"><?= get_the_title(get_the_ID()); ?></div>
+                    <div class="accessories-card__text">
+                        <p><?= the_excerpt(); ?></p>
+                    </div>
+                    <div class="accessories-card__footer"><a class="under-link js-modal-open" href="#" data-modal-id="modal-html" data-modal-html="#accessories-<?= get_the_ID() ?>">SEE MORE</a>
+                    </div>
+                    <div class="get-content" id="accessories-<?= get_the_ID() ?>" style="display:none; visibility: hidden;">
+                        <div class="modal-content">
+                            <div class="modal-info">
+                                <div class="modal-info__text">
+                                    <div class="modal-info__title"><?= get_the_title(get_the_ID());  ?></div>
+                                    <div class="content">
+                                        <p>A pillow made of sustainable Talalay latex sourced from rubber trees. It is incredibly soft, durable and the natural latex provides superior anti-microbial features. Best for tummy and back sleepers.</p>
+                                        <h6>PRODUCT FEATURES:</h6>
+                                        <ul>
+                                            <li>Great for allery suffers because of the hypoallergenic properties of latex</li>
+                                            <li>Size 68X40cm</li>
+                                            <li>Hand washable</li>
+                                            <li>Low to medium profile</li>
+                                            <li>Japara cotton cover with a zip</li>
+                                            <li>Great for allery suffers because of the hypoallergenic properties of latex</li>
+                                            <li>Size 68X40cm</li>
+                                            <li>Hand washable</li>
+                                            <li>Low to medium profile</li>
+                                            <li>Japara cotton cover with a zip</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="modal-info__img">
+                                    <div class="modal-info-img"><img src="<?= $image[0] ?? '' ?>" srcset="<?= $image[0] ?? '' ?> 2x"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer"><a class="bttn bttn--bg" href="#">Find your perfect sleep solution</a><a class="bttn" href="#">FIND A STORE</a></div>
+                        </div>
+                    </div>
+                </div>
+            <?php endwhile;
+            wp_reset_postdata();?>
+        </div>
+    </div>
+    <div class="accessories-footer">
+
+        <?php
+        echo paginate_links([
+            'base' => '%_%',
+            'format' => '?pages=%#%',
+            'current' => max(1, $paged),
+            'total' => $total_pages,
+            'type' => 'list',
+            'prev_text' => '<div class="pagination__link pagination__link--prev pagination__item--prev">
+                                    <svg class="icon arrow-right" width="24" height="24" viewBox="0 0 24 24">
+                                        <use xlink:href="#arrow-right"></use>
+                                    </svg></div>',
+            'next_text' => '<div class="pagination__link pagination__link--next pagination__item--prev">
+                                    <svg class="icon arrow-right" width="24" height="24" viewBox="0 0 24 24">
+                                        <use xlink:href="#arrow-right"></use>
+                                    </svg></div>'
+        ]);
+        ?>
+
+    </div>
+
+
+    <?php $content = ob_get_clean();
+
+    echo $content;
+    die();
+
+}
+
 add_filter('auth_cookie_expiration', 'admin_expiration_filter', 99, 3);
 function admin_expiration_filter($seconds, $user_id, $remember){
 

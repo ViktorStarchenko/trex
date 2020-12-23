@@ -103,7 +103,7 @@ ul._inner-submenu li:first-child {
     background-color: #523c94;
     line-height: 60px;
     margin-top: -20px;
-    
+
 }
 
 ul._inner-submenu li:first-child::after {
@@ -499,7 +499,7 @@ body, html{
     .m-technology__clickpoints .-point02 {
         top: 60% !important;
     }
-    
+
     .m-technology__clickpoints .-point03 {
         top: 64% !important;
     }
@@ -4681,12 +4681,11 @@ ul._inner-submenu li:first-child::after{
 }
 #product-reviews .yotpo .yotpo-pager .yotpo-page-element {
     z-index: 1;
-
+}
 .select-promo .select-promo__title {
     font-size: 2em;
 }
 ul.page-numbers li {
-
     margin-left: -1px;
     border: 1px solid #ddd;
     transition: border-color .2s;
@@ -4803,7 +4802,7 @@ ul.page-numbers li .page-numbers {
 .page-template-reviews-page .yotpo.yotpo-main-widget .yotpo-bottomline.yotpo-bottomline-3-boxes .yotpo-bottomline-box-2 .yotpo-star-distribution .yotpo-star-distribution-content .yotpo-distibutions-stars .review-stars,.page-template-reviews-page .yotpo .yotpo-modal-dialog .yotpo-bottomline.yotpo-bottomline-3-boxes .yotpo-bottomline-box-2 .yotpo-star-distribution .yotpo-star-distribution-content .yotpo-distibutions-stars .review-stars {
     display: inline;
 }
-.promotions-footer ul.page-numbers {
+.promotions-footer ul.page-numbers, .accessories-footer ul.page-numbers {
     display: flex;
     margin-left: auto;
 }
@@ -4811,7 +4810,7 @@ ul.page-numbers li span.page-numbers.current {
     border-color: #2e1a47;
     z-index: 1;
 }
-.promotions-footer ul.page-numbers li span.page-numbers.current {
+.promotions-footer ul.page-numbers li span.page-numbers.current, .accessories-footer ul.page-numbers li span.page-numbers.current {
     color: #404041;
     border: 1px solid #2e1a47;
 }
@@ -4821,11 +4820,14 @@ ul.page-numbers li a.page-numbers.next {
 ul.page-numbers li a.page-numbers.prev {
     color: #fff;
 }
-/* .promotions-card__img {
-    margin-bottom: 30px;
-    height: 100%;
-    max-height: 170px;
+.main .accessories-footer {
+    max-width: 1250px;
+    margin: 40px auto 80px;
+    display: flex;
 }
-.promotions-card__img img {
-    max-height: 100%;
-} */
+.modal-container.js-modal-container:not(.is-hidden) {
+    z-index: 100;
+}
+.modal-container .modal-close-btn{
+    z-index: 10;
+}
