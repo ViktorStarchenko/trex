@@ -71,10 +71,12 @@ block content
                                             label.filter-drop__label(for="retailer-5") retailer #5
         .promotions-tile-wrap
             .promotions-tile
-                - n = 0
-                while n < 12
-                    - n++
-                    +accessories-card({number: n})
+                +accessories-card({number: 1, title: 'Supima Cotton/ TENCEL® Sheet Set'})
+                +accessories-card({number: 2, title: 'Sheets'})
+                +accessories-card({number: 3, title: 'Luxury Headboard: Zinc'})
+                +accessories-card({number: 4, title: 'Opus Headboard: Dusk'})
+                +accessories-card({number: 5, title: 'Luxury Headboard: Champagne'})
+                +accessories-card({number: 6, title: 'Sample Base'})
 
         .promotions-footer
             ul.pagination

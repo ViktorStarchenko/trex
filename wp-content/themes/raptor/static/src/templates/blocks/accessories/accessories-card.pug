@@ -1,8 +1,8 @@
 mixin accessories-card(props={})
     .accessories-card
         .accessories-card__img
-            +img('../img/accessories/accessories-card', 'png')
-        .accessories-card__title Plush Latex Pillow
+            +img(`../img/accessories/accessories-${props.number}`, 'jpg')
+        .accessories-card__title!= props.title
         .accessories-card__text 
             p A pillow made of sustainable Talalay latex sourced from rubber trees. It is incredibly soft, durable and the natural latex provides superior anti-microbial features. Best for tummy and back sleepers.
         .accessories-card__footer
@@ -11,7 +11,7 @@ mixin accessories-card(props={})
             .modal-content
                 .modal-info
                     .modal-info__text
-                        .modal-info__title Plush Latex Pillow
+                        .modal-info__title!= props.title
                         .content
                             p A pillow made of sustainable Talalay latex sourced from rubber trees. It is incredibly soft, durable and the natural latex provides superior anti-microbial features. Best for tummy and back sleepers.
                             h6 PRODUCT FEATURES:

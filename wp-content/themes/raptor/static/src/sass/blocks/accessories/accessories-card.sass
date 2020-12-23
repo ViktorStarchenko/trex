@@ -15,6 +15,14 @@
         width: calc( 100% - 32px )
     &__img
         margin-bottom: 40px
+        height: 150px
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        img
+            max-height: 100%
+            object-fit: contain
     &__title
         font-family: $f-1
         font-size: 26px
@@ -23,6 +31,10 @@
         letter-spacing: 0.35px
         color: $main
         margin-bottom: 10px
+        display: flex
+        align-items: flex-start
+        +rm(550)
+            min-height: 57px
     &__text
         font-family: $f-1
         font-size: 18px
