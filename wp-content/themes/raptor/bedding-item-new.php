@@ -156,7 +156,7 @@ $footer_block = get_field('footer_block',$bedding_page->ID);
                             $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID()), 'large' );
                             ?>
                             <div class="accessories-card">
-                                <div class="accessories-card__img"><img src="<?= $image[0] ?? '' ?>" srcset="<?= $image[0] ?? '' ?> 2x"/>
+                                <div class="accessories-card__img"><img src="<?= $image[0] ?? '' ?>" />
                                 </div>
                                 <div class="accessories-card__title"><?= get_the_title(get_the_ID()); ?></div>
                                 <div class="accessories-card__text">
