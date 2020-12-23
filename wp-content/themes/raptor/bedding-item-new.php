@@ -60,10 +60,10 @@ $total_pages = $promo_query->max_num_pages;
 
 ?>
 <?php
-$bedding_page = get_page_by_path( 'bedding-new' );
+$bedding_page = get_page_by_path( 'bedding' );
 $hero = get_field('hero', $bedding_page->ID);
 $popup_cta = get_field('popup_cta', $bedding_page->ID);
-$footer_block = get_field('footer_block', $bedding_page->ID);
+$footer_block = get_field('footer_block',$bedding_page->ID);
 ?>
 
     <div class="main">

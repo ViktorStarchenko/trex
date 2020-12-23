@@ -6,7 +6,7 @@
 ?>
 <?php get_header(); ?>
 <?php
-//$currentCat = get_queried_object();
+$currentCat = get_queried_object();
 
 $beddingCategory = get_category_by_slug('bedding');
 $beddingsArgs = [
@@ -49,7 +49,7 @@ $retailers = get_posts($args);
 $paged = get_query_var('paged') ? get_query_var('paged') : 1;
 
 $promo_query = new WP_Query(array(
-    'category_name' => $beddingCategory->slug,
+    'category_name' => $currentCat->post_name,
     'posts_per_page' => 12,
     'paged' => $paged,
     'post_status' => 'publish',
@@ -105,7 +105,7 @@ $footer_block = get_field('footer_block');
                                                 ?>
                                                 <li class="filter-drop__item js-drop-filter-item ">
                                                     <!--<a href="<?/*= get_category_link($category_id); */?>" >-->
-                                                        <input class="filter-drop__check" id="range-<?= $slug ?>" type="checkbox" <?php echo $beddingCategory->slug == $slug ? 'checked' : ''?> name="range-acc" value="<?= $category_id ?>" >
+                                                        <input class="filter-drop__check" id="range-<?= $slug ?>" type="checkbox" <?php echo $currentCat->post_name == $slug ? 'checked' : ''?> name="range-acc" value="<?= $category_id ?>" >
                                                     <label class="filter-drop__label" for="range-<?= $slug ?>"><a href="<?= get_category_link($category_id); ?>" ><?= $slug == 'bedding' ? 'All' : ucfirst($slug) ?></a></label>
                                                   <!--  </a>-->
                                                 </li>

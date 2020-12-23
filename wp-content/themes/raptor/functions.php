@@ -3440,7 +3440,7 @@ function paginate_bedding() {
     ));
 
     $total_pages = $promo_query->max_num_pages;
-    $bedding_page = get_page_by_path( 'bedding-new' );
+    $bedding_page = get_page_by_path( 'bedding' );
     $popup_cta = get_field('popup_cta', $bedding_page->ID);
     ob_start();
     ?>
