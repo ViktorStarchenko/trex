@@ -186,7 +186,7 @@ $footer_block = get_field('footer_block',$bedding_page->ID);
                                                 </div>
                                             </div>
                                             <div class="modal-info__img">
-                                                <div class="modal-info-img"><img src="<?= $image[0] ?? '' ?>" srcset="<?= $image[0] ?? '' ?> 2x"/>
+                                                <div class="modal-info-img"><img src="<?= $image[0] ?? '' ?>" />
                                                 </div>
                                             </div>
                                         </div>
