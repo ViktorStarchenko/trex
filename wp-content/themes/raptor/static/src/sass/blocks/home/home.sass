@@ -210,7 +210,6 @@
 		position: relative
 		padding: 0 20px
 		line-height: calc(22/18)
-		cursor: pointer
 	&__check
 		position: absolute
 		width: 1px
@@ -229,6 +228,7 @@
 		position: relative
 		padding-left: 33px
 		display: block
+		cursor: pointer
 		&::before
 			content: ''
 			display: block
@@ -250,6 +250,14 @@
 			opacity: 0
 			transform: scale(0.5)
 			transition: opacity .2s, transform .2s
+		a
+			display: block
+			width: 100%
+			height: 100%
+			position: absolute
+			left: 0
+			top: 0
+			z-index: 2
 
 .filter-drop__item + .filter-drop__item
 	margin-top: 10px
