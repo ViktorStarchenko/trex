@@ -104,8 +104,8 @@ $footer_block = get_field('footer_block',$bedding_page->ID);
                                                   }*/
                                                 ?>
                                                 <li class="filter-drop__item js-drop-filter-item ">
-                                                    <input class="filter-drop__check" id="range-<?= $slug ?>" type="checkbox" <?php echo $currentCat->post_name == $slug ? 'checked' : ''?> name="range-acc" value="<?= $category_id ?>" >
-                                                    <label class="filter-drop__label" for="range-<?= $slug ?>"><a href="<?= get_category_link($category_id); ?>" ><?= $slug == 'bedding' ? 'All' : ucfirst($slug) ?></a></label>
+                                                    <input class="filter-drop__check" id="range-<?= $slug ?>" type="radio" <?php echo $currentCat->post_name == $slug ? 'checked' : ''?> name="range-acc" value="<?= $category_id ?>" >
+                                                    <label class="filter-drop__label" for="range-<?= $slug ?>"><?= $slug == 'bedding' ? 'All' : ucfirst($slug) ?><a href="<?= get_category_link($category_id); ?>" ></a></label>
                                                 </li>
                                             <?php endforeach; ?>
                                             </li>
