@@ -22,9 +22,15 @@ export default function textCollapseInit() {
 					let svgObjectDoc = svgObject.contentDocument;
 					svgIcon = svgObjectDoc.querySelector('svg');
 					svgIconElems = [...svgIcon.querySelectorAll('*')];
+					let svgIconStyles = [...svgIcon.querySelectorAll('style')];
+					console.log(svgIconStyles);
+					svgIconStyles.remove();
 					svgIcon.setAttribute('fill', '#ffffff');
 					svgIconElems.forEach(el => {
 						el.setAttribute('fill', '#ffffff');
+					});
+					svgIconStyles.forEach(el => {
+						el.remove();
 					});
 				}
 
