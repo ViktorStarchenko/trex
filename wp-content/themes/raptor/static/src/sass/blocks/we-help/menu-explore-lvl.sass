@@ -58,6 +58,13 @@
         padding-bottom: 30px
         padding-right: 20px
         overflow-y: auto
+        /*IE and Edge*/
+        -ms-overflow-style: none
+        /*Firefox*/
+        scrollbar-width: none
+        /*Chrome, Safari, Opera*/
+        &::-webkit-scrollbar
+            display: none
         +rm(769)
             max-width: 490px
 

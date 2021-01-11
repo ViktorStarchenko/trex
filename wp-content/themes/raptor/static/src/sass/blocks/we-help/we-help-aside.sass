@@ -21,6 +21,13 @@
         padding: 20px 50px
         transition: transform 0.3s ease, opacity 0.2s ease
         overflow-y: auto
+        /*IE and Edge*/
+        -ms-overflow-style: none
+        /*Firefox*/
+        scrollbar-width: none
+        /*Chrome, Safari, Opera*/
+        &::-webkit-scrollbar
+            display: none
         +r(1200)
             padding: 20px 30px
         &.active
