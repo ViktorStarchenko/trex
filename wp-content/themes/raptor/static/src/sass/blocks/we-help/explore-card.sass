@@ -10,13 +10,7 @@
         justify-content: space-between
         align-items: flex-start
     &__info
-        padding-right: 20px
-        padding-bottom: 10px
-        width: calc(100% - 190px)
-        flex-grow: 1
-        min-width: 260px
-        +r(768)
-            padding-bottom: 0
+        width: 100%
     &__title
         font-family: $f-1
         font-size: 30px
@@ -36,10 +30,9 @@
         +r(768)
             font-size: 15px
     &__bttns
-        flex-shrink: 0
-        padding-top: 10px
+        margin-top: 20px
     &__link
-        display: block
+        display: inline-block
         text-decoration: none
         font-size: 16px
         font-weight: normal
@@ -51,6 +44,4 @@
         text-transform: uppercase
 
 .explore-card + .explore-card
-    margin-top: 50px
-    +r(768)
-        margin-top: 30px
+    margin-top: 27px
