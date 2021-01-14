@@ -67,7 +67,7 @@ $paged = get_query_var('paged') ? get_query_var('paged') : 1;
 $promo_query = new WP_Query(array(
     'category_name' => 'special-offers',
     'meta_query' => $metaQuery,
-    'posts_per_page' => 8,
+    'posts_per_page' => -1,
     'paged' => $paged,
     'post_status' => 'publish',
 ));
