@@ -66,8 +66,13 @@
                         margin-bottom: 10px
                     input
                         visibility: hidden
+                    input[type="checkbox"],
+                    input[type="radio"]
+                        position: absolute
                     label
                         padding-left: 30px
+                        position: relative
+                        display: block
                         &::before
                             content: ''
                             display: block
@@ -98,8 +103,9 @@
     .gform_footer
         padding-left: 7.5px !important
         padding-right: 7.5px !important
-        .gform_button.button
-            padding: 20px
+        .gform_button.button,
+        input[type="submit"],
+            padding: 19px 20px
             font-size: 16px
             font-weight: normal
             line-height: 0.81 !important
@@ -123,6 +129,8 @@
                 &:hover
                     color: $main
                     background: $white
+        .bttn
+            padding: 19px 20px
 
     .text-limit
         position: relative
@@ -147,3 +155,26 @@
         right: 16px
         bottom: 8px
         font-size: 14px
+
+._custom-sleep-selector-form
+    .gravity-form
+        .gform_body
+            max-width: 600px
+            margin: 0 auto
+        .gform_footer
+            display: flex
+            flex-flow: row wrap
+            input[type="submit"],
+            button,
+            .button,
+            .bttn
+                height: auto !important
+                width: auto !important
+                flex-grow: 1
+                margin: 5px !important
+                max-width: 350px
+                padding: 10px 20px
+                min-height: 52px !important
+                display: inline-flex
+                align-items: center
+                justify-content: center

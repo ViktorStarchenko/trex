@@ -4831,9 +4831,13 @@ ul.page-numbers li a.page-numbers.prev {
 .modal-container .modal-close-btn{
     z-index: 10;
 }
+
+/*
+it breaks everything (´･_･`)
 #gform_submit_button_52{
     margin-top: 0px !important;
     color: #472E8C!important;
     background-color: #ffffff!important;
     height: 44px!important;
 }
+*/
