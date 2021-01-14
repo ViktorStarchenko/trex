@@ -102,6 +102,7 @@ function filterBeddingRetailer (paged) {
         retIdsArr.push(jQuery(this).val());
     });
     var $content = jQuery('.dynamic-ajax-content');
+    var catId = jQuery('input:radio[name=range-acc]:checked').val();
 
     jQuery.ajax({
         type : 'post',
@@ -109,6 +110,7 @@ function filterBeddingRetailer (paged) {
         data : {
             action : 'filter_bedding',
             retId : retIdsArr,
+            catId : catId,
             paged: paged
         },
         beforeSend: function() {

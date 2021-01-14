@@ -3528,8 +3528,7 @@ add_action( 'wp_ajax_nopriv_filter_bedding', 'filter_bedding' );
 
 function filter_bedding() {
     $retIds = $_POST['retId'] ?? null;
-    $beddingCategory = get_category_by_slug('bedding');
-
+    $catId = $_POST['catId'];
     $paged = $_POST['paged'];
 
     $metaQuery = [];
@@ -3555,7 +3554,7 @@ function filter_bedding() {
         ));
     } else {
         $promo_query = new WP_Query(array(
-            'category_name' => 'bedding',
+            'cat' => intval($catId),
             'posts_per_page' => 12,
             'paged' => $paged,
             'post_status' => 'publish',
