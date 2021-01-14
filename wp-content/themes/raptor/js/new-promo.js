@@ -51,7 +51,7 @@ function filterRange (paged) {
 function filterBedding (paged) {
     var catId;
 
-    catId = jQuery('input:checkbox[name=range-acc]:checked').val();
+    catId = jQuery('input:radio[name=range-acc]:checked').val();
 
     var $content = jQuery('.dynamic-ajax-content');
 
