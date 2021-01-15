@@ -6,7 +6,10 @@
 ?>
 <?php get_header(); ?>
 <?php
-
+$preselected_range_id = null;
+if (isset($_GET['r'])) {
+    $preselected_range_id = $_GET['r'];
+}
 $matressesCategory = get_category_by_slug('products');
 $matressesArgs = [
     'numberposts' => -1,
@@ -48,7 +51,13 @@ $baseQuery = [
 ];
 
 $metaQuery[] = $baseQuery;
-
+if (isset($preselected_range_id)) {
+    $metaQuery[] =  [
+        'key'     => 'range',
+        'value'   => '"' . $preselected_range_id . '"',
+        'compare' => 'LIKE',
+    ];
+}
 
 
 $args = [
@@ -192,7 +201,7 @@ $footer_block = get_field('footer_block');
                                             }
                                             ?>
                                             <li class="filter-drop__item js-drop-filter-item ">
-                                                <input class="filter-drop__check" id="range-<?= $key ?>" type="checkbox" name="range" value="<?= $matresse->ID ?>" >
+                                                <input class="filter-drop__check" id="range-<?= $key ?>" type="checkbox" <?= $matresse->ID == $preselected_range_id ? ' checked="checked"' : ''?> name="range" value="<?= $matresse->ID ?>" >
                                                 <label class="filter-drop__label" for="range-<?= $key ?>"><?= $matresse->post_title ?></label>
                                             </li>
                                         <?php endforeach; ?>

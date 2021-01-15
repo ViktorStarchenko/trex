@@ -8,6 +8,10 @@ if (isset($_GET['retailer_id'])) {
 }
 
 $postId = null;
+$preselected_range_id = null;
+if (isset($_GET['r'])) {
+    $preselected_range_id = $_GET['r'];
+}
 if (isset($_GET['post_id'])) {
     $postId = $_GET['post_id'];
 } else if (isset($_GET['range'])) {
@@ -165,7 +169,7 @@ ob_start();
                                         <ul class="filter-drop">
                                             <?php foreach ($matresses as $key => $matresse): ?>
                                                 <li class="filter-drop__item js-drop-filter-item  <?= $matresse->ID == $postId ? ' active' : '' ?>">
-                                                    <input class="filter-drop__check" id="range-<?= $key ?>" type="checkbox" name="range" value="<?= $matresse->ID ?>" <?= $matresse->ID == $postId ? ' checked="checked"' : '' ?>>
+                                                    <input class="filter-drop__check" id="range-<?= $key ?>" type="checkbox" name="range" value="<?= $matresse->ID ?>" <?= ($matresse->ID == $postId) || ($matresse->ID == $preselected_range_id) ? ' checked="checked"' : '' ?>>
                                                     <label class="filter-drop__label" for="range-<?= $key ?>"><?= $matresse->post_title ?></label>
                                                 </li>
                                             <?php endforeach; ?>

@@ -1,4 +1,7 @@
-<?php /* Template Name: Mattresses New */ ?>
+<?php /*
+ * Template Name: Mattresses New
+ * Template Post Type: post
+ */ ?>
 <?php add_action('wp_head', 'add_reviews_js'); ?>
 <?php get_header() ?>
 <?php
@@ -129,10 +132,13 @@ $complete_cards = get_field('complete_card');
 						<?php $where_to_buy = $technology['where_to_buy']; ?>
 						<h2><?= $where_to_buy['title'] ?? '' ?></h2>
 						<p><?= $where_to_buy['text'] ?? '' ?></p>
+                        <?php
+                                $range_id = get_queried_object_id();
+                        ?>
 						<div class="bttn-row">
 							<?php if(!empty($where_to_buy['buttons'])) :?>
 								<?php foreach ($where_to_buy['buttons'] as $button) :?>
-									<a class="bttn bttn--border" href="<?= $button['link']['url'] ?? ''?>"><?= $button['link']['title'] ?? ''?></a>
+									<a class="bttn bttn--border" href="<?= $button['link']['url'].'?r='.$range_id ?? ''?>"><?= $button['link']['title'] ?? ''?></a>
 								<?php endforeach;?>
 							<?php endif; ?>
 						</div>

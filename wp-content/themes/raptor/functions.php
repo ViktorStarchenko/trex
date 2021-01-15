@@ -302,7 +302,6 @@ if (!is_admin()) {
     wp_enqueue_script( 'browser', get_template_directory_uri() . '/js/browser.js', ['jquery'], false, true);
     wp_enqueue_script( 'promo', get_template_directory_uri() . '/js/new-promo.js', ['jquery'], false, true);
     wp_enqueue_script( 'slider', get_template_directory_uri() . '/js/resources/carousel/bootstrap.min.js', ['jquery'], false, true);
-    wp_enqueue_script( 'custom', get_template_directory_uri() . '/js/resources/custom.js', ['jquery'], false, true);
     wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/js/fancybox/jquery.fancybox.min.js', ['jquery'], false, true);
 
     wp_enqueue_script( 'owl', get_template_directory_uri() . '/js/owl.carousel.min.js', ['jquery'], false, true);
