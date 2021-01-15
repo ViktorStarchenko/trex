@@ -303,7 +303,7 @@ if (!is_admin()) {
     wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/js/fancybox/jquery.fancybox.min.js', ['jquery'], false, true);
 
     wp_enqueue_script( 'owl', get_template_directory_uri() . '/js/owl.carousel.min.js', ['jquery'], false, true);
-    wp_enqueue_script( 'wpsl-gmap', ( 'https://maps.google.com/maps/api/js' . wpsl_get_gmap_api_params( 'browser_key' ) . '' ), '', null, true );
+    //wp_enqueue_script( 'wpsl-gmap', ( 'https://maps.google.com/maps/api/js' . wpsl_get_gmap_api_params( 'browser_key' ) . '' ), '', null, true );
     wp_enqueue_script('main-scripts', get_template_directory_uri() . '/js/scripts.min.js', ['jquery'], false, true);
     wp_dequeue_script('wpsl-js');
 
