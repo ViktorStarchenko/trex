@@ -4834,6 +4834,9 @@ ul.page-numbers li a.page-numbers.prev {
 .main .content-center h4 {
     font-size: 30px;
 }
+.main .comparison-grid .comparison-card__title {
+    font-family: NewzaldWeb-Book,serif;
+}
 /*
 it breaks everything (´･_･`)
 #gform_submit_button_52{
