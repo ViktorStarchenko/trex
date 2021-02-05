@@ -4836,6 +4836,7 @@ ul.page-numbers li a.page-numbers.prev {
 }
 .main .comparison-grid .comparison-card__title {
     font-family: NewzaldWeb-Book,serif;
+    letter-spacing: normal;
 }
 /*
 it breaks everything (´･_･`)
