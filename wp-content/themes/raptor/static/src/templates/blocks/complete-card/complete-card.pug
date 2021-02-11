@@ -3,8 +3,8 @@ mixin complete-card(props={title: 'title'})
         .complete-card__img
             +img(`../img/complete-card/${props.img}`, 'png')
         .complete-card__title!= props.title
-            if props.subtitle
-                span.complete-card__subtitle!= props.subtitle
+        if props.subtitle
+            span.complete-card__subtitle!= props.subtitle
         p.complete-card__text Lorem ipsum dolor sit amet, tellus id, vestibulum habitasse iaculis, dolor nunc, lacinia maecen.
         if props.bttn
             a.bttn(href="#")!= props.bttn
