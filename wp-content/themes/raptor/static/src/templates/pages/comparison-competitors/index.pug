@@ -1,0 +1,191 @@
+extends /layout
+
+block head
+    - page.title = 'Comparison'
+
+block content
+    .hero-screen
+        picture.hero-screen__pictire
+            source(media="(max-width: 768px)", srcset=`../img/comparison/comparison-mob.jpg 1x, ../img/comparison/comparison-mob@2x.jpg 2x`)
+            +img('../img/comparison/comparison-desc', 'jpg')
+        .hero-screen__title Find your perfect <br/> Sleep Solution
+    .container
+        .comparison-wrap
+            .content-center
+                h4 Explore our Mattresses
+                p We've taken more than 100 years of sleep obsession to turn a beautiful dream into reality. Nestle into a mattress with rich, quality fabric that integrates the latest technology designed to give you a superior sleep.
+            .comparison-table-wrap
+                .comparison-table
+                    .comparison-table__row
+                        .comparison-table__parameter
+                            .comparison-table__heading Queen size mattress comparison
+                            .comparison-table__title Price
+                        .comparison-table__matching
+                            .comparison-table__cell(style="background-color: #2e1a47;")
+                                .comparison-table__brand
+                                    img(src="../img/logo-white.svg", alt="")
+                                .comparison-table__price $1500
+                            .comparison-table__cell(style="background-color: #d9d9d9;")
+                                .comparison-table__brand Tempur
+                                .comparison-table__price $2500 - $4000+
+                            .comparison-table__cell(style="background-color: #e5e4e4;")
+                                .comparison-table__brand Ecosa
+                                .comparison-table__price $2500 - $4000+
+                    .comparison-table__row
+                        .comparison-table__parameter
+                            .comparison-table__subtitle Promotion
+                        .comparison-table__matching
+                            .comparison-table__cell(style="background-color: #2e1a47;")
+                                .comparison-table__text $200 off
+                            .comparison-table__cell(style="background-color: #d9d9d9;")
+                                .comparison-table__text Retailer's discretion
+                            .comparison-table__cell(style="background-color: #e5e4e4;")
+                                .comparison-table__text Retailer's discretion
+                    .comparison-table__row
+                        .comparison-table__parameter
+                            .comparison-table__title Features
+                        .comparison-table__matching.empty-matching
+                            .comparison-table__cell(style="background-color: #2e1a47;")
+                            .comparison-table__cell(style="background-color: #d9d9d9;")
+                            .comparison-table__cell(style="background-color: #e5e4e4;")
+                    .comparison-table__row
+                        .comparison-table__parameter
+                            .comparison-table__subtitle Open Cell Foam
+                        .comparison-table__matching
+                            .comparison-table__cell(style="background-color: #2e1a47;")
+                                .comparison-table-icon.plus
+                                    .comparison-table-icon.plus
+
+                            .comparison-table__cell(style="background-color: #d9d9d9;")
+                                .comparison-table-icon.minus
+                                    span.comparison-table-icon__symbol -
+                            .comparison-table__cell(style="background-color: #e5e4e4;")
+                                .comparison-table-icon.minus
+                                    span.comparison-table-icon__symbol -
+                    .comparison-table__row
+                        .comparison-table__parameter
+                            .comparison-table__subtitle Adjustable Firmness
+                        .comparison-table__matching
+                            .comparison-table__cell(style="background-color: #2e1a47;")
+                                .comparison-table-icon.plus
+                                    span.comparison-table-icon__symbol +
+                            .comparison-table__cell(style="background-color: #d9d9d9;")
+                                .comparison-table-icon.minus
+                                    span.comparison-table-icon__symbol -
+                            .comparison-table__cell(style="background-color: #e5e4e4;")
+                                .comparison-table-icon.minus
+                                    span.comparison-table-icon__symbol -
+                    .comparison-table__row
+                        .comparison-table__parameter
+                            .comparison-table__subtitle Ergonomic Support Foam
+                        .comparison-table__matching
+                            .comparison-table__cell(style="background-color: #2e1a47;")
+                                .comparison-table-icon.plus
+                                    span.comparison-table-icon__symbol +
+                            .comparison-table__cell(style="background-color: #d9d9d9;")
+                                .comparison-table-icon.minus
+                                    span.comparison-table-icon__symbol -
+                            .comparison-table__cell(style="background-color: #e5e4e4;")
+                                .comparison-table-icon.minus
+                                    span.comparison-table-icon__symbol -
+                    .comparison-table__row
+                        .comparison-table__parameter
+                            .comparison-table__subtitle No Partner Disturbance
+                        .comparison-table__matching
+                            .comparison-table__cell(style="background-color: #2e1a47;")
+                                .comparison-table-icon.plus
+                                    span.comparison-table-icon__symbol +
+                            .comparison-table__cell(style="background-color: #d9d9d9;")
+                                .comparison-table-icon.plus
+                                    span.comparison-table-icon__symbol +
+                            .comparison-table__cell(style="background-color: #e5e4e4;")
+                                .comparison-table-icon.plus
+                                    span.comparison-table-icon__symbol +
+                    .comparison-table__row
+                        .comparison-table__parameter
+                            .comparison-table__subtitle Self-Assembly
+                        .comparison-table__matching
+                            .comparison-table__cell(style="background-color: #2e1a47;")
+                                .comparison-table-icon.plus
+                                    span.comparison-table-icon__symbol +
+                            .comparison-table__cell(style="background-color: #d9d9d9;")
+                                .comparison-table-icon.minus
+                                    span.comparison-table-icon__symbol -
+                            .comparison-table__cell(style="background-color: #e5e4e4;")
+                                .comparison-table-icon.minus
+                                    span.comparison-table-icon__symbol -
+                    .comparison-table__row
+                        .comparison-table__parameter
+                            .comparison-table__title Terms
+                        .comparison-table__matching.empty-matching
+                            .comparison-table__cell(style="background-color: #2e1a47;")
+                            .comparison-table__cell(style="background-color: #d9d9d9;")
+                            .comparison-table__cell(style="background-color: #e5e4e4;")
+                    .comparison-table__row
+                        .comparison-table__parameter
+                            .comparison-table__subtitle Free Shipping
+                        .comparison-table__matching
+                            .comparison-table__cell(style="background-color: #2e1a47;")
+                                .comparison-table-icon.plus
+                                    span.comparison-table-icon__symbol +
+                            .comparison-table__cell(style="background-color: #d9d9d9;")
+                                .comparison-table-icon.minus
+                                    span.comparison-table-icon__symbol -
+                            .comparison-table__cell(style="background-color: #e5e4e4;")
+                                .comparison-table-icon.minus
+                                    span.comparison-table-icon__symbol -
+                    .comparison-table__row
+                        .comparison-table__parameter
+                            .comparison-table__subtitle Free Returns
+                        .comparison-table__matching
+                            .comparison-table__cell(style="background-color: #2e1a47;")
+                                .comparison-table-icon.plus
+                                    span.comparison-table-icon__symbol +
+                            .comparison-table__cell(style="background-color: #d9d9d9;")
+                                .comparison-table-icon.minus
+                                    span.comparison-table-icon__symbol -
+                            .comparison-table__cell(style="background-color: #e5e4e4;")
+                                .comparison-table-icon.plus
+                                    span.comparison-table-icon__symbol +
+                    .comparison-table__row
+                        .comparison-table__parameter
+                            .comparison-table__subtitle Ergonomic Support Foam
+                        .comparison-table__matching
+                            .comparison-table__cell(style="background-color: #2e1a47;")
+                                .comparison-table-icon.plus
+                                    span.comparison-table-icon__symbol +
+                            .comparison-table__cell(style="background-color: #d9d9d9;")
+                                .comparison-table-icon.minus
+                                    span.comparison-table-icon__symbol -
+                            .comparison-table__cell(style="background-color: #e5e4e4;")
+                                .comparison-table-icon.minus
+                                    span.comparison-table-icon__symbol -
+                    .comparison-table__row
+                        .comparison-table__parameter
+                            .comparison-table__subtitle No Partner Disturbance
+                        .comparison-table__matching
+                            .comparison-table__cell(style="background-color: #2e1a47;")
+                                .comparison-table-icon.plus
+                                    span.comparison-table-icon__symbol +
+                            .comparison-table__cell(style="background-color: #d9d9d9;")
+                                .comparison-table-icon.minus
+                                    span.comparison-table-icon__symbol -
+                            .comparison-table__cell(style="background-color: #e5e4e4;")
+                                .comparison-table-icon.minus
+                                    span.comparison-table-icon__symbol -
+                    .comparison-table__row
+                        .comparison-table__parameter
+                            .comparison-table__subtitle Self-Assembly
+                        .comparison-table__matching
+                            .comparison-table__cell(style="background-color: #2e1a47;")
+                                .comparison-table-icon.plus
+                                    span.comparison-table-icon__symbol +
+                            .comparison-table__cell(style="background-color: #d9d9d9;")
+                                .comparison-table-icon.minus
+                                    span.comparison-table-icon__symbol -
+                            .comparison-table__cell(style="background-color: #e5e4e4;")
+                                .comparison-table-icon.minus
+                                    span.comparison-table-icon__symbol -
+        .swap-card-wrap
+            +swap-card
+            //- +swap-card

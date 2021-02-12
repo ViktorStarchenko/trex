@@ -1,0 +1,144 @@
+.comparison-table
+    &__row
+        display: flex
+        flex-flow: row wrap
+    &__parameter
+        padding: 12px 0
+        padding-right: 15px
+        width: 39%
+        border-bottom: solid 1px #d2d2d2
+        +sm
+            width: 100%
+            padding: 8px 0
+            text-align: center
+            border: 0
+    &__heading
+        font-family: $f-2
+        font-size: 24px
+        font-weight: normal
+        line-height: normal
+        letter-spacing: normal
+        color: $main
+        margin-top: -7px
+        margin-bottom: 38px
+        & + .comparison-table__title
+            +sm
+                display: none
+        +sm
+            font-size: 20px
+            letter-spacing: 0.28px
+            margin-top: 0
+            margin-bottom: 24px
+            text-align: center
+    &__title
+        font-family: $f-2
+        font-size: 22px
+        font-weight: normal
+        line-height: normal
+        letter-spacing: normal
+        color: $main
+        margin-top: 14px
+        +sm
+            margin-top: 0
+    &__subtitle
+        font-family: $f-1
+        font-size: 16px
+        font-weight: normal
+        line-height: 1
+        letter-spacing: normal
+        color: #3b3b3b
+        margin: 8px 0
+        +sm
+            margin: 0
+    &__brand
+        font-size: 24px
+        font-weight: 500
+        line-height: normal
+        min-height: 31px
+        margin-top: 5px
+        +sm
+            font-size: 20px
+            min-height: 20px
+            margin-top: 10px
+            margin-bottom: 15px
+        img
+            max-height: 26px
+            +sm
+                max-height: 20px
+    &__price
+        font-size: 24px
+        font-weight: 500
+        line-height: normal
+        margin-top: auto
+        +sm
+            font-size: 16px
+            line-height: 1
+            margin-top: 0
+            margin-bottom: 10px
+    &__text
+        font-size: 16px
+        font-weight: 500
+        line-height: 1
+        +sm
+            font-size: 14px
+            line-height: 1.14
+    &__matching
+        display: flex
+        width: 61%
+        &.empty-matching
+            +sm
+                display: none
+        +sm
+            width: 100%
+    &__cell
+        font-family: 'CalibreWeb-Medium', sans-serif
+        text-align: center
+        padding: 12px
+        background-color: #e5e4e4
+        color: #3c3c3c
+        flex-grow: 1
+        width: 33.33%
+        min-width: 230px
+        border-bottom: solid 1px #d2d2d2
+        font-size: 0
+        display: flex
+        flex-flow: column nowrap
+        justify-content: center
+        align-items: center
+        +sm
+            min-height: 35px
+            min-width: 110px
+            padding: 2px 12px
+        &:first-child
+            background-color: $main
+            color: #fff
+        .comparison-table-icon
+            +sm
+                margin-top: 14px
+                margin-bottom: 13px
+
+.comparison-table-wrap
+    width: 100%
+    max-width: 1265px
+    margin: 40px auto 50px
+    overflow-x: auto
+
+.comparison-table-icon
+    display: inline-flex
+    justify-content: center
+    align-items: center
+    border-radius: 50%
+    width: 30px
+    height: 30px
+    padding: 3px
+    &__symbol
+        display: block
+        font-size: 40px
+        line-height: 30px
+        font-weight: bold
+    &.plus
+        background: #fff
+        color: #5a3588
+    &.minus
+        background: #bcbcbc
+        color: #505050

@@ -28,3 +28,6 @@ PageList:
 - file: /test-form/
   name: test-form
   ready: 1
+- file: /comparison-competitors/
+  name: comparison-competitors
+  ready: 1
