@@ -152,7 +152,7 @@ if ($collectionsPage) {
                         <?php if($collectionsPage) : ?>
                             <?php if(!empty($posts)) : ?>
                                 <?php foreach ($posts as $post) : ?>
-                                    <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID) );?>
+                                    <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );?>
                                     <div class="accessories-card">
                                         <div class="accessories-card__img"><img src="<?= $image[0] ?? '' ?>" />
                                         </div>
