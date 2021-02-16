@@ -3445,6 +3445,7 @@ function paginate_bedding() {
         'paged' => $paged,
         'post_status' => 'publish',
         'posts_per_page' => 12,
+        'post__not_in' => [23165, 5087, 5093, 5095, 9991, 9993],
     ));
 
     $total_pages = $promo_query->max_num_pages;
@@ -3559,6 +3560,7 @@ function filter_bedding() {
             'posts_per_page' => 12,
             'paged' => $paged,
             'post_status' => 'publish',
+            'post__not_in' => [23165, 5087, 5093, 5095, 9991, 9993],
         ));
     } else {
         $promo_query = new WP_Query(array(
@@ -3566,6 +3568,7 @@ function filter_bedding() {
             'posts_per_page' => 12,
             'paged' => $paged,
             'post_status' => 'publish',
+            'post__not_in' => [23165, 5087, 5093, 5095, 9991, 9993],
         ));
     }
 
