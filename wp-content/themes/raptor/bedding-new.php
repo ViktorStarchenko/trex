@@ -54,6 +54,7 @@ $promo_query = new WP_Query(array(
     'posts_per_page' => 12,
     'paged' => $paged,
     'post_status' => 'publish',
+    'post__not_in' => [23165, 5087, 5093, 5095, 9991, 9993],
 ));
 $big = 99999999999999;
 $total_posts = $promo_query->found_posts;
