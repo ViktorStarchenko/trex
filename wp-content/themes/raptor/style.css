@@ -4838,6 +4838,10 @@ ul.page-numbers li a.page-numbers.prev {
     font-family: NewzaldWeb-Book,serif;
     letter-spacing: normal;
 }
+.main .comparison-table__cell:nth-child(2n) {
+    background-color: #d9d9d9;
+    color: #3c3c3c;
+}
 /*
 it breaks everything (´･_･`)
 #gform_submit_button_52{
