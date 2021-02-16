@@ -4497,7 +4497,7 @@ ul.page-numbers li .page-numbers {
     align-items: center;
     text-decoration: none;
 }
-.promotions-footer ul.page-numbers {
+.promotions-footer ul.page-numbers, .accessories-footer ul.page-numbers {
     display: flex;
     margin-left: auto;
 }
@@ -4505,7 +4505,7 @@ ul.page-numbers li span.page-numbers.current {
     border-color: #2e1a47;
     z-index: 1;
 }
-.promotions-footer ul.page-numbers li span.page-numbers.current {
+.promotions-footer ul.page-numbers li span.page-numbers.current, .accessories-footer ul.page-numbers li span.page-numbers.current {
     color: #404041;
     border: 1px solid #2e1a47;
 }
@@ -4518,4 +4518,15 @@ ul.page-numbers li a.page-numbers.prev {
 .yotpo-bottomline-box-2 .yotpo-star-distribution .yotpo-distibutions-stars .review-stars{
     display: flex !important;
     width: auto;
+}
+.main .accessories-footer {
+    max-width: 1250px;
+    margin: 40px auto 80px;
+    display: flex;
+}
+.modal-container.js-modal-container:not(.is-hidden) {
+    z-index: 100;
+}
+.modal-container .modal-close-btn{
+    z-index: 10;
 }
