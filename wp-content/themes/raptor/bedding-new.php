@@ -144,7 +144,7 @@ $footer_block = get_field('footer_block');
                 <div class="promotions-tile-wrap">
                     <div class="promotions-tile">
                         <?php while($promo_query->have_posts()) : $promo_query->the_post();
-                            $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID()));
+                            $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID()), 'large' );
                             ?>
                             <div class="accessories-card">
                                 <div class="accessories-card__img"><img src="<?= $image[0] ?? '' ?>"/>
