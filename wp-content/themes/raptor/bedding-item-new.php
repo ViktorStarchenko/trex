@@ -63,7 +63,11 @@ $total_pages = $promo_query->max_num_pages;
 ?>
 <?php
 $bedding_page = get_page_by_path( 'bedding');
-$hero = get_field('hero', $bedding_page->ID);
+
+$hero_main = get_field('hero', $bedding_page->ID);
+$hero_current_category = get_field('hero');
+$hero = !empty($hero_current_category['title']) && !empty($hero_current_category['text']) ? $hero_current_category : $hero_main;
+
 $popup_cta = get_field('popup_cta', $bedding_page->ID);
 $footer_block = get_field('footer_block',$bedding_page->ID);
 if ($collectionsPage) {
