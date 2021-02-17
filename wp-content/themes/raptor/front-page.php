@@ -128,7 +128,7 @@ $reviews_title = $yotpo['items']['reviews_title'];
                         <h6><?= $promo_block['items']['top']['subtitle'] ?? ''?></h6>
                         <h2><?= $promo_block['items']['top']['title'] ?? ''?></h2>
                         <p>
-                            <?= $promo_block['items']['items']['top']['text'] ?? ''?>
+                            <?= $promo_block['items']['top']['text'] ?? ''?>
                         </p><a class="bttn bttn--bg" href="<?= $promo_block['items']['top']['cta']['url'] ?? ''?>"><?= $promo_block['items']['top']['cta']['title'] ?? ''?></a>
                     </div>
                 </div>
