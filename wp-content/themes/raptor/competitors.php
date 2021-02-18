@@ -12,8 +12,6 @@ $hero = get_field('hero');
 $explore = get_field('explore');
 $cta_block = get_field('footer_cta');
 ?>
-
-
     <div class="main">
         <div class="hero-screen">
             <picture class="hero-screen__pictire">
@@ -30,16 +28,13 @@ $cta_block = get_field('footer_cta');
                 <div class="comparison-table-wrap">
                     <div class="comparison-table">
                         <?php
-                        if ( ! empty ( $header ) ) {
-
-                            foreach ( $header['body'] as $key_tr => $tr ) {
-
+                        if (!empty($header)) {
+                            foreach ($header['body'] as $key_tr => $tr) {
                                 echo '<div class="comparison-table__row">';
-
-                                foreach ( $tr as $key_td => $td ) {
+                                foreach ($tr as $key_td => $td) {
                                     if ($key_td == 0) {
                                         echo ' <div class="comparison-table__parameter">
-                                <div class="comparison-table__heading">' .  $td['c'] .
+                                                <div class="comparison-table__heading">' .  $td['c'] .
                                             '</div></div><div class="comparison-table__matching">';
                                     } else {
                                         echo '<div class="comparison-table__cell">';
@@ -48,15 +43,11 @@ $cta_block = get_field('footer_cta');
                                         echo '</div>';
                                         echo '</div>';
                                     }
-
                                 }
                                 echo '</div>';
-
                                 echo '</div>';
                             }
-
                         }?>
-
                         <?php
                         foreach ($rows as $row) {
                             $subtable = $row['row_table'];
@@ -68,7 +59,7 @@ $cta_block = get_field('footer_cta');
                                     foreach ( $subtable['header'] as $key_th => $th ) {
                                         if ($key_th == 0) {
                                             echo '<div class="comparison-table__parameter">
-                                <div class="comparison-table__title">' .  $th['c'] .
+                                                    <div class="comparison-table__title">' .  $th['c'] .
                                                 '</div></div><div class="comparison-table__matching">';
                                         } else {
                                             if ($is_price) {
@@ -84,9 +75,7 @@ $cta_block = get_field('footer_cta');
                                     }
                                     echo '</div>';
                                     echo '</div>';
-
                                 }
-
                                 foreach ( $subtable['body'] as $key_tr => $tr ) {
                                     echo '<div class="comparison-table__row">';
                                     foreach ( $tr as $key_td => $td ) {
@@ -101,17 +90,15 @@ $cta_block = get_field('footer_cta');
                                                     <div class="comparison-table__text">'.$td['c'].'</div>
                                                 </div>';
                                             } else {
-                                                echo '<div class="comparison-table__cell"><div class="comparison-table-icon plus"><span class="comparison-table-icon__symbol">+</span></div></div>';
+                                                echo '<div class="comparison-table__cell"><div class="comparison-table-icon">'.$td['c'].'</div></div>';
                                             }
                                         }
                                     }
                                     echo '</div>';
-
                                     echo '</div>';
                                 }
                             }
                         }
-
                         ?>
                     </div>
                 </div>
