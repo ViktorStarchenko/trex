@@ -22,7 +22,7 @@ jQuery(document).on( 'click', '.accessories-footer .page-numbers a.page-numbers'
 
     var paged = /[\?&]pages=(\d+)/.test( this.href ) && RegExp.$1;
     filterBedding(paged);
-
+    jQuery("body").get(0).scrollIntoView();
 });
 function filterRange (paged) {
     var matIdsArr = [];
