@@ -6,7 +6,7 @@
 <?php get_header() ?>
 <?php
 $hero = get_field('hero');
-$features = get_field('features');
+$features = get_field('product_features');
 $cards = get_field('product_cards');
 $technology = get_field('technology');
 $product_specs = get_field('product_specs');
