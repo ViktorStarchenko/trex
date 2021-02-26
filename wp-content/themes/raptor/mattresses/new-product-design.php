@@ -82,7 +82,7 @@ $complete_cards = get_field('complete_card');
                                                     <div class="advance-card__header">
                                                         <div class="advance-card__icon">
                                                         <?php if(!empty($spec['icon']) && $spec['icon'] != null) :?>
-                                                            <object data="<?= $spec['icon']['url'] ?>"  type="image/svg+xml" ></object>
+                                                            <img class="advance-card__img default" src="<?= $spec['icon']['url'] ?>" alt=""/><img class="advance-card__img active" src="<?= $spec['icon_active']['url'] ?>" alt=""/>
                                                         <?php endif; ?>
                                                         </div>
                                                         <div class="advance-card__title"><?= $spec['title'] ?? ''?></div>
