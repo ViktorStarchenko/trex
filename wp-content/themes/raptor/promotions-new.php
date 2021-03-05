@@ -19,6 +19,13 @@ $matressesArgs = [
 ];
 $matresses = get_posts($matressesArgs);
 
+$order_by = 'range';
+$order_by = get_field('filteredBy');
+
+if ($order_by == 'retailer') {
+    $order_by = 'retailer_groups';
+}
+
 $retailersGroupCategory = get_category_by_slug('retailer-groups');
 
 
@@ -76,6 +83,8 @@ $paged = get_query_var('paged') ? get_query_var('paged') : 1;
 $promo_query = new WP_Query(array(
     'category_name' => 'special-offers',
     'meta_query' => $metaQuery,
+    'meta_key' => $order_by,
+    'orderby' => 'meta_value',
     'posts_per_page' => -1,
     'paged' => $paged,
     'post_status' => 'publish',
