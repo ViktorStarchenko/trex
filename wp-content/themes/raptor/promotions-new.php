@@ -79,7 +79,7 @@ $retailers = get_posts($args);
 
 $paged = get_query_var('paged') ? get_query_var('paged') : 1;
 
-
+var_dump($order_by);
 $promo_query = new WP_Query(array(
     'category_name' => 'special-offers',
     'meta_query' => $metaQuery,
