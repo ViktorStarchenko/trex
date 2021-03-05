@@ -19,8 +19,7 @@ $matressesArgs = [
 ];
 $matresses = get_posts($matressesArgs);
 
-$order_by = 'range';
-$order_by = get_field('filteredBy');
+$order_by = !empty(get_field('filteredBy')) ? get_field('filteredBy') : 'range' ;
 
 if ($order_by == 'retailer') {
     $order_by = 'retailer_groups';
