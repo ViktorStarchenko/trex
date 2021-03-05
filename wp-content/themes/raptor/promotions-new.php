@@ -21,10 +21,6 @@ $matresses = get_posts($matressesArgs);
 
 $order_by = !empty(get_field('filteredBy')) ? get_field('filteredBy') : 'range' ;
 
-if ($order_by == 'retailer') {
-    $order_by = 'retailer_groups';
-}
-
 $retailersGroupCategory = get_category_by_slug('retailer-groups');
 
 
