@@ -3555,7 +3555,7 @@ function filter_bedding() {
         }
         $metaQuery[] = $retArr;
         $promo_query = new WP_Query(array(
-            'category_name' => 'bedding',
+            'cat' => intval($catId),
             'meta_query' => $retArr,
             'posts_per_page' => 12,
             'paged' => $paged,
