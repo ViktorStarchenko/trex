@@ -8,11 +8,12 @@
                 background: #2e1a47 !important
                 color: white !important
         .yotpo-regular-box
-            border-color: 1px solid rgba(46,26,71,.2) !important
+            border-color: rgba(46,26,71,.2) !important
         .yotpo-label-container
             display: none
         .bottom-line-items-container-desktop,
         .bottom-line-items-container-mobile
+            height: auto !important
             .bottom-line-items-wrapper
                 display: flex
                 position: relative
@@ -39,6 +40,7 @@
                     line-height: 1 !important
                     top: auto !important
                     left: auto !important
+                    transform: none !important
                     width: auto !important
                     height: auto !important
                     padding: 0 !important
@@ -48,11 +50,13 @@
                     margin: 15px auto 0 !important
                     padding: 0 !important
                     top: auto !important
+                    display: flex !important
                 .reviews-qa-labels-container
                     float: none !important
                     padding: 0 !important
                     position: relative !important
                     margin: 0 !important
+                    top: auto !important
                     .reviews-qa-label
                         margin: 0 !important
                         padding: 10px 0 0 !important
@@ -63,6 +67,9 @@
                 padding-left: 40px !important
                 border-left: 1px solid rgba(46,26,71,.22)
                 height: auto !important
+                +r(768)
+                    border: none !important
+                    padding: 0 !important
                 .yotpo-distribution-row
                     width: auto !important
                 .yotpo-star-distribution-score-value
