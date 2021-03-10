@@ -11,7 +11,8 @@
             border-color: 1px solid rgba(46,26,71,.2) !important
         .yotpo-label-container
             display: none
-        .bottom-line-items-container-desktop
+        .bottom-line-items-container-desktop,
+        .bottom-line-items-container-mobile
             .bottom-line-items-wrapper
                 display: flex
                 position: relative
@@ -57,13 +58,15 @@
                 float: none !important
                 padding-left: 40px !important
                 border-left: 1px solid rgba(46,26,71,.22)
+                height: auto !important
+                .yotpo-distribution-row
+                    width: auto !important
                 +r(768)
                     border: none !important
                     padding: 0 !important
                 .yotpo-star-distribution-score-value
                     color: $main !important
                     font-size: 16px !important
-                    height: 12px !important
                     border-radius: 6px
                     overflow: hidden
                 .yotpo-star-distribution-bar-score
@@ -72,6 +75,7 @@
                     border-radius: 6px
                 .yotpo-star-distribution-bar
                     width: 260px !important
+                    height: 12px !important
                     margin-right: 0 !important
                     margin-left: 20px
                     background:#e9e9e9 !important
@@ -94,6 +98,8 @@
                 .write-question-review-button-text
                     width: auto !important
                     color: $main !important
+                .write-question-review-button-icon
+                    color: $main !important
         .write-review-wrapper,
         .write-question-wrapper
             &.visible
@@ -101,7 +107,9 @@
         .new-yotpo-small-box
             margin-top: 15px
             .yotpo-nav
-                border-color: 1px solid rgba(46,26,71,.2) !important
+                border-color: rgba(46,26,71,.2) !important
+                .yotpo-nav-tab
+                    margin-bottom: -1px !important
         .yotpo-nav-content
             .free-text-search
                 width: 100% !important
