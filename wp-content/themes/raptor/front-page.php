@@ -9,6 +9,8 @@ $catalog_cards = get_field('catalog_cards');
 $yotpo = get_field('yotpo');
 $yotpo_id = $yotpo['items']['yotpo_product_id'];
 $reviews_title = $yotpo['items']['reviews_title'];
+$yotpo_api_key = $yotpo['items']['api_key'];
+$yotpo_api_secret = $yotpo['items']['api_secret'];
 ?>
 	<div class="main">
         <div class="we-help js-tabs-wrapper">
@@ -208,87 +210,112 @@ $reviews_title = $yotpo['items']['reviews_title'];
             <?php endif; ?>
         </div>
 	</div>
+<?php
+$reviews = '';
+if (empty($yotpo_id)) {
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL,"https://api.yotpo.com/oauth/token");
+    curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch, CURLOPT_POSTFIELDS,
+        "client_id=$yotpo_api_key&client_secret=$yotpo_api_secret&grant_type=client_credentials");
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+    $server_output = curl_exec($ch);
+    $response = json_decode($server_output,true);
+    $token = $response['access_token'];
+
+    if (!empty($token)) {
+        curl_setopt($ch, CURLOPT_URL,"https://api.yotpo.com/v1/apps/$yotpo_api_key/reviews?utoken=$token&page=1&count=10");
+        curl_setopt($ch, CURLOPT_POST, 0);
+        $reviews_output = curl_exec($ch);
+        $reviews_response = json_decode($reviews_output,true);
+        $reviews = $reviews_response['reviews'];
+    }
+    curl_close ($ch);
+
+} else {
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL,"https://api.yotpo.com/v1/widget/$yotpo_api_key/products/$yotpo_id/reviews.json");
+    curl_setopt($ch, CURLOPT_POST, 0);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+    $server_output = curl_exec($ch);
+    $response = json_decode($server_output,true);
+    $reviews = $response['response']['reviews'];
+    curl_close ($ch);
+}
+?>
 	<script>
-        var data = null;
-        var xhr = new XMLHttpRequest();
+        var show_all_reviews = <?php echo !empty($yotpo_id) ? 'false' : 'true'; ?>;
+        var reviews = <?= json_encode($reviews) ?>;
+        var parent = document.getElementById('home-reviews');
 
-        xhr.addEventListener("readystatechange", function () {
-            if (this.readyState === this.DONE) {
-                var responseBody = JSON.parse(this.responseText);
-                var reviews = responseBody.response.reviews;
-                var parent = document.getElementById('home-reviews');
-
-                for (var i = 0; i < reviews.length; i++) {
-                    var rating = reviews[i].score;
-                    var user = reviews[i].user.display_name;
-                    var firstLetters = user.match(/\b(\w)/g);
-                    var shortName = firstLetters.join('.');
-
-                    switch (rating) {
-                        case 1:
-                            rating_class = 'one';
-                            break;
-                        case 2:
-                            rating_class = 'two';
-                            break;
-                        case 3:
-                            rating_class = 'three';
-                            break;
-                        case 4:
-                            rating_class = 'four';
-                            break;
-                        case 5:
-                            rating_class = 'five';
-                            break;
-                        default:
-                            rating_class = 'five';
-                    }
-                    parent.innerHTML += ' <div class="swiper-slide">' +
-                        '<div class="rating-reviews-card">' +
-                        '<div class="rating-reviews-card__initials"><span>'+shortName+'</span></div>' +
-                        '<div class="rating-reviews-card__stars">' +
-                        '<ul class="rating rating--'+rating_class+'">'+
-                        '<li class="rating__item">'+
-                        '<svg class="icon star" width="22" height="22" viewBox="0 0 22 22">'+
-                        '<use xlink:href="#star"></use>'+
-                        '</svg>'+
-                        '</li>'+
-                        '<li class="rating__item">'+
-                        '	<svg class="icon star" width="22" height="22" viewBox="0 0 22 22">'+
-                        '		<use xlink:href="#star"></use>'+
-                        '	</svg>'+
-                        '</li>'+
-                        '<li class="rating__item">'+
-                        '<svg class="icon star" width="22" height="22" viewBox="0 0 22 22">'+
-                        '<use xlink:href="#star"></use>'+
-                        '</svg>'+
-                        '</li>'+
-                        '<li class="rating__item">'+
-                        '<svg class="icon star" width="22" height="22" viewBox="0 0 22 22">'+
-                        '<use xlink:href="#star"></use>'+
-                        '</svg>'+
-                        '</li>'+
-                        '<li class="rating__item">'+
-                        '<svg class="icon star" width="22" height="22" viewBox="0 0 22 22">'+
-                        '<use xlink:href="#star"></use>'+
-                        '</svg>'+
-                        '</li>'+
-                        '</ul></div>'+
-                        '<div class="rating-reviews-card__title">' + reviews[i].title + '</div>' +
-                        '<p class="rating-reviews-card__text">'+ reviews[i].content +'</p>' +
-                        '<div class="rating-reviews-card__name">'+reviews[i].user.display_name+'</div>' +
-                        '</div>' +
-                        '</div>';
-                }
+        for (var i = 0; i < reviews.length; i++) {
+            var rating = reviews[i].score;
+            var user;
+            if (show_all_reviews) {
+                user = reviews[i].name;
+            } else {
+                user = reviews[i].user.display_name;
             }
-        });
+            var firstLetters = user.match(/\b(\w)/g);
+            var shortName = firstLetters.join('.');
 
-        xhr.open("GET", "https://api.yotpo.com/v1/widget/nTvdl5HFT1TU7SIJWaQU9c4b0n2gzJx11sDi0L8B/products/"+ <?= $yotpo_id; ?> + "/reviews.json");
-        xhr.setRequestHeader("content-type", "application/json");
-
-        xhr.send(data);
-
-
-
-	</script>
+            switch (rating) {
+                case 1:
+                    rating_class = 'one';
+                    break;
+                case 2:
+                    rating_class = 'two';
+                    break;
+                case 3:
+                    rating_class = 'three';
+                    break;
+                case 4:
+                    rating_class = 'four';
+                    break;
+                case 5:
+                    rating_class = 'five';
+                    break;
+                default:
+                    rating_class = 'five';
+            }
+            parent.innerHTML += ' <div class="swiper-slide">' +
+                '<div class="rating-reviews-card">' +
+                '<div class="rating-reviews-card__initials"><span>'+shortName+'</span></div>' +
+                '<div class="rating-reviews-card__stars">' +
+                '<ul class="rating rating--'+rating_class+'">'+
+                '<li class="rating__item">'+
+                '<svg class="icon star" width="22" height="22" viewBox="0 0 22 22">'+
+                '<use xlink:href="#star"></use>'+
+                '</svg>'+
+                '</li>'+
+                '<li class="rating__item">'+
+                '	<svg class="icon star" width="22" height="22" viewBox="0 0 22 22">'+
+                '		<use xlink:href="#star"></use>'+
+                '	</svg>'+
+                '</li>'+
+                '<li class="rating__item">'+
+                '<svg class="icon star" width="22" height="22" viewBox="0 0 22 22">'+
+                '<use xlink:href="#star"></use>'+
+                '</svg>'+
+                '</li>'+
+                '<li class="rating__item">'+
+                '<svg class="icon star" width="22" height="22" viewBox="0 0 22 22">'+
+                '<use xlink:href="#star"></use>'+
+                '</svg>'+
+                '</li>'+
+                '<li class="rating__item">'+
+                '<svg class="icon star" width="22" height="22" viewBox="0 0 22 22">'+
+                '<use xlink:href="#star"></use>'+
+                '</svg>'+
+                '</li>'+
+                '</ul></div>'+
+                '<div class="rating-reviews-card__title">' + reviews[i].title + '</div>' +
+                '<p class="rating-reviews-card__text">'+ reviews[i].content +'</p>' +
+                '<div class="rating-reviews-card__name">'+user+'</div>' +
+                '</div>' +
+                '</div>';
+        }
+    </script>
 <?php get_footer();
