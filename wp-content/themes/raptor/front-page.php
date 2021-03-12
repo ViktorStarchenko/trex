@@ -124,7 +124,7 @@ $yotpo_api_secret = $yotpo['items']['api_secret'];
                 <?php $is_video = !empty($top_item['video']['url']) ? true : false; ?>
                     <div class=<?= $is_video ? 'video-decor': 'complete-decor'?>>
                         <?php if($is_video) : ?>
-                            <video class="video-decor__action" src="<?= $top_item['video']['url'] ?>" poster="<?= $top_item['img']['url'] ?? ''?>" playsinline autoplay muted loop></video>
+                            <video class="video-decor__action" src="<?= $top_item['video']['url'] ?>" playsinline autoplay muted loop></video>
                         <?php else: ?>
                             <div class="complete-decor__bg">
                                 <picture>
