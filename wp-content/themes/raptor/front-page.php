@@ -119,46 +119,52 @@ $yotpo_api_secret = $yotpo['items']['api_secret'];
             <?php endif; ?>
         </div>
         <?php if ($promo_block['enable']) : ?>
-            <?php if ($promo_block['items']['top']['enable']) : ?>
-                <div class="complete-decor">
-                    <div class="complete-decor__bg">
-                        <picture>
-                            <source media="(max-width: 650px)" srcset="<?= $promo_block['items']['top']['img_mob']['url'] ?? ''?> 1x, <?= $promo_block['items']['top']['img_mob_2x']['url'] ?? ''?> 2x"><img src="<?= $promo_block['items']['top']['img']['url'] ?? ''?>" srcset="<?= $promo_block['items']['top']['img_2x']['url'] ?? ''?> 2x"/>
-                        </picture>
+            <?php foreach ($promo_block['items']['top'] as $top_item) :?>
+                <?php if ($top_item['enable']) : ?>
+                    <div class="complete-decor">
+                        <div class="complete-decor__bg">
+                            <picture>
+                                <source media="(max-width: 650px)" srcset="<?= $top_item['img_mob']['url'] ?? ''?> 1x, <?= $top_item['img_mob_2x']['url'] ?? ''?> 2x"><img src="<?= $top_item['img']['url'] ?? ''?>" srcset="<?= $top_item['img_2x']['url'] ?? ''?> 2x"/>
+                            </picture>
+                        </div>
+                        <div class="content-center">
+                            <h6><?= $top_item['subtitle'] ?? ''?></h6>
+                            <h2><?= $top_item['title'] ?? ''?></h2>
+                            <p>
+                                <?= $top_item['text'] ?? ''?>
+                            </p><a class="bttn bttn--bg" href="<?= $top_item['cta']['url'] ?? ''?>"><?= $top_item['cta']['title'] ?? ''?></a>
+                        </div>
                     </div>
-                    <div class="content-center">
-                        <h6><?= $promo_block['items']['top']['subtitle'] ?? ''?></h6>
-                        <h2><?= $promo_block['items']['top']['title'] ?? ''?></h2>
-                        <p>
-                            <?= $promo_block['items']['top']['text'] ?? ''?>
-                        </p><a class="bttn bttn--bg" href="<?= $promo_block['items']['top']['cta']['url'] ?? ''?>"><?= $promo_block['items']['top']['cta']['title'] ?? ''?></a>
+                <?php endif; ?>
+            <?php endforeach;?>
+            <?php foreach ($promo_block['items']['bottom'] as $bottom_item) :?>
+                <?php if ($bottom_item['enable']) : ?>
+                        <div class="promo-decor">
+                                <div class="promo-decor__bg">
+                                    <picture>
+                                        <source media="(max-width: 650px)" srcset="<?= $bottom_item['img_mob']['url'] ?? ''?> 1x, <?= $bottom_item['img_mob_2x']['url'] ?? ''?> 2x"><img src="<?= $bottom_item['img']['url'] ?? ''?>" srcset="<?= $bottom_item['img_2x']['url'] ?? ''?> 2x"/>
+                                    </picture>
+                                </div>
+                                <div class="content big-text">
+                                    <h6><?= $bottom_item['subtitle'] ?? ''?></h6>
+                                    <h2><?= $bottom_item['title'] ?? ''?></h2>
+                                    <p><?= $bottom_item['text'] ?? ''?></p>
+                                    <a class="bttn bttn--bg" href="<?= $bottom_item['cta']['url'] ?? ''?>"><?= $bottom_item['cta']['title'] ?? ''?></a>
+                                </div>
+                        </div>
+                <?php endif; ?>
+            <?php endforeach;?>
+            <?php foreach ($promo_block['items']['decor'] as $decor_item) :?>
+                <?php if ($decor_item['enable']) : ?>
+                    <div class="bg-decor">
+                        <div class="content-center big-text">
+                            <h2><?= $decor_item['title'] ?? ''?></h2>
+                            <p><?= $decor_item['text'] ?? ''?></p>
+                            <a class="bttn bttn--reverse" href="<?= $decor_item['cta']['url'] ?? ''?>"><?= $decor_item['cta']['title'] ?? ''?></a>
+                        </div>
                     </div>
-                </div>
-            <?php endif; ?>
-        <?php if ($promo_block['items']['bottom']['enable']) : ?>
-            <div class="promo-decor">
-                    <div class="promo-decor__bg">
-                        <picture>
-                            <source media="(max-width: 650px)" srcset="<?= $promo_block['items']['bottom']['img_mob']['url'] ?? ''?> 1x, <?= $promo_block['items']['bottom']['img_mob_2x']['url'] ?? ''?> 2x"><img src="<?= $promo_block['items']['bottom']['img']['url'] ?? ''?>" srcset="<?= $promo_block['items']['bottom']['img_2x']['url'] ?? ''?> 2x"/>
-                        </picture>
-                    </div>
-                    <div class="content big-text">
-                        <h6><?= $promo_block['items']['bottom']['subtitle'] ?? ''?></h6>
-                        <h2><?= $promo_block['items']['bottom']['title'] ?? ''?></h2>
-                        <p><?= $promo_block['items']['bottom']['text'] ?? ''?></p>
-                        <a class="bttn bttn--bg" href="<?= $promo_block['items']['bottom']['cta']['url'] ?? ''?>"><?= $promo_block['items']['bottom']['cta']['title'] ?? ''?></a>
-                    </div>
-            </div>
-        <?php endif; ?>
-        <?php if ($promo_block['items']['decor']['enable']) : ?>
-            <div class="bg-decor">
-                <div class="content-center big-text">
-                    <h2><?= $promo_block['items']['decor']['title'] ?? ''?></h2>
-                    <p><?= $promo_block['items']['decor']['text'] ?? ''?></p>
-                    <a class="bttn bttn--reverse" href="<?= $promo_block['items']['decor']['cta']['url'] ?? ''?>"><?= $promo_block['items']['decor']['cta']['title'] ?? ''?></a>
-                </div>
-            </div>
-        <?php endif; ?>
+                <?php endif; ?>
+            <?php endforeach;?>
         <?php endif; ?>
         <div class="rating-reviews">
             <?php if ($yotpo['enable']) : ?>
