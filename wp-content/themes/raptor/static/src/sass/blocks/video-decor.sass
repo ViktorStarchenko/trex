@@ -1,0 +1,35 @@
+.video-decor
+    width: 100%
+    max-width: 1440px
+    margin: 0 auto
+    background-color: #ccc
+    color: $main
+    position: relative
+    z-index: 1
+    text-align: center
+    &__action
+        +r(768)
+            position: absolute
+            z-index: -1
+            width: 100%
+            height: 100%
+            object-fit: cover
+            left: 0
+            top: 0
+    &__info
+        z-index: 1
+        display: flex
+        align-items: center
+        justify-content: center
+        color: $white
+        padding: 60px 20px
+        +rm(769)
+            padding: 20px
+            position: absolute
+            left: 0
+            top: 0
+            width: 100%
+            height: 100%
+        .content-center,
+        .content
+            color: inherit
