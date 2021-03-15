@@ -150,19 +150,30 @@ $yotpo_api_secret = $yotpo['items']['api_secret'];
             <?php endforeach;?>
             <?php foreach ($promo_block['items']['bottom'] as $bottom_item) :?>
                 <?php if ($bottom_item['enable']) : ?>
-                        <div class="promo-decor">
-                                <div class="promo-decor__bg">
-                                    <picture>
-                                        <source media="(max-width: 650px)" srcset="<?= $bottom_item['img_mob']['url'] ?? ''?> 1x, <?= $bottom_item['img_mob_2x']['url'] ?? ''?> 2x"><img src="<?= $bottom_item['img']['url'] ?? ''?>" srcset="<?= $bottom_item['img_2x']['url'] ?? ''?> 2x"/>
-                                    </picture>
-                                </div>
-                                <div class="content big-text">
-                                    <h6><?= $bottom_item['subtitle'] ?? ''?></h6>
-                                    <h2><?= $bottom_item['title'] ?? ''?></h2>
-                                    <p><?= $bottom_item['text'] ?? ''?></p>
-                                    <a class="bttn bttn--bg" href="<?= $bottom_item['cta']['url'] ?? ''?>"><?= $bottom_item['cta']['title'] ?? ''?></a>
-                                </div>
+                    <?php $is_video = !empty($bottom_item['video']['url']) ? true : false; ?>
+                    <div class="<?= $is_video ? 'video-decor-left': 'promo-decor'?>">
+                        <?php if($is_video) : ?>
+                            <video class="video-decor-left__action" src="<?= $bottom_item['video']['url'] ?>" playsinline autoplay muted loop></video>
+                        <?php else: ?>
+                            <div class="promo-decor__bg">
+                                <picture>
+                                    <source media="(max-width: 650px)" srcset="<?= $bottom_item['img_mob']['url'] ?? ''?> 1x, <?= $bottom_item['img_mob_2x']['url'] ?? ''?> 2x"><img src="<?= $bottom_item['img']['url'] ?? ''?>" srcset="<?= $bottom_item['img_2x']['url'] ?? ''?> 2x"/>
+                                </picture>
+                            </div>
+                        <?php endif; ?>
+                        <?php if($is_video) : ?>
+                        <div class="video-decor-left__info">
+                            <?php endif; ?>
+                            <div class="content big-text">
+                                <h6><?= $bottom_item['subtitle'] ?? ''?></h6>
+                                <h2><?= $bottom_item['title'] ?? ''?></h2>
+                                <p><?= $bottom_item['text'] ?? ''?></p>
+                                <a class="bttn bttn--bg" href="<?= $bottom_item['cta']['url'] ?? ''?>"><?= $bottom_item['cta']['title'] ?? ''?></a>
+                            </div>
+                            <?php if($is_video) : ?>
                         </div>
+                    <?php endif; ?>
+                    </div>
                 <?php endif; ?>
             <?php endforeach;?>
             <?php foreach ($promo_block['items']['decor'] as $decor_item) :?>
