@@ -1,10 +1,14 @@
 <?php $navigation = get_field("header_menu", $headerNavigation->ID); ?>
 
-<?php if (!empty($navigation["submenu_logo"])) {
-	$submenu_logo = $navigation['submenu_logo'];
-} ?>
-<?php if (!empty($navigation["main_logo"])) {
+
+<?php
+$submenu_logo = '';
+if (!empty($navigation["main_logo"])) {
 	$main_logo = $navigation['main_logo'];
+    $submenu_logo = $main_logo;
+} ?>
+<?php if (!empty($navigation["submenu_logo"])) {
+    $submenu_logo = $navigation['submenu_logo'];
 } ?>
 
 
