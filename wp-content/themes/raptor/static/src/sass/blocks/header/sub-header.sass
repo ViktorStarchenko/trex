@@ -45,7 +45,8 @@
 
 .sub-header-nav
     display: inline-flex
-    max-width: 660px
+    // max-width: 660px
+    overflow-x: auto
     width: 100%
     +r(1024)
         display: none
@@ -63,5 +64,6 @@
         color: $text
         text-decoration: none
         cursor: pointer
+        white-space: nowrap
         &.active
             color: $main
