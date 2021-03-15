@@ -127,7 +127,7 @@ $complete_cards = get_field('complete_card');
 						<div class="advance-brands-caption"><?= $brands['caption']; ?></div>
 					</div>
 				</div>
-				<div class="container">
+				<div class="container" id="available-here">
 					<div class="content-center big-text">
 						<?php $where_to_buy = $technology['where_to_buy']; ?>
 						<h2><?= $where_to_buy['title'] ?? '' ?></h2>
