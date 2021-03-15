@@ -171,7 +171,6 @@
                      $subtext = get_field('header_text', $obj->ID);
                  }
             ?>
-            <div class="sub-header-title"><?= $subtext; ?></div>
         </div>
         <div class="sub-header__nav">
             <ul class="sub-header-nav">
