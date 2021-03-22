@@ -122,6 +122,9 @@
                     padding-top: 0
                 .form-element
                     margin-bottom: 15px
+            .yotpo-footer
+                display: flex !important
+                align-items: flex-start
         .new-yotpo-small-box
             margin-top: 15px
             .yotpo-nav
@@ -154,3 +157,75 @@
 
 .mobile-filters-modal .mobile-filter-radio-button .radio-non-selected-color
     color: $main !important
+
+.reviews-page
+    .yotpo
+        .main-widget
+            .write-review-wrapper,
+            .write-question-wrapper
+                max-width: 790px
+                margin: 0 auto
+                .yotpo-regular-box
+                    padding-top: 0
+                    border: none
+                .form-group
+                    .y-label
+                        font-size: 14px
+                        text-transform: uppercase
+                        color: #3f4245
+                    .yotpo-mandatory-mark
+                        color: #3f4245
+                    .y-input,
+                    .yotpo-text-box
+                        margin: 5px 0px 30px
+                    .connect-wrapper
+                        .y-label
+                            padding-bottom: 5px
+                .yotpo-footer
+                    +r(768)
+                        flex-flow: row wrap
+                    .socialize-wrapper
+                        display: flex !important
+                        position: relative
+                        width: auto
+                        +r(768)
+                            flex-flow: column nowrap
+                        .socialize
+                            min-width: auto
+                            display: flex
+                            flex-flow: column nowrap
+                            +r(768)
+                                align-items: center
+                        .y-label
+                            padding-top: 0
+                            padding-bottom: 16px
+                            padding-right: 0
+                            text-transform: uppercase
+                            font-size: 14px
+                            letter-spacing: 0.2px
+                            color: #3f4245
+                            white-space: nowrap
+                        .yotpo-default-button.yotpo-icon-btn
+                            padding: 0
+                            border: none
+                            width: 30px
+                            height: 30px
+                            &:not(:last-child)
+                                margin-right: 20px
+                            .yotpo-icon
+                                font-size: 25px
+                        .yotpo-or
+                            margin-top: 40px
+                            width: auto
+                            text-align: center
+                            white-space: nowrap
+                            margin-left: 30px
+                            margin-right: 30px
+                            +r(768)
+                                margin-top: 30px
+                                margin-bottom: 30px
+                .submit-button
+                    +r(450)
+                        width: 100%
+                        .yotpo-default-button
+                            width: 100%

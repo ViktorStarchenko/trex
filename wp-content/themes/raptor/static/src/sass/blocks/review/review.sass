@@ -3,6 +3,22 @@
     max-width: 1290px
     margin: 0 auto
     padding: 60px 20px 80px
+    &__categories
+        display: flex
+        flex-flow: row wrap
+        justify-content: center
+        align-items: flex-start
+        margin-bottom: 40px
+        margin-left: -6px
+        margin-right: -6px
+        .bttn
+            margin: 0 6px 10px 6px
+            letter-spacing: 0.87px
+            padding: 9px 14px
+            &:not(:first-child)
+                min-width: 114px
+                +r(768)
+                    min-width: 100px
     &__head
         display: flex
         flex-flow: row wrap
@@ -13,3 +29,6 @@
         .review-pagination,
         .pagination
             margin-left: auto
+    .content-center,
+    .content
+        margin-bottom: 40px

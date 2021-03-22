@@ -24,10 +24,13 @@ PageList:
   ready: 100
 - file: /modal/
   name: modal
-  ready: 1
+  ready: 100
 - file: /test-form/
   name: test-form
-  ready: 1
+  ready: 100
 - file: /comparison-competitors/
   name: comparison-competitors
+  ready: 100
+- file: /reviews/
+  name: reviews
   ready: 1

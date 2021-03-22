@@ -34,4 +34,25 @@ export default function inirSliders() {
 			});
 		});
 	}
+
+	if(document.querySelector('.js-feature-slider')) {
+		let featureSlider = document.querySelector('.js-feature-slider');
+		let prevBttn = featureSlider.querySelector('.js-feature-slider-prev');
+		let nextBttn = featureSlider.querySelector('.js-feature-slider-next');
+		let featureSliderInit = new Swiper(featureSlider, {
+			slidesPerView: 1,
+			navigation: {
+				nextEl: nextBttn,
+				prevEl: prevBttn,
+			},
+			breakpoints: {
+				551: {
+					slidesPerView: 2,
+				},
+				1025: {
+					slidesPerView: 3,
+				}
+			}
+		});
+	}
 }

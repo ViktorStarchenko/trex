@@ -1,0 +1,98 @@
+extends /layout
+
+block head
+	- page.title = 'Reviews'
+	- page.class = ['reviews-page']
+
+block content
+	.reviews-page
+		.hero-review
+			picture.hero-review__pictire
+				source(media="(max-width: 450px)", srcset=`../img/reviews/review-hero-mob.jpg 1x, ../img/reviews/review-hero-mob@2x.jpg 2x`)
+				+img('../img/reviews/review-hero', 'jpg')
+		.container
+			.heading-review
+				.heading-review__title Reviews
+			.heading-review-content
+				.content-center
+					h4 See what our customers are saying about a SleepMaker Mattress
+					p At Sleepyhead we pride ourselves on ensuring every customer begins their SleepMaker journey with nothing but the best experience possible. From the moment you begin shopping for the perfect mattress to the second your head hits the pillow, read the reviews of hundreds of verified customers to see why SleepMaker has been recognised as Australia’s #1 mattress brand for customer satisfaction.
+					h6 What do we mean by verified reviews?
+					p Our customers can leave a review on their mattress purchase through ProductReview.com.au, where they’ll be able to upload a proof of purchase document which will verify the review. This allows us to ensure that each and every customer review we receive has been made by a verified customer and, most importantly, is a trusted review.
+					h6 Ready to experience a better sleep?
+					p Now that you’ve seen why Australians trust us for a better night’s sleep, head to our Find A Retailer page to find the closest SleepMaker retailer near you. Our experts are ready to assist you with your sleeping needs and help identify whether the Miracoil, Cocoon, Lifestyle, Motion Comfort or Bed in a Box is the perfect mattress for you – you can thank us later. And for future SleepMaker customers don’t forget to leave a review and help more Aussies make the right choice for their SleepMaker mattress.
+		hr.page-devider
+		.container
+			.feature-wrap
+				.content-center
+					h4 Why choose SleepyMaker?
+					p Sleepymaker is 100% Australia owned and operated. We’re committed to making beds in Australia, which not only provides local jobs, but also ensures all Aussies get the highest quality products for the best possible sleep. Sleepymaker is part of The Comfort Group, Australasia’s largest bedding and foam manufacturer with more than 1200 staff.
+				.feature-slider
+					.swiper-container.js-feature-slider
+						.swiper-wrapper
+							.swiper-slide
+								+feature-card({img:'feature-card-7', title:'Quality', text:'Sleepymaker mattresses are only made with the highest quality materials to ensure total comfort and support.'})
+							.swiper-slide
+								+feature-card({img:'feature-card-8', title:'Innovation', text:'Sleepymaker combines world class innovation, operations and design to create the highest quality products.'})
+							.swiper-slide
+								+feature-card({img:'feature-card-9', title:'Australia made', text:'Sleepymaker is committed to long term local manufacturing, ensuring our product meet the highest standards. '})
+						.swiper-nav
+							.swiper-button-prev.js-feature-slider-prev
+								.swiper-button-icon
+									+icon('arrow-right')(width="24" height="24" viewBox="0 0 24 24")
+							.swiper-button-next.js-feature-slider-next
+								.swiper-button-icon
+									+icon('arrow-right')(width="24" height="24" viewBox="0 0 24 24")
+		hr.page-devider
+		.review
+			.content-center
+				h3 Latest reviews
+			.review__categories
+				a(href="#").bttn.bttn--active All
+				a(href="#").bttn Motion comfort
+				a(href="#").bttn Lifestyle
+				a(href="#").bttn Miracoil
+				a(href="#").bttn Cocoon
+			.review__head
+				.review-stars
+					.review-stars-rating
+						.review-stars-rating__value
+							.review-quantity 4.8
+							img(src="../img/review-stars.svg", alt="review stars")
+						.review-stars-rating__total Bases on 2000 reviews
+				.review-chart-wrap
+					+review-chart({val:90})
+					+review-chart({val:4})
+					+review-chart({val:5})
+					+review-chart({val:1})
+					+review-chart({val:0})
+				.review-write
+					a.bttn(href="#") WRITE A REVIEW
+			.review__body
+				.review-tabs.js-tabs-wrapper
+					.review-tabs__head
+						ul.review-tabs__list
+							li.review-tabs__list-item
+								a.review-tabs__list-link.js-tab-trigger(href="#review-tab-1") Reviews
+							li.review-tabs__list-item
+								a.review-tabs__list-link.js-tab-trigger(href="#review-tab-2") Questions
+					.review-tabs__body
+						.review-tabs__content.js-tab-content#review-tab-1
+							+review-card({star:'five'})
+							+review-card({star:'four'})
+						.review-tabs__content.js-tab-content#review-tab-2
+							h1 questions
+			.review__footer
+				ul.review-pagination
+					li.review-pagination__item.review-pagination__item--prev
+						a.review-pagination__link.review-pagination__link--prev(href="#")
+							+icon('arrow-right')(width="24" height="24" viewBox="0 0 24 24")
+					li.review-pagination__item.active
+						a.review-pagination__link.active(href="#") 1
+					li.review-pagination__item
+						a.review-pagination__link(href="#") 2
+					li.review-pagination__item
+						a.review-pagination__link(href="#") 3
+					li.review-pagination__item.review-pagination__item--next
+						a.review-pagination__link.review-pagination__link--next(href="#")
+							+icon('arrow-right')(width="24" height="24" viewBox="0 0 24 24")
