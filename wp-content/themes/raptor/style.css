@@ -2933,7 +2933,9 @@ ul.app-store-list .deal-store-list li{
     font-weight: normal;
     font-family: NewzaldWeb-Bold, serif !important;
 }
-
+#newsletter-signup{
+    display: none;
+}
 #newsletter-signup-sleep-selector.app-sleep-selector-modal._size-lg {
     max-height: 940px;
     overflow-y: scroll;
@@ -4536,4 +4538,27 @@ ul.page-numbers li a.page-numbers.prev {
 .main .comparison-table__cell:nth-child(2n) {
     background-color: #d9d9d9;
     color: #3c3c3c;
+}
+.footer .app-link-animation::before {
+    display: none;
+}
+.footer-breadcrumb a, .breadcrumb_last {
+    opacity: .37;
+    color: #fff;
+    transition: opacity .25s;
+    text-decoration: none;
+    font-family: CalibreWeb-Regular,sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: .15px;
+    text-transform: uppercase;
+}
+.footer-breadcrumb .breadcrumb_last {
+    opacity: 1;
+}
+.main-header__logo img {
+    width: 100%;
 }
