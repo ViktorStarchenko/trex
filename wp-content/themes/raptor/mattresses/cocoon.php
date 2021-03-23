@@ -412,7 +412,7 @@ add_action( 'wp_enqueue_scripts', 'gmw_include_google_places_api' );*/
                                 </div>
                             </div>
                         </section>
-                        <?php get_footer('unclosed') ?>
+                        <?php get_footer() ?>
 
                     </div>
                 </div>
