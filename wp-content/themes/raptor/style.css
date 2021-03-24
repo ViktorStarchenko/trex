@@ -4859,6 +4859,12 @@ ul.page-numbers li a.page-numbers.prev {
 .main .yotpo .write-review .yotpo-header .yotpo-icon {
     color: #2e1a47;
 }
+#newsletter-signup{
+    display: none;
+}
+.main-header__logo img {
+    width: 100%;
+}
 /*
 it breaks everything (´･_･`)
 #gform_submit_button_52{
