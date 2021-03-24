@@ -16,6 +16,7 @@
     }
     ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="facebook-domain-verification" content="cpwkk8njp5l7mzztwm2ytpb9lvs5yp" />
 
     <link rel="icon" href="<?= get_template_directory_uri() ?>/img/favicon.png">
 

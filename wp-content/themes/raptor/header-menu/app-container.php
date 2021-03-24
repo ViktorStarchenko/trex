@@ -66,7 +66,7 @@ if (!empty($navigation["main_logo"])) {
             <?php if (!empty($navigation["main_menu"])) : ?>
                 <?php foreach ($navigation["main_menu"] as $mainItem) : ?>
                     <?php if (!empty($mainItem["help"])) : ?>
-                        <a class="app-sm-hidden _help-parent help-padding" href="#" data-class="<?= $mainItem["data_class"] ?>">
+                        <div class="app-sm-hidden _help-parent help-padding" href="#" data-class="<?= $mainItem["data_class"] ?>">
                             <div class="_label"><?= $mainItem["title"] ?></div>
                             <div class="_custom-help">
                                 <nav class="_horizontal _help-and-support-menu">
@@ -96,7 +96,7 @@ if (!empty($navigation["main_logo"])) {
                                     <?php endforeach; ?>
                                 </nav>
                             </div>
-                        </a>
+                        </div>
                     <?php endif; ?>
                 <?php endforeach; ?>
             <?php endif; ?>
