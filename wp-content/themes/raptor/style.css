@@ -4859,7 +4859,7 @@ ul.page-numbers li a.page-numbers.prev {
 .main .yotpo .write-review .yotpo-header .yotpo-icon {
     color: #2e1a47;
 }
-.yotpo-reviews-filters {
+.main .yotpo .yotpo-nav-content .yotpo-reviews-filters {
     display: none;
 }
 /*
