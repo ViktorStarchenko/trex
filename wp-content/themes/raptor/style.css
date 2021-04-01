@@ -1177,9 +1177,6 @@ body, html{
     justify-content: center;
     align-items: center;
 }
-a, ._terms-line-link:hover, ._underlined-link:hover{
-    text-decoration: none !important;
-}
 
 .modal-body .carousel-control.left, .modal-body .carousel-control.right{
     box-shadow: none;
