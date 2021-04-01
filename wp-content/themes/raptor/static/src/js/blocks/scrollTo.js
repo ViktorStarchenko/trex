@@ -16,12 +16,28 @@ export default function scrollTo() {
 					item.blur();
 				} catch (error) {}
 
-				e.preventDefault();
+				if(item.getAttribute('href')) {
+					e.preventDefault();
+				}
+
 				let targetel = item.getAttribute('href') || item.dataset.href;
+				console.log('scrolto ' + targetel);
 				let target = document.querySelector(targetel);
-				let timeDelay = 0;
+				let timeDelay = 150;
+				let mobOffset = 120;
+				let deskOffset = 200;
+
+				console.log(item.dataset);
+				if(item.dataset && item.dataset.delay) {
+					timeDelay = item.dataset.delay;
+					mobOffset = 80;
+					deskOffset = 80;
+				}
 
 				if(target) {
+
+					console.log(timeDelay);
+
 					scrollToTriggers.forEach(trigg => {
 						trigg.classList.remove('active');
 					});
@@ -31,10 +47,10 @@ export default function scrollTo() {
 					setTimeout(function() {
 						let offs = offset(target);
 						window.scroll({
-							top: offs - (window.matchMedia('(max-width: 768px)').matches ? '120' : '250'),
+							top: offs - (window.matchMedia('(max-width: 768px)').matches ? mobOffset : deskOffset),
 							behavior: 'smooth'
 						});
-					}, 150);
+					}, timeDelay);
 				}
 			});
 		});

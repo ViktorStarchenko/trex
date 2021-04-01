@@ -37,46 +37,28 @@ block content
 						.menu-explore-lvl__title.we-help__title What Mattress range suits you...
 					.menu-explore-lvl__body
 						ul.we-help-nav
-							li.we-help-nav__item
-								a.we-help-nav__link.js-tab-trigger.not-initial(href="#tab-aside-1")
+							li.we-help-nav__item.js-scroll-to(data-href="#tab-aside-1" data-delay="400")
+								span.we-help-nav__link.js-tab-trigger.not-initial(data-hash="#tab-aside-1")
 									span.we-help-nav__name Luxury
 										span.we-help-nav__icon
 											+icon('arrow-right')(width="24" height="24" viewBox="0 0 24 24")
 									span.we-help-nav__text Our most Luxury range Lorem ipsum dolor sit amet, conubia nam pellentesque laoreet id.
-							li.we-help-nav__item
-								a.we-help-nav__link.js-tab-trigger.not-initial(href="#tab-aside-2")
+							li.we-help-nav__item.js-scroll-to(data-href="#tab-aside-2" data-delay="400")
+								span.we-help-nav__link.js-tab-trigger.not-initial(data-hash="#tab-aside-2")
 									span.we-help-nav__name Therapeutic Needs
 										span.we-help-nav__icon
 											+icon('arrow-right')(width="24" height="24" viewBox="0 0 24 24")
 									span.we-help-nav__text Suffer from back pain? our miracoilr range. Lorem ipsum dolor sit amet, conubia nam pellentesque laoreet id.
-							li.we-help-nav__item
-								a.we-help-nav__link.js-tab-trigger.not-initial(href="#tab-aside-3")
+							li.we-help-nav__item.js-scroll-to(data-href="#tab-aside-3" data-delay="400")
+								span.we-help-nav__link.js-tab-trigger.not-initial(data-hash="#tab-aside-3")
 									span.we-help-nav__name Your Essentials
 										span.we-help-nav__icon
 											+icon('arrow-right')(width="24" height="24" viewBox="0 0 24 24")
 									span.we-help-nav__text A mattress for any need. Spare bedrooms, kids rooms, range Lorem ipsum dolor sit amet, conubia nam pellentesque laoreet id.
-							li.we-help-nav__item
-								a.we-help-nav__link.js-tab-trigger.not-initial(href="#tab-aside-1")
-									span.we-help-nav__name Luxury
-										span.we-help-nav__icon
-											+icon('arrow-right')(width="24" height="24" viewBox="0 0 24 24")
-									span.we-help-nav__text Our most Luxury range Lorem ipsum dolor sit amet, conubia nam pellentesque laoreet id.
-							li.we-help-nav__item
-								a.we-help-nav__link.js-tab-trigger.not-initial(href="#tab-aside-2")
-									span.we-help-nav__name Therapeutic Needs
-										span.we-help-nav__icon
-											+icon('arrow-right')(width="24" height="24" viewBox="0 0 24 24")
-									span.we-help-nav__text Suffer from back pain? our miracoilr range. Lorem ipsum dolor sit amet, conubia nam pellentesque laoreet id.
-							li.we-help-nav__item
-								a.we-help-nav__link.js-tab-trigger.not-initial(href="#tab-aside-3")
-									span.we-help-nav__name Your Essentials
-										span.we-help-nav__icon
-											+icon('arrow-right')(width="24" height="24" viewBox="0 0 24 24")
-									span.we-help-nav__text A mattress for any need. Spare bedrooms, kids rooms, range Lorem ipsum dolor sit amet, conubia nam pellentesque laoreet id.
-
+							
 		.we-help__content
 			.we-help-aside
-				.we-help-aside__tab.js-tab-content(id="tab-aside-1")
+				.we-help-aside__tab.js-tab-content(data-id="tab-aside-1" id="tab-aside-1")
 					.we-help-aside__title
 						h2 Luxury
 						span 4 OPTIONS AVAILABLE
@@ -87,14 +69,14 @@ block content
 						+explore-card({title: 'Luxury', img: 'explore-card-2'})
 						+explore-card({title: 'Luxury', img: 'explore-card-1'})
 						+explore-card({title: 'Luxury', img: 'explore-card-2'})
-				.we-help-aside__tab.js-tab-content(id="tab-aside-2")
+				.we-help-aside__tab.js-tab-content(data-id="tab-aside-2" id="tab-aside-2")
 					.we-help-aside__title
 						h2 Therapeutic Needs
 						span 4 OPTIONS AVAILABLE
 					.we-help-aside__content
 						+explore-card({title: 'Cocoon', img: 'explore-card-1'})
 						+explore-card({title: 'Luxury', img: 'explore-card-2'})
-				.we-help-aside__tab.js-tab-content(id="tab-aside-3")
+				.we-help-aside__tab.js-tab-content(data-id="tab-aside-3" id="tab-aside-3")
 					.we-help-aside__title
 						h2 Your Essentials
 						span 4 OPTIONS AVAILABLE

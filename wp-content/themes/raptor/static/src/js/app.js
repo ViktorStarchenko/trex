@@ -50,12 +50,15 @@ window.addEventListener('load', () => {
 	var height_top = jQuery('header').offset().top;
 	jQuery(window).scroll(function() {
 		var sticky = jQuery('header'),
+			bodyMain = jQuery('body'),
 			scroll = jQuery(window).scrollTop();
 		if (scroll > height_top) {
 			sticky.addClass('header-fixed');
+			bodyMain.addClass('header-fixed');
 		} else {
 			if(!jQuery('body').hasClass('modal-opened')) {
 				sticky.removeClass('header-fixed');
+				bodyMain.removeClass('header-fixed');
 			}
 		}
 	});

@@ -60,6 +60,7 @@ export default function setupTabs() {
 						trigger.parentElement.classList.add('active');
 
 						let triggerHash = trigger.hash ? trigger.hash : trigger.dataset.hash;
+						console.log('tab ' + triggerHash);
 
 						tabContents.forEach((content) => {
 							if (content.id ? content.id !== triggerHash.slice(1) : content.dataset.id !== triggerHash.slice(1)) {
