@@ -30,8 +30,8 @@ export default function scrollTo() {
 				console.log(item.dataset);
 				if(item.dataset && item.dataset.delay) {
 					timeDelay = item.dataset.delay;
-					mobOffset = 80;
-					deskOffset = 80;
+					mobOffset = 180;
+					deskOffset = 180;
 				}
 
 				if(target) {

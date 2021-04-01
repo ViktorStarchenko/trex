@@ -54,11 +54,11 @@ window.addEventListener('load', () => {
 			scroll = jQuery(window).scrollTop();
 		if (scroll > height_top) {
 			sticky.addClass('header-fixed');
-			bodyMain.addClass('header-fixed');
+			// bodyMain.addClass('header-fixed');
 		} else {
 			if(!jQuery('body').hasClass('modal-opened')) {
 				sticky.removeClass('header-fixed');
-				bodyMain.removeClass('header-fixed');
+				// bodyMain.removeClass('header-fixed');
 			}
 		}
 	});
