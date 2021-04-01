@@ -73,6 +73,7 @@
                         padding-left: 30px
                         position: relative
                         display: block !important
+                        max-width: none
                         &::before
                             content: ''
                             display: block
@@ -96,6 +97,11 @@
                             opacity: 0
                             transform: translateY(-3px) rotate(45deg)
                             transition: opacity .2s .0s, transform .2s .2s
+                        a
+                            color: inherit
+                            text-decoration: underline
+                            &:hover
+                                text-decoration: none
                     input[type=checkbox]:checked+label:after
                         opacity: 1
                         transform: translateY(0) rotate(45deg)
