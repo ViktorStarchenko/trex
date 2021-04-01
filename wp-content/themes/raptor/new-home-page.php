@@ -57,10 +57,18 @@ $yotpo_api_secret = $yotpo['items']['api_secret'];
                                     <?php
                                     $i = 1;
                                     foreach ( $explore['items'] as  $item) : ?>
-                                        <li class="we-help-nav__item"><a class="we-help-nav__link js-tab-trigger not-initial" href="#tab-aside-<?= $i ?>"><span class="we-help-nav__name"><?= $item['title'] ?><span class="we-help-nav__icon">
+                                        <li class="we-help-nav__item js-scroll-to" data-href="#tab-aside-<?= $i ?>" data-delay="400">
+                                            <span class="we-help-nav__link js-tab-trigger not-initial" data-hash="#tab-aside-<?= $i ?>">
+                                                <span class="we-help-nav__name"><?= $item['title'] ?>
+                                                    <span class="we-help-nav__icon">
                                                         <svg class="icon arrow-right" width="24" height="24" viewBox="0 0 24 24">
                                                             <use xlink:href="#arrow-right"></use>
-                                                        </svg></span></span><span class="we-help-nav__text"><?= $item['text'] ?></span></a>
+                                                        </svg>
+                                                    </span>
+                                                </span>
+                                                <span class="we-help-nav__text"><?= $item['text'] ?>
+                                                </span>
+                                            </span>
                                         </li>
                                         <?php $i++; endforeach; ?>
                                 </ul>
@@ -73,7 +81,7 @@ $yotpo_api_secret = $yotpo['items']['api_secret'];
                         <?php
                         $i = 1;
                         foreach ( $explore['items'] as  $item) : ?>
-                            <div class="we-help-aside__tab js-tab-content" id="tab-aside-<?= $i ?>">
+                            <div class="we-help-aside__tab js-tab-content" data-id="tab-aside-<?= $i ?>" id="tab-aside-<?= $i ?>">
                                 <div class="we-help-aside__title">
                                     <h2><?= $item['aside']['title']?></h2><span><?= $item['aside']['subtitle']?></span>
                                 </div>
