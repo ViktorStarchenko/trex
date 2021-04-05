@@ -4866,3 +4866,6 @@ ul.page-numbers li a.page-numbers.prev {
 .yotpo .yotpo-modal-content .yotpo-hidden.only-invisible {
     display: none !important;
 }
+.yotpo .yotpo-bottomline {
+    margin-bottom: 10px;
+}
