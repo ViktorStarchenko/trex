@@ -4859,12 +4859,13 @@ ul.page-numbers li a.page-numbers.prev {
 .main .yotpo .yotpo-nav-content .yotpo-reviews-filters {
     display: none;
 }
-/*
-it breaks everything (´･_･`)
-#gform_submit_button_52{
-    margin-top: 0px !important;
-    color: #472E8C!important;
-    background-color: #ffffff!important;
-    height: 44px!important;
+.yotpo .yotpo-bottomline .text-m {
+    font-family: CalibreWeb-Regular,sans-serif;
+    font-size: 20px;
 }
-*/
+.yotpo .yotpo-modal-content .yotpo-hidden.only-invisible {
+    display: none !important;
+}
+.yotpo .yotpo-bottomline {
+    margin-bottom: 10px;
+}
