@@ -2025,7 +2025,7 @@ body, html{
     max-width: 450px;
     margin: 0 auto;
 }
-.spec-offers-list.owl-carousel .owl-stage-outer{;
+.spec-offers-list.owl-carousel .owl-stage-outer{
     margin: 0 auto;
 }
 
@@ -4859,7 +4859,6 @@ ul.page-numbers li a.page-numbers.prev {
 .main .yotpo .yotpo-nav-content .yotpo-reviews-filters {
     display: none;
 }
-/*Yotpo all tab */
 .yotpo .yotpo-bottomline .text-m {
     font-family: CalibreWeb-Regular,sans-serif;
     font-size: 20px;

@@ -4,7 +4,7 @@
  * Template Post Type: page
  */
 ?>
-<?php get_header(); ?>czxczczxcx
+<?php get_header(); ?>
 <?php
 $currentCat = get_queried_object();
 
