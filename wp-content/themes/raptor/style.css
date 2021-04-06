@@ -4873,6 +4873,6 @@ ul.page-numbers li a.page-numbers.prev {
 #yotpo-testimonials-custom-tab .yotpo-modal-content .yotpo-modal-bottom-line {
     border: none;
 }
-.main a {
+.main a, .main a:hover {
     text-decoration: none;
 }
