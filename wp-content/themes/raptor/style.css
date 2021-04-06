@@ -4870,3 +4870,6 @@ ul.page-numbers li a.page-numbers.prev {
 .yotpo .yotpo-bottomline {
     margin-bottom: 10px;
 }
+#yotpo-testimonials-custom-tab .yotpo-modal-content .yotpo-modal-bottom-line {
+    border: none;
+}
