@@ -164,14 +164,14 @@ $complete_cards = get_field('complete_card');
         </div>
         <?php $yotpo = get_field('yotpo'); ?>
         <?php $yotpo_product_id = $yotpo['yotpo_product_id'] ?>
-        <?php $post = get_post($yotpo_product_id); ?>
-        <?php $postImage = get_field('review_image', $yotpo_product_id); ?>
+        <?php global $post; ?>
+        <?php $postImage = get_field('review_image', $post->ID); ?>
         <div id="product-reviews">
             <div class="review">
                 <div class="yotpo yotpo-main-widget"
 
                      data-product-id="<?= $yotpo_product_id; ?>"
-                     data-name="<?= the_title(); ?>"
+                     data-name="<?= $post->post_title; ?>"
 
                      data-url="<?= get_post_permalink($yotpo_product_id) ?>"
                     <?php if ($postImage) : ?>
