@@ -171,7 +171,7 @@ $complete_cards = get_field('complete_card');
                 <div class="yotpo yotpo-main-widget"
 
                      data-product-id="<?= $yotpo_product_id; ?>"
-                     data-name="<?= $post->post_title; ?>"
+                     data-name="<?= get_the_title(); ?>"
 
                      data-url="<?= get_post_permalink($yotpo_product_id) ?>"
                     <?php if ($postImage) : ?>
