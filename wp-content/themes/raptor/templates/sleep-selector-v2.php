@@ -27,4 +27,26 @@ tcg_init_selector('70303aa4960c853fc06555b592f7160d', 2);
 <?php if(get_field('sleep_selector_block_form', 5598)) : ?>
 <div class="js-signup-newsletter"></div>
 <?php endif; ?>
+
+
+<?php $headerNavigation = get_page_by_path('sleep-selector'); ?>
+    <div class="selector-brand-campaign"></div>
+
+<?php if (get_field('start_promotion')=="yes") : ?>
+    <div id="brand-campaign-popup" class="brand-campaign-popup app-sleep-selector-modal _size-lg" style="display: none;">
+
+        <a href="" class="app-modal-close"></a>
+        <div class="app-sleep-selector-modal__flex">
+            <div class="_custom-gform-styles">
+                <div class="article-news-box gravity-form _gravity-form-wrapper">
+                    <?= get_field('brand-campaign-popup-block-form', $headerNavigation->ID); ?>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" class="popup-sleep-selector-trigger" style="color: #fff;">.</a>
+<?php endif;?>
+
+
 <?php get_footer();
