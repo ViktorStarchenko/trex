@@ -242,7 +242,7 @@ $yotpo_api_secret = $yotpo['items']['api_secret'];
 $reviews = [];
 $show_individual_reviews = $yotpo['items']['show_individual_reviews'];
 $individual_review_ids = $yotpo['items']['individual_reviews'];
-var_dump($show_individual_reviews);
+
 if (empty($yotpo_id)) {
     if ($show_individual_reviews) {
         if (count($individual_review_ids)) {
