@@ -247,7 +247,7 @@ if (empty($yotpo_id)) {
     if ($show_individual_reviews) {
         if (count($individual_review_ids)) {
             foreach ($individual_review_ids as $rev_id) {
-                $ch = curl_init();
+                /*$ch = curl_init();
                 $id = $rev_id['review_id'];
                 curl_setopt($ch, CURLOPT_URL,"https://api.yotpo.com/reviews/$id");
                 curl_setopt($ch, CURLOPT_POST, 0);
@@ -257,7 +257,7 @@ if (empty($yotpo_id)) {
                 $response = json_decode($server_output,true);
 
                 $reviews[] = $response['response']['review'];
-                curl_close ($ch);
+                curl_close ($ch);*/
             }
         }
     } else {
