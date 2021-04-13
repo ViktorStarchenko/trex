@@ -295,7 +295,7 @@ if (empty($yotpo_id)) {
 }
 ?>
 	<script>
-        var show_all_reviews = <?php echo !empty($yotpo_id) ? 'false' : 'true'; ?>;
+        var show_all_reviews = <?php echo !empty($yotpo_id) || $show_individual_reviews ? 'false' : 'true'; ?>;
         var reviews = <?= json_encode($reviews) ?>;
         var parent = document.getElementById('home-reviews');
 
