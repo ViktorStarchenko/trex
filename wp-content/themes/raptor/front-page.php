@@ -215,6 +215,10 @@ $yotpo_api_secret = $yotpo['items']['api_secret'];
                         </div>
                     </div>
                 </div>
+                <div class="content-center">
+                    <br>
+                    <a class="bttn bttn--bg" href="/reviews">See All Reviews</a>
+                </div>
             <?php endif; ?>
         </div>
         <div class="complete-card-outer">
@@ -307,8 +311,8 @@ if (empty($yotpo_id)) {
             } else {
                 user = reviews[i].user.display_name;
             }
-            let firstLetters = user.match(/\b(\w)/g);
-            let shortName = firstLetters.join('.');
+            var firstLetters = user.match(/\b(\w)/g);
+            var shortName = firstLetters.join('.');
 
             switch (rating) {
                 case 1:
