@@ -239,16 +239,16 @@ $yotpo_api_secret = $yotpo['items']['api_secret'];
         </div>
 	</div>
 <?php
-$reviews = '';
+$reviews = [];
 $show_individual_reviews = $yotpo['items']['show_individual_reviews'];
 $individual_review_ids = $yotpo['items']['individual_reviews'];
 var_dump($show_individual_reviews);
 if (empty($yotpo_id)) {
     if ($show_individual_reviews) {
         if (count($individual_review_ids)) {
-           // foreach ($individual_review_ids as $rev_id) {
+            foreach ($individual_review_ids as $rev_id) {
                 $ch = curl_init();
-                $rid = 132118791;
+                $rid = $rev_id['review_id'];
                 curl_setopt($ch, CURLOPT_URL,"https://api.yotpo.com/reviews/$rid");
                 curl_setopt($ch, CURLOPT_POST, 0);
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -256,9 +256,9 @@ if (empty($yotpo_id)) {
                 $server_output = curl_exec($ch);
                 $response = json_decode($server_output,true);
 
-                //$reviews[] = $response['response']['review'];*/
+                $reviews[] = $response['response']['review'];
                 curl_close ($ch);
-       //     }
+            }
         }
     } else {
         $ch = curl_init();
