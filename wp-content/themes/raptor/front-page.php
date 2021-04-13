@@ -295,20 +295,20 @@ if (empty($yotpo_id)) {
 }
 ?>
 	<script>
-        var show_all_reviews = <?php echo !empty($yotpo_id) || $show_individual_reviews ? 'false' : 'true'; ?>;
-        var reviews = <?= json_encode($reviews) ?>;
-        var parent = document.getElementById('home-reviews');
+        let show_all_reviews = <?php echo !empty($yotpo_id) || $show_individual_reviews ? 'false' : 'true'; ?>;
+        let reviews = <?= json_encode($reviews) ?>;
+        let parent = document.getElementById('home-reviews');
 
-        for (var i = 0; i < reviews.length; i++) {
-            var rating = reviews[i].score;
-            var user;
+        for (let i = 0; i < reviews.length; i++) {
+            let rating = reviews[i].score;
+            let user;
             if (show_all_reviews) {
                 user = reviews[i].name;
             } else {
                 user = reviews[i].user.display_name;
             }
-            var firstLetters = user.match(/\b(\w)/g);
-            var shortName = firstLetters.join('.');
+            let firstLetters = user.match(/\b(\w)/g);
+            let shortName = firstLetters.join('.');
 
             switch (rating) {
                 case 1:
