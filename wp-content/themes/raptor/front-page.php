@@ -240,26 +240,47 @@ $yotpo_api_secret = $yotpo['items']['api_secret'];
 	</div>
 <?php
 $reviews = '';
+$show_individual_reviews = $yotpo['items']['show_individual_reviews'];
+$individual_review_ids = $yotpo['items']['individual_reviews'];
+
 if (empty($yotpo_id)) {
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL,"https://api.yotpo.com/oauth/token");
-    curl_setopt($ch, CURLOPT_POST, 1);
-    curl_setopt($ch, CURLOPT_POSTFIELDS,
-        "client_id=$yotpo_api_key&client_secret=$yotpo_api_secret&grant_type=client_credentials");
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    if ($show_individual_reviews) {
+        if (count($individual_review_ids)) {
+            foreach ($individual_review_ids as $rev_id) {
+                $ch = curl_init();
+                $id = $rev_id['review_id'];
+                curl_setopt($ch, CURLOPT_URL,"https://api.yotpo.com/reviews/$id");
+                curl_setopt($ch, CURLOPT_POST, 0);
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
-    $server_output = curl_exec($ch);
-    $response = json_decode($server_output,true);
-    $token = $response['access_token'];
+                $server_output = curl_exec($ch);
+                $response = json_decode($server_output,true);
 
-    if (!empty($token)) {
-        curl_setopt($ch, CURLOPT_URL,"https://api.yotpo.com/v1/apps/$yotpo_api_key/reviews?utoken=$token&page=1&count=10");
-        curl_setopt($ch, CURLOPT_POST, 0);
-        $reviews_output = curl_exec($ch);
-        $reviews_response = json_decode($reviews_output,true);
-        $reviews = $reviews_response['reviews'];
+                $reviews[] = $response['response']['review'];
+                curl_close ($ch);
+            }
+        }
+    } else {
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL,"https://api.yotpo.com/oauth/token");
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS,
+            "client_id=$yotpo_api_key&client_secret=$yotpo_api_secret&grant_type=client_credentials");
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+        $server_output = curl_exec($ch);
+        $response = json_decode($server_output,true);
+        $token = $response['access_token'];
+
+        if (!empty($token)) {
+            curl_setopt($ch, CURLOPT_URL,"https://api.yotpo.com/v1/apps/$yotpo_api_key/reviews?utoken=$token&page=1&count=10");
+            curl_setopt($ch, CURLOPT_POST, 0);
+            $reviews_output = curl_exec($ch);
+            $reviews_response = json_decode($reviews_output,true);
+            $reviews = $reviews_response['reviews'];
+        }
+        curl_close ($ch);
     }
-    curl_close ($ch);
 
 } else {
     $ch = curl_init();
