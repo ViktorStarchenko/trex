@@ -138,7 +138,7 @@ $complete_cards = get_field('complete_card');
                         <div class="bttn-row">
                             <?php if(!empty($where_to_buy['buttons'])) :?>
                                 <?php foreach ($where_to_buy['buttons'] as $button) :?>
-                                    <a class="bttn bttn--border" href="<?= $button['link']['url'].'?r='.$range_id ?? ''?>"><?= $button['link']['title'] ?? ''?></a>
+                                    <a class="bttn bttn--border" href="<?= $button['link']['url'] ?? ''?>"><?= $button['link']['title'] ?? ''?></a>
                                 <?php endforeach;?>
                             <?php endif; ?>
                         </div>
