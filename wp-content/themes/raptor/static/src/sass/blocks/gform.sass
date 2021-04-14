@@ -74,6 +74,7 @@
                         position: relative
                         display: block !important
                         max-width: none
+                        min-height: 22px
                         &::before
                             content: ''
                             display: block
@@ -185,3 +186,27 @@
                 display: inline-flex
                 align-items: center
                 justify-content: center
+
+
+.app-sleep-selector-modal
+
+    ._custom-gform-styles
+        height: 100%
+        .gravity-form
+            .gform_body
+                ul.gform_fields
+                    li.gfield
+                        label.gfield_label
+                            display: none !important
+                        .ginput_container_checkbox
+                            margin-top: 0 !important
+                    ul.gfield_checkbox
+                        margin: 0 !important
+
+    .gravity-form.article-news-box
+        padding-top: 40px
+        padding-bottom: 40px
+        .gform_wrapper
+            padding-top: 0
+            padding-bottom: 0
+            margin: 0
