@@ -316,6 +316,8 @@ if (!is_admin()) {
 
     wp_enqueue_script( 'retailers', get_template_directory_uri() . '/js/retailers.min.js', ['jquery'], false, true);
     wp_localize_script( 'retailers', 'ajax_variables', ['ajax_url' => admin_url( 'admin-ajax.php' ), 'entity_id' => !empty($_GET['entry_id']) ? $_GET['entry_id'] : ''] );
+
+    wp_enqueue_script('raptor-custom-v2', get_template_directory_uri() . '/js/resources/custom_v2.js', ['jquery'], '1.0.0', true);
 }
 
 function dequeue_unnecessary_scripts()
