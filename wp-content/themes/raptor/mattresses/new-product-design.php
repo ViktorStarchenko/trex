@@ -193,7 +193,7 @@ $complete_cards = get_field('complete_card');
                                 <li class="product-specs-contact__list-item"><a class="product-specs-contact__list-link" onclick="LC_API.open_chat_window(); return false;" href="#"><span class="product-specs-contact__list-icon">
 												<svg class="icon message" width="30" height="30" viewBox="0 0 30 30">
 													<use xlink:href="#message"></use>
-												</svg></span>LiveChat</a></li>
+												</svg></span>Talk to use on Live Chat</a></li>
                                 <li class="product-specs-contact__list-item"><a class="product-specs-contact__list-link" href="<?= $product_specs['mail']['url'] ?? ''?>"><span class="product-specs-contact__list-icon">
 												<svg class="icon envelope" width="30" height="30" viewBox="0 0 30 30">
 													<use xlink:href="#envelope"></use>
