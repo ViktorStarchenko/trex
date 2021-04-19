@@ -6,7 +6,10 @@
 ?>
 <?php get_header(); ?>
 <?php
-
+$preselected_range_id = null;
+if (isset($_GET['r'])) {
+    $preselected_range_id = $_GET['r'];
+}
 $matressesCategory = get_category_by_slug('products');
 $matressesArgs = [
     'numberposts' => -1,
@@ -15,6 +18,8 @@ $matressesArgs = [
     'order' => 'ASC'
 ];
 $matresses = get_posts($matressesArgs);
+
+$order_by = !empty(get_field('filteredBy')) ? get_field('filteredBy') : 'range' ;
 
 $retailersGroupCategory = get_category_by_slug('retailer-groups');
 
@@ -48,7 +53,13 @@ $baseQuery = [
 ];
 
 $metaQuery[] = $baseQuery;
-
+if (isset($preselected_range_id)) {
+    $metaQuery[] =  [
+        'key'     => 'range',
+        'value'   => '"' . $preselected_range_id . '"',
+        'compare' => 'LIKE',
+    ];
+}
 
 
 $args = [
@@ -67,6 +78,8 @@ $paged = get_query_var('paged') ? get_query_var('paged') : 1;
 $promo_query = new WP_Query(array(
     'category_name' => 'special-offers',
     'meta_query' => $metaQuery,
+    'meta_key' => $order_by,
+    'orderby' => 'meta_value',
     'posts_per_page' => -1,
     'paged' => $paged,
     'post_status' => 'publish',
@@ -192,7 +205,7 @@ $footer_block = get_field('footer_block');
                                             }
                                             ?>
                                             <li class="filter-drop__item js-drop-filter-item ">
-                                                <input class="filter-drop__check" id="range-<?= $key ?>" type="checkbox" name="range" value="<?= $matresse->ID ?>" >
+                                                <input class="filter-drop__check" id="range-<?= $key ?>" type="checkbox" <?= $matresse->ID == $preselected_range_id ? ' checked="checked"' : ''?> name="range" value="<?= $matresse->ID ?>" >
                                                 <label class="filter-drop__label" for="range-<?= $key ?>"><?= $matresse->post_title ?></label>
                                             </li>
                                         <?php endforeach; ?>
@@ -258,7 +271,6 @@ $footer_block = get_field('footer_block');
                             </div>
                             <?php
                             $promolinks = get_field("promotion_link", get_the_ID());
-
                             ?>
                             <div class="promotions-card__footer"><a class="bttn" href="<?= $promolinks[0]['promotion_link_url']?>">FIND OUT MORE</a>
                                 <div class="promotions-card__caption">Offer ends <?php echo $date->format('d F Y'); ?></div>
