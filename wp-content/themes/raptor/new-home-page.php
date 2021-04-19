@@ -227,6 +227,10 @@ $yotpo_api_secret = $yotpo['items']['api_secret'];
                         </div>
                     </div>
                 </div>
+                <div class="content-center">
+                    <br>
+                    <a class="bttn bttn--bg" href="/reviews">See All Reviews</a>
+                </div>
             <?php endif; ?>
         </div>
         <div class="complete-card-outer">
@@ -251,7 +255,7 @@ $yotpo_api_secret = $yotpo['items']['api_secret'];
         </div>
     </div>
 <?php
-$reviews = '';
+$reviews = [];
 $show_individual_reviews = $yotpo['items']['show_individual_reviews'];
 $individual_review_ids = $yotpo['items']['individual_reviews'];
 
