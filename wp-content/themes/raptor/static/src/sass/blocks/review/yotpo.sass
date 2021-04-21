@@ -133,6 +133,7 @@
                     width: auto
                     +r(768)
                         flex-flow: column nowrap
+                        width: 100%
                     .socialize
                         min-width: auto
                         display: flex
@@ -152,10 +153,13 @@
                         display: inline-flex
                         align-items: center
                         justify-content: center
-                        padding: 0
+                        padding: 0 !important
                         border: none
                         width: 30px
                         height: 30px
+                        +r(768)
+                            width: 50px
+                            height: 50px
                         &:not(:last-child)
                             margin-right: 20px
                         .yotpo-icon
@@ -168,8 +172,8 @@
                         margin-left: 30px
                         margin-right: 30px
                         +r(768)
-                            margin-top: 30px
-                            margin-bottom: 30px
+                            margin-top: 10px
+                            margin-bottom: 20px
             .submit-button
                 +r(450)
                     width: 100%
@@ -245,6 +249,7 @@
                             display: flex
                             flex-flow: column nowrap
                             +r(768)
+                                width: 100%
                                 align-items: center
                         .y-label
                             padding-top: 0
@@ -259,10 +264,13 @@
                             display: inline-flex
                             align-items: center
                             justify-content: center
-                            padding: 0
+                            padding: 0 !important
                             border: none
                             width: 30px
                             height: 30px
+                            +r(768)
+                                width: 50px
+                                height: 50px
                             &:not(:last-child)
                                 margin-right: 20px
                             .yotpo-icon
@@ -275,8 +283,8 @@
                             margin-left: 30px
                             margin-right: 30px
                             +r(768)
-                                margin-top: 30px
-                                margin-bottom: 30px
+                                margin-top: 10px
+                                margin-bottom: 20px
                 .submit-button
                     +r(450)
                         width: 100%
