@@ -103,7 +103,7 @@ if (!empty($navigation["main_logo"])) {
             <?php if (isset($isCocoon)): ?>
                 <a href="#retailers" class="where-buy" style="font-family: sans-serif;font-size: 16px;">WHERE TO BUY</a>
             <?php else :  ?>
-                <a class="app-button-reserve _inline _navigation-mobile-find-a-retailer-hidden" href="/stockists/">Find a Retailer</a>
+                <a class="app-button-reserve _inline _navigation-mobile-find-a-retailer-hidden" href="/stockists/">WHERE TO BUY</a>
             <?php endif; ?>
         </div>
 
