@@ -23,7 +23,7 @@
 tcg_init_selector('70303aa4960c853fc06555b592f7160d', 2);
 
 </script>
-<?php if(get_field('sleep_selector_block_form', 5598)) : ?>
+<?php if(get_field('brand-campaign-popup-block-form', 5598)) : ?>
     <div class="js-signup-newsletter"></div>
 <?php endif; ?>
 <?php get_footer();
