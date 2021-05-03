@@ -10,9 +10,9 @@
 
  <!-- These files always load from our main server-->
 
-    <script src="https://selector.thecomfortgroup.co/pub/media/js/sleepmaker-v2.js"></script>
-    <script src="https://selector.thecomfortgroup.co/pub/media/js/sleepsaas.js"></script>
-    <script src="https://selector.thecomfortgroup.co/pub/media/js/main.js"></script>
+    <script src="https://selector.staging.overdose.digital/pub/media/js/sleepmaker-v2.js"></script>
+    <script src="https://selector.staging.overdose.digital/pub/media/js/sleepsaas.js"></script>
+    <script src="https://selector.staging.overdose.digital/pub/media/js/main.js"></script>
 
     <!-- These files always load from the local web site-->
     <link rel="stylesheet" href="/assets/css/vendor.css">
