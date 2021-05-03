@@ -10,7 +10,7 @@
 
  <!-- These files always load from our main server-->
 
-    <script src="https://selector.thecomfortgroup.co/pub/media/js/sleepmaker_v2.js"></script>
+    <script src="https://selector.thecomfortgroup.co/pub/media/js/sleepmaker-v2.js"></script>
     <script src="https://selector.thecomfortgroup.co/pub/media/js/sleepsaas.js"></script>
     <script src="https://selector.thecomfortgroup.co/pub/media/js/main.js"></script>
 
