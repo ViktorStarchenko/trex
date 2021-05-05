@@ -187,7 +187,6 @@
                 align-items: center
                 justify-content: center
 
-
 .app-sleep-selector-modal
 
     ._custom-gform-styles
@@ -210,3 +209,45 @@
             padding-top: 0
             padding-bottom: 0
             margin: 0
+
+.tcg-selector__content
+    .gform_wrapper
+        form
+            padding: 0 20px
+        .gform_body
+            ul.gform_fields
+                li.gfield
+                    label.gfield_label
+                        display: none !important
+                    ul.gfield_checkbox
+                        margin-top: 0 !important
+                        margin-bottom: 0 !important
+                        li
+                            margin-bottom: 0 !important
+        .gform_footer
+            display: flex
+            flex-flow: row wrap
+            justify-content: center
+            margin-top: 0
+
+            .gform_button,
+            input[type=submit],
+            .button,
+            .btn
+                width: 100% !important
+                max-width: 350px !important
+                margin: 10px !important
+                display: flex !important
+                align-items: center !important
+                padding: 5px 10px !important
+                min-height: 52px !important
+                border: 1px solid #2e1a47 !important
+                font-size: 16px !important
+
+            input[type=submit]
+                background: #2e1a47 !important
+                color: #ffffff !important
+                transition: all .2s
+                &:hover
+                    background: #ffffff !important
+                    color: #2e1a47 !important
