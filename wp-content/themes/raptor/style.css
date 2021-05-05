@@ -4876,3 +4876,27 @@ ul.page-numbers li a.page-numbers.prev {
 .main a, .main a:hover {
     text-decoration: none;
 }
+/*features block stars rating customisation*/
+.stars-rating-features .yotpo-star-distribution-wrapper,.stars-rating-features .write-question-review-buttons-container,.stars-rating-features form,.stars-rating-features .new-yotpo-small-box.reviews, .stars-rating-features .yotpo-nav-content, .stars-rating-features .avg-score {
+    display: none!important;
+    visibility: hidden!important;
+}
+.main .stars-rating-features .review, .main .stars-rating-features .yotpo .main-widget .yotpo-regular-box {
+    padding: unset;
+}
+.stars-rating-features .bottom-line-items-container-desktop .bottom-line-items-wrapper .bottom-line-items {
+    padding-inline-end: unset;
+}
+.stars-rating-features #product-reviews .yotpo .yotpo-bottomline .yotpo-icon-star {
+    color: #000;
+}
+.stars-rating-features .bottom-line-items-container-desktop .bottom-line-items-wrapper .reviews-qa-labels-container .reviews-qa-label {
+    color: #000;
+    font-size: 15px;
+    line-height: 0;
+    font-weight: bold;
+    text-decoration: underline;   
+}
+.stars-rating-features {
+    margin-top: -23px;    
+}
