@@ -225,8 +225,15 @@
                         margin-bottom: 0 !important
                         li
                             margin-bottom: 0 !important
+                        li + li
+                            margin-top: 20px i !important
                     .ginput_container_checkbox
                         margin-top: 0 !important
+
+                    .ginput_container
+                        .charleft.ginput_counter
+                            &:not(:first-child)
+                                display: none i !important
         .gform_footer
             display: flex
             flex-flow: row wrap
