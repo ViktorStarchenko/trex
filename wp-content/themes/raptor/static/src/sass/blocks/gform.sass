@@ -232,9 +232,8 @@
                         margin-top: 0 !important
 
                     .ginput_container
-                        .charleft.ginput_counter
-                            &:not(:first-child)
-                                display: none !important
+                        .charleft.ginput_counter + .charleft.ginput_counter
+                            display: none !important
 
         .gform_footer
             display: flex
