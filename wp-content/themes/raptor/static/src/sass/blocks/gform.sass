@@ -216,14 +216,17 @@
             padding: 0 20px
         .gform_body
             ul.gform_fields
-                li.gfield
-                    label.gfield_label
+                li.gfield,
+                li.gfield.field_description_below
+                    > label.gfield_label._gfield-select-label
                         display: none !important
                     ul.gfield_checkbox
                         margin-top: 0 !important
                         margin-bottom: 0 !important
                         li
                             margin-bottom: 0 !important
+                    .ginput_container_checkbox
+                        margin-top: 0 !important
         .gform_footer
             display: flex
             flex-flow: row wrap
@@ -233,7 +236,8 @@
             .gform_button,
             input[type=submit],
             .button,
-            .btn
+            .btn,
+            .bttn
                 width: 100% !important
                 max-width: 350px !important
                 margin: 10px !important
