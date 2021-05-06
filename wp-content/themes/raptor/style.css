@@ -4904,3 +4904,8 @@ ul.page-numbers li a.page-numbers.prev {
 .main .advance-card.active p {
     display: inline;
 }
+/*promo video block*/
+.main .video-decor-left__action {
+    height: 100%;
+    width: 100%;
+}

@@ -119,56 +119,47 @@ $yotpo_api_secret = $yotpo['items']['api_secret'];
             <?php endif; ?>
         </div>
         <?php if ($promo_block['enable']) : ?>
-            <?php foreach ($promo_block['items']['top'] as $top_item) :?>
-                <?php if ($top_item['enable']) : ?>
-                <?php $is_video = !empty($top_item['video']['url']) ? true : false; ?>
-                    <div class=<?= $is_video ? 'video-decor': 'complete-decor'?>>
+
+            <?php foreach ($promo_block['promo_copy'] as $promo) :?>
+                <?php print_r($promo['img_mob']); ?>
+                <?php
+                $classes = $promo['attributes']['content_class'];
+                $classes_together = implode(" ", $classes);
+                ?>
+                <style>
+                    <?php if($promo['attributes']['height']) : ?>
+                    .acf-block-<?php echo $promo['attributes']['id'] ?>.<?php echo $promo['attributes']['content_type']; ?> {
+                        height: <?php echo $promo['attributes']['height'] ?> !important;
+                    }
+                    <?php endif ?>
+                    <?php if($promo['attributes']['height_mob']) : ?>
+                    @media screen and (max-width: 767px) {
+                        .acf-block-<?php echo $promo['attributes']['id'] ?>.<?php echo $promo['attributes']['content_type']; ?> {
+                            height: <?php echo $promo['attributes']['height_mob'] ?>!important;
+                        }
+                    }
+                    <?php endif ?>
+                </style>
+                <?php if ($promo['enable']) : ?>
+                    <?php $is_video = !empty($promo['video']['url']) ? true : false; ?>
+                    <div class="<?= $is_video ? 'video-decor-left': $promo['attributes']['content_type']?> acf-block-<?php echo $promo['attributes']['id'] ?>">
                         <?php if($is_video) : ?>
-                            <video class="video-decor__action" src="<?= $top_item['video']['url'] ?>" playsinline autoplay muted loop></video>
+                            <video class="video-decor-left__action" src="<?= $promo['video']['url'] ?>" playsinline autoplay muted loop></video>
                         <?php else: ?>
-                            <div class="complete-decor__bg">
+                            <div class="<?php echo $promo['attributes']['content_type']; ?>__bg">
                                 <picture>
-                                    <source media="(max-width: 650px)" srcset="<?= $top_item['img_mob']['url'] ?? ''?> 1x, <?= $top_item['img_mob_2x']['url'] ?? ''?> 2x"><img src="<?= $top_item['img']['url'] ?? ''?>" srcset="<?= $top_item['img_2x']['url'] ?? ''?> 2x"/>
-                                </picture>
-                            </div>
-                        <?php endif; ?>
-                        <?php if($is_video) : ?>
-                            <div class="video-decor__info">
-                        <?php endif; ?>
-                            <div class="content-center">
-                                <h6><?= $top_item['subtitle'] ?? ''?></h6>
-                                <h2><?= $top_item['title'] ?? ''?></h2>
-                                <p>
-                                    <?= $top_item['text'] ?? ''?>
-                                </p><a class="bttn bttn--bg" href="<?= $top_item['cta']['url'] ?? ''?>"><?= $top_item['cta']['title'] ?? ''?></a>
-                            </div>
-                        <?php if($is_video) : ?>
-                            </div>
-                        <?php endif; ?>
-                    </div>
-                <?php endif; ?>
-            <?php endforeach;?>
-            <?php foreach ($promo_block['items']['bottom'] as $bottom_item) :?>
-                <?php if ($bottom_item['enable']) : ?>
-                    <?php $is_video = !empty($bottom_item['video']['url']) ? true : false; ?>
-                    <div class="<?= $is_video ? 'video-decor-left': 'promo-decor'?>">
-                        <?php if($is_video) : ?>
-                            <video class="video-decor-left__action" src="<?= $bottom_item['video']['url'] ?>" playsinline autoplay muted loop></video>
-                        <?php else: ?>
-                            <div class="promo-decor__bg">
-                                <picture>
-                                    <source media="(max-width: 650px)" srcset="<?= $bottom_item['img_mob']['url'] ?? ''?> 1x, <?= $bottom_item['img_mob_2x']['url'] ?? ''?> 2x"><img src="<?= $bottom_item['img']['url'] ?? ''?>" srcset="<?= $bottom_item['img_2x']['url'] ?? ''?> 2x"/>
+                                    <source media="(max-width: 650px)" srcset="<?= $promo['img_mob']['url'] ?? ''?> 1x, <?= $promo['img_mob_2x']['url'] ?? ''?> 2x"><img src="<?= $promo['img']['url'] ?? ''?>" srcset="<?= $promo['img_2x']['url'] ?? ''?> 2x"/>
                                 </picture>
                             </div>
                         <?php endif; ?>
                         <?php if($is_video) : ?>
                         <div class="video-decor-left__info">
                             <?php endif; ?>
-                            <div class="content big-text">
-                                <h6><?= $bottom_item['subtitle'] ?? ''?></h6>
-                                <h2><?= $bottom_item['title'] ?? ''?></h2>
-                                <p><?= $bottom_item['text'] ?? ''?></p>
-                                <a class="bttn bttn--bg" href="<?= $bottom_item['cta']['url'] ?? ''?>"><?= $bottom_item['cta']['title'] ?? ''?></a>
+                            <div class="<?php echo $promo['attributes']['content_position']; ?> <?php echo $classes_together ?>">
+                                <h6><?= $promo['subtitle'] ?? ''?></h6>
+                                <h2><?= $promo['title'] ?? ''?></h2>
+                                <p><?= $promo['text'] ?? ''?></p>
+                                <a class="bttn bttn--bg" href="<?= $promo['cta']['url'] ?? ''?>"><?= $promo['cta']['title'] ?? ''?></a>
                             </div>
                             <?php if($is_video) : ?>
                         </div>
@@ -176,6 +167,7 @@ $yotpo_api_secret = $yotpo['items']['api_secret'];
                     </div>
                 <?php endif; ?>
             <?php endforeach;?>
+
             <?php foreach ($promo_block['items']['decor'] as $decor_item) :?>
                 <?php if ($decor_item['enable']) : ?>
                     <div class="bg-decor">
