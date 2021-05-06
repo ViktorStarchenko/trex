@@ -121,7 +121,6 @@ $yotpo_api_secret = $yotpo['items']['api_secret'];
         <?php if ($promo_block['enable']) : ?>
 
             <?php foreach ($promo_block['promo_copy'] as $promo) :?>
-                <?php print_r($promo['img_mob']); ?>
                 <?php
                 $classes = $promo['attributes']['content_class'];
                 $classes_together = implode(" ", $classes);
