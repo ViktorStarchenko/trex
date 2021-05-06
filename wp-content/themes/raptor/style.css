@@ -4900,3 +4900,7 @@ ul.page-numbers li a.page-numbers.prev {
 .stars-rating-features {
     margin-top: -23px;    
 }
+/*accordion styles*/
+.main .advance-card.active p {
+    display: inline;
+}
