@@ -4874,3 +4874,7 @@ it breaks everything (´･_･`)
     height: 44px!important;
 }
 */
+/*accordion styles*/
+.main .advance-card.active p {
+    display: inline;
+}
