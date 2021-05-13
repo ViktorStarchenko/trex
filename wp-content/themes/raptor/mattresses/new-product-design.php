@@ -33,7 +33,7 @@ $complete_cards = get_field('complete_card');
                 <p><?= $hero['text'] ?? ''?></p>
             </div>
             <?php if(!empty($hero['cta'])) : ?>
-                <a class="product-hero-btn" href="<?= $hero['cta']['url'] ?? ''?>"><span class="product-hero-btn__icon"><span class="product-hero-btn__icon-inn"></span></span><?= $hero['cta']['title'] ?? ''?></a>
+                <a target="_blank" class="product-hero-btn" href="<?= $hero['cta']['url'] ?? ''?>"><span class="product-hero-btn__icon"><span class="product-hero-btn__icon-inn"></span></span><?= $hero['cta']['title'] ?? ''?></a>
             <?php endif; ?>
         </div>
         <div class="feature-wrap">
