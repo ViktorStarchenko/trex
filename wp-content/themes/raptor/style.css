@@ -4927,7 +4927,7 @@ it breaks everything (´･_･`)
     color:black!important;
 }
 @media screen and (max-width:1100px) {
-    .main .yotpo .main-widget .bottom-line-items-container-desktop .bottom-line-items .reviews-qa-labels-container {
+    .post-template .main .yotpo .main-widget .bottom-line-items-container-desktop .bottom-line-items .reviews-qa-labels-container {
       padding: 10px!important; 
     }
     .main .feature-wrap .feature-card .stars-rating-features #product-reviews .avg-score {
