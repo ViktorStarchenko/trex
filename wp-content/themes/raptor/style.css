@@ -4906,8 +4906,8 @@ it breaks everything (´･_･`)
 .stars-rating-features {
     margin-top: -23px;    
 }
-.main .feature-wrap .feature-card .stars-rating-features .yotpo.yotpo-main-widget .yotpo-bottomline .yotpo-icon-star {
-    font-size: 22px;
+.main .feature-wrap .feature-card .stars-rating-features .yotpo.yotpo-main-widget .yotpo-bottomline .yotpo-icon-star, .main #product-reviews .yotpo .yotpo-bottomline .yotpo-icon-half-star {
+    font-size: 22px!important;
 }
 .main .stars-rating-features .yotpo .main-widget .yotpo-regular-box {
     margin-top: 20px;
@@ -4925,4 +4925,12 @@ it breaks everything (´･_･`)
     content: '/5';
     font-size: 18px;
     color:black!important;
+}
+@media screen and (max-width:1100px) {
+    .main .yotpo .main-widget .bottom-line-items-container-desktop .bottom-line-items .reviews-qa-labels-container {
+      padding: 10px!important; 
+    }
+    .main .feature-wrap .feature-card .stars-rating-features #product-reviews .avg-score {
+        line-height: 1!important;    
+    }
 }
