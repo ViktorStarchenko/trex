@@ -3658,3 +3658,11 @@ function filter_bedding() {
     die();
 
 }
+
+function custom_wp_vs_scripts(){
+    if (!is_admin()) {
+        wp_enqueue_style('vs-styles', get_theme_file_uri() . '/css/vs-styles.css');
+    }
+}
+
+add_action( 'wp_enqueue_scripts', 'custom_wp_vs_scripts' );

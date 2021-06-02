@@ -1,0 +1,60 @@
+/**
+ * @author zhixin wen <viktor.s@overdose.digital>
+ */
+
+/*accordion styles*/
+.main .advance-card.active p {
+    display: inline;
+}
+/*promo video block*/
+.main .video-decor-left__action {
+    height: 100%;
+    width: 100%;
+}
+/*review page*/
+.page-template-reviews-page .page-h1 {
+    font-family: NewzaldWeb-Book,serif;
+}
+._custom-retailer-page .page-content ._uphead {
+    font-family:  NewzaldWeb-Book,serif
+}
+/*sleep guide*/
+.page-template-sleep-guide-page .article-solution-box ._title {
+    font-family: NewzaldWeb-Book,serif;
+}
+/*blog posts*/
+
+.single .page-h1 {
+    font-family: NewzaldWeb-Book,serif;
+}
+/*registration*/
+._absolute-bg._absolute-title {
+    font-family: NewzaldWeb-Book,serif!important;
+}
+.article-box__title {
+    font-family: NewzaldWeb-Book,serif!important;
+}
+._custom-retailer-item-info h2 {
+    font-family: NewzaldWeb-Book,serif!important;
+}
+.article-advice-box__content ._title,
+.article-advice-box__content ._title-small {
+    font-family: NewzaldWeb-Book,serif!important;
+}
+._custom-retailer-page .page-content ._description, ._custom-retailer-page .page-content ._description p {
+    font-family: CalibreWeb-Regular;
+}
+._custom-retailer-item ._custom-retailer-item-info ._inf {
+    font-family: CalibreWeb-Regular;
+}
+._contact-page-content {
+    font-family: CalibreWeb-Regular;
+}
+.tech-description-point-text {
+    font-family: CalibreWeb-Regular;
+}
+
+.article-grid-box__item.app-centered-box ._uphead span {
+    display: inline-block;
+}
+
