@@ -33,14 +33,40 @@ $complete_cards = get_field('complete_card');
                 <p><?= $hero['text'] ?? ''?></p>
             </div>
             <?php if(!empty($hero['cta'])) : ?>
-                <a class="product-hero-btn" href="<?= $hero['cta']['url'] ?? ''?>"><span class="product-hero-btn__icon"><span class="product-hero-btn__icon-inn"></span></span><?= $hero['cta']['title'] ?? ''?></a>
+                <a target="_blank" class="product-hero-btn" href="<?= $hero['cta']['url'] ?? ''?>"><span class="product-hero-btn__icon"><span class="product-hero-btn__icon-inn"></span></span><?= $hero['cta']['title'] ?? ''?></a>
             <?php endif; ?>
         </div>
         <div class="feature-wrap">
             <?php if(!empty($features)) :?>
                 <?php foreach ($features as $feature) :?>
                     <div class="feature-card">
-                        <div class="feature-card__icon"><img src="<?= $feature['img']['url'] ?? ''?>" srcset="<?= $feature['img_2x']['url'] ?? ''?> 2x"/>
+                        <div class="feature-card__icon">
+                            <?php if(!empty($feature['img']['url'])) :?>
+                                <img src="<?= $feature['img']['url'] ?? ''?>" srcset="<?= $feature['img_2x']['url'] ?? ''?> 2x"/>
+                                <?php else :?>
+                                    <a class="stars-rating-features-link" href="#product-reviews"><div class="stars-rating-features">
+                                        <?php $yotpo = get_field('yotpo'); ?>
+                                        <?php $yotpo_product_id = $yotpo['yotpo_product_id'] ?>
+                                        <?php global $post; ?>
+                                        <?php $postImage = get_field('review_image', $post->ID); ?>
+                                        <div id="product-reviews">
+                                            <div class="review">
+                                                <div class="yotpo yotpo-main-widget"
+
+                                                     data-product-id="<?= $yotpo_product_id; ?>"
+                                                     data-name="<?= $post->post_title; ?>"
+
+                                                     data-url="<?= get_post_permalink($yotpo_product_id) ?>"
+                                                    <?php if ($postImage) : ?>
+                                                        data-image-url="<?= $postImage ?>"
+                                                    <?php endif; ?>
+                                                     data-description="<?= $post->post_excerpt; ?>"
+
+                                                     ></div>
+                                            </div>
+                                        </div></a>
+                                    </div>
+                            <?php endif; ?>
                         </div>
                         <div class="feature-card__text"><?= $feature['text'] ?? ''?></div>
                     </div>

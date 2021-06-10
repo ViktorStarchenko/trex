@@ -4874,3 +4874,63 @@ it breaks everything (´･_･`)
     height: 44px!important;
 }
 */
+/*accordion styles*/
+.main .advance-card.active p {
+    display: inline;
+}
+/*promo video block*/
+.main .video-decor-left__action {
+    height: 100%;
+    width: 100%;
+}
+/*features block stars rating customisation*/
+.stars-rating-features .yotpo-star-distribution-wrapper,.stars-rating-features .write-question-review-buttons-container,.stars-rating-features form,.stars-rating-features .new-yotpo-small-box.reviews, .stars-rating-features .yotpo-nav-content {
+    display: none!important;
+    visibility: hidden!important;
+}
+.main .stars-rating-features .review, .main .stars-rating-features .yotpo .main-widget .yotpo-regular-box {
+    padding: unset;
+}
+.stars-rating-features .bottom-line-items-container-desktop .bottom-line-items-wrapper .bottom-line-items {
+    padding-inline-end: unset;
+}
+.stars-rating-features #product-reviews .yotpo .yotpo-bottomline .yotpo-icon-star {
+    color: #000;
+}
+.stars-rating-features .bottom-line-items-container-desktop .bottom-line-items-wrapper .reviews-qa-labels-container .reviews-qa-label {
+    color: #000;
+    font-size: 15px;
+    line-height: 0;
+    font-weight: bold;
+}
+.stars-rating-features {
+    margin-top: -23px;    
+}
+.main .feature-wrap .feature-card .stars-rating-features .yotpo.yotpo-main-widget .yotpo-bottomline .yotpo-icon-star, .main #product-reviews .yotpo .yotpo-bottomline .yotpo-icon-half-star {
+    font-size: 22px!important;
+}
+.main .stars-rating-features .yotpo .main-widget .yotpo-regular-box {
+    margin-top: 20px;
+}
+.main .stars-rating-features .yotpo .main-widget .bottom-line-items-container-desktop .bottom-line-items .yotpo-filter-stars {
+    margin: 5px auto -5px!important;
+}
+.main .feature-wrap .feature-card .stars-rating-features #product-reviews .avg-score {
+    color: rgb(0 0 0)!important;
+    line-height: 0!important;
+    font-size: 18px;
+    position: relative;
+}
+.main .feature-wrap .feature-card .stars-rating-features #product-reviews .avg-score:after {
+    content: '/5';
+    font-size: 18px;
+    color:black!important;
+}
+@media screen and (max-width:1100px) {
+    .post-template .main .yotpo .main-widget .bottom-line-items-container-desktop .bottom-line-items .reviews-qa-labels-container {
+      padding: 10px!important; 
+    }
+    .main .feature-wrap .feature-card .stars-rating-features #product-reviews .avg-score {
+        line-height: 1!important;    
+    }
+}
