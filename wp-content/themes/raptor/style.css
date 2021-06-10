@@ -4934,3 +4934,20 @@ it breaks everything (´･_･`)
         line-height: 1!important;    
     }
 }
+.main .yotpo-reviews .yotpo-pager .yotpo-page-element{
+    margin: 0 0 0 -1px!important;
+    width: 44px!important;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    font-weight: 700;
+}
+.yotpo.yotpo-main-widget .yotpo-label .yotpo-logo-title, .yotpo .yotpo-modal-dialog .yotpo-label .yotpo-logo-title.yotpo-powered {
+    color: #2e1a47;
+}
+.main .yotpo .write-review .yotpo-header .yotpo-icon {
+    color: #2e1a47;
+}
